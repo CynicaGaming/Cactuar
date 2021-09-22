@@ -31,6 +31,7 @@ zones[tpz.zone.BASTOK_MARKETS_S] =
         WELDON_DELIVERY_DIALOG   = 10862, -- Do you have something you wish to send?
         ALLIED_SIGIL             = 12350, -- You have received the Allied Sigil!
         SILKE_SHOP_DIALOG        = 12802, -- You wouldn't happen to be a fellow scholar, by any chance? The contents of these pages are beyond me, but perhaps you might glean something from them. They could be yours...for a nominal fee.
+        KEVAN_TRADE_BOX_DIALOG   = 13549, -- Just as we suspected. This contains a great deal of information that will prove vital to the cause. Hm, what's this? Not sure what tot make of this... Doesn't seem to be terribly important. Here, why don't you have onto it? See if you can't get some use out of it down the road.
         RETRIEVE_DIALOG_ID       = 14714, -- You retrieve <item> from the porter moogle's care.
         COMMON_SENSE_SURVIVAL    = 14783, -- It appears that you have arrived at a new survival guide provided by the Servicemen's Mutual Aid Network. Common sense dictates that you should now be able to teleport here from similar tomes throughout the world.
     },
