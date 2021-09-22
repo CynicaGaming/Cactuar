@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Bastok Markets [S]
 --  NPC: Kevan
--- !pos 
+-- !pos -308.590 -012.000 -094.227 189
 -----------------------------------
 
 local ID = require("scripts/zones/Bastok_Markets_[S]/IDs")
