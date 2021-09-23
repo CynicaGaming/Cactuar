@@ -1129,7 +1129,7 @@ INSERT INTO `mob_pools` VALUES(1065, 'Diving_Beetle', 'Diving_Beetle', 49, 0x000
 INSERT INTO `mob_pools` VALUES(1066, 'Di_Dha_Adamantfist', 'Di_Dha_Adamantfist', 202, 0x00000e0300000000000000000000000000000000, 3, 3, 11, 265, 100, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 202);
 INSERT INTO `mob_pools` VALUES(1067, 'Di_Dhas_Elite_Guard', 'Di_Dhas_Elite_Guard', 202, 0x00009f0200000000000000000000000000000000, 3, 3, 3, 265, 100, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 202);
 INSERT INTO `mob_pools` VALUES(1068, 'Di_Mho_Platekeeper', 'Di_Mho_Platekeeper', 202, 0x00009f0200000000000000000000000000000000, 1, 1, 7, 265, 100, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 202);
-INSERT INTO `mob_pools` VALUES(1069, 'Di_Zho_Spongeshell', 'Di_Zho_Spongeshell', 202, 0x00004c0800000000000000000000000000000000, 8, 8, 2, 265, 100, 0, 1, 1, 1, 2, 0, 32, 653, 157, 0, 0, 5, 0, 0, 202);
+INSERT INTO `mob_pools` VALUES(1069, 'Di_Zho_Spongeshell', 'Di_Zho_Spongeshell', 202, 0x00004c0800000000000000000000000000000000, 8, 8, 2, 265, 100, 0, 1, 1, 1, 2, 6183, 32, 653, 157, 0, 0, 5, 0, 0, 202);
 INSERT INTO `mob_pools` VALUES(1070, 'Djahama', 'Djahama', 149, 0x0500ab0700000000000000000000000000000000, 16, 16, 3, 240, 100, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 8, 0, 0, 149);
 INSERT INTO `mob_pools` VALUES(1071, 'Djigga', 'Djigga', 64, 0x0000d40600000000000000000000000000000000, 6, 6, 2, 150, 100, 0, 1, 1, 1, 16, 0, 0, 0, 3, 0, 0, 0, 0, 1024, 64);
 INSERT INTO `mob_pools` VALUES(1072, 'Djinn', 'Djinn', 82, 0x0000c40800000000000000000000000000000000, 1, 1, 11, 240, 100, 0, 1, 0, 0, 0, 0, 0, 397, 129, 0, 0, 0, 0, 0, 82);
