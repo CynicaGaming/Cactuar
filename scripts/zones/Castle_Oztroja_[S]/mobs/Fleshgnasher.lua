@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Castle Oztroja [S]
 --   NM: Fleshgnasher
+-- pos: 174.370 -16.539 -141.226
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------
