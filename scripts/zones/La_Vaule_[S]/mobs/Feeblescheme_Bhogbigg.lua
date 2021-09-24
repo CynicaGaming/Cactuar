@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: La Vaule [S]
 --   NM: Feeblescheme Bhogbigg
+-- pos -176.207 -0.384 -298.763
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------

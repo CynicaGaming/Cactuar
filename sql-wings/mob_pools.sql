@@ -1377,7 +1377,7 @@ INSERT INTO `mob_pools` VALUES(1313, 'Febrenard_C_Brunnaut', 'Febrenard_C_Brunna
 INSERT INTO `mob_pools` VALUES(1314, 'Federation_Dispenser', 'Federation_Dispenser', 151, 0x0100020789108920513089405150f961f9710080, 1, 1, 0, 240, 100, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 151);
 INSERT INTO `mob_pools` VALUES(1315, 'Federation_Garrison', 'Federation_Garrison', 153, 0x0100010500000320033003400350c26000000000, 1, 1, 0, 240, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 153);
 INSERT INTO `mob_pools` VALUES(1316, 'Federation_Infantry', 'Federation_Infantry', 153, 0x01000d0512101420143014401450316100000000, 1, 1, 0, 240, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 153);
-INSERT INTO `mob_pools` VALUES(1317, 'Feeblescheme_Bhogbigg', 'Feeblescheme_Bhogbigg', 334, 0x0000190400000000000000000000000000000000, 4, 4, 5, 240, 100, 0, 1, 1, 1, 2, 0, 32, 134, 157, 0, 0, 2, 0, 0, 334);
+INSERT INTO `mob_pools` VALUES(1317, 'Feeblescheme_Bhogbigg', 'Feeblescheme_Bhogbigg', 334, 0x0000190400000000000000000000000000000000, 4, 4, 5, 240, 100, 0, 1, 1, 1, 2, 8183, 32, 134, 157, 0, 0, 2, 0, 0, 334);
 INSERT INTO `mob_pools` VALUES(1318, 'Feeler_Antlion', 'Feeler_Antlion', 26, 0x0000430500000000000000000000000000000000, 1, 1, 3, 240, 100, 0, 0, 0, 1, 2, 0, 0, 0, 3, 0, 0, 0, 0, 0, 26);
 INSERT INTO `mob_pools` VALUES(1319, 'Feeorin', 'Feeorin', 504, 0x0000ee0700000000000000000000000000000000, 3, 3, 7, 240, 100, 0, 1, 0, 1, 0, 240, 0, 0, 0, 0, 0, 1, 0, 0, 195);
 INSERT INTO `mob_pools` VALUES(1320, 'Fee_Jugu_the_Ramfist', 'Fee_Jugu_the_Ramfist', 360, 0x0000440200000000000000000000000000000000, 2, 2, 1, 480, 100, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 360);
