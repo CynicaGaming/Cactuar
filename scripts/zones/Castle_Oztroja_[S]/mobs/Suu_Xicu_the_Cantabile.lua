@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Castle Oztroja [S]
 --   NM: Suu Xicu the Cantabile
+-- pos -252.700, -0.382, 115.500
 -- TODO:
 --  Summoning of pets should be tied to Soul Voice usage.
 --  Gains a hidden regen from Army's Paeon V. Even if it is dispelled, it will gain several HP%.
