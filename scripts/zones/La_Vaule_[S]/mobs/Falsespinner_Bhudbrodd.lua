@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: La Vaule [S]
 --   NM: Falsespinner Bhudbrodd
+-- pos -221.122 -0.915 -96.614
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------
