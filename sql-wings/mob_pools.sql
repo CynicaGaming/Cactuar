@@ -822,7 +822,7 @@ INSERT INTO `mob_pools` VALUES(758, 'Cockatrice', 'Cockatrice', 70, 0x0000200100
 INSERT INTO `mob_pools` VALUES(759, 'Coeurl', 'Coeurl', 71, 0x00006f0100000000000000000000000000000000, 1, 1, 2, 240, 100, 0, 1, 0, 0, 0, 0, 0, 607, 131, 0, 0, 0, 0, 0, 71);
 INSERT INTO `mob_pools` VALUES(760, 'Cogitator', 'Cogitator', 241, 0x0000680400000000000000000000000000000000, 1, 1, 7, 240, 100, 0, 1, 1, 1, 16, 0, 0, 6236, 133, 0, 0, 0, 0, 0, 706);
 INSERT INTO `mob_pools` VALUES(761, 'Cogtooth_Skagnogg', 'Cogtooth_Skagnogg', 190, 0x0000ad0100000000000000000000000000000000, 11, 11, 7, 240, 100, 0, 1, 1, 1, 2, 0, 32, 0, 157, 8, 0, 0, 0, 0, 190);
-INSERT INTO `mob_pools` VALUES(762, 'Coinbiter_Cjaknokk', 'Coinbiter_Cjaknokk', 334, 0x0000ff0700000000000000000000000000000000, 8, 8, 5, 240, 100, 0, 1, 1, 1, 2, 0, 32, 305, 669, 0, 0, 5, 0, 0, 334);
+INSERT INTO `mob_pools` VALUES(762, 'Coinbiter_Cjaknokk', 'Coinbiter_Cjaknokk', 334, 0x0000ff0700000000000000000000000000000000, 8, 8, 5, 240, 100, 0, 1, 1, 1, 2, 1030, 32, 305, 669, 0, 0, 5, 0, 0, 334);
 INSERT INTO `mob_pools` VALUES(763, 'Cointeach', 'Cointeach', 91, 0x0000310700000000000000000000000000000000, 4, 1, 11, 240, 100, 0, 1, 0, 0, 0, 0, 0, 579, 131, 0, 0, 2, 0, 0, 0);
 INSERT INTO `mob_pools` VALUES(764, 'Cold_Gigas', 'Cold_Gigas', 126, 0x0000c40200000000000000000000000000000000, 1, 1, 11, 240, 100, 0, 1, 0, 1, 0, 0, 0, 4773, 131, 0, 0, 0, 0, 0, 126);
 INSERT INTO `mob_pools` VALUES(765, 'Colibri', 'Colibri', 72, 0x0000b50800000000000000000000000000000000, 5, 5, 2, 220, 100, 0, 0, 0, 0, 0, 0, 0, 99, 131, 0, 0, 0, 0, 0, 72);

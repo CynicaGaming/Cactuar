@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: La Vaule [S]
 --   NM: Coinbiter Cjaknokk
+-- pos -128.493 3.745 20.947
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------
