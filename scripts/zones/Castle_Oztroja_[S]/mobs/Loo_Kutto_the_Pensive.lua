@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Castle Oztroja [S]
 --   NM: Loo Kutto the Pensive
+-- pos 7.990 -16.500 -187.812
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------
