@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: La Vaule [S]
 --   NM: Cogtooth Skagnogg
+-- pos 142.595 -0.377 -176.132
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------
