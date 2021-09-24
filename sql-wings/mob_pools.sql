@@ -1014,7 +1014,7 @@ INSERT INTO `mob_pools` VALUES(950, 'Deelgeed', 'Deelgeed', 58, 0x00004805000000
 INSERT INTO `mob_pools` VALUES(951, 'Deep_Eye', 'Deep_Eye', 4, 0x0000090100000000000000000000000000000000, 4, 4, 12, 240, 100, 0, 1, 0, 1, 0, 0, 0, 1, 133, 0, 0, 11, 0, 0, 4);
 INSERT INTO `mob_pools` VALUES(952, 'Dee_Wapa_the_Desolator', 'Dee_Wapa_the_Desolator', 360, 0x0000540200000000000000000000000000000000, 15, 15, 6, 240, 100, 0, 1, 1, 1, 18, 0, 32, 0, 159, 0, 0, 30, 0, 256, 360);
 INSERT INTO `mob_pools` VALUES(953, 'Dee_Xalmo_the_Grim', 'Dee_Xalmo_the_Grim', 360, 0x0000240800000000000000000000000000000000, 2, 2, 1, 480, 100, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 360);
-INSERT INTO `mob_pools` VALUES(954, 'Dee_Zelko_the_Esoteric', 'Dee_Zelko_the_Esoteric', 360, 0x00003d0400000000000000000000000000000000, 4, 4, 9, 240, 100, 0, 1, 1, 1, 2, 23, 32, 221, 157, 0, 0, 239, 0, 0, 0);
+INSERT INTO `mob_pools` VALUES(954, 'Dee_Zelko_the_Esoteric', 'Dee_Zelko_the_Esoteric', 360, 0x00003d0400000000000000000000000000000000, 4, 4, 9, 240, 100, 0, 1, 1, 1, 2, 2069, 32, 221, 157, 0, 0, 239, 0, 0, 0);
 INSERT INTO `mob_pools` VALUES(955, 'Defender', 'Defender', 234, 0x00003b0100000000000000000000000000000000, 1, 1, 7, 240, 100, 0, 1, 0, 0, 0, 0, 0, 271, 131, 0, 0, 0, 0, 0, 235);
 INSERT INTO `mob_pools` VALUES(956, 'Defile_Scorpion', 'Defile_Scorpion', 217, 0x00001c0100000000000000000000000000000000, 4, 4, 7, 240, 100, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 217);
 INSERT INTO `mob_pools` VALUES(957, 'Defoliate_Leshy', 'Defoliate_Leshy', 245, 0x00008b0100000000000000000000000000000000, 1, 1, 7, 240, 100, 0, 1, 0, 0, 2, 0, 0, 0, 133, 0, 0, 0, 0, 0, 245);
