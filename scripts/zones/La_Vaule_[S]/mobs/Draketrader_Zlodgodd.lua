@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: La Vaule [S]
 --   NM: Draketrader Zlodgodd
+-- pos -17.291 0.243 -57.281
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------

@@ -4320,7 +4320,7 @@ INSERT INTO `mob_groups` VALUES(31, 3030, 85, 'Orcish_Prophetess', 300, 0, 1885,
 INSERT INTO `mob_groups` VALUES(32, 2741, 85, 'Morbol', 960, 0, 1734, 0, 0, 82, 83, 0);
 INSERT INTO `mob_groups` VALUES(33, 2381, 85, 'La_Vaule_Pugil', 300, 0, 1498, 8000, 4500, 72, 75, 0);
 INSERT INTO `mob_groups` VALUES(34, 762, 85, 'Coinbiter_Cjaknokk', 7200, 0, 498, 16000, 9999, 83, 83, 0);
-INSERT INTO `mob_groups` VALUES(35, 1108, 85, 'Draketrader_Zlodgodd', 300, 0, 700, 20000, 9999, 83, 83, 0);
+INSERT INTO `mob_groups` VALUES(35, 1108, 85, 'Draketrader_Zlodgodd', 300, 0, 700, 11500, 9999, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(36, 1317, 85, 'Feeblescheme_Bhogbigg', 300, 0, 825, 15000, 9999, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(37, 88, 85, 'All-Seeing_Onyx_Eye', 7200, 0, 51, 15000, 9999, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(38, 761, 85, 'Cogtooth_Skagnogg', 7200, 0, 497, 10000, 9999, 83, 83, 0);
