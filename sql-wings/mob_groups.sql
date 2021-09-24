@@ -4326,7 +4326,7 @@ INSERT INTO `mob_groups` VALUES(37, 88, 85, 'All-Seeing_Onyx_Eye', 7200, 0, 51, 
 INSERT INTO `mob_groups` VALUES(38, 761, 85, 'Cogtooth_Skagnogg', 7200, 0, 497, 10000, 9999, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(39, 64, 85, 'Agrios', 7200, 0, 31, 16000, 9999, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(40, 1293, 85, 'Falsespinner_Bhudbrodd', 7200, 0, 816, 18000, 9999, 83, 83, 0);
-INSERT INTO `mob_groups` VALUES(41, 3413, 85, 'Rugaroo', 14400, 0, 2130, 22000, 9999, 83, 83, 0);
+INSERT INTO `mob_groups` VALUES(41, 3413, 85, 'Rugaroo', 14400, 0, 2130, 16000, 9999, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(42, 1449, 85, 'Galarhigg', 0, 128, 0, 11000, 0, 65, 65, 0);
 INSERT INTO `mob_groups` VALUES(3545, 18, 85, 'Abenzio', 1, 0, 0, 0, 0, 1, 1, 0);
 INSERT INTO `mob_groups` VALUES(3546, 37, 85, 'Achtelle', 1, 0, 0, 0, 0, 1, 1, 0);
