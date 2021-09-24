@@ -2634,7 +2634,7 @@ INSERT INTO `mob_pools` VALUES(2570, 'Marquis_Andras', 'Marquis_Andras', 358, 0x
 INSERT INTO `mob_pools` VALUES(2571, 'Marquis_Andrealphus', 'Marquis_Andrealphus', 358, 0x0000e50200000000000000000000000000000000, 8, 8, 5, 240, 100, 0, 1, 0, 1, 2, 0, 0, 0, 3, 0, 0, 5, 0, 0, 358);
 INSERT INTO `mob_pools` VALUES(2572, 'Marquis_Cimeries', 'Marquis_Cimeries', 358, 0x0000eb0200000000000000000000000000000000, 11, 11, 6, 240, 100, 0, 1, 1, 1, 2, 0, 32, 20, 159, 0, 0, 0, 0, 0, 358);
 INSERT INTO `mob_pools` VALUES(2573, 'Marquis_Decarabia', 'Marquis_Decarabia', 358, 0x0000f40200000000000000000000000000000000, 10, 10, 9, 240, 100, 0, 1, 1, 1, 2, 0, 32, 139, 159, 0, 0, 6, 0, 0, 358);
-INSERT INTO `mob_pools` VALUES(2574, 'Marquis_Forneus', 'Marquis_Forneus', 358, 0x0000f00200000000000000000000000000000000, 8, 8, 7, 240, 100, 0, 1, 1, 1, 2, 55, 32, 0, 1181, 0, 0, 301, 0, 0, 358);
+INSERT INTO `mob_pools` VALUES(2574, 'Marquis_Forneus', 'Marquis_Forneus', 358, 0x0000f00200000000000000000000000000000000, 8, 8, 7, 240, 100, 0, 1, 1, 1, 2, 4151, 32, 0, 1181, 0, 0, 301, 0, 0, 358);
 INSERT INTO `mob_pools` VALUES(2575, 'Marquis_Gamygyn', 'Marquis_Gamygyn', 358, 0x0000ba0200000000000000000000000000000000, 13, 13, 3, 240, 100, 0, 1, 1, 1, 2, 0, 32, 1226, 159, 0, 0, 7, 0, 0, 358);
 INSERT INTO `mob_pools` VALUES(2576, 'Marquis_Nebiros', 'Marquis_Nebiros', 358, 0x0000f30200000000000000000000000000000000, 15, 15, 4, 240, 100, 0, 1, 1, 1, 2, 0, 32, 139, 159, 0, 0, 141, 0, 0, 358);
 INSERT INTO `mob_pools` VALUES(2577, 'Marquis_Orias', 'Marquis_Orias', 358, 0x0000f30200000000000000000000000000000000, 4, 4, 5, 240, 100, 0, 1, 1, 1, 2, 0, 32, 19, 159, 0, 0, 2, 0, 0, 358);

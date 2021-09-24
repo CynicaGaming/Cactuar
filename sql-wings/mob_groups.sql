@@ -6270,7 +6270,7 @@ INSERT INTO `mob_groups` VALUES(28, 1628, 99, 'Gnat', 960, 0, 1008, 0, 0, 79, 83
 INSERT INTO `mob_groups` VALUES(29, 4452, 99, 'Yagudo_Superior', 960, 0, 2767, 0, 0, 81, 83, 0);
 INSERT INTO `mob_groups` VALUES(30, 4438, 99, 'Yagudo_Parasite', 960, 0, 2738, 0, 0, 45, 48, 0);
 INSERT INTO `mob_groups` VALUES(31, 954, 99, 'Dee_Zelko_the_Esoteric', 0, 128, 594, 14750, 999999, 83, 83, 0);
-INSERT INTO `mob_groups` VALUES(32, 2574, 99, 'Marquis_Forneus', 0, 128, 1627, 0, 0, 80, 85, 0);
+INSERT INTO `mob_groups` VALUES(32, 2574, 99, 'Marquis_Forneus', 0, 128, 1627, 20715, 0, 80, 85, 0);
 INSERT INTO `mob_groups` VALUES(33, 2438, 99, 'Loo_Kutto_the_Pensive', 0, 128, 1535, 0, 0, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(34, 1368, 99, 'Fleshgnasher', 0, 128, 847, 0, 0, 80, 85, 0);
 INSERT INTO `mob_groups` VALUES(35, 4210, 99, 'Vee_Ladu_the_Titterer', 0, 128, 2567, 0, 0, 83, 83, 0);

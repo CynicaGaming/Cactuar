@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Castle Oztroja [S]
 --   NM: Marquis Forneus
+-- pos: -343.345 -16.984 141.193
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
 -----------------------------------
