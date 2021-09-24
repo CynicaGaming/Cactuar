@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Beadeaux [S]
---   NM: Ba'Tho Mercifulheart
+--   NM: Blifnix Oilycheeks
 -- pos -132.780 23.532 97.215
 -----------------------------------
 mixins = {require("scripts/mixins/job_special")}
