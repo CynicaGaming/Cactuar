@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Castle Oztroja [S]
 --   NM: Maa Illmu the Bestower
+-- pos: -17.176, -16.250, -16.468
 -- TODO:
 --  Test what spells it casts at what HPP.
 --  Immune to spell interruption from melee attacks. Only stuns and silence will interrupt it.
