@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: La Vaule [S]
 --   NM: Agrios
+-- pos 101.244 -0.570 60.608
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
