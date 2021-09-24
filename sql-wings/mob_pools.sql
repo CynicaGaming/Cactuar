@@ -148,7 +148,7 @@ INSERT INTO `mob_pools` VALUES(84, 'Alfons', 'Alfons', 149, 0x01000d014d104d204d
 INSERT INTO `mob_pools` VALUES(85, 'Alklha', 'Alklha', 87, 0x0000a40100000000000000000000000000000000, 1, 1, 6, 240, 100, 0, 1, 1, 1, 2, 0, 32, 7098, 1179, 0, 0, 0, 0, 0, 87);
 INSERT INTO `mob_pools` VALUES(86, 'Alkonost', 'Alkonost', 140, 0x0000550500000000000000000000000000000000, 6, 8, 2, 240, 100, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 140);
 INSERT INTO `mob_pools` VALUES(87, 'Alkyoneus', 'Alkyoneus', 126, 0x0000830200000000000000000000000000000000, 1, 2, 1, 240, 100, 0, 1, 0, 1, 2, 0, 32, 1871, 1183, 0, 0, 0, 0, 0, 126);
-INSERT INTO `mob_pools` VALUES(88, 'All-Seeing_Onyx_Eye', 'All-Seeing_Onyx_Eye', 4, 0x0000090100000000000000000000000000000000, 20, 20, 11, 240, 100, 0, 1, 1, 0, 2, 0, 0, 0, 0, 0, 0, 11, 0, 0, 4);
+INSERT INTO `mob_pools` VALUES(88, 'All-Seeing_Onyx_Eye', 'All-Seeing_Onyx_Eye', 4, 0x0000090100000000000000000000000000000000, 20, 20, 11, 240, 100, 0, 1, 1, 0, 2, 6161, 0, 0, 0, 0, 0, 11, 0, 0, 4);
 INSERT INTO `mob_pools` VALUES(89, 'Allied_Armored_Belfry', 'Allied_Armored_Belfry', 236, 0x0000190900000000000000000000000000000000, 1, 1, 0, 0, 100, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 INSERT INTO `mob_pools` VALUES(90, 'Allied_Belfry', 'Allied_Belfry', 236, 0x0000190900000000000000000000000000000000, 1, 1, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0);
 INSERT INTO `mob_pools` VALUES(91, 'Allied_Mantelet', 'Allied_Mantelet', 239, 0x0000170900000000000000000000000000000000, 1, 1, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 239);
