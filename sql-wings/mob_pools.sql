@@ -4270,7 +4270,7 @@ INSERT INTO `mob_pools` VALUES(4206, 'Vasuki', 'Vasuki', 118, 0x0000b10800000000
 INSERT INTO `mob_pools` VALUES(4207, 'Vault_Weapon', 'Vault_Weapon', 110, 0x0000c30100000000000000000000000000000000, 5, 5, 3, 240, 100, 0, 1, 0, 0, 0, 0, 0, 171, 645, 0, 0, 42, 0, 0, 110);
 INSERT INTO `mob_pools` VALUES(4208, 'Va_Gho_Bloodbasked', 'Va_Gho_Bloodbasked', 337, 0x00001d0400000000000000000000000000000000, 5, 5, 11, 265, 100, 0, 0, 0, 1, 2, 0, 32, 290, 669, 8, 0, 3, 0, 0, 337);
 INSERT INTO `mob_pools` VALUES(4209, 'VaRhu_Bodysnatcher', 'VaRhu_Bodysnatcher', 337, 0x00001e0400000000000000000000000000000000, 6, 6, 11, 265, 100, 0, 1, 0, 1, 2, 0, 32, 0, 159, 0, 0, 0, 0, 0, 337);
-INSERT INTO `mob_pools` VALUES(4210, 'Vee_Ladu_the_Titterer', 'Vee_Ladu_the_Titterer', 360, 0x0000210800000000000000000000000000000000, 13, 13, 2, 240, 100, 0, 1, 1, 1, 2, 23, 32, 0, 157, 0, 0, 7, 0, 0, 360);
+INSERT INTO `mob_pools` VALUES(4210, 'Vee_Ladu_the_Titterer', 'Vee_Ladu_the_Titterer', 360, 0x0000210800000000000000000000000000000000, 13, 13, 2, 240, 100, 0, 1, 1, 1, 2, 16, 32, 0, 157, 0, 0, 7, 0, 0, 360);
 INSERT INTO `mob_pools` VALUES(4211, 'Vee_Qiqas_Elemental', 'Vee_Qiqas_Elemental', 99, 0x00000a0000000000000000000000000000000000, 4, 5, 12, 240, 100, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 99);
 INSERT INTO `mob_pools` VALUES(4212, 'Vee_Qiqa_the_Decreer', 'Vee_Qiqa_the_Decreer', 360, 0x00000d0300000000000000000000000000000000, 15, 15, 4, 240, 100, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 360);
 INSERT INTO `mob_pools` VALUES(4213, 'Vee_Sejus_Elemental', 'Vee_Sejus_Elemental', 99, 0x00000a0000000000000000000000000000000000, 4, 5, 12, 240, 100, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 99);

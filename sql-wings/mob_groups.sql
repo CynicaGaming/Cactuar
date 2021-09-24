@@ -6273,7 +6273,7 @@ INSERT INTO `mob_groups` VALUES(31, 954, 99, 'Dee_Zelko_the_Esoteric', 0, 128, 5
 INSERT INTO `mob_groups` VALUES(32, 2574, 99, 'Marquis_Forneus', 0, 128, 1627, 20715, 0, 80, 85, 0);
 INSERT INTO `mob_groups` VALUES(33, 2438, 99, 'Loo_Kutto_the_Pensive', 0, 128, 1535, 21000, 0, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(34, 1368, 99, 'Fleshgnasher', 0, 128, 847, 17000, 0, 80, 85, 0);
-INSERT INTO `mob_groups` VALUES(35, 4210, 99, 'Vee_Ladu_the_Titterer', 0, 128, 2567, 0, 0, 83, 83, 0);
+INSERT INTO `mob_groups` VALUES(35, 4210, 99, 'Vee_Ladu_the_Titterer', 0, 128, 2567, 21000, 0, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(36, 2465, 99, 'Maa_Illmu_the_Bestower', 0, 128, 1561, 12000, 99999, 83, 83, 0);
 INSERT INTO `mob_groups` VALUES(37, 274, 99, 'Asterion', 0, 128, 185, 0, 0, 80, 85, 0);
 INSERT INTO `mob_groups` VALUES(38, 3815, 99, 'Suu_Xicu_the_Cantabile', 0, 128, 2361, 14500, 0, 83, 83, 0);
