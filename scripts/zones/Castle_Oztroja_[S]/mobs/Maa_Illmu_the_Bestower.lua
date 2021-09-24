@@ -11,7 +11,6 @@ mixins = {require("scripts/mixins/job_special")}
 
 function onMobInitialize(mob)
     mob:setMobMod(tpz.mobMod.MAGIC_COOL, 6)
-    mob:setMod(tpz.mod.SILENCERES, 100)
 end
 
 function onMobDeath(mob, player, isKiller)

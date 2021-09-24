@@ -2525,7 +2525,7 @@ INSERT INTO `mob_pools` VALUES(2461, 'Maats_Avatar', 'Maats_Avatar', 34, 0x00001
 INSERT INTO `mob_pools` VALUES(2462, 'Maats_Pet', 'Maats_Pet', 178, 0x00002d0100000000000000000000000000000000, 1, 1, 7, 240, 100, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 178);
 INSERT INTO `mob_pools` VALUES(2463, 'Maats_Wyvern', 'Maats_Wyvern', 193, 0x0000180000000000000000000000000000000000, 1, 1, 7, 200, 100, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 714);
 INSERT INTO `mob_pools` VALUES(2464, 'Maa_Febi_the_Steadfast', 'Maa_Febi_the_Steadfast', 360, 0x00003a0400000000000000000000000000000000, 7, 12, 10, 240, 100, 0, 1, 1, 1, 2, 0, 32, 7, 159, 0, 0, 4, 0, 0, 360);
-INSERT INTO `mob_pools` VALUES(2465, 'Maa_Illmu_the_Bestower', 'Maa_Illmu_the_Bestower', 360, 0x00003c0400000000000000000000000000000000, 3, 3, 3, 240, 100, 0, 1, 1, 1, 2, 7, 32, 311, 669, 8, 0, 1, 0, 0, 360);
+INSERT INTO `mob_pools` VALUES(2465, 'Maa_Illmu_the_Bestower', 'Maa_Illmu_the_Bestower', 360, 0x00003c0400000000000000000000000000000000, 3, 3, 3, 240, 100, 0, 1, 1, 1, 2, 0, 32, 311, 669, 8, 0, 1, 0, 0, 360);
 INSERT INTO `mob_pools` VALUES(2466, 'Maa_Zaua_the_Wyrmkeeper', 'Maa_Zaua_the_Wyrmkeeper', 360, 0x0000390400000000000000000000000000000000, 14, 14, 5, 240, 100, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 360);
 INSERT INTO `mob_pools` VALUES(2467, 'Macan_Gadangan', 'Macan_Gadangan', 71, 0x00006f0100000000000000000000000000000000, 4, 4, 12, 240, 100, 0, 1, 0, 0, 18, 0, 32, 2674, 155, 0, 0, 72, 0, 0, 469);
 INSERT INTO `mob_pools` VALUES(2468, 'Macha', 'Macha', 55, 0x0000bd0100000000000000000000000000000000, 5, 5, 2, 240, 100, 0, 1, 0, 1, 18, 0, 0, 0, 3, 0, 0, 61, 0, 0, 55);
