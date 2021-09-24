@@ -14,6 +14,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_I)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_I)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 
@@ -21,6 +22,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_II)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_II)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 
@@ -28,6 +30,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_III)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_III)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 
@@ -35,6 +38,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_IV)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_IV)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 
@@ -42,6 +46,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_V)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_V)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 
@@ -49,6 +54,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_VI)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_VI)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 
@@ -56,6 +62,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_VII)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_VII)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 
@@ -63,6 +70,7 @@ function onTrade(player, npc, trade)
         player:tradeComplete()
         player:addKeyItem(tpz.ki.THE_WORDS_OF_DONHU_VIII)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.THE_WORDS_OF_DONHU_VIII)
+        npc:showText(npc, 13549)
  -- correct onTradeEvent here, possibly 1 or multiple events per strongbox     player:startEvent(number here)
     end
 end
