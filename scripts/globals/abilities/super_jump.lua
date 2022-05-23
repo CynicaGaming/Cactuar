@@ -32,13 +32,13 @@ function onUseAbility(player, target, ability)
     player:queue(5000, function(player)
         player:setSuperJump(0)
     end)
-    
+
     -- player:addStatusEffect(tpz.effect.SUPER_JUMP,1,0,5)
 
     -- If the Dragoon's wyvern is out and alive, tell it to use Super Climb
     local wyvern = player:getPet()
     if (wyvern ~= nil and player:getPetID() == tpz.pet.id.WYVERN and wyvern:getHP() > 0) then
-        wyvern:useJobAbility(636, wyvern)
+        wyvern:useJobAbility(1164, wyvern)
     end
 
 end
