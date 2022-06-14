@@ -210,7 +210,7 @@ uint8 CNavMesh::maxAngleDivergenceOfPath(std::vector<position_t>* PPath)
         divergence = angleDiff > divergence ? angleDiff : divergence;
     }
 
-    //ShowInfo("maxAngleDivergenceOfPath was %i\n", divergence);
+    ShowInfo("maxAngleDivergenceOfPath was %i\n", divergence);
     return divergence;
 }
 
@@ -224,7 +224,7 @@ float CNavMesh::countPathDistance(std::vector<position_t>* PPath)
     for (auto i = PPath->begin(); (i + 1) != PPath->end(); i++)
         dist += distance(*i, *(i + 1));
 
-    //ShowInfo("countPathDistance was %f\n", dist);
+    ShowInfo("countPathDistance was %f\n", dist);
     return dist;
 }
 
