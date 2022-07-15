@@ -30,7 +30,7 @@ function onTrigger(player, npc)
         player:startEvent(24)
 
     -- Chasing Quotas (DRG AF2)
-    elseif (Quotas_Status == QUEST_AVAILABLE and player:getMainJob() == tpz.job.DRG and player:getMainLvl() >= AF1_QUEST_LEVEL and Quotas_No == 0) then
+    elseif (Quotas_Status == QUEST_AVAILABLE and ((player:getMainJob() == tpz.job.DRG and player:getMainLvl() >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.DRG and player:getSubLvl() >= AF1_QUEST_LEVEL)) and Quotas_No == 0) then
         player:startEvent(18) -- Long version of quest start
     elseif (Quotas_No == 1) then
         player:startEvent(14) -- Short version for those that said no.

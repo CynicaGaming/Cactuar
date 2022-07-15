@@ -2786,12 +2786,15 @@ int32 map_config_default()
     map_config.conquest_auth_zone = 245; // Lower Jeuno
     map_config.enable_influence_boost = false;
     map_config.enable_low_level_xp_boost = false;
-    map_config.disable_rare_item_limit = false;
+    map_config.disable_rare_item_limit = true;
     map_config.storage_mission_unlock = true;
     map_config.storage_ignore_features = false;
     map_config.force_enable_mog_locker = false;
     map_config.log_gil_period = 0;
     map_config.adventuring_fellow_dualwield = true;
+    map_config.dual_main_job = true;
+    map_config.all_jobs_dual_wield = true;
+
     return 0;
 }
 
@@ -3344,6 +3347,14 @@ int32 map_config_read(const int8* cfgName)
             if (strcmp(w1, "helpdesk_enabled") == 0)
             {
                 map_config.helpdesk_enabled = atoi(w2);
+            }
+            else if (strcmp(w1, "dual_main_job") == 0)
+            {
+                map_config.dual_main_job = atoi(w2);
+            }
+            else if (strcmp(w1, "all_jobs_dual_wield") == 0)
+            {
+                map_config.all_jobs_dual_wield = atoi(w2);
             }
             else if (strcmp(w1, "autotarget_qol") == 0)
             {

@@ -42,21 +42,23 @@ function onTrigger(player, npc)
     local rootProblem = player:getQuestStatus(WINDURST, tpz.quest.id.windurst.THE_ROOT_OF_THE_PROBLEM)
     local mLvl = player:getMainLvl()
     local mJob = player:getMainJob()
+    local sLvl = player:getSubLvl()
+    local sJob = player:getSubJob()
 
-    if theThreeMagi == QUEST_AVAILABLE and mJob == tpz.job.BLM and mLvl >= AF1_QUEST_LEVEL then
+    if theThreeMagi == QUEST_AVAILABLE and ((mJob == tpz.job.BLM and mLvl >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.BLM and sLvl >= AF1_QUEST_LEVEL)) then
         player:startEvent(260, 0, 613, 0, 0, 0, 1104) -- Start Quest "The Three Magi" --- NOTE: 5th parameter is "Meteorites" but he doesn't exist ---
     elseif theThreeMagi == QUEST_ACCEPTED then
         player:startEvent(261, 0, 0, 0, 0, 0, 1104) -- During Quest "The Three Magi"
     elseif
         theThreeMagi == QUEST_COMPLETED and
         recollections == QUEST_AVAILABLE and
-        (mJob == tpz.job.BLM and mLvl < AF2_QUEST_LEVEL or mJob ~= tpz.job.BLM)
+        ((player:isCustomizationEnabled(1) == false and (mJob == tpz.job.BLM and mLvl < AF2_QUEST_LEVEL or mJob ~= tpz.job.BLM)) or
+         (player:isCustomizationEnabled(1) and (((mJob == tpz.job.BLM or sJob == tpz.job.BLM) and mLvl < AF2_QUEST_LEVEL) or (mJob ~= tpz.job.BLM and sJob ~= tpz.job.BLM))))
     then
         player:startEvent(268) -- New standard dialog after "The Three Magi"
     elseif
         theThreeMagi == QUEST_COMPLETED and
-        mJob == tpz.job.BLM and
-        mLvl >= AF2_QUEST_LEVEL and
+        ((mJob == tpz.job.BLM and mLvl >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.BLM and sLvl >= AF2_QUEST_LEVEL)) and
         not player:needToZone() and
         recollections == QUEST_AVAILABLE
     then
@@ -66,8 +68,7 @@ function onTrigger(player, npc)
     elseif
         recollections == QUEST_COMPLETED and
         rootProblem == QUEST_AVAILABLE and
-        mJob == tpz.job.BLM and
-        mLvl >= 50 and
+        ((mJob == tpz.job.BLM and mLvl >= 50) or (player:isCustomizationEnabled(1) and sJob == tpz.job.BLM and sLvl >= 50)) and
         not player:needToZone()
     then
         player:startEvent(276, 0, 829) -- Start Quest "The Root of The problem"

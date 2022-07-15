@@ -55,7 +55,9 @@ end
 function onTrigger(player, npc)
     local wsQuestEvent = tpz.wsquest.getTriggerEvent(wsQuest, player)
     local mLvl = player:getMainLvl()
+	local sLvl = player:getSubLvl()
     local mJob = player:getMainJob()
+	local sJob = player:getSubJob()
     local theGeneralSecret = player:getQuestStatus(SANDORIA, sandyQuests.THE_GENERAL_S_SECRET)
     local envelopedInDarkness = player:getQuestStatus(SANDORIA, sandyQuests.ENVELOPED_IN_DARKNESS)
     local peaceForTheSpirit = player:getQuestStatus(SANDORIA, sandyQuests.PEACE_FOR_THE_SPIRIT)
@@ -100,7 +102,7 @@ function onTrigger(player, npc)
             player:startEvent(108)
         end
     elseif
-        mJob == tpz.job.RDM and mLvl >= AF2_QUEST_LEVEL and envelopedInDarkness == QUEST_COMPLETED and
+        ((mJob == tpz.job.RDM and mLvl >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.RDM and sLvl >= AF2_QUEST_LEVEL)) and envelopedInDarkness == QUEST_COMPLETED and
         peaceForTheSpirit == QUEST_AVAILABLE
     then
         player:startEvent(109) -- Start
@@ -115,7 +117,7 @@ function onTrigger(player, npc)
             player:startEvent(117)
         end
     elseif
-        mJob == tpz.job.RDM and mLvl >= AF2_QUEST_LEVEL and
+        ((mJob == tpz.job.RDM and mLvl >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.RDM and sLvl >= AF2_QUEST_LEVEL)) and
         player:getQuestStatus(SANDORIA, sandyQuests.THE_CRIMSON_TRIAL) == QUEST_COMPLETED and
         envelopedInDarkness == QUEST_AVAILABLE
     then
@@ -234,3 +236,4 @@ function onEventFinish(player, csid, option)
         tpz.wsquest.handleEventFinish(wsQuest, player, csid, option, ID.text.SAVAGE_BLADE_LEARNED)
     end
 end
+

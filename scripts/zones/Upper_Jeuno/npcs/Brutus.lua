@@ -50,6 +50,8 @@ function onTrigger(player, npc)
 
     local mLvl = player:getMainLvl()
     local mJob = player:getMainJob()
+    local sLvl = player:getSubLvl()
+    local sJob = player:getSubJob()
 
     -- AXE THE COMPETITION
     if wsQuestEvent ~= nil then
@@ -82,7 +84,7 @@ function onTrigger(player, npc)
         player:startEvent(70)
 
     -- WINGS OF GOLD
-    elseif pathOfTheBeastmaster == QUEST_COMPLETED and wingsOfGold == QUEST_AVAILABLE and mJob == tpz.job.BST and mLvl >= AF1_QUEST_LEVEL then
+    elseif pathOfTheBeastmaster == QUEST_COMPLETED and wingsOfGold == QUEST_AVAILABLE and ((mJob == tpz.job.BST and mLvl >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.BST and sLvl >= AF1_QUEST_LEVEL)) then
         if player:getCharVar("wingsOfGold_shortCS") == 1 then
             player:startEvent(137) -- Start Quest "Wings of gold" (Short dialog)
         else
@@ -97,7 +99,7 @@ function onTrigger(player, npc)
         end
 
     -- SCATTERED INTO SHADOW
-    elseif wingsOfGold == QUEST_COMPLETED and scatteredIntoShadow == QUEST_AVAILABLE and mJob == tpz.job.BST and mLvl >= AF2_QUEST_LEVEL then
+    elseif wingsOfGold == QUEST_COMPLETED and scatteredIntoShadow == QUEST_AVAILABLE and ((mJob == tpz.job.BST and mLvl >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.BST and sLvl >= AF2_QUEST_LEVEL)) then
         if player:getCharVar("scatIntoShadow_shortCS") == 1 then
             player:startEvent(143)
         else

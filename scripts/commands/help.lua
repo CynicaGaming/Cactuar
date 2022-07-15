@@ -46,6 +46,18 @@ function onTrigger(player)
         player:PrintToPlayer("  Gives you a pearl to the server linkshell.", 29, "", -1)
         player:PrintToPlayer("  Use this command to reobtain the pearl if accidentaly dropped.", 29, "", -1)
     end
+    if player:isCustomizationEnabled(2) then
+        player:PrintToPlayer("!dw", 29, "", -1)
+        player:PrintToPlayer("  Sends a packet to your client to show your subjob as NIN so that", 29, "", -1)
+        player:PrintToPlayer("  your client will allow you to dual wield. This does not actually", 29, "", -1)
+        player:PrintToPlayer("  change your jobs. Toggleable.", 29, "", -1)
+    end
+    if player:isCustomizationEnabled(1) then
+        player:PrintToPlayer("!flip", 29, "", -1)
+        player:PrintToPlayer("  Sends a packet to show your main and sub jobs as switched around", 29, "", -1)
+        player:PrintToPlayer("  so that your client will allow you to equip items usable by your", 29, "", -1)
+        player:PrintToPlayer("  subjob. This does not actually change your jobs. Toggleable.", 29, "", -1)
+    end
     if ALL_MAPS ~= nil and ALL_MAPS > 0 then
         player:PrintToPlayer("!maps", 29, "", -1)
         player:PrintToPlayer("  Gives you the maps of all zones.", 29, "", -1)

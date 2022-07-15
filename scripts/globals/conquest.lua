@@ -628,7 +628,7 @@ local overseerInvCommon =
     [32933] = {cp =   500, lvl =  1, item = 15761},             -- chariot_band
     [32934] = {cp =  1000, lvl =  1, item = 15762},             -- empress_band
     [32935] = {cp =  2000, lvl =  1, item = 15763},             -- emperor_band
-    --[32936] = {cp =  5000, lvl =  1, item = 28540},             -- warp_ring
+    [32936] = {cp =  5000, lvl =  1, item = 28540},             -- warp_ring
     [32941] = {cp = 20000, lvl =  1, item =  6380, rank = 10},  -- refined_chair_set
 }
 
@@ -1277,10 +1277,10 @@ tpz.conquest.vendorOnEventFinish = function(player, option, vendorRegion)
             player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.HOME_NATION, 0, 1, 0, region)
         end
     elseif option == 6 then
-        --player:delCP(fee)
-        --player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.HOME_NATION, 0, 1, 0, region)
+        player:delCP(fee)
+        player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.HOME_NATION, 0, 1, 0, region)
         if player:delGil(fee) then
-            player:PrintToPlayer("Conquest point fees for teleports are out-of-WotG-era. The gil fee option has been used instead.",29)
+            --player:PrintToPlayer("Conquest point fees for teleports are out-of-WotG-era. The gil fee option has been used instead.",29)
             player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.HOME_NATION, 0, 1, 0, region)
         end
     end
@@ -1319,11 +1319,11 @@ end
 tpz.conquest.teleporterOnEventFinish = function(player, csid, option, teleporterEvent)
     if csid == teleporterEvent then
         -- TELEPORT WITH GIL
-        -- if option >= 5 and option <= 23 then
+         if option >= 5 and option <= 23 then
             local region = option - 5
             
             if option >= 1029 and option <= 1047 then
-                player:PrintToPlayer("Conquest point fees for teleports are out-of-WotG-era. The gil fee option has been used instead.",29)
+                --player:PrintToPlayer("Conquest point fees for teleports are out-of-WotG-era. The gil fee option has been used instead.",29)
                 region = option - 1029
             end
             
@@ -1336,7 +1336,7 @@ tpz.conquest.teleporterOnEventFinish = function(player, csid, option, teleporter
         -- TELEPORT WITH CP, not 75 cap, disabled
         
             
-            --[[
+
             local region = option - 1029
             local fee = tpz.conquest.outpostFee(player, region)
 
@@ -1344,8 +1344,8 @@ tpz.conquest.teleporterOnEventFinish = function(player, csid, option, teleporter
                 player:delCP(fee)
                 player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.OUTPOST, 0, 1, 0, region)
             end
-            ]]
-        --end
+
+        end
 
     end
 end

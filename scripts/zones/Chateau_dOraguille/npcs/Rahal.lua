@@ -36,7 +36,7 @@ function onTrigger(player, npc)
     -- Completed AF2, AF3 available, and currently on DRG.  No level check, since they cleared AF2.
     elseif
         player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.CHASING_QUOTAS) == QUEST_COMPLETED and
-        Stalker_Quest == QUEST_AVAILABLE and player:getMainJob() == tpz.job.DRG
+        Stalker_Quest == QUEST_AVAILABLE and ((player:getMainJob() == tpz.job.DRG) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.DRG))
     then
         if (player:getCharVar("KnightStalker_Declined") == 0) then
             player:startEvent(121) -- Start AF3

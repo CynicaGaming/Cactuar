@@ -32,8 +32,11 @@ function onUseAbility(player, target, ability)
         darkKnightLvl = player:getMainLvl()    -- Use Mainjob Lvl
     elseif player:getSubJob() == tpz.job.DRK then
         darkKnightLvl = player:getSubLvl()    -- Use Subjob Lvl
-        chance = 80
+        if player:isCustomizationEnabled(1) == false then
+            chance = 80
+        end
     end
+
     
     chance = chance + player:getMainLvl()*2 - target:getMainLvl()*2
     if chance < 33 then

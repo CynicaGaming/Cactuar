@@ -36,6 +36,13 @@ function onUseAbility(player, target, ability)
     if (player:getMainJob() == tpz.job.SCH and player:getMainLvl() >= 20) then
         helixbonus = math.floor(player:getMainLvl() / 4)
     end
+    if player:isCustomizationEnabled(1) == true then
+        if (player:getSubJob() == tpz.job.SCH and player:getSubLvl() >= 20) then
+            helixbonus = math.floor(player:getMainLvl() / 4)
+        end
+    end
+
+
 
     player:addStatusEffectEx(tpz.effect.ADDENDUM_BLACK, tpz.effect.ADDENDUM_BLACK, effectbonus, 0, 7200, 0, helixbonus, true)
 

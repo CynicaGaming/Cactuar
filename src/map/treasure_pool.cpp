@@ -513,12 +513,12 @@ void CTreasurePool::CheckTreasureItem(time_point tick, uint8 SlotID, CCharEntity
         }
         else
         {
-            //No one has lotted on this item - Give to random member who has not passed
+            // No one has lotted on this item - Give to random member who has not passed
             std::vector<CCharEntity*> candidates;
             for (uint8 i = 0; i < members.size(); ++i)
             {
-                if (itemutils::GetItem(m_PoolItems[SlotID].ID)->isRare() && charutils::HasItem(members[i], m_PoolItems[SlotID].ID))
-                    continue;
+                /*if (charutils::HasItem(members[i], m_PoolItems[SlotID].ID) && itemutils::GetItem(m_PoolItems[SlotID].ID)->getFlag() & ITEM_FLAG_RARE)
+                    continue;*/
 
                 if (members[i]->getStorage(LOC_INVENTORY)->GetFreeSlotsCount() != 0 && !HasPassedItem(members[i], SlotID))
                 {

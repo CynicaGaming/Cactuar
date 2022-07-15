@@ -18,6 +18,8 @@ end
 function onTrigger(player, npc)
     local mJob   = player:getMainJob()
     local mLvl   = player:getMainLvl()
+    local sJob   = player:getSubJob()
+    local sLvl   = player:getSubLvl()
     local lotdCS = player:getCharVar("LuckOfTheDraw")
     local efao   = player:getQuestStatus(AHT_URHGAN, tpz.quest.id.ahtUrhgan.EQUIPPED_FOR_ALL_OCCASIONS)
     local efaoCS = player:getCharVar("EquippedforAllOccasions")
@@ -28,13 +30,13 @@ function onTrigger(player, npc)
         player:startEvent(211)
 
     -- EQUIPPED FOR ALL OCCASIONS
-    elseif efao == QUEST_AVAILABLE and mJob == tpz.job.COR and mLvl >= AF1_QUEST_LEVEL then
+    elseif efao == QUEST_AVAILABLE and ((mJob == tpz.job.COR and mLvl >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.COR and sLvl >= AF1_QUEST_LEVEL)) then
         player:startEvent(228)
     elseif efao == QUEST_ACCEPTED and efaoCS == 3 then
         player:startEvent(231)
 
     -- NAVIGATING THE UNFRIENDLY SEAS
-    elseif efao == QUEST_COMPLETED and ntus == QUEST_AVAILABLE and mJob == tpz.job.COR and mLvl >= AF2_QUEST_LEVEL then
+    elseif efao == QUEST_COMPLETED and ntus == QUEST_AVAILABLE and ((mJob == tpz.job.COR and mLvl >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.COR and sLvl >= AF2_QUEST_LEVEL)) then
         player:startEvent(232)
     elseif player:getCharVar("NavigatingtheUnfriendlySeas") == 4 then
         player:startEvent(233)
@@ -69,3 +71,4 @@ function onEventFinish(player, csid, option)
         npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.NAVIGATING_THE_UNFRIENDLY_SEAS, {item=15601, var={"NavigatingtheUnfriendlySeas", "HydrogauageTimer"}})
     end
 end
+

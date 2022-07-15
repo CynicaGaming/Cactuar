@@ -64,13 +64,12 @@ function onUseAbility(player, target, ability)
     local cure = 0
 
     -- Performing sj mj check.
-    if mjob == tpz.job.DNC then
+    if ((mjob == tpz.job.DNC) or (player:isCustomizationEnabled(1) and sjob == tpz.job.DNC)) then
         cure = (vit+chr)*0.25+60
-    end
-
-    if sjob == tpz.job.DNC then
+    elseif sjob == tpz.job.DNC then
         cure = (vit+chr)*0.125+60
     end
+
 
     -- Apply waltz modifiers
     cure = math.floor(cure * (1.0 + (player:getMod(tpz.mod.WALTZ_POTENTCY)/100)))

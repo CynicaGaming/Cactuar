@@ -32,12 +32,14 @@ function onTrigger(player, npc)
     local theFirstMeeting = player:getQuestStatus(BASTOK, tpz.quest.id.bastok.THE_FIRST_MEETING)
     local mLvl = player:getMainLvl()
     local mJob = player:getMainJob()
+    local sLvl = player:getSubLvl()
+    local sJob = player:getSubJob()
 
     if wsQuestEvent ~= nil then
         player:startEvent(wsQuestEvent)
-    elseif (ghostsOfThePast == QUEST_AVAILABLE and mJob == tpz.job.MNK and mLvl >= 40) then
+    elseif (ghostsOfThePast == QUEST_AVAILABLE and ((mJob == tpz.job.MNK and mLvl >= 40) or (player:isCustomizationEnabled(1) and sJob == tpz.job.MNK and sLvl >= 40))) then
         player:startEvent(231) -- Start Quest "Ghosts of the Past"
-    elseif (ghostsOfThePast == QUEST_COMPLETED and player:needToZone() == false and theFirstMeeting == QUEST_AVAILABLE and mJob == tpz.job.MNK and mLvl >= 50) then
+    elseif (ghostsOfThePast == QUEST_COMPLETED and player:needToZone() == false and theFirstMeeting == QUEST_AVAILABLE and ((mJob == tpz.job.MNK and mLvl >= 50) or (player:isCustomizationEnabled(1) and sJob == tpz.job.MNK and sLvl >= 50))) then
         player:startEvent(233) -- Start Quest "The First Meeting"
     elseif (player:hasKeyItem(tpz.ki.LETTER_FROM_DALZAKK) and player:hasKeyItem(tpz.ki.SANDORIAN_MARTIAL_ARTS_SCROLL)) then
         player:startEvent(234) -- Finish Quest "The First Meeting"
