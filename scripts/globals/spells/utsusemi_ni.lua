@@ -17,7 +17,7 @@ function onSpellCast(caster, target, spell)
     local effect = target:getStatusEffect(tpz.effect.COPY_IMAGE)
 	
     -- Get extras shadows
-    local numShadows = 3
+    local numShadows = 4
     local icon = tpz.effect.COPY_IMAGE_3
 
     if (caster:getMainJob() == tpz.job.NIN) then

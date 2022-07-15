@@ -29,7 +29,7 @@ function onUseAbility(player, target, ability)
     player:delStatusEffect(tpz.effect.PERPETUANCE)
 
     local helixbonus = 0
-    if (player:getMainJob() == tpz.job.SCH and player:getMainLvl() >= 20) then
+    if ((player:getMainJob() == tpz.job.SCH and player:getMainLvl() >= 20) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.SCH and player:getSubLvl() >= 20))then
         helixbonus = math.floor(player:getMainLvl() / 4)
     end
 

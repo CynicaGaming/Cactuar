@@ -28,7 +28,8 @@
 #include "../common/utils.h"
 #include "../common/tpzrand.h"
 
-const int8 CNavMesh::ERROR_NEARESTPOLY;
+constexpr int8 CNavMesh::ERROR_NEARESTPOLY;
+constexpr float polyPickExt[3] = { 5.0f, 10.0f, 5.0f };
 
 void CNavMesh::ToFFXIPos(const position_t* pos, float* out) {
     float y = pos->y;
@@ -93,9 +94,7 @@ CNavMesh::CNavMesh(uint16 zoneID)
     m_hit.maxPath = 20;
 }
 
-CNavMesh::~CNavMesh()
-{
-}
+CNavMesh::~CNavMesh() = default;
 
 bool CNavMesh::load(const std::string& filename)
 {
@@ -145,7 +144,7 @@ bool CNavMesh::load(const std::string& filename)
         memset(data, 0, tileHeader.dataSize);
         file.read(reinterpret_cast<char*>(data), tileHeader.dataSize);
 
-        m_navMesh->addTile(data, tileHeader.dataSize, DT_TILE_FREE_DATA, tileHeader.tileRef, 0);
+        m_navMesh->addTile(data, tileHeader.dataSize, DT_TILE_FREE_DATA, tileHeader.tileRef, nullptr);
 
     }
 
@@ -246,10 +245,10 @@ std::vector<position_t> CNavMesh::findPath(const position_t& start, const positi
     filter.setIncludeFlags(0xffff);
     filter.setExcludeFlags(0);
 
-    float polyPickExt[3];
-    polyPickExt[0] = 10;
-    polyPickExt[1] = 20;
-    polyPickExt[2] = 10;
+   //float polyPickExt[3];
+   // polyPickExt[0] = 10;
+   // polyPickExt[1] = 20;
+   // polyPickExt[2] = 10;
 
     dtPolyRef startRef;
     dtPolyRef endRef;
@@ -336,10 +335,10 @@ std::pair<int16, position_t> CNavMesh::findRandomPosition(const position_t& star
     float spos[3];
     CNavMesh::ToDetourPos(&start, spos);
 
-    float polyPickExt[3];
-    polyPickExt[0] = 30;
-    polyPickExt[1] = 60;
-    polyPickExt[2] = 30;
+   // float polyPickExt[3];
+   // polyPickExt[0] = 30;
+   // polyPickExt[1] = 60;
+   // polyPickExt[2] = 30;
 
     float randomPt[3];
     float snearest[3];
@@ -392,10 +391,10 @@ bool CNavMesh::validPosition(const position_t& position)
     float spos[3];
     CNavMesh::ToDetourPos(&position, spos);
 
-    float polyPickExt[3];
-    polyPickExt[0] = 30;
-    polyPickExt[1] = 60;
-    polyPickExt[2] = 30;
+   // float polyPickExt[3];
+   // polyPickExt[0] = 30;
+   // polyPickExt[1] = 60;
+   // polyPickExt[2] = 30;
 
     float snearest[3];
 
@@ -432,10 +431,10 @@ bool CNavMesh::raycast(const position_t& start, const position_t& end, bool look
     float epos[3];
     CNavMesh::ToDetourPos(&end, epos);
 
-    float polyPickExt[3];
-    polyPickExt[0] = 30;
-    polyPickExt[1] = 60;
-    polyPickExt[2] = 30;
+   // float polyPickExt[3];
+   // polyPickExt[0] = 30;
+   // polyPickExt[1] = 60;
+   // polyPickExt[2] = 30;
 
     dtQueryFilter filter;
     filter.setIncludeFlags(0xffff);
@@ -518,10 +517,5 @@ bool CNavMesh::raycast(const position_t& start, const position_t& end, bool look
     }
 
     // no wall was hit
-    if (m_hit.t == FLT_MAX)
-    {
-        return true;
-    }
-
-    return false;
+    return m_hit.t == FLT_MAX;
 }

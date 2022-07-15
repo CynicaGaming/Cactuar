@@ -1082,7 +1082,7 @@ void CZone::CharZoneIn(CCharEntity* PChar)
                 PChar->SetSLevel(PChar->jobs.job[PChar->GetSJob()]);
             }
             charutils::CalculateStats(PChar);
-            PChar->pushPacket(new CCharStatsPacket(PChar));
+            PChar->pushPacket(new CCharStatsPacket(PChar, true));
         }
     }
 

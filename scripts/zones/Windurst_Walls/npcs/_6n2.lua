@@ -50,8 +50,7 @@ function onTrigger(player, npc)
     elseif
         iCanHearARainbow == QUEST_COMPLETED and
         thePuppetMaster == QUEST_AVAILABLE and
-        player:getMainLvl() >= AF1_QUEST_LEVEL and
-        player:getMainJob() == tpz.job.SMN
+        ((player:getMainLvl() >= AF1_QUEST_LEVEL and player:getMainJob() == tpz.job.SMN) or (player:isCustomizationEnabled(1) and player:getSubLvl() >= AF1_QUEST_LEVEL and player:getSubJob() == tpz.job.SMN))
     then
         player:startEvent(402)
     elseif thePuppetMaster == QUEST_ACCEPTED and player:getCharVar("ThePuppetMasterProgress") == 1 then
@@ -61,8 +60,7 @@ function onTrigger(player, npc)
     elseif
         thePuppetMaster == QUEST_COMPLETED and
         classReunion == QUEST_AVAILABLE and
-        player:getMainLvl() >= AF2_QUEST_LEVEL and
-        player:getMainJob() == tpz.job.SMN and
+        ((player:getMainLvl() >= AF2_QUEST_LEVEL and player:getMainJob() == tpz.job.SMN) or (player:isCustomizationEnabled(1) and player:getSubLvl() >= AF2_QUEST_LEVEL and player:getSubJob() == tpz.job.SMN)) and
         not player:needToZone()
     then
         player:startEvent(413)
@@ -72,8 +70,7 @@ function onTrigger(player, npc)
         thePuppetMaster == QUEST_COMPLETED and
         classReunion == QUEST_COMPLETED and
         carbuncleDebacle == QUEST_AVAILABLE and
-        player:getMainLvl() >= AF3_QUEST_LEVEL and
-        player:getMainJob() == tpz.job.SMN and
+        ((player:getMainLvl() >= AF3_QUEST_LEVEL and player:getMainJob() == tpz.job.SMN) or (player:isCustomizationEnabled(1) and player:getSubLvl() >= AF3_QUEST_LEVEL and player:getSubJob() == tpz.job.SMN)) and
         not player:needToZone()
     then
         player:startEvent(415)
@@ -83,6 +80,7 @@ function onTrigger(player, npc)
         player:startEvent(402)
 
     -- DEFAULT DIALOG
+
     else
         player:messageSpecial(ID.text.DOORS_SEALED_SHUT)
     end

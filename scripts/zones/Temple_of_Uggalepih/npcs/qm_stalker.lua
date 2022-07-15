@@ -21,7 +21,7 @@ function onTrigger(player, npc)
     if
         player:getCharVar("KnightStalker_Progress") == 4 and
         player:getCharVar("KnightStalker_Kill") == 0 and
-        player:getMainJob() == tpz.job.DRG and
+        ((player:getMainJob() == tpz.job.DRG) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.DRG)) and
         player:getPetID() == tpz.pet.id.WYVERN and
         npcUtil.popFromQM(player, npc, {ID.mob.CLEUVARION_M_RESOAIX, ID.mob.ROMPAULION_S_CITALLE}, {hide = 0, claim = false})
     then

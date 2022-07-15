@@ -97,16 +97,22 @@ void TryLearningSpells(CCharEntity* PChar, CMobEntity* PMob) {
 	std::vector<CCharEntity*> PBlueMages;
 
 	// populate PBlueMages
-	if (PChar->PParty != nullptr) {
-        for (uint8 i = 0; i < PChar->PParty->members.size(); i++) {
-			if (PChar->PParty->members[i]->GetMJob() == JOB_BLU && PChar->PParty->members[i]->objtype == TYPE_PC) {
-				PBlueMages.push_back((CCharEntity*)PChar->PParty->members[i]);
-			}
-		}
-	}
-	else if (PChar->GetMJob() == JOB_BLU) {
-		PBlueMages.push_back(PChar);
-	}
+        if (PChar->PParty != nullptr)
+        {
+            for (uint8 i = 0; i < PChar->PParty->members.size(); i++)
+            {
+                if ((PChar->PParty->members[i]->GetMJob() == JOB_BLU || ((map_config.dual_main_job) && (PChar->PParty->members[i]->GetSJob() == JOB_BLU))) &&
+                    PChar->PParty->members[i]->objtype == TYPE_PC)
+                {
+                    PBlueMages.push_back((CCharEntity*)PChar->PParty->members[i]);
+                }
+            }
+        }
+        else if (PChar->GetMJob() == JOB_BLU || ((map_config.dual_main_job) && (PChar->GetSJob() == JOB_BLU)))
+        {
+            PBlueMages.push_back(PChar);
+        }
+
 
 	// loop through the list of BLUs and see if they can learn.
 	for (size_t i = 0; i < PBlueMages.size(); i++) {
@@ -190,7 +196,7 @@ void UnequipAllBlueSpells(CCharEntity* PChar)
     charutils::BuildingCharTraitsTable(PChar);
 	PChar->pushPacket(new CCharJobExtraPacket(PChar, true));
 	PChar->pushPacket(new CCharJobExtraPacket(PChar, false));
-	PChar->pushPacket(new CCharStatsPacket(PChar));
+	PChar->pushPacket(new CCharStatsPacket(PChar, true));
 	charutils::CalculateStats(PChar);
 	PChar->UpdateHealth();
     SaveSetSpells(PChar);

@@ -26,10 +26,12 @@ function onTrigger(player, npc)
 
     local mLvl = player:getMainLvl()
     local mJob = player:getMainJob()
+    local sLvl = player:getSubLvl()
+    local sJob = player:getSubJob()
 
     -- A New Dawn (BST AF3)
     if (ScatteredIntoShadow == QUEST_COMPLETED and ANewDawn == QUEST_AVAILABLE) then
-        if (mJob == tpz.job.BST and mLvl >= 50) then
+        if ((mJob == tpz.job.BST and mLvl >= 50) or (player:isCustomizationEnabled(1) and sJob == tpz.job.BST and sLvl >= 50)) then
             if (ANewDawnEvent == 0) then
                 player:startEvent(5)
             elseif (ANewDawnEvent == 1) then

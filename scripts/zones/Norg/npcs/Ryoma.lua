@@ -31,6 +31,8 @@ function onTrigger(player, npc)
     local trueWill = player:getQuestStatus(OUTLANDS, tpz.quest.id.outlands.TRUE_WILL)
     local mLvl = player:getMainLvl()
     local mJob = player:getMainJob()
+    local sLvl = player:getSubLvl()
+    local sJob = player:getSubJob()
 
     if (wsQuestEvent ~= nil) then
         player:startEvent(wsQuestEvent)
@@ -40,11 +42,11 @@ function onTrigger(player, npc)
         else
             player:startEvent(94)
         end
-    elseif (twentyInPirateYears == QUEST_AVAILABLE and mJob == tpz.job.NIN and mLvl >= 40) then
+    elseif (twentyInPirateYears == QUEST_AVAILABLE and ((mJob == tpz.job.NIN and mLvl >= 40) or (player:isCustomizationEnabled(1) and sJob == tpz.job.NIN and sLvl >= 40))) then
         player:startEvent(133) -- Start Quest "20 in Pirate Years"
     elseif (twentyInPirateYears == QUEST_ACCEPTED and player:hasKeyItem(tpz.ki.TRICK_BOX)) then
         player:startEvent(134) -- Finish Quest "20 in Pirate Years"
-    elseif (twentyInPirateYears == QUEST_COMPLETED and illTakeTheBigBox == QUEST_AVAILABLE and mJob == tpz.job.NIN and mLvl >= 50 and player:needToZone() == false) then
+    elseif (twentyInPirateYears == QUEST_COMPLETED and illTakeTheBigBox == QUEST_AVAILABLE and ((mJob == tpz.job.NIN and mLvl >= 50) or (player:isCustomizationEnabled(1) and sJob == tpz.job.NIN and sLvl >= 50)) and player:needToZone() == false) then
         player:startEvent(135) -- Start Quest "I'll Take the Big Box"
     elseif (illTakeTheBigBox == QUEST_COMPLETED and trueWill == QUEST_AVAILABLE) then
         player:startEvent(136) -- Start Quest "True Will"

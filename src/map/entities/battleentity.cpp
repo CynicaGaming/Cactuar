@@ -290,7 +290,7 @@ float CBattleEntity::GetStoreTPMultiplier()
     if (objtype == TYPE_PC)
     {
         auto PChar = (CCharEntity*)this;
-        if (PChar->GetMJob() == JOB_SAM)
+        if ((PChar->GetMJob() == JOB_SAM) || (map_config.dual_main_job && (PChar->GetSJob() == JOB_SAM)))
         {
             samuraiMeritBonus = PChar->PMeritPoints->GetMeritValue(MERIT_STORE_TP_EFFECT, PChar);
         }
@@ -970,7 +970,24 @@ void CBattleEntity::SetMLevel(uint8 mlvl)
 
 void CBattleEntity::SetSLevel(uint8 slvl)
 {
-    m_slvl = (slvl > (m_mlvl >> 1) ? (m_mlvl == 1 ? 1 : (m_mlvl >> 1)) : slvl);
+    if (map_config.dual_main_job)
+    {
+        m_slvl = slvl * 2;
+
+        if (m_slvl >= 74) // 37 subjob "clicks" to 75
+        {
+            m_slvl++;
+        }
+
+        if (m_slvl > m_mlvl)
+        {
+            m_slvl = m_mlvl;
+        }
+    }
+    else
+    {
+        m_slvl = (slvl > (m_mlvl >> 1) ? (m_mlvl == 1 ? 1 : (m_mlvl >> 1)) : slvl);
+    }
 
     if (this->objtype & TYPE_PC)
         Sql_Query(SqlHandle, "UPDATE char_stats SET slvl = %u WHERE charid = %u LIMIT 1;", m_slvl, this->id);

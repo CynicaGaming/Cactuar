@@ -25,30 +25,70 @@
 
 #include "char_jobs.h"
 #include "../entities/charentity.h"
+#include "../utils/charutils.h"
 
 
-CCharJobsPacket::CCharJobsPacket(CCharEntity * PChar)
+
+
+CCharJobsPacket::CCharJobsPacket(CCharEntity* PChar, bool resetflips)
 {
-	this->type = 0x1B;
+    this->type = 0x1B;
     this->size = 0x34;
 
-	ref<uint8>(0x04) = PChar->look.race;
+    ref<uint8>(0x04) = PChar->look.race;
 
-	ref<uint8>(0x08) = PChar->GetMJob();			    // Highlight the main job in Yellow
-	ref<uint8>(0x0B) = PChar->GetSJob();			    // Highlight the sub job in Blue
+    if (map_config.dual_main_job || map_config.all_jobs_dual_wield)
+    {
+        if (resetflips)
+        {
+            charutils::SetCharVar(PChar, "JobFlipState", 0);
 
-	memcpy(data+(0x0C), &PChar->jobs, 22);
+            ref<uint8>(0x08) = PChar->GetMJob(); // подсвечиваем желтым главную профессию
+            ref<uint8>(0x0B) = PChar->GetSJob(); // подсвечиваем синим дополнительную профессию
+        }
+        else
+        {
+            uint8 flipstate = (uint8)charutils::GetCharVar(PChar, "JobFlipState");
 
-    memcpy(data+(0x20), &PChar->stats,14);
-	memcpy(data+(0x44), &PChar->jobs, 27);
+            if (flipstate == 0) // not flipped
+            {
+                ref<uint8>(0x08) = PChar->GetMJob();
+                ref<uint8>(0x0B) = PChar->GetSJob();
+            }
+
+            else if (map_config.dual_main_job && (flipstate == 1)) // flipped
+            {
+                ref<uint8>(0x08) = PChar->GetSJob();
+                ref<uint8>(0x0B) = PChar->GetMJob();
+            }
+
+            else if (map_config.all_jobs_dual_wield && (flipstate == 2)) // dw workaround
+            {
+                ref<uint8>(0x08) = PChar->GetMJob();
+                ref<uint8>(0x0B) = (JOBTYPE)6; // thf
+            }
+        }
+    }
+    else
+    {
+        // Tonberry customizations disabled
+        ref<uint8>(0x08) = PChar->GetMJob(); // Highlight the main job in Yellow
+        ref<uint8>(0x0B) = PChar->GetSJob(); // Highlight the sub job in Blue
+    }
+
+    memcpy(data + (0x0C), &PChar->jobs, 22);
+
+    memcpy(data + (0x20), &PChar->stats, 14);
+    memcpy(data + (0x44), &PChar->jobs, 27);
 
     ref<uint32>(0x3C) = PChar->health.hp;
-	ref<uint32>(0x40) = PChar->health.mp;
+    ref<uint32>(0x40) = PChar->health.mp;
 
-	ref<uint32>(0x44) = PChar->jobs.unlocked & 1;    // первый бит в unlocked отвечает за дополнительную профессию
+    ref<uint32>(0x44) = PChar->jobs.unlocked & 1; // первый бит в unlocked отвечает за дополнительную профессию
 
-    ref<uint16>(0x60) = PChar->m_EquipBlock;         // Locked equipment slots
-    ref<uint16>(0x62) = PChar->m_StatsDebilitation;  // Bit field. Underestimation of physical characteristics, the characteristic turns red and a red arrlow appears next to it.
+    ref<uint16>(0x60) = PChar->m_EquipBlock; // Locked equipment slots
+    ref<uint16>(0x62) =
+        PChar->m_StatsDebilitation; // Bit field. Underestimation of physical characteristics, the characteristic turns red and a red arrlow appears next to it.
 
     ref<uint8>(0x64) = 0x01; // Unknown, set due to Retail reference; suspicion around mentor unlock
     ref<uint8>(0x66) = 0x01; // Mastery Rank (In Profile Menu)

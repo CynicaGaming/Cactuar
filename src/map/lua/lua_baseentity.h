@@ -820,6 +820,13 @@ public:
 
     int32 checkVersionMismatch(lua_State* L);  // Check whether the player is using the correct client version
     int32 getInfluenceMult(lua_State*);        // If influence boost is enabled, get the boost of the player's nation
+
+    //Tonberry Stuff
+    int32 flip(lua_State*);
+   // int32 isWeekendEvent(lua_State*);
+   // int32 setPVP(lua_State*);
+   // int32 isPVP(lua_State*);
+    int32 isCustomizationEnabled(lua_State*);
 };
 
 #endif
