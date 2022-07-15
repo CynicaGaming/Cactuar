@@ -1478,8 +1478,8 @@ namespace charutils
         charutils::SaveCharExp(PChar, PChar->GetMJob());
         PChar->updatemask |= UPDATE_HP;
 
-        PChar->pushPacket(new CCharJobsPacket(PChar));
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharJobsPacket(PChar, true));
+        PChar->pushPacket(new CCharStatsPacket(PChar, true));
         PChar->pushPacket(new CCharSkillsPacket(PChar));
         PChar->pushPacket(new CCharRecastPacket(PChar));
         PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -1964,15 +1964,15 @@ namespace charutils
             return false;
         }
 
-        if  ((!PChar->m_GMSuperpowers) &&
-            ((PChar->m_EquipBlock & (1 << equipSlotID)) ||
-            !(PItem->getJobs() & (1 << (PChar->GetMJob() - 1))) ||
-            ((PItem->getRace() & (1 << (PChar->look.race - 1))) == 0) ||
-            (PItem->getReqLvl() > (map_config.disable_gear_scaling ?
-            PChar->GetMLevel() : PChar->jobs.job[PChar->GetMJob()]))))
+
+    if ((!PChar->m_GMSuperpowers) && ((PChar->m_EquipBlock & (1 << equipSlotID)) ||
+                                          !(PItem->getJobs() & (1 << (PChar->GetMJob() - 1))) && !(PItem->getJobs() & (1 << (PChar->GetSJob() - 1))) ||
+                                          ((PItem->getRace() & (1 << (PChar->look.race - 1))) == 0) ||
+                                          (PItem->getReqLvl() > (map_config.disable_gear_scaling ? PChar->GetMLevel() : PChar->jobs.job[PChar->GetMJob()]))))
         {
             return false;
         }
+
 
         if (equipSlotID == SLOT_MAIN)
         {
@@ -2467,11 +2467,12 @@ namespace charutils
     *                                                                       *
     ************************************************************************/
 
-    void CheckValidEquipment(CCharEntity* PChar)
+void CheckValidEquipment(CCharEntity* PChar)
     {
         CItemEquipment* PItem = nullptr;
 
-        if (PChar->m_GMSuperpowers) {
+        if (PChar->m_GMSuperpowers)
+        {
             return;
         }
 
@@ -2483,8 +2484,7 @@ namespace charutils
                 continue;
             }
 
-            if (PItem->getReqLvl() > (map_config.disable_gear_scaling ?
-                PChar->GetMLevel() : PChar->jobs.job[PChar->GetMJob()]))
+            if (PItem->getReqLvl() > (map_config.disable_gear_scaling ? PChar->GetMLevel() : PChar->jobs.job[PChar->GetMJob()]))
             {
                 UnequipItem(PChar, slotID);
                 continue;
@@ -2493,23 +2493,25 @@ namespace charutils
             if (slotID == SLOT_SUB && !PItem->IsShield())
             {
                 // Unequip if no main weapon or a non-grip subslot without DW
-                if (!PChar->getEquip(SLOT_MAIN) ||
-                    (!charutils::hasTrait(PChar, TRAIT_DUAL_WIELD) &&
-                     !(((CItemWeapon*)PItem)->getSkillType() == SKILL_NONE)))
+                if (!PChar->getEquip(SLOT_MAIN) || (!charutils::hasTrait(PChar, TRAIT_DUAL_WIELD) && !(((CItemWeapon*)PItem)->getSkillType() == SKILL_NONE)))
                 {
                     UnequipItem(PChar, SLOT_SUB);
                     continue;
                 }
             }
 
-            if ((PItem->getJobs() & (1 << (PChar->GetMJob() - 1))) &&
-                (PItem->getEquipSlotId() & (1 << slotID)))
+            if ((((PItem->getJobs() & (1 << (PChar->GetMJob() - 1))) && (PChar->GetMLevel() >= PItem->getReqLvl())) ||
+                 ((PItem->getJobs() & (1 << (PChar->GetSJob() - 1))) && (PChar->GetSLevel() >= PItem->getReqLvl())))
+
+                && (PItem->getEquipSlotId() & (1 << slotID)))
+
             {
                 continue;
             }
 
             UnequipItem(PChar, slotID);
         }
+
         // Unarmed H2H weapon check
         if (!PChar->getEquip(SLOT_MAIN) || !PChar->getEquip(SLOT_MAIN)->isType(ITEM_EQUIPMENT) || PChar->m_Weapons[SLOT_MAIN] == itemutils::GetUnarmedH2HItem())
         {
@@ -3207,6 +3209,12 @@ namespace charutils
             }
             uint16 MaxMSkill = battleutils::GetMaxSkill((SKILLTYPE)i, PChar->GetMJob(), PChar->GetMLevel());
             uint16 MaxSSkill = battleutils::GetMaxSkill((SKILLTYPE)i, PChar->GetSJob(), PChar->GetSLevel());
+
+            if (MaxSSkill > MaxMSkill)
+            {
+                MaxMSkill = MaxSSkill;
+            }
+
             uint16 skillBonus = 0;
 
             // apply arts bonuses
@@ -3353,35 +3361,58 @@ namespace charutils
     *                                                                       *
     ************************************************************************/
 
-    void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
+void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
     {
-
-        // This usually happens after a crash
-        TPZ_DEBUG_BREAK_IF(SkillID >= MAX_SKILLTYPE);   // выход за пределы допустимых умений
-
         if (PChar->objtype != TYPE_PC)
         {
-            //ShowDebug(CL_CYAN"INVALID CLIENT %s CANNOT SKILLUP ID %i: NOT A PLAYER CHARACTER\n" CL_RESET, PChar->GetName(), SkillID);
+            // ShowDebug(CL_CYAN"INVALID CLIENT %s CANNOT SKILLUP ID %i: NOT A PLAYER CHARACTER\n" CL_RESET, PChar->GetName(), SkillID);
             return;
         }
 
-        if ((PChar->WorkingSkills.rank[SkillID] != 0) && !(PChar->WorkingSkills.skill[SkillID] & 0x8000))
+        // This usually happens after a crash
+        TPZ_DEBUG_BREAK_IF(SkillID >= MAX_SKILLTYPE); // выход за пределы допустимых умений
+
+        /*
+        if (SkillID == 0 || SkillID == 63)
+        {
+        ShowDebug(CL_CYAN"WRONG SKILLID %i FROM CLIENT %s\n" CL_RESET, SkillID, PChar->GetName());
+        DSP_DEBUG_BREAK_IF(SkillID == 0 || SkillID == 63);
+        }
+         */
+
+        if ((PChar->WorkingSkills.rank[SkillID] >= 0) && !(PChar->WorkingSkills.skill[SkillID] & 0x8000))
         {
             uint16 CurSkill = PChar->RealSkills.skill[SkillID];
-            uint16 CapSkill = battleutils::GetMaxSkill(SkillID, PChar->GetMJob(), PChar->GetMLevel());
-            // Max skill this victim level will allow.
-            // Note this is no longer retail accurate, since now 'decent challenge' mobs allow to cap any skill.
-            bool usingMonsterLevel = PChar->GetMLevel() > lvl;
-            uint16 MaxSkill = battleutils::GetMaxSkill(SkillID, PChar->GetMJob(), std::min(PChar->GetMLevel(), lvl));
 
-            int16  Diff = MaxSkill - CurSkill / 10;
-            double SkillUpChance = Diff / 5.0 + map_config.skillup_chance_multiplier * (2.0 - log10(1.0 + CurSkill / 100));
+            uint16 mjobmax = battleutils::GetMaxSkill(SkillID, PChar->GetMJob(), std::min(PChar->GetMLevel(), lvl));
+            uint16 sjobmax = battleutils::GetMaxSkill(SkillID, PChar->GetSJob(), std::min(PChar->GetSLevel(), lvl));
+
+            uint16 MaxSkill = std::max(mjobmax, sjobmax);
+
+            float ratemult = 1.5f;
+            if (CurSkill < 90)
+            {
+                ratemult = 3.0f;
+            }
+
+            if (MaxSkill == 0)
+            {
+                return;
+            }
+
+            int16 Diff = MaxSkill - CurSkill / 10;
+            double SkillUpChance = ratemult * (Diff / 5.0 + map_config.skillup_chance_multiplier * (2.0 - log10(1.0 + CurSkill / 100)));
 
             double random = tpzrand::GetRandomNumber(1.);
 
-            if (SkillUpChance > 0.5)
+            if (SkillUpChance > 0.64 && ratemult == 1.5f)
             {
-                SkillUpChance = 0.5;
+                SkillUpChance = 0.64;
+            }
+
+            if (SkillUpChance > 0.92 && ratemult == 3.0f)
+            {
+                SkillUpChance = 0.92;
             }
 
             // Check for skillup% bonus. https://www.bg-wiki.com/bg/Category:Skill_Up_Food
@@ -3399,30 +3430,40 @@ namespace charutils
             if (Diff > 0 && random < SkillUpChance)
             {
                 double chance = 0;
-                uint8  SkillAmount = 1;
-                uint8  tier = std::min(1 + (Diff / 5), 5);
+                uint8 SkillAmount = 1;
+                uint8 tier = std::min(1 + (Diff / 5), 5);
 
                 for (uint8 i = 0; i < 4; ++i) // 1 + 4 возможных дополнительных (максимум 5)
                 {
                     random = tpzrand::GetRandomNumber(1.);
-
                     switch (tier)
                     {
-                        case 5:  chance = 0.900; break;
-                        case 4:  chance = 0.700; break;
-                        case 3:  chance = 0.500; break;
-                        case 2:  chance = 0.300; break;
-                        case 1:  chance = 0.200; break;
-                        default: chance = 0.000; break;
+                        case 5:
+                            chance = 0.900;
+                            break;
+                        case 4:
+                            chance = 0.700;
+                            break;
+                        case 3:
+                            chance = 0.500;
+                            break;
+                        case 2:
+                            chance = 0.300;
+                            break;
+                        case 1:
+                            chance = 0.200;
+                            break;
+                        default:
+                            chance = 0.000;
+                            break;
                     }
 
-                    if (chance < random || SkillAmount == 5) break;
-
+                    if (chance < random || SkillAmount == 5)
+                        break;
                     tier -= 1;
                     SkillAmount += 1;
                 }
-                // convert to 10th units
-                CapSkill = CapSkill * 10;
+                MaxSkill = MaxSkill * 10;
 
                 // Do skill amount multiplier (Will only be applied if default setting is changed)
                 if (map_config.skillup_amount_multiplier > 1)
@@ -3433,23 +3474,18 @@ namespace charutils
                         SkillAmount = 9;
                     }
                 }
-
-                if (SkillAmount + CurSkill >= CapSkill && !usingMonsterLevel)
+                if (SkillAmount + CurSkill >= MaxSkill)
                 {
-                    // skill is capped. set blue flag
-                    SkillAmount = CapSkill - CurSkill;
+                    SkillAmount = MaxSkill - CurSkill;
                     PChar->WorkingSkills.skill[SkillID] |= 0x8000;
                 }
-
                 PChar->RealSkills.skill[SkillID] += SkillAmount;
                 PChar->pushPacket(new CMessageBasicPacket(PChar, PChar, SkillID, SkillAmount, 38));
-
-                if ((CurSkill / 10) < (CurSkill + SkillAmount) / 10) //if gone up a level
+                if ((CurSkill / 10) < (CurSkill + SkillAmount) / 10) // if gone up a level
                 {
                     PChar->WorkingSkills.skill[SkillID] += 1;
                     PChar->pushPacket(new CCharSkillsPacket(PChar));
                     PChar->pushPacket(new CMessageBasicPacket(PChar, PChar, SkillID, (CurSkill + SkillAmount) / 10, 53));
-
                     CheckWeaponSkill(PChar, SkillID);
                     /* ignoring this for now
                     if (SkillID >= 1 && SkillID <= 12)
@@ -3463,6 +3499,7 @@ namespace charutils
             }
         }
     }
+
 
     /************************************************************************
     *                                                                       *
@@ -3622,7 +3659,7 @@ namespace charutils
     void setTitle(CCharEntity* PChar, uint16 Title)
     {
         PChar->profile.title = Title;
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharStatsPacket(PChar, true));
 
         addTitle(PChar, Title);
         SaveTitles(PChar);
@@ -4277,7 +4314,7 @@ namespace charutils
                 BuildingCharTraitsTable(PChar);
                 BuildingCharWeaponSkills(PChar);
 
-                PChar->pushPacket(new CCharJobsPacket(PChar));
+                PChar->pushPacket(new CCharJobsPacket(PChar, true));
                 PChar->pushPacket(new CCharUpdatePacket(PChar));
                 PChar->pushPacket(new CCharSkillsPacket(PChar));
                 PChar->pushPacket(new CCharRecastPacket(PChar));
@@ -4316,7 +4353,7 @@ namespace charutils
         }
 
         SaveCharExp(PChar, PChar->GetMJob());
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharStatsPacket(PChar, true));
     }
 
     void tryCompleteGK75(CCharEntity* PChar)
@@ -4536,7 +4573,7 @@ namespace charutils
                 SaveCharJob(PChar, PChar->GetMJob());
                 SaveCharExp(PChar, PChar->GetMJob());
 
-                PChar->pushPacket(new CCharJobsPacket(PChar));
+                PChar->pushPacket(new CCharJobsPacket(PChar, true));
                 PChar->pushPacket(new CCharUpdatePacket(PChar));
                 PChar->pushPacket(new CCharSkillsPacket(PChar));
                 PChar->pushPacket(new CCharRecastPacket(PChar));
@@ -4547,7 +4584,7 @@ namespace charutils
                 PChar->pushPacket(new CCharSyncPacket(PChar));
 
                 PChar->loc.zone->PushPacket(PChar, CHAR_INRANGE_SELF, new CMessageCombatPacket(PChar, PMob, PChar->jobs.job[PChar->GetMJob()], 0, 9));
-                PChar->pushPacket(new CCharStatsPacket(PChar));
+                PChar->pushPacket(new CCharStatsPacket(PChar, true));
 
                 luautils::OnPlayerLevelUp(PChar);
                 PChar->updatemask |= UPDATE_HP;
@@ -4558,7 +4595,7 @@ namespace charutils
         SaveCharStats(PChar);
         SaveCharJob(PChar, PChar->GetMJob());
         SaveCharExp(PChar, PChar->GetMJob());
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharStatsPacket(PChar, true));
 
         if (onLimitMode)
             PChar->pushPacket(new CMenuMeritPacket(PChar));
@@ -6282,7 +6319,7 @@ namespace charutils
             {
                 // weapon is now broken
                 PChar->PLatentEffectContainer->CheckLatentsWeaponBreak(slotid);
-                PChar->pushPacket(new CCharStatsPacket(PChar));
+                PChar->pushPacket(new CCharStatsPacket(PChar, false));
             }
             
             char extra[sizeof(PWeapon->m_extra) * 2 + 1];

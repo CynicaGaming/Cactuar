@@ -40,6 +40,8 @@ function onTrigger(player, npc)
     -- Checking levels and jobs for af quest
     local mLvl = player:getMainLvl()
     local mJob = player:getMainJob()
+    local sLvl = player:getSubLvl()
+    local sJob = player:getSubJob()
     -- Check if they have key item "Ordelle whetStone"
     local OrdelleWhetstone = player:hasKeyItem(tpz.ki.ORDELLE_WHETSTONE)
     local sharpeningTheSwordCS = player:getCharVar("sharpeningTheSwordCS")
@@ -51,12 +53,13 @@ function onTrigger(player, npc)
     elseif (fatherAndSon == QUEST_ACCEPTED and player:getCharVar("QuestfatherAndSonVar") == 1) then
         player:startEvent(509) -- Finish Quest "Father and Son" (part1)
     elseif (sharpeningTheSword == QUEST_AVAILABLE and player:getCharVar("returnedAilbecheRod") == 1) then
-        if (mJob == tpz.job.PLD and mLvl < 40 or mJob ~= tpz.job.PLD) then
+        if ((player:isCustomizationEnabled(1) == false and (mJob == tpz.job.PLD and mLvl < 40 or mJob ~= tpz.job.PLD)) or 
+            (player:isCustomizationEnabled(1) and ((mJob == tpz.job.PLD and mLvl < 40) or (sJob == tpz.job.PLD and sLvl < 40) or (mJob ~= tpz.job.PLD and sJob ~= tpz.job.PLD)))) then
             player:startEvent(12) -- Dialog after "Father and Son" (part2)
     -- "Sharpening the Sword" Quest Dialogs
-        elseif (mJob == tpz.job.PLD and mLvl >= 40 and sharpeningTheSwordCS == 0) then
+        elseif (((mJob == tpz.job.PLD and mLvl >= 40) or (player:isCustomizationEnabled(1) and sJob == tpz.job.PLD and sLvl >= 40)) and sharpeningTheSwordCS == 0) then
             player:startEvent(45) -- Start Quest "Sharpening the Sword" with thank you for the rod
-        elseif (mJob == tpz.job.PLD and mLvl >= 40 and sharpeningTheSwordCS == 1) then
+        elseif (((mJob == tpz.job.PLD and mLvl >= 40) or (player:isCustomizationEnabled(1) and sJob == tpz.job.PLD and sLvl >= 40)) and sharpeningTheSwordCS == 1) then
             player:startEvent(43) -- Start Quest "Sharpening the Sword"
         end
     elseif (sharpeningTheSword == QUEST_ACCEPTED and OrdelleWhetstone == false) then
@@ -64,7 +67,7 @@ function onTrigger(player, npc)
     elseif (sharpeningTheSword == QUEST_ACCEPTED and OrdelleWhetstone == true) then
         player:startEvent(44) -- Finish Quest "Sharpening the Sword"
     -- "A Boy's Dream" Quest Dialogs
-    elseif (aBoysDream == QUEST_AVAILABLE and mJob == tpz.job.PLD and mLvl >= 50 and player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.SHARPENING_THE_SWORD) == QUEST_COMPLETED) then
+    elseif (aBoysDream == QUEST_AVAILABLE and ((mJob == tpz.job.PLD and mLvl >= 50) or (player:isCustomizationEnabled(1) and sJob == tpz.job.PLD and sLvl >= 50))) then
         if (aBoysDreamCS == 0) then
             player:startEvent(41) -- Start Quest "A Boy's Dream" (long cs)
         else

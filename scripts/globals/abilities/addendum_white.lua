@@ -36,6 +36,12 @@ function onUseAbility(player, target, ability)
     if (player:getMainJob() == tpz.job.SCH and player:getMainLvl() >= 20) then
         regenbonus = 3 * math.floor((player:getMainLvl() - 10) / 10)
     end
+    if player:isCustomizationEnabled(1) == true then
+        if (player:getSubJob() == tpz.job.SCH and player:getSubLvl() >= 20) then
+            regenbonus = 3 * math.floor((player:getMainLvl() - 10) / 10)
+        end
+    end
+
 
     player:addStatusEffectEx(tpz.effect.ADDENDUM_WHITE, tpz.effect.ADDENDUM_WHITE, effectbonus, 0, 7200, 0, regenbonus, true)
 

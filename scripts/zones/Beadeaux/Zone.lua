@@ -39,7 +39,7 @@ function onZoneIn(player, prevZone)
             cs = 121
         elseif player:getCurrentMission(BASTOK) == tpz.mission.id.bastok.THE_FOUR_MUSKETEERS and player:getCharVar("MissionStatus") == 1 then
             cs = 120
-        elseif player:getMainJob() == tpz.job.DRK and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.DARK_PUPPET) == QUEST_COMPLETED and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.BLADE_OF_EVIL) == QUEST_AVAILABLE then
+        elseif (player:getMainJob() == tpz.job.DRK or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.DRK)) and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.DARK_PUPPET) == QUEST_COMPLETED and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.BLADE_OF_EVIL) == QUEST_AVAILABLE then
             cs = 122
         end
     end

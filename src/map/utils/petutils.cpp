@@ -1385,7 +1385,8 @@ namespace petutils
 
         PPetData = *std::find_if(g_PPetList.begin(), g_PPetList.end(), [PetID](Pet_t* t) { return t->PetID == PetID; });
 
-        if (PMaster->GetMJob() != JOB_DRG && PetID == PETID_WYVERN)
+        if (PMaster->GetMJob() != JOB_DRG && (!((map_config.dual_main_job) && (PMaster->GetSJob() == JOB_DRG))) && PetID == PETID_WYVERN)
+
         {
             return;
         }

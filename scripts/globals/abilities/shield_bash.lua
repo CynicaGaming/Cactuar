@@ -41,12 +41,13 @@ function onUseAbility(player, target, ability)
     end
 
     -- Main job factors
-    if player:getMainJob() == tpz.job.PLD then
+    if ((player:getMainJob() == tpz.job.PLD) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.PLD)) then
         damage = math.floor(damage)
     else
         damage = math.floor(damage / 2.2)
         chance = 80
     end
+
 
     -- Calculate stun proc chance
     if player:getMainJob() == tpz.job.PLD then

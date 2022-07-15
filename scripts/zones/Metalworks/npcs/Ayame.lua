@@ -81,7 +81,7 @@ function onTrigger(player, npc)
     elseif (player:getCurrentMission(BASTOK) == tpz.mission.id.bastok.THE_CRYSTAL_LINE and
         player:hasKeyItem(tpz.ki.C_L_REPORTS)) then
         player:startEvent(712)
-    elseif (trueStrength == QUEST_AVAILABLE and player:getMainJob() == tpz.job.MNK and player:getMainLvl() >= 50) then
+    elseif (trueStrength == QUEST_AVAILABLE and ((player:getMainJob() == tpz.job.MNK and player:getMainLvl() >= 50)) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.MNK and player:getSubLvl() >= 50)) then
         player:startEvent(748) -- Start Quest "True Strength"
     elseif (player:getCharVar("FadedPromises") == 1) then
         player:startEvent(803)

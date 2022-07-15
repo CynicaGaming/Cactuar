@@ -347,15 +347,15 @@ namespace battleutils
     bool CanUseWeaponskill(CCharEntity* PChar, CWeaponSkill* PSkill)
     {
         if ((((PSkill->getSkillLevel() > 0 && PChar->GetSkill(PSkill->getType()) >= PSkill->getSkillLevel() &&
-            (PSkill->getUnlockId() == 0 || charutils::hasLearnedWeaponskill(PChar, PSkill->getUnlockId()))) ||
-            (PSkill->getSkillLevel() == 0 && (PSkill->getUnlockId() == 0 || charutils::hasLearnedWeaponskill(PChar, PSkill->getUnlockId())))) &&
-            (PSkill->getJob(PChar->GetMJob()) > 0 || (PSkill->getJob(PChar->GetSJob()) > 0 && !PSkill->mainOnly())))
-            && PChar->GetMLevel() >= PSkill->getRequiredLevel())
+               (PSkill->getUnlockId() == 0 || charutils::hasLearnedWeaponskill(PChar, PSkill->getUnlockId()))) ||
+              (PSkill->getSkillLevel() == 0 && (PSkill->getUnlockId() == 0 || charutils::hasLearnedWeaponskill(PChar, PSkill->getUnlockId())))) &&
+             (PSkill->getJob(PChar->GetMJob()) > 0 || (PSkill->getJob(PChar->GetSJob()) > 0 && (map_config.dual_main_job || !PSkill->mainOnly())))))
         {
             return true;
         }
         return false;
     }
+
 
     /************************************************************************
     *                                                                       *
@@ -1919,24 +1919,32 @@ namespace battleutils
         return (int8)std::clamp((int32)((base + (int32)skillmodifier) * blockRateMod), 5, (shieldSize == 6 ? 100 : std::max<int32>((int32)(65 * blockRateMod), 100)));
     }
 
-     uint8 GetParryRate(CBattleEntity* PAttacker, CBattleEntity* PDefender)
+    uint8 GetParryRate(CBattleEntity* PAttacker, CBattleEntity* PDefender)
     {
         CItemWeapon* PWeapon = GetEntityWeapon(PDefender, SLOT_MAIN);
-        // An Entity using not using HtH and not a mob (weapon ID 0 signifies a mob/pet)
-        if (((PWeapon != nullptr && PWeapon->getID() != 0 && PWeapon->getID() != 65535 && PWeapon->getSkillType() != SKILL_HAND_TO_HAND) || 
-             (PDefender->objtype == TYPE_PET && static_cast<CPetEntity*>(PDefender)->getPetType() == PETTYPE_AUTOMATON && PDefender->GetMJob() == JOB_PLD)) // Valoredge Puppet
-            && PDefender->PAI->IsEngaged()) // Everyone has to be engaged to parry
+        if ((PWeapon != nullptr && PWeapon->getID() != 0 && PWeapon->getID() != 65535 &&
+            PWeapon->getSkillType() != SKILL_HAND_TO_HAND) && PDefender->PAI->IsEngaged())
         {
             JOBTYPE job = PDefender->GetMJob();
+            JOBTYPE sjob = PDefender->GetSJob();
 
-            if (job == JOB_NIN || job == JOB_SAM ||
-                job == JOB_THF || job == JOB_BST || job == JOB_DRG ||
-                job == JOB_PLD || job == JOB_WAR || job == JOB_BRD ||
-                job == JOB_DRK || job == JOB_RDM || job == JOB_COR ||
-                job == JOB_DNC || job == JOB_PUP || job == JOB_RUN ||
-                job == JOB_BLU || job == JOB_MNK || job == JOB_GEO ||
-                job == JOB_SCH)
+            if ((job == JOB_NIN || job == JOB_SAM ||
+                 job == JOB_THF || job == JOB_BST || job == JOB_DRG ||
+                 job == JOB_PLD || job == JOB_WAR || job == JOB_BRD ||
+                 job == JOB_DRK || job == JOB_RDM || job == JOB_COR ||
+                 job == JOB_DNC || job == JOB_PUP || job == JOB_RUN ||
+                 job == JOB_BLU || job == JOB_MNK || job == JOB_GEO ||
+                 job == JOB_SCH) ||
+                (map_config.dual_main_job && (
+                    sjob == JOB_NIN || sjob == JOB_SAM ||
+                    sjob == JOB_THF || sjob == JOB_BST || sjob == JOB_DRG ||
+                    sjob == JOB_PLD || sjob == JOB_WAR || sjob == JOB_BRD ||
+                    sjob == JOB_DRK || sjob == JOB_RDM || sjob == JOB_COR ||
+                    sjob == JOB_DNC || sjob == JOB_PUP || sjob == JOB_RUN ||
+                    sjob == JOB_BLU || sjob == JOB_MNK || sjob == JOB_GEO ||
+                    sjob == JOB_SCH)))
             {
+
                 // http://wiki.ffxiclopedia.org/wiki/Talk:Parrying_Skill
                 // {(Parry Skill x .125) + ([Player Agi - Enemy Dex] x .125)} x Diff
 
@@ -2621,8 +2629,9 @@ namespace battleutils
                 crithitrate = 100;
             }
         }
-        else if (PAttacker->objtype == TYPE_PC && PAttacker->GetMJob() == JOB_THF && charutils::hasTrait((CCharEntity*)PAttacker, TRAIT_ASSASSIN) && (!ignoreSneakTrickAttack) &&
-            PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK))
+        else if (PAttacker->objtype == TYPE_PC && (map_config.dual_main_job || (PAttacker->GetMJob() == JOB_THF)) &&
+                 charutils::hasTrait((CCharEntity*)PAttacker, TRAIT_ASSASSIN) && (!ignoreSneakTrickAttack) &&
+                 PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK))
         {
             CBattleEntity* taChar = battleutils::getAvailableTrickAttackChar(PAttacker, PDefender);
             if (taChar != nullptr) crithitrate = 100;
@@ -3034,7 +3043,7 @@ namespace battleutils
         }
 
         // hasso occasionally triggers Zanshin after landing a normal attack, only active while Samurai is set as Main
-        if (PEntity->GetMJob() == JOB_SAM)
+        if ((PEntity->GetMJob() == JOB_SAM) || (map_config.dual_main_job && (PEntity->GetSJob() == JOB_SAM)))
         {
             if (PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_HASSO))
             {
@@ -3676,6 +3685,22 @@ namespace battleutils
 
             uint8  SlotID = 0;
             uint16 toolID = PSpell->getMPCost();
+
+                        CItem* PItem = PChar->getEquip(SLOT_WAIST);
+
+            uint16 waistID = 0;
+
+            // waistID = PChar->getEquip(SLOT_WAIST)->getID(); // crash the server
+
+            if (PItem)
+            {
+                waistID = PChar->getEquip(SLOT_WAIST)->getID();
+            } // 15940 is Gosha
+
+            if (charutils::hasTrait(PChar, TRAIT_NINJA_TOOL_EXPERT) || waistID == 15940)
+            {
+                return true;
+            }
 
             if (ERROR_SLOTID == (SlotID = PChar->getStorage(LOC_INVENTORY)->SearchItem(toolID)))
             {
@@ -4346,7 +4371,7 @@ namespace battleutils
             uint16 enmityReduction = PAttacker->getMod(Mod::HIGH_JUMP_ENMITY_REDUCTION) + 50;
 
             // DRG sub has only 30% enmity removed instead of 50%.
-            if (PAttacker->GetSJob() == JOB_DRG)
+            if ((!map_config.dual_main_job) && (PAttacker->GetSJob() == JOB_DRG))
             {
                 enmityReduction = PAttacker->getMod(Mod::HIGH_JUMP_ENMITY_REDUCTION) + 30;
             }
@@ -6174,7 +6199,7 @@ namespace battleutils
         {
             if (PSpell->getAOE() == SPELLAOE_RADIAL_MANI && PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_MANIFESTATION))
             {
-                if (PEntity->GetMJob() == JOB_SCH)
+                if ((PEntity->GetMJob() == JOB_SCH) || ((map_config.dual_main_job && (PEntity->GetSJob() == JOB_SCH))))
                 {
                     recast *= 2;
                 }

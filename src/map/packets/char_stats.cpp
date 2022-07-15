@@ -31,7 +31,7 @@
 #include "../modifier.h"
 
 
-CCharStatsPacket::CCharStatsPacket(CCharEntity * PChar)
+CCharStatsPacket::CCharStatsPacket(CCharEntity * PChar, bool resetflips)
 {
 	this->type = 0x61;
     // Note: Appears to have changed to 0x70 on the November 2021
@@ -40,13 +40,68 @@ CCharStatsPacket::CCharStatsPacket(CCharEntity * PChar)
     // new clients start crashing this may need to be changed.
 	this->size = 0x30;
 
-    ref<uint32>(0x04) = PChar->GetMaxHP();
-    ref<uint32>(0x08) = PChar->GetMaxMP();
 
-	ref<uint8>(0x0C) = PChar->GetMJob();
-	ref<uint8>(0x0D) = PChar->GetMLevel();
-	ref<uint8>(0x0E) = PChar->GetSJob();
-	ref<uint8>(0x0F) = PChar->GetSLevel();
+    ref<uint32>(0x04) = PChar->GetMaxHP();
+        ref<uint32>(0x08) = PChar->GetMaxMP();
+
+        if (map_config.dual_main_job || map_config.all_jobs_dual_wield)
+        {
+            if (resetflips == true)
+            {
+                charutils::SetCharVar(PChar, "JobFlipState", 0);
+
+                ref<uint8>(0x0C) = PChar->GetMJob();
+                ref<uint8>(0x0D) = PChar->GetMLevel();
+                ref<uint8>(0x0E) = PChar->GetSJob();
+                ref<uint8>(0x0F) = PChar->GetSLevel();
+            }
+
+            if (resetflips == false)
+            {
+                uint8 flipstate = (uint8)charutils::GetCharVar(PChar, "JobFlipState");
+
+                if (flipstate == 0) // not flipped, no DWWA
+                {
+                    ref<uint8>(0x0C) = PChar->GetMJob();
+                    ref<uint8>(0x0D) = PChar->GetMLevel();
+                    ref<uint8>(0x0E) = PChar->GetSJob();
+                    ref<uint8>(0x0F) = PChar->GetSLevel();
+                }
+
+                else if (flipstate == 1) // flipped, no DWWA
+                {
+                    ref<uint8>(0x0C) = PChar->GetSJob();
+                    ref<uint8>(0x0D) = PChar->GetSLevel();
+                    ref<uint8>(0x0E) = PChar->GetMJob();
+                    ref<uint8>(0x0F) = PChar->GetMLevel();
+                }
+
+                else if (flipstate == 2) // dw workaround, no flip
+                {
+                    ref<uint8>(0x0C) = PChar->GetMJob();
+                    ref<uint8>(0x0D) = PChar->GetMLevel();
+                    ref<uint8>(0x0E) = (JOBTYPE)JOB_NIN;
+                    ref<uint8>(0x0F) = 1;
+                }
+
+                else if (flipstate == 3) // dw workaround while flipped
+                {
+                    ref<uint8>(0x0C) = PChar->GetSJob();
+                    ref<uint8>(0x0D) = PChar->GetSLevel();
+                    ref<uint8>(0x0E) = (JOBTYPE)JOB_NIN;
+                    ref<uint8>(0x0F) = 1;
+                }
+            }
+        }
+        else
+        {
+            // No Tonberry customizations
+            ref<uint8>(0x0C) = PChar->GetMJob();
+            ref<uint8>(0x0D) = PChar->GetMLevel();
+            ref<uint8>(0x0E) = PChar->GetSJob();
+            ref<uint8>(0x0F) = PChar->GetSLevel();
+        }
+
 
 	ref<uint16>(0x10) = PChar->jobs.exp[PChar->GetMJob()];
 	ref<uint16>(0x12) = charutils::GetExpNEXTLevel(PChar->jobs.job[PChar->GetMJob()]);

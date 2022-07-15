@@ -5101,7 +5101,7 @@ int32 CLuaBaseEntity::setEquipBlock(lua_State* L)
     {
         auto PChar {static_cast<CCharEntity*>(m_PBaseEntity)};
         PChar->m_EquipBlock = (uint16)lua_tointeger(L, 1);
-        PChar->pushPacket(new CCharJobsPacket(PChar));
+        PChar->pushPacket(new CCharJobsPacket(PChar, true));
     }
     return 0;
 }
@@ -5131,7 +5131,7 @@ inline int32 CLuaBaseEntity::lockEquipSlot(lua_State *L)
     PChar->m_EquipBlock |= 1 << SLOT;
     PChar->pushPacket(new CCharAppearancePacket(PChar));
     PChar->pushPacket(new CEquipPacket(0, SLOT, LOC_INVENTORY));
-    PChar->pushPacket(new CCharJobsPacket(PChar));
+    PChar->pushPacket(new CCharJobsPacket(PChar, true));
     PChar->updatemask |= UPDATE_LOOK;
 
     return 0;
@@ -5158,7 +5158,7 @@ inline int32 CLuaBaseEntity::unlockEquipSlot(lua_State *L)
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
 
     PChar->m_EquipBlock &= ~(1 << SLOT);
-    PChar->pushPacket(new CCharJobsPacket(PChar));
+    PChar->pushPacket(new CCharJobsPacket(PChar, true));
 
     return 0;
 }
@@ -6488,8 +6488,8 @@ inline int32 CLuaBaseEntity::changeJob(lua_State *L)
         charutils::SaveCharExp(PChar, PChar->GetMJob());
         PChar->updatemask |= UPDATE_HP;
 
-        PChar->pushPacket(new CCharJobsPacket(PChar));
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharJobsPacket(PChar, true));
+        PChar->pushPacket(new CCharStatsPacket(PChar, true));
         PChar->pushPacket(new CCharSkillsPacket(PChar));
         PChar->pushPacket(new CCharRecastPacket(PChar));
         PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -6565,7 +6565,7 @@ inline int32 CLuaBaseEntity::unlockJob(lua_State *L)
         if (PChar->jobs.job[JobID] == 0) PChar->jobs.job[JobID] = 1;
 
         charutils::SaveCharJob(PChar, JobID);
-        PChar->pushPacket(new CCharJobsPacket(PChar));
+        PChar->pushPacket(new CCharJobsPacket(PChar, true));
     }
     return 0;
 }
@@ -6711,8 +6711,8 @@ inline int32 CLuaBaseEntity::setLevel(lua_State *L)
     charutils::SaveCharExp(PChar, PChar->GetMJob());
     PChar->updatemask |= UPDATE_HP;
 
-    PChar->pushPacket(new CCharJobsPacket(PChar));
-    PChar->pushPacket(new CCharStatsPacket(PChar));
+    PChar->pushPacket(new CCharJobsPacket(PChar, true));
+    PChar->pushPacket(new CCharStatsPacket(PChar, true));
     PChar->pushPacket(new CCharSkillsPacket(PChar));
     PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -6772,8 +6772,8 @@ inline int32 CLuaBaseEntity::setsLevel(lua_State *L)
     charutils::SaveCharJob(PChar, PChar->GetSJob());
     charutils::SaveCharExp(PChar, PChar->GetMJob());
 
-    PChar->pushPacket(new CCharJobsPacket(PChar));
-    PChar->pushPacket(new CCharStatsPacket(PChar));
+    PChar->pushPacket(new CCharJobsPacket(PChar, true));
+    PChar->pushPacket(new CCharStatsPacket(PChar, true));
     PChar->pushPacket(new CCharSkillsPacket(PChar));
     PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -6858,8 +6858,8 @@ inline int32 CLuaBaseEntity::levelRestriction(lua_State* L)
                 charutils::BuildingCharTraitsTable(PChar);
                 charutils::BuildingCharAbilityTable(PChar);
                 charutils::CheckValidEquipment(PChar);
-                PChar->pushPacket(new CCharJobsPacket(PChar));
-                PChar->pushPacket(new CCharStatsPacket(PChar));
+                PChar->pushPacket(new CCharJobsPacket(PChar, true));
+                PChar->pushPacket(new CCharStatsPacket(PChar, true));
                 PChar->pushPacket(new CCharSkillsPacket(PChar));
                 PChar->pushPacket(new CCharRecastPacket(PChar));
                 PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -6971,7 +6971,7 @@ inline int CLuaBaseEntity::addTitle(lua_State *L)
     uint16 TitleID = (uint16)lua_tointeger(L, 1);
 
     PChar->profile.title = TitleID;
-    PChar->pushPacket(new CCharStatsPacket(PChar));
+    PChar->pushPacket(new CCharStatsPacket(PChar, true));
 
     charutils::addTitle(PChar, TitleID);
     charutils::SaveTitles(PChar);
@@ -7025,7 +7025,7 @@ inline int32 CLuaBaseEntity::delTitle(lua_State *L)
         {
             PChar->profile.title = 0;
         }
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharStatsPacket(PChar, true));
 
         charutils::SaveTitles(PChar);
     }
@@ -10292,13 +10292,13 @@ inline int32 CLuaBaseEntity::getPartySize(lua_State* L)
 }
 
 /************************************************************************
-*  Function: hasPartyJob()
-*  Purpose : Loops over party members and returns true if job is found
-*  Example : if (caster:hasPartyJob(JOBS.DRK)) then
-*  Notes   : Highly useful for future addition of features
-************************************************************************/
+ *  Function: hasPartyJob()
+ *  Purpose : Loops over party members and returns true if job is found
+ *  Example : if (caster:hasPartyJob(JOBS.DRK)) then
+ *  Notes   : Highly useful for future addition of features
+ ************************************************************************/
 
-inline int32 CLuaBaseEntity::hasPartyJob(lua_State *L)
+inline int32 CLuaBaseEntity::hasPartyJob(lua_State* L)
 {
     TPZ_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
 
@@ -10311,14 +10311,14 @@ inline int32 CLuaBaseEntity::hasPartyJob(lua_State *L)
         for (uint32 i = 0; i < ((CCharEntity*)m_PBaseEntity)->PParty->members.size(); i++)
         {
             CCharEntity* PTarget = (CCharEntity*)((CCharEntity*)m_PBaseEntity)->PParty->members[i];
-            if (PTarget->GetMJob() == job)
+            if ((PTarget->GetMJob() == job) || (map_config.dual_main_job && (PTarget->GetSJob() == job)))
             {
                 lua_pushboolean(L, true);
                 return 1;
             }
             for (auto PTrust : PTarget->PTrusts)
             {
-                if (PTrust->GetMJob() == job)
+                if ((PTrust->GetMJob() == job) || (map_config.dual_main_job && (PTrust->GetSJob() == job)))
                 {
                     lua_pushboolean(L, true);
                     return 1;
@@ -10326,9 +10326,19 @@ inline int32 CLuaBaseEntity::hasPartyJob(lua_State *L)
             }
         }
     }
+    else
+    {
+        CCharEntity* self = (CCharEntity*)m_PBaseEntity;
+        if (self->GetMJob() == job || (map_config.dual_main_job && (self->GetSJob() == job)))
+        {
+            lua_pushboolean(L, true);
+            return 1;
+        }
+    }
     lua_pushboolean(L, false);
     return 1;
 }
+
 
 /************************************************************************
 *  Function: getPartyMember()
@@ -11767,8 +11777,8 @@ int32 CLuaBaseEntity::recalculateStats(lua_State* L)
 
         PChar->UpdateHealth();
 
-        PChar->pushPacket(new CCharJobsPacket(PChar));
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharJobsPacket(PChar, true));
+        PChar->pushPacket(new CCharStatsPacket(PChar, false));
         PChar->pushPacket(new CCharSkillsPacket(PChar));
         PChar->pushPacket(new CCharRecastPacket(PChar));
         PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -13008,7 +13018,7 @@ inline int32 CLuaBaseEntity::addCorsairRoll(lua_State *L)
         (n >= 8 ? (uint16)lua_tointeger(L, 8) : 0),  // SubPower or 0
         (n >= 9 ? (uint16)lua_tointeger(L, 9) : 0)); // Tier or 0
     uint8 maxRolls = 2;
-    if (casterJob != JOB_COR)
+    if ((casterJob != JOB_COR) || (map_config.dual_main_job))
     {
         maxRolls = 1;
     }
@@ -13213,7 +13223,7 @@ int32 CLuaBaseEntity::setStatDebilitation(lua_State* L)
     {
         auto PChar {static_cast<CCharEntity*>(m_PBaseEntity)};
         PChar->m_StatsDebilitation = (uint16)lua_tointeger(L, 1);
-        PChar->pushPacket(new CCharJobsPacket(PChar));
+        PChar->pushPacket(new CCharJobsPacket(PChar, true));
     }
     return 0;
 }
@@ -17229,6 +17239,103 @@ inline int32 CLuaBaseEntity::friendListMain(lua_State* L)
     return 2;
 
 }
+/************************************************************************
+ *  Function: flip()
+ *  Purpose : allows use of equipment from subjob... workaround on client-side
+ *  Example : !flip
+ *  Notes   : also used for !dw to allow dual wielding
+ ************************************************************************/
+
+inline int32 CLuaBaseEntity::flip(lua_State* L)
+{
+    TPZ_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
+    TPZ_DEBUG_BREAK_IF(!lua_isnumber(L, 1));
+
+    if (!map_config.dual_main_job && !map_config.all_jobs_dual_wield)
+    {
+        return 0;
+    }
+
+    int32 arg = (int32)lua_tointeger(L, 1);
+    bool dw = false;
+    if (arg == 18)
+    {
+        dw = true;
+        if (!map_config.all_jobs_dual_wield)
+        {
+            return 0;
+        }
+    }
+    else
+    {
+        if (!map_config.dual_main_job)
+        {
+            return 0;
+        }
+    }
+
+    uint8 flipstate = (uint8)charutils::GetCharVar(PChar, "JobFlipState");
+
+    if (dw == false) // we aren't doing DW workaround
+    {
+        if (flipstate == 0) // not flipped
+        {
+            flipstate = 1; // let's flip
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Flip enabled. You may now equip items allowed by your sub job.", "Server"));
+        }
+
+        else if (flipstate == 1) // flipped
+        {
+            flipstate = 0; // let's unflip
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Flip disabled. You may now equip items allowed by your main job.", "Server"));
+        }
+
+        else if (flipstate == 2) // dw workaround
+        {
+            flipstate = 3; // let's flip with dw workaround still enabled
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Flip enabled. You may now equip items allowed by your sub job.", "Server"));
+        }
+
+        else if (flipstate == 3) // dw workaround while flipped
+        {
+            flipstate = 2; // let's unflip but leave dw up
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Flip disabled. You may now equip items allowed by your main job.", "Server"));
+        }
+    }
+
+    if (dw == true) // we ARE doing DW workaround
+    {
+        if (flipstate == 0) // not flipped
+        {
+            flipstate = 2; // let's set DWWA
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Subjob has been ghosted to be NIN to allow dual wielding.", "Server"));
+        }
+
+        else if (flipstate == 1) // flipped
+        {
+            flipstate = 3; // let's set DWWA and keep flip on
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Subjob has been ghosted to be NIN to allow dual wielding.", "Server"));
+        }
+
+        else if (flipstate == 2) // dw workaround
+        {
+            flipstate = 0; // let's undo DWWA
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Dual wield disabled. Your jobs have been reset to normal state.", "Server"));
+        }
+
+        else if (flipstate == 3) // dw workaround with flip enabled
+        {
+            flipstate = 1; // let's undo DWWA but keep flip on
+            PChar->pushPacket(new CChatMessagePacket(PChar, MESSAGE_SYSTEM_3, "Dual wield disabled. Your jobs have been reset to normal state.", "Server"));
+        }
+    }
+
+    charutils::SetCharVar(PChar, "JobFlipState", flipstate);
+    PChar->pushPacket(new CCharStatsPacket(PChar, false));
+
+    return 1;
+}
 
 /************************************************************************
 *  Function: checkVersionMismatch()
@@ -17242,6 +17349,47 @@ inline int32 CLuaBaseEntity::checkVersionMismatch(lua_State* L)
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
 
     lua_pushboolean(L, PChar->m_clientVerMismatch);
+    return 1;
+}
+/************************************************************************
+ *  Function: isCustomizationEnabled()
+ *  Purpose : Checks if a certain server customization has been enabled
+ *  Example : player:isCustomizationEnabled(1)
+ ************************************************************************/
+
+inline int32 CLuaBaseEntity::isCustomizationEnabled(lua_State* L)
+{
+    // TPZ_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    TPZ_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isnumber(L, 1));
+
+    uint32 customization = lua_tointeger(L, 1);
+
+    bool enabled = false;
+
+    switch (customization)
+    {
+        case 0:
+            // Stub
+            enabled = false;
+            break;
+        case 1:
+            // flip
+            enabled = map_config.dual_main_job;
+            break;
+        case 2:
+            // dual wield
+            enabled = map_config.all_jobs_dual_wield;
+            break;
+        // case 3:
+            // PvP
+        //    enabled = map_config.enable_duel_pvp;
+        //     break;
+        default:
+            enabled = true;
+    }
+
+    lua_pushboolean(L, enabled);
+
     return 1;
 }
 
@@ -19605,6 +19753,11 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
 
     LUNAR_DECLARE_METHOD(CLuaBaseEntity, checkVersionMismatch),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getInfluenceMult),
+
+    //Tonberry
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity, isCustomizationEnabled),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity, flip),
+
 
     {nullptr,nullptr}
 };

@@ -45,6 +45,7 @@ end
 
 function onTrigger(player, npc)
     local mLvl = player:getMainLvl()
+	local sLvl = player:getSubLvl()
     local aBoysDream = player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.A_BOY_S_DREAM)
     local underOath = player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.UNDER_OATH)
 
@@ -52,7 +53,7 @@ function onTrigger(player, npc)
     if player:getCharVar("UnderOathCS") == 8 then
         player:startEvent(89)
     elseif
-        player:getMainJob() == tpz.job.PLD and mLvl >= AF2_QUEST_LEVEL and
+        ((player:getMainJob() == tpz.job.PLD and mLvl >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.PLD and sLvl >= AF2_QUEST_LEVEL)) and
         aBoysDream == QUEST_COMPLETED and underOath == QUEST_AVAILABLE
     then
         player:startEvent(90) -- Start
@@ -142,7 +143,7 @@ function onEventFinish(player, csid, option)
         if (player:getFreeSlotsCount() == 0) then
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 14095)
         else
-            if (player:getMainJob() == tpz.job.PLD) then
+            if (player:getMainJob() == tpz.job.PLD) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.PLD) then
                 player:addQuest(SANDORIA, tpz.quest.id.sandoria.UNDER_OATH)
             end
             player:delKeyItem(tpz.ki.KNIGHTS_BOOTS)
