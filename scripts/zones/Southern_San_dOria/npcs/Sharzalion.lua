@@ -25,7 +25,7 @@ function onTrigger(player, npc)
     peaceForTheSpiritCS = player:getCharVar("peaceForTheSpiritCS")
     OrcishDriedFood = player:hasKeyItem(tpz.ki.ORCISH_DRIED_FOOD)
 
-    if (player:getMainJob() == tpz.job.RDM and player:getMainLvl() >= AF1_QUEST_LEVEL and theCrimsonTrial == QUEST_AVAILABLE) then
+    if (((player:getMainJob() == tpz.job.RDM and player:getMainLvl() >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.RDM and player:getSubLvl() >= AF1_QUEST_LEVEL)) and theCrimsonTrial == QUEST_AVAILABLE) then
         if (player:getCharVar("has_seen_rdmaf1_quest_already") == 0) then
             player:startEvent(70)
         else

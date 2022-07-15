@@ -1,4 +1,4 @@
-/*
+﻿/*
 ===========================================================================
 
 Copyright (c) 2010-2015 Darkstar Dev Teams
@@ -118,7 +118,8 @@ bool CMobController::CanPursueTarget(CBattleEntity* PTarget)
 bool CMobController::CheckHide(CBattleEntity* PTarget)
 {
     TracyZoneScoped;
-    if (PTarget->GetMJob() == JOB_THF && PTarget->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE))
+    if ((PTarget->GetMJob() == JOB_THF || (map_config.dual_main_job && (PTarget->GetSJob() == JOB_THF))) &&
+        PTarget->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE))
     {
         return !CanPursueTarget(PTarget) && !PMob->m_TrueDetection;
     }

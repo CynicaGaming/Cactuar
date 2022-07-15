@@ -1,6 +1,6 @@
 -----------------------------------------
--- ID: 16858
--- Item: Sacred Lance
+-- ID: 17683
+-- Item: Sacred Degen
 -- Additional Effect: Light Damage
 -- Enchantment: "Enlight"
 -----------------------------------------
@@ -10,12 +10,12 @@ require("scripts/globals/msg")
 -----------------------------------
 
 function onAdditionalEffect(player, target, damage)
-    local chance = 15
+    local chance = 5
 
     if (math.random(0, 99) >= chance) then
         return 0, 0, 0
     else
-        local dmg = math.random(20, 40)
+        local dmg = math.random(10, 28)
         local params = {}
         params.bonusmab = 0
         params.includemab = false

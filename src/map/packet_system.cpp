@@ -433,7 +433,7 @@ void SmallPacket0x00C(map_session_data_t* const PSession, CCharEntity* const PCh
     TracyZoneScoped;
     PChar->pushPacket(new CInventorySizePacket(PChar));
     PChar->pushPacket(new CMenuConfigPacket(PChar));
-    PChar->pushPacket(new CCharJobsPacket(PChar));
+    PChar->pushPacket(new CCharJobsPacket(PChar, true));
 
     // TODO: While in mog house; treasure pool is not created.
     if (PChar->PTreasurePool != nullptr)
@@ -3834,7 +3834,7 @@ void SmallPacket0x061(map_session_data_t* const PSession, CCharEntity* const PCh
     TracyZoneScoped;
     PChar->pushPacket(new CCharUpdatePacket(PChar));
     PChar->pushPacket(new CCharHealthPacket(PChar));
-    PChar->pushPacket(new CCharStatsPacket(PChar));
+    PChar->pushPacket(new CCharStatsPacket(PChar, false));
     PChar->pushPacket(new CCharSkillsPacket(PChar));
     PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CMenuMeritPacket(PChar));
@@ -5334,9 +5334,20 @@ void SmallPacket0x0BE(map_session_data_t* const PSession, CCharEntity* const PCh
         break;
         case 3: // change merit
         {
-            if (PChar->m_moghouseID == PChar->id)
+            if (PChar->m_moghouseID)
             {
+                if (map_config.dual_main_job || map_config.all_jobs_dual_wield)
+                {
+                    if (charutils::GetCharVar(PChar, "JobFlipState") > 0)
+                    {
+                        PChar->pushPacket(new CChatMessagePacket(PChar, CHAT_MESSAGE_TYPE::MESSAGE_SYSTEM_3,
+                                                                 "You must disable !flip mode to raise or lower merits.", "System"));
+                        return;
+                    }
+                }
+
                 MERIT_TYPE merit = (MERIT_TYPE)(data.ref<uint16>(0x06) << 1);
+
 
                 if (PChar->PMeritPoints->IsMeritExist(merit))
                 {
@@ -5368,7 +5379,7 @@ void SmallPacket0x0BE(map_session_data_t* const PSession, CCharEntity* const PCh
                         PChar->addHP(PChar->GetMaxHP());
                         PChar->addMP(PChar->GetMaxMP());
                         PChar->pushPacket(new CCharUpdatePacket(PChar));
-                        PChar->pushPacket(new CCharStatsPacket(PChar));
+                        PChar->pushPacket(new CCharStatsPacket(PChar, true));
                         PChar->pushPacket(new CCharSkillsPacket(PChar));
                         PChar->pushPacket(new CCharRecastPacket(PChar));
                         PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -6937,9 +6948,9 @@ void SmallPacket0x100(map_session_data_t* const PSession, CCharEntity* const PCh
         charutils::CheckValidEquipment(PChar);
         charutils::SaveCharStats(PChar);
 
-        PChar->pushPacket(new CCharJobsPacket(PChar));
+        PChar->pushPacket(new CCharJobsPacket(PChar, true));
         PChar->pushPacket(new CCharUpdatePacket(PChar));
-        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharStatsPacket(PChar, true));
         PChar->pushPacket(new CCharSkillsPacket(PChar));
         PChar->pushPacket(new CCharRecastPacket(PChar));
         PChar->pushPacket(new CCharAbilitiesPacket(PChar));
@@ -7001,7 +7012,7 @@ void SmallPacket0x102(map_session_data_t* const PSession, CCharEntity* const PCh
             PChar->pushPacket(new CCharAbilitiesPacket(PChar));
             PChar->pushPacket(new CCharJobExtraPacket(PChar, true));
             PChar->pushPacket(new CCharJobExtraPacket(PChar, false));
-            PChar->pushPacket(new CCharStatsPacket(PChar));
+            PChar->pushPacket(new CCharStatsPacket(PChar, true));
             PChar->UpdateHealth();
         }
         else
@@ -7029,7 +7040,7 @@ void SmallPacket0x102(map_session_data_t* const PSession, CCharEntity* const PCh
                     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
                     PChar->pushPacket(new CCharJobExtraPacket(PChar, true));
                     PChar->pushPacket(new CCharJobExtraPacket(PChar, false));
-                    PChar->pushPacket(new CCharStatsPacket(PChar));
+                    PChar->pushPacket(new CCharStatsPacket(PChar, true));
                     PChar->UpdateHealth();
                 }
                 else

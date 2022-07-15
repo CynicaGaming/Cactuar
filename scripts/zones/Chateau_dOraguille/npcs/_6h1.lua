@@ -20,7 +20,7 @@ function onTrigger(player, npc)
     local whmAf3 = player:getQuestStatus(SANDORIA, sandyQuests.PIEUJE_S_DECISION)
 
     -- WHM AF quests
-    if player:getMainJob() == tpz.job.WHM and player:getMainLvl() >= AF2_QUEST_LEVEL then
+    if ((player:getMainJob() == tpz.job.WHM and player:getMainLvl() >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.WHM and player:getSubLvl() >= AF2_QUEST_LEVEL)) then
         if whmAf1 == QUEST_COMPLETED and whmAf2 == QUEST_AVAILABLE then
             player:startEvent(551) -- Start Quest "Prelude of Black and White"
         elseif whmAf2 == QUEST_COMPLETED and whmAf3 == QUEST_AVAILABLE then

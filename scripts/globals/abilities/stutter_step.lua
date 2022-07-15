@@ -38,9 +38,11 @@ function onUseAbility(player, target, ability, action)
     if math.random() <= getHitRate(player, target, true, player:getMod(tpz.mod.STEP_ACCURACY)) then
         hit = 7
         local mjob = player:getMainJob()
+        local sjob = player:getSubJob()
         local daze = 1
 
-        if mjob == tpz.job.DNC then
+        if ((mjob == tpz.job.DNC) or (player:isCustomizationEnabled(1) and sjob == tpz.job.DNC)) then
+
             if (target:hasStatusEffect(tpz.effect.WEAKENED_DAZE_1)) then
                 local duration = target:getStatusEffect(tpz.effect.WEAKENED_DAZE_1):getDuration()
                 target:delStatusEffectSilent(tpz.effect.WEAKENED_DAZE_1)

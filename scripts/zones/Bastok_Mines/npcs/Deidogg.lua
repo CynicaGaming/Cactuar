@@ -41,7 +41,7 @@ function onTrigger(player, npc)
 
     if (player:getQuestStatus(BASTOK, tpz.quest.id.bastok.LURE_OF_THE_WILDCAT) == QUEST_ACCEPTED and not utils.mask.getBit(WildcatBastok, 18)) then
         player:startEvent(504)
-    elseif (theDoorman == QUEST_COMPLETED and theTalekeeperTruth == QUEST_AVAILABLE and player:getMainJob() == tpz.job.WAR and player:getMainLvl() >= 50) then
+    elseif (theDoorman == QUEST_COMPLETED and theTalekeeperTruth == QUEST_AVAILABLE and ((player:getMainJob() == tpz.job.WAR and player:getMainLvl() >= 50) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.WAR and player:getSubLvl() >= 50))) then
         if (theTalekeeperTruthCS == 1) then
             player:startEvent(160)
             player:setCharVar("theTalekeeperTruthCS", 2)
@@ -56,7 +56,7 @@ function onTrigger(player, npc)
         player:startEvent(165) -- Finish Quest "The Talekeeper's Truth"
     elseif (theTalekeeperTruthCS == 5 or (theTalekeeperTruth == QUEST_COMPLETED and (player:needToZone() or VanadielDayOfTheYear() == Wait1DayForAF3))) then
         player:startEvent(166) -- New standard dialog after "The Talekeeper's Truth"
-    elseif (player:needToZone() == false and VanadielDayOfTheYear() ~= Wait1DayForAF3 and Wait1DayForAF3 ~= 0 and theTalekeeperGiftCS == 0 and player:getMainJob() == tpz.job.WAR) then
+    elseif (player:needToZone() == false and VanadielDayOfTheYear() ~= Wait1DayForAF3 and Wait1DayForAF3 ~= 0 and theTalekeeperGiftCS == 0 and ((player:getMainJob() == tpz.job.WAR) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.WAR))) then
         player:startEvent(170)
         player:setCharVar("theTalekeeperGiftCS", 1)
         player:setCharVar("DeidoggWait1DayForAF3", 0)

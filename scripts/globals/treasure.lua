@@ -1373,15 +1373,22 @@ tpz.treasure.onTrade = function(player, npc, trade, chestType)
         end
 
         -- determine chance of success
-        if mJob ~= tpz.job.THF or mLvl < (info.treasureLvl - 10) then
+        local thfLevel = 0
+        if mJob == tpz.job.THF then
+            thfLevel = mLvl
+        elseif player:isCustomizationEnabled(1) and sJob == tpz.job.THF then
+            thfLevel = sLvl
+        end
+        if thfLevel == 0 or thfLevel < (info.treasureLvl - 10) then
             success = 0
         elseif keyTraded == keyType.SKELETON_KEY then
-            success = (mLvl / info.treasureLvl) - 0.50 + 0.2
+            success = (thfLevel / info.treasureLvl) - 0.50 + 0.2
         elseif keyTraded == keyType.LIVING_KEY then
-            success = (mLvl / info.treasureLvl) - 0.50 + 0.15
+            success = (thfLevel / info.treasureLvl) - 0.50 + 0.15
         elseif keyTraded == keyType.THIEF_TOOLS then
-            success = (mLvl / info.treasureLvl) - 0.50 + 0.1
+            success = (thfLevel / info.treasureLvl) - 0.50 + 0.1
         end
+
 
         -- failed lockpick
         if math.random() > success then
@@ -1437,6 +1444,22 @@ tpz.treasure.onTrade = function(player, npc, trade, chestType)
         player:messageSpecial(msgBase)
         player:delStatusEffectsByFlag(tpz.effectFlag.DETECTABLE)        -- Success - Remove sneak, invisible, deodorize
         if npcUtil.giveItem(player, info.af[mJob].reward) then
+            player:confirmTrade()
+            moveChest(npc, zoneId, chestType)
+        end
+        return
+    end
+
+        -- artifact armor (subjob - tonberry customizations)
+        if  player:isCustomizationEnabled(1) and
+        chestType == tpz.treasure.type.COFFER and
+        info.af and
+        info.af[sJob] and
+        player:getQuestStatus(JEUNO, info.af[sJob].quest) >= QUEST_ACCEPTED and
+        not player:hasItem(info.af[sJob].reward)
+    then
+        player:messageSpecial(msgBase)
+        if npcUtil.giveItem(player, info.af[sJob].reward) then
             player:confirmTrade()
             moveChest(npc, zoneId, chestType)
         end

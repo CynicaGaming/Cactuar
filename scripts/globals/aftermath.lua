@@ -20,7 +20,7 @@ tpz.aftermath.type =
 -- HELPERS : For aftermath eyes onry
 -------------------------------------
 local getTier1RelicDuration = function(tp)
-    return math.floor(tp * 0.02)
+    return math.floor(tp * 0.04)
 end
 
 local getTier2RelicDuration = function(tp)
@@ -32,20 +32,21 @@ tpz.aftermath.effects =
     -----------------------------------
     -- Tier 1 Relic
     -----------------------------------
-    [1]  = { mods = { tpz.mod.SUBTLE_BLOW, 10 }, duration = getTier1RelicDuration }, -- Spharai
-    [2]  = { mods = { tpz.mod.CRITHITRATE, 5 }, duration = getTier1RelicDuration }, -- Mandau
+    [1]  = { mods = { tpz.mod.DMG, -20 }, duration = getTier1RelicDuration }, -- Spharai (Tonberry custom, physical damage taken -20%.)
+    [2]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Mandau (Tonberry custom, doubled increased critical rate by 5%.)
     [3]  = { mods = { tpz.mod.REGEN, 10 }, duration = getTier1RelicDuration }, -- Excalibur
     [4]  = { mods = { tpz.mod.CRITHITRATE, 5 }, duration = getTier1RelicDuration }, -- Ragnarok
-    [5]  = { mods = { tpz.mod.ATTP, 10 }, duration = getTier1RelicDuration }, -- Guttler
-    [6]  = { mods = { tpz.mod.DMG, -20 }, duration = getTier1RelicDuration }, -- Bravura
+    [5]  = { mods = { tpz.mod.ATTP, 15 }, duration = getTier1RelicDuration }, -- Guttler (Tonberry custom, attack % increased by 5%.)
+    [6]  = { mods = { tpz.mod.HASTE_GEAR, 1000 }, duration = getTier1RelicDuration }, -- Bravura (Tonberry custom, gear haste +10%.)
     [7]  = { mods = { tpz.mod.HASTE_GEAR, 1000 }, duration = getTier1RelicDuration }, -- Apocalypse
     [8]  = { mods = { tpz.mod.SPIKES, tpz.subEffect.SHOCK_SPIKES, tpz.mod.SPIKES_DMG, 10 }, duration = getTier1RelicDuration }, -- Gungnir
-    [9]  = { mods = { tpz.mod.SUBTLE_BLOW, 10 }, duration = getTier1RelicDuration }, -- Kikoku
+    [9]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Kikoku (Tonberry custom, increased critical rate by 10%.)
     [10] = { mods = { tpz.mod.STORETP, 7 }, duration = getTier1RelicDuration }, -- Amanomurakumo
-    [11] = { mods = { tpz.mod.ACC, 20 }, duration = getTier1RelicDuration }, -- Mjollnir
+    [11] = { mods = { tpz.mod.ACC, 40 }, duration = getTier1RelicDuration }, -- Mjollnir (Tonberry custom, double accuracy bonus.)
     [12] = { mods = { tpz.mod.REFRESH, 8 }, duration = getTier1RelicDuration }, -- Claustrum
     [13] = { mods = { tpz.mod.RACC, 20 }, duration = getTier1RelicDuration }, -- Yoichinoyumi
     [14] = { mods = { tpz.mod.ENMITY, -20 }, duration = getTier1RelicDuration }, -- Annihilator
+
 
     -----------------------------------
     -- Tier 2 Relic

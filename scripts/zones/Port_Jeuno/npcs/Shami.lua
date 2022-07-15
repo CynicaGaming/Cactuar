@@ -282,7 +282,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1551)
                 player:setCharVar("CloudyOrbIsCracked", 0)
             elseif (player:hasItem(1551)) then
-                player:addItem(1551)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(20, 0)
+                player:addItem(1551)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1551)
+                player:setCharVar("CloudyOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1551)
             end
@@ -293,7 +296,9 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1552)
                 player:setCharVar("SkyOrbIsCracked", 0)
             elseif (player:hasItem(1552)) then
-                player:addItem(1552)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(30, 0)
+                player:addItem(1552)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1552)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1552)
             end
@@ -304,7 +309,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1131)
                 player:setCharVar("StarOrbIsCracked", 0)
             elseif (player:hasItem(1131) == true) then
-                player:addItem(1131)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(40, 0)
+                player:addItem(1131)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1131)
+                player:setCharVar("StarOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1131)
             end
@@ -315,7 +323,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1177)
                 player:setCharVar("CometOrbIsCracked", 0)
             elseif (player:hasItem(1177)) then
-                player:addItem(1177)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(50, 0)
+                player:addItem(1177)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1177)
+                player:setCharVar("CometOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1177)
             end
@@ -326,7 +337,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1130)
                 player:setCharVar("MoonOrbIsCracked", 0)
             elseif (player:hasItem(1130)) then
-                player:addItem(1130)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(60, 0)
+                player:addItem(1130)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1130)
+                player:setCharVar("MoonOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1130)
             end
@@ -340,7 +354,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1175)
                 player:setCharVar("ClothoOrbIsCracked", 0)
             elseif (player:hasItem(1175)) then
-                player:addItem(1175)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(30, 1)
+                player:addItem(1175)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1175)
+                player:setCharVar("ClothoOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1175)
             end
@@ -351,7 +368,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1178)
                 player:setCharVar("LachesisOrbIsCracked", 0)
             elseif (player:hasItem(1178) == true) then
-                player:addItem(1178)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(30, 1)
+                player:addItem(1178)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1178)
+                player:setCharVar("LachesisOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1178)
             end
@@ -362,7 +382,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1180)
                 player:setCharVar("AtroposOrbIsCracked", 0)
             elseif (player:hasItem(1180)) then
-                player:addItem(1180)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(30, 1)
+                player:addItem(1180)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1180)
+                player:setCharVar("AtroposOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1180)
             end
@@ -373,7 +396,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 1553)
                 player:setCharVar("ThemisOrbIsCracked", 0)
             elseif (player:hasItem(1553)) then
-                player:addItem(1553)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(99, 1)
+                player:addItem(1553)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 1553)
+                player:setCharVar("ThemisOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 1553)
             end
@@ -387,7 +413,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 3351)
                 player:setCharVar("PhobosOrbIsCracked", 0)
             elseif (player:hasItem(3351)) then
-                player:addItem(3351)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(30, 2)
+                player:addItem(3351)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 3351)
+                player:setCharVar("PhobosOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 3351)
             end
@@ -398,7 +427,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 3352)
                 player:setCharVar("DeimosOrbIsCracked", 0)
             elseif (player:hasItem(3352)) then
-                player:addItem(3352)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(50, 2)
+                player:addItem(3352)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 3352)
+                player:setCharVar("DeimosOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 3352)
             end
@@ -412,7 +444,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 3454)
                 player:setCharVar("ZelosOrbIsCracked", 0)
             elseif (player:hasItem(3454)) then
-                player:addItem(3454)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(30, 3)
+                player:addItem(3454)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 3454)
+                player:setCharVar("ZelosOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 3454)
             end
@@ -423,7 +458,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 3455)
                 player:setCharVar("BiaOrbIsCracked", 0)
             elseif (player:hasItem(3455)) then
-                player:addItem(3455)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(50, 3)
+                player:addItem(3455)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 3455)
+                player:setCharVar("BiaOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 3455)
             end
@@ -437,7 +475,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 4062)
                 player:setCharVar("MicrocosmicOrbIsCracked", 0)
             elseif (player:hasItem(4062)) then
-                player:addItem(4062)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(10, 4)
+                player:addItem(4062)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 4062)
+                player:setCharVar("MicrocosmicOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 4062)
             end
@@ -448,7 +489,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 4063)
                 player:setCharVar("MacrocosmicOrbIsCracked", 0)
             elseif (player:hasItem(4063)) then
-                player:addItem(4063)  -- does not add the item but forces it to send the "you cannot carry anymore of these" message.
+                player:delSeals(20, 4)
+                player:addItem(4063)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 4063)
+                player:setCharVar("MacrocosmicOrbIsCracked", 0)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 4063)
             end
@@ -458,3 +502,4 @@ function onEventFinish(player, csid, option)
         player:setCharVar("WildcatJeuno", utils.mask.setBit(player:getCharVar("WildcatJeuno"), 17, true))
     end
 end
+

@@ -42,6 +42,8 @@ function onTrigger(player, npc)
     local unbridledPassionCS = player:getCharVar("unbridledPassion")
     local lvl = player:getMainLvl()
     local job = player:getMainJob()
+    local slvl = player:getSubLvl()
+    local sjob = player:getSubJob()
 
     -- FROM SAPLINGS GROW
     if wsQuestEvent ~= nil then
@@ -64,7 +66,7 @@ function onTrigger(player, npc)
         end
 
     -- SIN HUNTING
-    elseif sinHunting == QUEST_AVAILABLE and job == tpz.job.RNG and lvl >= AF1_QUEST_LEVEL and sinHuntingCS == 0 then
+    elseif sinHunting == QUEST_AVAILABLE and ((job == tpz.job.RNG and lvl >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sjob == tpz.job.RNG and slvl >= AF1_QUEST_LEVEL)) and sinHuntingCS == 0 then
         player:startEvent(523) -- start RNG AF1
     elseif sinHuntingCS > 0 and sinHuntingCS < 5 then
         player:startEvent(524) -- during quest RNG AF1
@@ -72,7 +74,7 @@ function onTrigger(player, npc)
         player:startEvent(527) -- complete quest RNG AF1
 
     -- FIRE AND BRIMSTONE
-    elseif sinHunting == QUEST_COMPLETED and job == tpz.job.RNG and lvl >= AF2_QUEST_LEVEL and fireAndBrimstone == QUEST_AVAILABLE and fireAndBrimstoneCS == 0 then
+    elseif sinHunting == QUEST_COMPLETED and ((job == tpz.job.RNG and lvl >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sjob == tpz.job.RNG and slvl >= AF2_QUEST_LEVEL)) and fireAndBrimstone == QUEST_AVAILABLE and fireAndBrimstoneCS == 0 then
         player:startEvent(531) -- start RNG AF2
     elseif fireAndBrimstoneCS > 0 and fireAndBrimstoneCS < 4 then
         player:startEvent(532) -- during RNG AF2
@@ -82,7 +84,7 @@ function onTrigger(player, npc)
         player:startEvent(536, 0, 13360, 1113) -- during second part RNG AF2
 
     -- UNBRIDLED PASSION
-    elseif fireAndBrimstone == QUEST_COMPLETED and job == tpz.job.RNG and lvl >= AF3_QUEST_LEVEL and unbridledPassion == QUEST_AVAILABLE and unbridledPassion == 0 then
+    elseif fireAndBrimstone == QUEST_COMPLETED and ((job == tpz.job.RNG and lvl >= AF3_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sjob == tpz.job.RNG and slvl >= AF3_QUEST_LEVEL)) and unbridledPassion == QUEST_AVAILABLE and unbridledPassion == 0 then
         player:startEvent(541, 0, 13360) -- start RNG AF3
     elseif unbridledPassionCS > 0 and unbridledPassionCS < 3 then
         player:startEvent(542)-- during RNG AF3

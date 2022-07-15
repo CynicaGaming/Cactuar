@@ -29,9 +29,8 @@ function onTrade(player, npc, trade)
     local wsQuestEvent = tpz.wsquest.getTradeEvent(wsQuest, player, trade)
 
     if player:getCharVar("chips") == 1 then
-        if npcUtil.tradeHasExactly(trade, {1693, 1692, 1694}) then
+        if trade:getItemQty(1693, 1) and trade:getItemQty(1692, 1) and trade:getItemQty(1694, 1) then
             player:startEvent(883,1693,1692,1694)
-            player:tradeComplete()
         end
     end
 
@@ -112,7 +111,7 @@ function onTrigger(player, npc)
         player:startEvent(845) -- COP event
     elseif (currentCOPMission == tpz.mission.id.cop.THE_ROAD_FORKS and player:getCharVar("EMERALD_WATERS_Status")== 7 and player:getCharVar("MEMORIES_OF_A_MAIDEN_Status")== 12) then --two paths are finished ?
         player:startEvent(847) -- COP event 3.3
-    elseif (player:getMainJob() == tpz.job.DRK and player:getMainLvl() >= AF2_QUEST_LEVEL and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.DARK_LEGACY) == QUEST_COMPLETED and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.DARK_PUPPET) == QUEST_AVAILABLE) then
+    elseif (((player:getMainJob() == tpz.job.DRK and player:getMainLvl() >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and player:getSubJob() == tpz.job.DRK and player:getSubLvl() >= AF2_QUEST_LEVEL)) and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.DARK_LEGACY) == QUEST_COMPLETED and player:getQuestStatus(BASTOK, tpz.quest.id.bastok.DARK_PUPPET) == QUEST_AVAILABLE) then
         player:startEvent(760) -- Start Quest "Dark Puppet"
     elseif (currentMission == tpz.mission.id.bastok.GEOLOGICAL_SURVEY) then
         if (player:hasKeyItem(tpz.ki.RED_ACIDITY_TESTER)) then
@@ -185,6 +184,7 @@ function onEventFinish(player, csid, option)
         if player:hasItem(5268) then
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 5268)
         else
+            player:tradeComplete(trade)
             player:addItem(5268)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 5268)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.CHIPS)
@@ -221,8 +221,8 @@ function onEventFinish(player, csid, option)
         finishMissionTimeline(player, 1, csid, option)
     elseif (csid == 505 and option == 0) then
         if (player:getCharVar("MissionStatus") == 0) then
-            local crystal = math.random(4096, 4103)
             if (player:getFreeSlotsCount(0) >= 1) then
+                crystal = math.random(4096, 4103)
                 player:addItem(crystal)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, crystal)
                 player:setCharVar("MissionStatus", 1)

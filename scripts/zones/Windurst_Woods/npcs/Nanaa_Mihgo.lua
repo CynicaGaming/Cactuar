@@ -74,6 +74,8 @@ function onTrigger(player, npc)
     local hittingTheMarquisateNanaaCS = player:getCharVar("hittingTheMarquisateNanaaCS")
     local job = player:getMainJob()
     local lvl = player:getMainLvl()
+    local sjob = player:getSubJob()
+    local slvl = player:getSubLvl()
 
     -- LURE OF THE WILDCAT (WINDURST 2-1)
     -- Simply checks this NPC as talked to for the PC, should be highest priority
@@ -116,7 +118,7 @@ function onTrigger(player, npc)
         end
 
     -- THE TENSHODO SHOWDOWN (THF AF Weapon)
-    elseif job == tpz.job.THF and lvl >= AF1_QUEST_LEVEL and tenshodoShowdown == QUEST_AVAILABLE then
+    elseif ((job == tpz.job.THF and lvl >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sjob == tpz.job.THF and slvl >= AF1_QUEST_LEVEL)) and tenshodoShowdown == QUEST_AVAILABLE then
         player:startEvent(496) -- start quest
     elseif tenshodoShowdownCS == 1 then
         player:startEvent(497) -- before cs at tensho HQ
@@ -127,7 +129,7 @@ function onTrigger(player, npc)
 
     -- THICK AS THIEVES (THF AF Head)
     elseif
-        job == tpz.job.THF and lvl >= AF2_QUEST_LEVEL and
+        ((job == tpz.job.THF and lvl >= AF2_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sjob == tpz.job.THF and slvl >= AF2_QUEST_LEVEL)) and
         thickAsThieves == QUEST_AVAILABLE and tenshodoShowdown == QUEST_COMPLETED
     then
         player:startEvent(504) -- start quest
@@ -140,7 +142,7 @@ function onTrigger(player, npc)
         end
 
     -- HITTING THE MARQUISATE (THF AF Feet)
-    elseif job == tpz.job.THF and lvl >= AF3_QUEST_LEVEL and
+    elseif ((job == tpz.job.THF and lvl >= AF3_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sjob == tpz.job.THF and slvl >= AF3_QUEST_LEVEL)) and
         thickAsThieves == QUEST_COMPLETED and hittingTheMarquisate == QUEST_AVAILABLE
     then
         player:startEvent(512) -- start quest

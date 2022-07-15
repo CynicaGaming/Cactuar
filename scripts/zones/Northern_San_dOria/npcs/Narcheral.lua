@@ -35,8 +35,10 @@ function onTrigger(player, npc)
     -- Checking levels and jobs for af quest
     mLvl = player:getMainLvl()
     mJob = player:getMainJob()
+    sLvl = player:getSubLvl()
+    sJob = player:getSubJob()
 
-    if (messengerFromBeyond == QUEST_AVAILABLE and mJob == tpz.job.WHM and mLvl >= AF1_QUEST_LEVEL) then
+    if (messengerFromBeyond == QUEST_AVAILABLE and ((mJob == tpz.job.WHM and mLvl >= AF1_QUEST_LEVEL) or (player:isCustomizationEnabled(1) and sJob == tpz.job.WHM and sLvl >= AF1_QUEST_LEVEL))) then
         player:startEvent(689) -- Start quest "Messenger from Beyond"
     else
         player:startEvent(688) -- Standard dialog
