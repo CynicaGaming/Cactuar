@@ -1101,4 +1101,3 @@ function onChocoboDig(player)
 
     return true
   end
-end
