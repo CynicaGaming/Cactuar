@@ -129,6 +129,11 @@ void CAbility::setCastTime(duration time)
     m_castTime = time;
 }
 
+void CAbility::setExtraJobs(uint32 extraJobs)
+{
+    m_extraJobs = extraJobs;
+}
+
 uint16 CAbility::getAnimationID()
 {
     return m_animationID;
@@ -227,10 +232,10 @@ uint16 CAbility::getVE()
 }
 
 /************************************************************************
-*                                                                       *
-*  Get/Set ability message                                              *
-*                                                                       *
-************************************************************************/
+ *                                                                       *
+ *  Get/Set ability message                                              *
+ *                                                                       *
+ ************************************************************************/
 
 uint16 CAbility::getMessage()
 {
@@ -240,6 +245,11 @@ uint16 CAbility::getMessage()
 void CAbility::setMessage(uint16 message)
 {
     m_message = message;
+}
+
+uint32 CAbility::getExtraJobs()
+{
+    return m_extraJobs;
 }
 
 uint16 CAbility::getAoEMsg()
@@ -312,10 +322,10 @@ uint16 CAbility::getAoEMsg()
 }
 
 /************************************************************************
-*                                                                       *
-*  Implement namespace for working with abilities                       *
-*                                                                       *
-************************************************************************/
+ *                                                                       *
+ *  Implement namespace for working with abilities                       *
+ *                                                                       *
+ ************************************************************************/
 
 namespace ability
 {
@@ -357,7 +367,8 @@ namespace ability
             "VE, "
             "meritModID, "
             "addType, "
-            "content_tag "
+            "content_tag, "
+            "extraJobs "
             "FROM abilities LEFT JOIN (SELECT mob_skill_name, MIN(mob_skill_id) AS min_id "
             "FROM mob_skills GROUP BY mob_skill_name) mob_skills_1 ON "
             "abilities.name = mob_skills_1.mob_skill_name "
@@ -398,11 +409,21 @@ namespace ability
                 PAbility->setVE(Sql_GetIntData(SqlHandle, 17));
                 PAbility->setMeritModID(Sql_GetIntData(SqlHandle, 18));
                 PAbility->setAddType(Sql_GetUIntData(SqlHandle, 19));
+                PAbility->setExtraJobs(Sql_GetUIntData(SqlHandle, 21));
 
                 if (PAbility)
+                {
+                    PAbilityList[PAbility->getID()] = PAbility;
+                    PAbilitiesList[PAbility->getJob()].push_back(PAbility);
 
-                PAbilityList[PAbility->getID()] = PAbility;
-                PAbilitiesList[PAbility->getJob()].push_back(PAbility);
+                    uint32 extra_jobs = PAbility->getExtraJobs();
+                    JOBTYPE native_job = PAbility->getJob();
+                    for (uint8 i = 0; i < 23; i++) {
+                        if (extra_jobs & (1 << i)) {
+                            PAbilitiesList[i].push_back(PAbility);
+                        }
+                    }
+                }
             }
         }
 
@@ -444,10 +465,10 @@ namespace ability
     }
 
     /************************************************************************
-    *                                                                       *
-    *  Obtain correct ability according to main job                         *
-    *                                                                       *
-    ************************************************************************/
+     *                                                                       *
+     *  Obtain correct ability according to main job                         *
+     *                                                                       *
+     ************************************************************************/
 
     CAbility* GetTwoHourAbility(JOBTYPE JobID)
     {
@@ -487,10 +508,11 @@ namespace ability
         if (GetAbility(AbilityID) != nullptr)
         {
             uint8 Job = PAbilityList[AbilityID]->getJob();
+            uint32 ExtraJobs = PAbilityList[AbilityID]->getExtraJobs();
             uint8 JobLvl = PAbilityList[AbilityID]->getLevel();
 
-            return ((PUser->GetMJob() == Job && PUser->GetMLevel() >= JobLvl) ||
-                (PUser->GetSJob() == Job && PUser->GetSLevel() >= JobLvl));
+            return (((PUser->GetMJob() == Job || (PUser->GetMJob() & (1 << ExtraJobs))) && PUser->GetMLevel() >= JobLvl) ||
+                    ((PUser->GetSJob() == Job || (PUser->GetSJob() & (1 << ExtraJobs))) && PUser->GetSLevel() >= JobLvl));
         }
         return false;
     }
