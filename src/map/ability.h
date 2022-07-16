@@ -722,6 +722,7 @@ public:
     uint16      getVE();
     uint16      getMeritModID();
     ACTIONTYPE  getActionType();
+    uint32      getExtraJobs();
 
     void        setID(uint16 id);
     void        setMobSkillID(uint16 id);
@@ -741,6 +742,7 @@ public:
     void        setVE(uint16 VE);
     void        setMeritModID(uint16 value);
     void        setActionType(ACTIONTYPE type);
+    void        setExtraJobs(uint32 extraJobs);
 
     const int8* getName();
     void        setName(int8* name);
@@ -766,11 +768,12 @@ private:
     string_t    m_name;
     uint16      m_mobskillId;
     ACTIONTYPE  m_actionType;
+    uint32      m_extraJobs;
 };
 
 /************************************************************************
 *                                                                       *
-*  Namespace to work with abilities                                     *
+*  namespase для работы со способностями                                *
 *                                                                       *
 ************************************************************************/
 

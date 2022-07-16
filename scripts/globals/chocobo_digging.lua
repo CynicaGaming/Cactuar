@@ -806,6 +806,65 @@ local function updatePlayerDigCount(player, increment)
     player:setLocalVar('[DIG]LastDigTime', os.time())
 end
 
+local function updateZoneDigCount(zoneId, increment)
+    local serverVar = '[DIG]ZONE' .. zoneId .. '_ITEMS'
+
+    -- 0 means we wanna wipe (probably only gonna happen onGameDay or something)
+    if increment == 0 then
+      SetServerVariable(serverVar, 0)
+    else
+      SetServerVariable(serverVar, GetServerVariable(serverVar) + increment)
+    end
+end
+
+local function canDig(player)
+    local digCount = player:getCharVar('[DIG]DigCount')
+    local lastDigTime = player:getCharVar('[DIG]LastDigTime')
+    local lastDigX = player:getCharVar('[DIG]LastDigX')
+    local lastDigY = player:getCharVar('[DIG]LastDigY')
+    local lastDigZ = player:getCharVar('[DIG]LastDigZ')
+    local posTable = player:getPos()
+    local currX = math.floor(posTable.x)
+    local currY = math.floor(posTable.y)
+    local currZ = math.floor(posTable.z)
+    local distanceSquared = (lastDigX - currX)*(lastDigX - currX) + (lastDigY - currY)*(lastDigY - currY) + (lastDigZ - currZ)*(lastDigZ - currZ)
+    local zoneItemsDug = GetServerVariable('[DIG]ZONE'..player:getZoneID()..'_ITEMS')
+    local zoneInTime = player:getLocalVar('ZoneInTime')
+    local currentTime = os.time()
+    local skillRank = player:getSkillRank(tpz.skill.DIG)
+
+     -- personal dig caps
+    local digCap = 100 + (skillRank * 10)
+    -- base delay -5 for each rank
+    local digDelay = 16 - (skillRank * 5)
+    local areaDigDelay = 60 - (skillRank * 5)
+        if player:hasItem(4545, 0) then 
+           if digDelay < 4 then digDelay = 4 end -- minimum delay to cover the animation time
+
+           local prevMidnight = getMidnight() - 86400
+
+           -- Last dig was before today, so reset player fatigue
+           if lastDigTime < prevMidnight then
+              updatePlayerDigCount(player, 0)
+              digCount = 0
+           end
+           -- player:PrintToPlayer(distanceSquared)
+           -- neither player nor zone have reached their dig limit
+
+           if (digCount < digCap and zoneItemsDug < 120) or DIG_FATIGUE == 0 then
+              -- pesky delays
+              if (zoneInTime + areaDigDelay) <= currentTime and (lastDigTime + digDelay) <= currentTime and distanceSquared > 45 then
+                 player:setCharVar('[DIG]LastDigX', currX)
+                 player:setCharVar('[DIG]LastDigY', currY)
+                 player:setCharVar('[DIG]LastDigZ', currZ)
+                 player:delItem(4545, 1)
+                 return true
+              end
+           end
+        end
+    return false
+  end
+
 --[[
 per wiki, avg. digs needed per rank
 taken from wiki, took the average of top/bottom
