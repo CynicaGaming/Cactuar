@@ -869,6 +869,7 @@ local function canDig(player)
            end
         end
     return false
+          end
 
 
 --[[
