@@ -869,6 +869,7 @@ local function canDig(player)
            end
         end
     return false
+          end
 
 
 --[[
@@ -1101,3 +1102,4 @@ function onChocoboDig(player)
 
     return true
   end
+end
