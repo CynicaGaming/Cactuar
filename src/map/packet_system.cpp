@@ -5336,15 +5336,6 @@ void SmallPacket0x0BE(map_session_data_t* const PSession, CCharEntity* const PCh
         {
             if (PChar->m_moghouseID)
             {
-                if (map_config.dual_main_job || map_config.all_jobs_dual_wield)
-                {
-                    if (charutils::GetCharVar(PChar, "JobFlipState") > 0)
-                    {
-                        PChar->pushPacket(new CChatMessagePacket(PChar, CHAT_MESSAGE_TYPE::MESSAGE_SYSTEM_3,
-                                                                 "You must disable !flip mode to raise or lower merits.", "System"));
-                        return;
-                    }
-                }
 
                 MERIT_TYPE merit = (MERIT_TYPE)(data.ref<uint16>(0x06) << 1);
 
