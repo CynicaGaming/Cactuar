@@ -35,11 +35,11 @@ tpz.aftermath.effects =
     [1]  = { mods = { tpz.mod.DMG, -20 }, duration = getTier1RelicDuration }, -- Spharai (Tonberry custom, physical damage taken -20%.)
     [2]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Mandau (Tonberry custom, doubled increased critical rate by 5%.)
     [3]  = { mods = { tpz.mod.REGEN, 10 }, duration = getTier1RelicDuration }, -- Excalibur
-    [4]  = { mods = { tpz.mod.CRITHITRATE, 5 }, duration = getTier1RelicDuration }, -- Ragnarok
+    [4]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Ragnarok (Cactuar custom, doubled increased critical rate by 5%.)
     [5]  = { mods = { tpz.mod.ATTP, 15 }, duration = getTier1RelicDuration }, -- Guttler (Tonberry custom, attack % increased by 5%.)
     [6]  = { mods = { tpz.mod.HASTE_GEAR, 1000 }, duration = getTier1RelicDuration }, -- Bravura (Tonberry custom, gear haste +10%.)
     [7]  = { mods = { tpz.mod.HASTE_GEAR, 1000 }, duration = getTier1RelicDuration }, -- Apocalypse
-    [8]  = { mods = { tpz.mod.SPIKES, tpz.subEffect.SHOCK_SPIKES, tpz.mod.SPIKES_DMG, 10 }, duration = getTier1RelicDuration }, -- Gungnir
+    [8]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Gungnir (Cactuar custom, increased crit rate 10%)
     [9]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Kikoku (Tonberry custom, increased critical rate by 10%.)
     [10] = { mods = { tpz.mod.STORETP, 7 }, duration = getTier1RelicDuration }, -- Amanomurakumo
     [11] = { mods = { tpz.mod.ACC, 40 }, duration = getTier1RelicDuration }, -- Mjollnir (Tonberry custom, double accuracy bonus.)
