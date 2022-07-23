@@ -1118,7 +1118,7 @@ tpz.regime.bookOnEventFinish = function(player, option, regimeType)
     local tabs = player:getCurrency("valor_point")
     -- repeating regimes OOE for 2010
     local regimeRepeat = bit.band(option, 0x80000000)
-    local regimeRepeat = 0
+    --local regimeRepeat = 0
     local hasKI  = player:hasKeyItem(tpz.ki.RHAPSODY_IN_WHITE)
 
     option = bit.band(option, 0x7FFFFFFF)
