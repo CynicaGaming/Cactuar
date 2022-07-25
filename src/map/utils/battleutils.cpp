@@ -1875,7 +1875,7 @@ namespace battleutils
             else
                 return 0;
         }
-        else if (PDefender->objtype == TYPE_MOB && PDefender->GetMJob() == JOB_PLD)
+        else if (PDefender->objtype == TYPE_MOB && PDefender->GetMJob() || PDefender->GetSJob() == JOB_PLD)
         {
             CMobEntity* PMob = (CMobEntity*)PDefender;
             if (PMob->m_EcoSystem != SYSTEM_UNDEAD && PMob->m_EcoSystem != SYSTEM_BEASTMEN)
@@ -2458,7 +2458,7 @@ namespace battleutils
         float sBlow1 = std::clamp((float)PAttacker->getMod(Mod::SUBTLE_BLOW), -50.0f, 50.0f);
         float sBlow2 = std::clamp((float)PAttacker->getMod(Mod::SUBTLE_BLOW_II), -50.0f, 50.0f);
         float sBlowMult = ((100.0f - std::clamp((float)(sBlow1 + sBlow2), -75.0f, 75.0f)) / 100.0f);
-        if (PAttacker->objtype == TYPE_PC && PAttacker->GetMJob() == JOB_NIN && PAttacker->GetMLevel() > 74)
+        if (PAttacker->objtype == TYPE_PC && PAttacker->GetMJob() == JOB_NIN || PAttacker->GetSJob() == JOB_NIN && PAttacker->GetMLevel() > 74)
             sBlowMult -= 0.01f * ((CCharEntity*)PAttacker)->PMeritPoints->GetMeritValue(MERIT_SUBTLE_BLOW_EFFECT, (CCharEntity*)PAttacker);
 
         return sBlowMult;
@@ -3178,7 +3178,7 @@ namespace battleutils
             KillerEffect = std::max<int32>(KillerEffect, PDefender->getMod(Mod::DRAGON_KILLER));
         }
 
-        if (PDefender->objtype == TYPE_PC && PDefender->GetMLevel() > 74 && PDefender->GetMJob() == JOB_BST)
+        if (PDefender->objtype == TYPE_PC && PDefender->GetMLevel() > 74 && PDefender->GetMJob() || PDefender->GetSJob() == JOB_BST)
             KillerEffect += ((CCharEntity*)PDefender)->PMeritPoints->GetMeritValue(MERIT_KILLER_EFFECTS, ((CCharEntity*)PDefender));
 
         // Add intimidation rate from Bully
@@ -3704,7 +3704,7 @@ namespace battleutils
 
             if (ERROR_SLOTID == (SlotID = PChar->getStorage(LOC_INVENTORY)->SearchItem(toolID)))
             {
-                if (PChar->GetMJob() == JOB_NIN)
+                if (PChar->GetMJob() || PChar->GetSJob() == JOB_NIN)
                 {
                     switch (toolID)
                     {
@@ -4124,7 +4124,7 @@ namespace battleutils
     uint16 doSoulEaterEffect(CCharEntity* m_PChar, uint32 damage)
     {
         // Souleater has no effect <10HP.
-        if (m_PChar->GetMJob() == JOB_DRK && m_PChar->health.hp >= 10 && m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SOULEATER))
+        if (m_PChar->GetMJob() || m_PChar->GetSJob() == JOB_DRK && m_PChar->health.hp >= 10 && m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SOULEATER))
         {
             //lost 10% current hp, converted to damage (displayed as just a strong regular hit)
             float drainPercent = 0.1f;
@@ -4135,12 +4135,6 @@ namespace battleutils
 
             damage += (uint32)(m_PChar->health.hp * drainPercent);
             m_PChar->addHP(-HandleStoneskin(m_PChar, (int32)(m_PChar->health.hp * (drainPercent - m_PChar->getMod(Mod::STALWART_SOUL) * 0.001f))));
-        }
-        else if (m_PChar->GetSJob() == JOB_DRK &&m_PChar->health.hp >= 10 && m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SOULEATER))
-        {
-            //lose 10% Current HP, only HALF (5%) converted to damage
-            damage += (uint32)(m_PChar->health.hp * 0.05f);
-            m_PChar->addHP(-HandleStoneskin(m_PChar, (int32)(m_PChar->health.hp * 0.1f)));
         }
         return damage;
     }
@@ -4647,7 +4641,7 @@ namespace battleutils
         {
             uint8 charmerBRDlevel = PChar->jobs.job[JOB_BRD];
             charmerBSTlevel = PChar->jobs.job[JOB_BST];
-            if (PCharmer->GetMJob() == JOB_BRD && charmerBRDlevel > charmerBSTlevel)
+            if (PCharmer->GetMJob() || PCharmer->GetSJob() == JOB_BRD && charmerBRDlevel > charmerBSTlevel)
                 charmerBSTlevel = charmerBRDlevel;
 
             charmerBSTlevel = std::min(charmerBSTlevel, charmerLvl);
@@ -5645,7 +5639,7 @@ namespace battleutils
                 }
 
                 // Restore 2hr except for Wildcard.
-                if (PTarget->GetMJob() != JOB_COR)
+                if (PTarget->GetMJob() || PTarget->GetSJob() != JOB_COR)
                 {
                     PTarget->PRecastContainer->Del(RECAST_ABILITY, 0);
                 }
@@ -5659,7 +5653,7 @@ namespace battleutils
 
             case 6:
                 // Restores all Job Abilities and One Hour Abilities (Not Wild Card though), 100% MP Restore
-                if (PTarget->GetMJob() == JOB_COR)
+                if (PTarget->GetMJob() || PTarget->GetSJob() == JOB_COR)
                 {
                     PTarget->PRecastContainer->ResetAbilities();
                 }
@@ -6238,7 +6232,7 @@ namespace battleutils
         {
             if (PSpell->getAOE() == SPELLAOE_RADIAL_ACCE && PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_ACCESSION))
             {
-                if (PEntity->GetMJob() == JOB_SCH)
+                if ((PEntity->GetMJob() == JOB_SCH) || ((map_config.dual_main_job && (PEntity->GetSJob() == JOB_SCH))))
                 {
                     recast *= 2;
                 }
