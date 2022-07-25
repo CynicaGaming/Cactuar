@@ -76,7 +76,7 @@ function onTrigger(player, npc)
         elseif (player:hasKeyItem(tpz.ki.WHISPER_OF_THE_MOON)) then -- First turn-in
             local availRewards = 0
             if not player:hasKeyItem(tpz.ki.TRAINERS_WHISTLE) or
-                player:hasKeyItem(tpz.ki.FENRIR_WHISTLE) then availRewards = availRewards + 64; end -- Mount Pact
+                player:hasKeyItem(tpz.ki.FENRIR_WHISTLE) then availRewards = availRewards + 128; end -- Mount Pact
 
             player:startEvent(846, 0, 13399, 1208, 1125, availRewards, 18165, 13572)
         elseif (player:hasKeyItem(tpz.ki.WHISPER_OF_FLAMES) and
@@ -103,7 +103,7 @@ function onTrigger(player, npc)
             if (player:hasItem(1208)) then availRewards = availRewards + 16; end -- Ancient's Key
             if (player:hasSpell(297)) then availRewards = availRewards + 64; end -- Pact
             if not player:hasKeyItem(tpz.ki.TRAINERS_WHISTLE) or
-                player:hasKeyItem(tpz.ki.FENRIR_WHISTLE) then availRewards = availRewards + 64; end -- Mount Pact
+                player:hasKeyItem(tpz.ki.FENRIR_WHISTLE) then availRewards = availRewards + 128; end -- Mount Pact
 
             player:startEvent(850, 0, 13399, 1208, 1125, availRewards, 18165, 13572)
         elseif (realday ~= player:getCharVar("MoonlitPath_date")) then --24 hours have passed, flag a new fight
@@ -168,6 +168,7 @@ function onEventFinish(player, csid, option)
         elseif (option == 8) then
             --player:addKeyItem(tpz.ki.FENRIR_WHISTLE)
             --player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.FENRIR_WHISTLE)
+            player:PrintToPlayer("NOTICE: Obtaining ♪Fenrir Companion via this method has been disabled. If you recieve this message please contact support. ",29)
             -- Pact as Mount
         end
 
@@ -205,6 +206,7 @@ function onEventFinish(player, csid, option)
         elseif (option == 8) then
             --player:addKeyItem(tpz.ki.FENRIR_WHISTLE)
             --player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.FENRIR_WHISTLE)
+            player:PrintToPlayer("NOTICE: Obtaining ♪Fenrir Companion via this method has been disabled. If you recieve this message please contact support. ",29)
             -- Pact as Mount
         end
 
