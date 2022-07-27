@@ -3178,7 +3178,10 @@ namespace battleutils
             KillerEffect = std::max<int32>(KillerEffect, PDefender->getMod(Mod::DRAGON_KILLER));
         }
 
-        if (PDefender->objtype == TYPE_PC && PDefender->GetMLevel() > 74 && PDefender->GetMJob() || PDefender->GetSJob() == JOB_BST)
+        if (PDefender->objtype == TYPE_PC && PDefender->GetMLevel() > 74 && PDefender->GetMJob() == JOB_BST)
+            KillerEffect += ((CCharEntity*)PDefender)->PMeritPoints->GetMeritValue(MERIT_KILLER_EFFECTS, ((CCharEntity*)PDefender));
+
+        if (PDefender->objtype == TYPE_PC && PDefender->GetSLevel() > 74 && PDefender->GetSJob() == JOB_BST)
             KillerEffect += ((CCharEntity*)PDefender)->PMeritPoints->GetMeritValue(MERIT_KILLER_EFFECTS, ((CCharEntity*)PDefender));
 
         // Add intimidation rate from Bully
@@ -4643,7 +4646,7 @@ namespace battleutils
         {
             uint8 charmerBRDlevel = PChar->jobs.job[JOB_BRD];
             charmerBSTlevel = PChar->jobs.job[JOB_BST];
-            if (PCharmer->GetMJob() || PCharmer->GetSJob() == JOB_BRD && charmerBRDlevel > charmerBSTlevel)
+            if (PCharmer->GetMJob() && charmerBRDlevel > charmerBSTlevel)
                 charmerBSTlevel = charmerBRDlevel;
 
             charmerBSTlevel = std::min(charmerBSTlevel, charmerLvl);
