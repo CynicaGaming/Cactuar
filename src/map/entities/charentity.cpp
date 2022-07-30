@@ -1388,13 +1388,13 @@ void CCharEntity::OnAbility(CAbilityState& state, action_t& action)
     auto PAbility = state.GetAbility();
 
     // Check if user is the right job and level
-    if ((PAbility->getJob() != this->GetMJob() && PAbility->getJob() != this->GetSJob()) ||
-        (PAbility->getJob() == this->GetMJob() && PAbility->getLevel() > this->GetMLevel()) ||
-        (PAbility->getJob() == this->GetSJob() && PAbility->getLevel() > this->GetSLevel() && this->GetMJob() != this->GetSJob()))
-    {
-        pushPacket(new CMessageBasicPacket(this, this, 0, 0, MSGBASIC_UNABLE_TO_USE_JA));
-        return;
-    }
+    //if ((PAbility->getJob() != this->GetMJob() && PAbility->getJob() != this->GetSJob()) ||
+    //    (PAbility->getJob() == this->GetMJob() && PAbility->getLevel() > this->GetMLevel()) ||
+    //    (PAbility->getJob() == this->GetSJob() && PAbility->getLevel() > this->GetSLevel() && this->GetMJob() != this->GetSJob()))
+    //{
+    //    pushPacket(new CMessageBasicPacket(this, this, 0, 0, MSGBASIC_UNABLE_TO_USE_JA));
+    //    return;
+    //}
 
     if (this->PRecastContainer->HasRecast(RECAST_ABILITY, PAbility->getRecastId(), PAbility->getRecastTime()))
     {

@@ -166,8 +166,9 @@ function onEventFinish(player, csid, option)
         elseif (option == 7) then
             player:addSpell(297) -- Pact
         elseif (option == 8) then
-            player:addKeyItem(tpz.ki.FENRIR_WHISTLE)
-            player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.FENRIR_WHISTLE)
+            --player:addKeyItem(tpz.ki.FENRIR_WHISTLE)
+            --player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.FENRIR_WHISTLE)
+            player:PrintToPlayer("NOTICE: Obtaining ♪Fenrir Companion via this method has been disabled. If you recieve this message please contact support. ",29)
             -- Pact as Mount
         end
 
@@ -203,8 +204,9 @@ function onEventFinish(player, csid, option)
         elseif (option == 7) then
             player:addSpell(297) -- Pact
         elseif (option == 8) then
-            player:addKeyItem(tpz.ki.FENRIR_WHISTLE)
-            player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.FENRIR_WHISTLE)
+            --player:addKeyItem(tpz.ki.FENRIR_WHISTLE)
+            --player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.FENRIR_WHISTLE)
+            player:PrintToPlayer("NOTICE: Obtaining ♪Fenrir Companion via this method has been disabled. If you recieve this message please contact support. ",29)
             -- Pact as Mount
         end
 

@@ -98,10 +98,8 @@ function onUseAbility(player, target, ability)
         totalHealing = diff
     end
     
-    local totalHealing = 0
-    
-    --pet:addHP(totalHealing)
-    --pet:wakeUp()
+    pet:addHP(totalHealing)
+    pet:wakeUp()
 
     -- Apply regen tpz.effect.
 

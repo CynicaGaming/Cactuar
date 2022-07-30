@@ -2,7 +2,7 @@
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{A82C7335-EC3C-3C20-811D-B8D6144B06CC}</UniqueIdentifier>
+      <UniqueIdentifier>{DBBAC070-3F23-3CFC-8220-43B1E21D08C8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
