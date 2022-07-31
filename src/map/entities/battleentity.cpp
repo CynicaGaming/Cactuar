@@ -243,18 +243,6 @@ uint8 CBattleEntity::GetSpeed()
     Mod mod = isMounted() ? Mod::MOUNT_MOVE : Mod::MOVE;
 
     float modAmount = (100.0f + static_cast<float>(getMod(mod))) / 100.0f;
-    // Cap unmounted movement speed increase to 25%
-    if (mod == Mod::MOVE)
-    {
-        if (StatusEffectContainer->GetStatusEffect(EFFECT_FLEE))
-        {
-            modAmount = std::clamp(modAmount, 0.0f, 2.0f);
-        }
-        else
-        {
-            modAmount = std::clamp(modAmount, 0.0f, 1.25f);
-        }
-    }
 
     float modifiedSpeed = static_cast<float>(startingSpeed) * modAmount;
     uint8 outputSpeed = static_cast<uint8>(modifiedSpeed < 0 ? 0 : modifiedSpeed);
