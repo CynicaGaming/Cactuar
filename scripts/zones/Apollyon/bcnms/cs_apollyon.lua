@@ -21,15 +21,15 @@ function onBattlefieldTick(battlefield, tick)
 end
 
 function onBattlefieldRegister(player, battlefield)
+end
+
+function onBattlefieldEnter(player, battlefield)
     player:delKeyItem(tpz.ki.COSMOCLEANSE)
     if player:getCharVar("ApollyonEntrance") == 0 then
         player:delKeyItem(tpz.ki.BLACK_CARD)
     else
         player:delKeyItem(tpz.ki.RED_CARD)
     end
-end
-
-function onBattlefieldEnter(player, battlefield)
 end
 
 function onBattlefieldDestroy(battlefield)

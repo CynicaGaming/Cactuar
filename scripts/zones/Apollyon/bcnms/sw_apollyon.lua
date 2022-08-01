@@ -34,11 +34,11 @@ function onBattlefieldTick(battlefield, tick)
 end
 
 function onBattlefieldRegister(player, battlefield)
-    player:delKeyItem(tpz.ki.COSMOCLEANSE)
-    player:delKeyItem(tpz.ki.RED_CARD)
 end
 
 function onBattlefieldEnter(player, battlefield)
+    player:delKeyItem(tpz.ki.COSMOCLEANSE)
+    player:delKeyItem(tpz.ki.RED_CARD)
     if battlefield:getLocalVar("race") == 0 then
         battlefield:setLocalVar("raceF1", player:getRace())
         battlefield:setLocalVar("race", 1)

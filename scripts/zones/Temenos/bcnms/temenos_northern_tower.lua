@@ -27,12 +27,9 @@ function onBattlefieldTick(battlefield, tick)
     tpz.battlefield.onBattlefieldTick(battlefield, tick)
 end
 
-function onBattlefieldRegister(player, battlefield)
+function onBattlefieldEnter(player, battlefield)
     player:delKeyItem(tpz.ki.COSMOCLEANSE)
     player:delKeyItem(tpz.ki.WHITE_CARD)
-end
-
-function onBattlefieldEnter(player, battlefield)
 end
 
 function onBattlefieldDestroy(battlefield)
