@@ -12,7 +12,6 @@ end
 -- After registering the BCNM via bcnmRegister(bcnmid)
 function onBattlefieldRegister(player, battlefield)
 end
-
 -- Physically entering the BCNM via bcnmEnter(bcnmid)
 function onBattlefieldEnter(player, battlefield)
 end

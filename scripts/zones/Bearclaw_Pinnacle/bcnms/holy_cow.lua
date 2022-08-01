@@ -16,12 +16,12 @@ function onBattlefieldTick(battlefield, tick)
 end
 
 function onBattlefieldRegister(player, battlefield)
-end
-
-function onBattlefieldEnter(player, battlefield)
     if player:hasKeyItem(tpz.ki.ZEPHYR_FAN) then
         player:delKeyItem(tpz.ki.ZEPHYR_FAN)
     end
+end
+
+function onBattlefieldEnter(player, battlefield)
 end
 
 function onBattlefieldLeave(player, battlefield, leavecode)
