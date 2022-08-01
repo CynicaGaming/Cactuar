@@ -43,12 +43,12 @@ function onBattlefieldTick(battlefield, tick)
 end
 
 function onBattlefieldRegister(player, battlefield)
-end
-
-function onBattlefieldEnter(player, battlefield)
     if player:hasKeyItem(tpz.ki.MIASMA_FILTER) then
         player:delKeyItem(tpz.ki.MIASMA_FILTER)
     end
+end
+
+function onBattlefieldEnter(player, battlefield)
 end
 
 function onBattlefieldLeave(player, battlefield, leavecode)

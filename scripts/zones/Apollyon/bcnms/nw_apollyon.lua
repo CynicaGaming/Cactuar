@@ -29,11 +29,11 @@ function onBattlefieldTick(battlefield, tick)
 end
 
 function onBattlefieldRegister(player, battlefield)
+    player:delKeyItem(tpz.ki.COSMOCLEANSE)
+    player:delKeyItem(tpz.ki.RED_CARD)
 end
 
 function onBattlefieldEnter(player, battlefield)
-    player:delKeyItem(tpz.ki.COSMOCLEANSE)
-    player:delKeyItem(tpz.ki.RED_CARD)
 end
 
 function onBattlefieldDestroy(battlefield)
