@@ -91,7 +91,8 @@ function onTrigger(player, npc)
         end
 
     elseif mamaMia == QUEST_COMPLETED and evokersRing then
-        player:startEvent(198) -- New standard dialog after "Mama Mia" is complete
+        --player:startEvent(198) -- New standard dialog after "Mama Mia" is complete
+        player:startEvent(243)
 
     elseif mamaMia == QUEST_COMPLETED and not evokersRing then
         player:startEvent(243) -- Quest completed, but dropped ring

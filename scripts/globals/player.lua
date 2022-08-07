@@ -124,6 +124,9 @@ local function CharCreate(player)
         player:changeContainerSize(tpz.inv.MOGSATCHEL, 30)
         player:changeContainerSize(tpz.inv.MOGCASE, 80)
         player:changeContainerSize(tpz.inv.WARDROBE, 80)
+        player:changeContainerSize(tpz.inv.WARDROBE2, 80)
+        player:changeContainerSize(tpz.inv.WARDROBE3, 80)
+        player:changeContainerSize(tpz.inv.WARDROBE4, 80)
 
     end
 

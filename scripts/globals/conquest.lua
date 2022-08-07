@@ -621,8 +621,8 @@ end
 
 local overseerInvCommon =
 {
-    [32928] = {cp =   500, lvl =  1, item =  4182},             -- scroll_of_instant_reraise
-    [32929] = {cp =   750, lvl =  1, item =  4181},             -- scroll_of_instant_warp
+    [32928] = {cp =   7, lvl =  1, item =  4182},             -- scroll_of_instant_reraise
+    [32929] = {cp =   10, lvl =  1, item =  4181},             -- scroll_of_instant_warp
     [32930] = {cp =  2500, lvl =  1, item = 15542},             -- return_ring
     [32931] = {cp =  9000, lvl =  1, item = 15541},             -- homing_ring
     [32933] = {cp =   500, lvl =  1, item = 15761},             -- chariot_band
@@ -692,7 +692,7 @@ local overseerInvNation =
         [32898] = {rank =  9, cp = 48000, lvl = 71, item = 17458, place = 2},     -- reserve_captains_mace
         [32899] = {rank =  9, cp = 48000, lvl = 71, item = 16893, place = 1},     -- reserve_captains_lance
         [32912] = {rank = 10, cp = 56000, lvl =  1, item = 14428, place = 1},     -- kingdom_aketon
-        [32932] = {           cp =  5000, lvl =  1, item = 17583},                -- kingdom_signet_staff
+        [32932] = {rank = 10, cp =  5000, lvl =  1, item = 17583},                -- kingdom_signet_staff
         [32940] = {rank = 10, cp = 10000, lvl =  1, item =  6377},                -- imperial_chair_set
     },
     [1] = -- Bastok
@@ -1114,12 +1114,6 @@ tpz.conquest.overseerOnEventUpdate = function(player, csid, option, guardNation)
         if stock.cp > player:getCP() then
             u2 = 1
         end
-        
-        if stock.item == 4181 then
-            player:PrintToPlayer("NOTICE: WotG era cost for the Scroll of Instant Warp is 750 CP.",29)
-        elseif stock.item == 4182 then
-            player:PrintToPlayer("NOTICE: WotG era cost for the Scroll of Instant Reraise is 500 CP.",29)
-        end
 
         local rankCheck = true
         if guardNation ~= tpz.nation.OTHER and guardNation ~= pNation and getNationRank(guardNation) <= pRank then -- buy from other nation, must be higher ranked
@@ -1279,10 +1273,6 @@ tpz.conquest.vendorOnEventFinish = function(player, option, vendorRegion)
     elseif option == 6 then
         player:delCP(fee)
         player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.HOME_NATION, 0, 1, 0, region)
-        if player:delGil(fee) then
-            --player:PrintToPlayer("Conquest point fees for teleports are out-of-WotG-era. The gil fee option has been used instead.",29)
-            player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.HOME_NATION, 0, 1, 0, region)
-        end
     end
 end
 
@@ -1319,24 +1309,15 @@ end
 tpz.conquest.teleporterOnEventFinish = function(player, csid, option, teleporterEvent)
     if csid == teleporterEvent then
         -- TELEPORT WITH GIL
-         if option >= 5 and option <= 23 then
+        if option >= 5 and option <= 23 then
             local region = option - 5
-            
-            if option >= 1029 and option <= 1047 then
-                --player:PrintToPlayer("Conquest point fees for teleports are out-of-WotG-era. The gil fee option has been used instead.",29)
-                region = option - 1029
-            end
-            
             local fee = tpz.conquest.outpostFee(player, region)
 
             if tpz.conquest.canTeleportToOutpost(player, region) and player:delGil(fee) then
                 player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.OUTPOST, 0, 1, 0, region)
             end
-
-        -- TELEPORT WITH CP, not 75 cap, disabled
-        
-            
-
+        -- TELEPORT WITH CP
+        elseif option >= 1029 and option <= 1047 then
             local region = option - 1029
             local fee = tpz.conquest.outpostFee(player, region)
 
@@ -1344,9 +1325,7 @@ tpz.conquest.teleporterOnEventFinish = function(player, csid, option, teleporter
                 player:delCP(fee)
                 player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.OUTPOST, 0, 1, 0, region)
             end
-
         end
-
     end
 end
 

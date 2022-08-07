@@ -13020,7 +13020,7 @@ inline int32 CLuaBaseEntity::addCorsairRoll(lua_State *L)
     uint8 maxRolls = 2;
     if ((casterJob != JOB_COR) || (map_config.dual_main_job))
     {
-        maxRolls = 1;
+        maxRolls = 2;
     }
     lua_pushboolean(L, ((CBattleEntity*)m_PBaseEntity)->StatusEffectContainer->ApplyCorsairEffect(PEffect, maxRolls, bustDuration));
     return 1;

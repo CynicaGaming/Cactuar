@@ -20,7 +20,7 @@ function onSpellCast(caster, target, spell)
     local numShadows = 4
     local icon = tpz.effect.COPY_IMAGE_3
 
-    if (caster:getMainJob() == tpz.job.NIN) then
+    if (caster:getMainJob() == tpz.job.NIN or caster:getSubJob() == tpz.job.NIN) then
         numShadows = 4 + target:getMod(tpz.mod.UTSUSEMI_BONUS)
         icon = tpz.effect.COPY_IMAGE_4
     end
