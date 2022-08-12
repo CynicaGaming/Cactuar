@@ -1191,27 +1191,55 @@ tpz.regime.bookOnEventFinish = function(player, option, regimeType)
             player:addStatusEffect(tpz.effect.RERAISE, 3, 0, 7200)
 
         elseif act == "REGEN" then
+            local mLvl = player:getMainLvl()
+            local power = 0
+
+            if mLvl >= 1 and mLvl <= 20 then
+                power = 3
+            elseif mLvl >= 21 and mLvl <= 36 then
+                power = 5
+            elseif mLvl > 37 and mLvl <= 65 then
+                power = 12
+            elseif mLvl > 66 and mLvl <= 75 then
+                power = 20
+            else 
+                power = 30
+            end
+
             player:delStatusEffectSilent(tpz.effect.REGEN)
-            player:addStatusEffect(tpz.effect.REGEN, 1, 3, 3600, 0, 128)
+            player:addStatusEffect(tpz.effect.REGEN, power, 3, 1800, 0, 128)
 
         elseif act == "REFRESH" then
+            local mLvl = player:getMainLvl()
+            local power = 0
+
+            if mLvl >= 1 and mLvl <= 20 then
+                power = 2
+            else
+                power = 3
+            end
+
             player:delStatusEffectSilent(tpz.effect.REFRESH)
             player:delStatusEffect(tpz.effect.SUBLIMATION_COMPLETE)
             player:delStatusEffect(tpz.effect.SUBLIMATION_ACTIVATED)
-            player:addStatusEffect(tpz.effect.REFRESH, 1, 3, 3600, 0, 128)
+            player:addStatusEffect(tpz.effect.REFRESH, power, 3, 1800, 0, 128)
 
         elseif act == "PROTECT" then
             local mLvl = player:getMainLvl()
             local power = 0
 
-            if mLvl < 27 then
+            if mLvl >= 1 and mLvl <= 6  then
                 power = 10
-            elseif mLvl < 47 then
-                power = 25
-            elseif mLvl < 63 then
-                power = 40
+            elseif mLvl >= 7 and mLvl <= 26  then
+                power = 20
+            elseif mLvl >= 27 and mLvl <= 56  then
+                power = 50
+            elseif mLvl >= 47 and mLvl <= 62  then
+                power = 90
+            elseif mLvl >= 63 and mLvl <= 75  then
+                power = 140
             else
-                power = 55
+                power = 220
             end
 
             player:delStatusEffectSilent(tpz.effect.PROTECT)
@@ -1221,21 +1249,26 @@ tpz.regime.bookOnEventFinish = function(player, option, regimeType)
             local mLvl = player:getMainLvl()
             local power = 0
 
-            if mLvl < 37 then
-                power = 9
-            elseif mLvl < 57 then
-                power = 14
-            elseif mLvl < 68 then
-                power = 19
+            if mLvl >= 1 and mLvl <= 16  then
+                power = 12
+            elseif mLvl >= 17 and mLvl <= 36  then
+                power = 25
+            elseif mLvl >= 37 and mLvl <= 56  then
+                power = 37
+            elseif mLvl >= 57 and mLvl <= 67  then
+                power = 51
+            elseif mLvl >= 68 and mLvl <= 75  then
+                power = 60
             else
-                power = 22
+                power = 75
             end
+
             player:delStatusEffectSilent(tpz.effect.SHELL)
             player:addStatusEffect(tpz.effect.SHELL, power, 0, 1800)
 
         elseif act == "HASTE" then
             player:delStatusEffectSilent(tpz.effect.HASTE)
-            player:addStatusEffect(tpz.effect.HASTE, 1000, 0, 600)
+            player:addStatusEffect(tpz.effect.HASTE, 1000, 0, 1800)
 
         elseif act == "DRIED_MEAT" then
             player:addStatusEffectEx(tpz.effect.FIELD_SUPPORT_FOOD, 251, 1, 0, 1800)
