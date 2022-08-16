@@ -64,7 +64,7 @@ function onTrigger(player, npc)
         local haveimperialIDtag = 0
         local tagsAvail = 0
 
-        while currentTime >= refreshTime and tagStock < 3 do
+        while currentTime >= refreshTime and tagStock < 7 do
             refreshTime = refreshTime + 86400
             tagStock = tagStock + 1
         end
@@ -115,7 +115,7 @@ function onEventFinish(player, csid, option)
         end
         npcUtil.giveKeyItem(player, tpz.ki.IMPERIAL_ARMY_ID_TAG)
 
-        if tagStock >= 3 then
+        if tagStock >= 7 then
             player:setCharVar("lastTagTime", os.time() + 86400)
         end
         player:setCurrency("id_tags", tagStock - 1)
