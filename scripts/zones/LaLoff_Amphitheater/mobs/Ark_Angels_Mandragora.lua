@@ -9,14 +9,14 @@ require("scripts/globals/status")
 -- TODO: Implement shared spawn and victory conditions with Ark Angel's Tiger.
 
 function onMobEngaged(mob, target)
-    --local mobid = mob:getID()
+    local mobid = mob:getID()
 
-    --for member = mobid-3, mobid+4 do
-        --local m = GetMobByID(member)
-        --if m:getCurrentAction() == tpz.act.ROAMING then
-            --m:updateEnmity(target)
-        --end
-    --end
+    for member = mobid-3, mobid+4 do
+        local m = GetMobByID(member)
+        if m:getCurrentAction() == tpz.act.ROAMING then
+            m:updateEnmity(target)
+        end
+    end
 end
 
 function onMobFight(mob, target)
