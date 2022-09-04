@@ -75,5 +75,6 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.MOGHOUSE_EXIT)
     elseif (csid == 160 and option == 10) then
         player:addQuest(BASTOK, tpz.quest.id.bastok.A_LADY_S_HEART)
+        player:addExp(EXP_RATE_QUEST*500)
     end
 end

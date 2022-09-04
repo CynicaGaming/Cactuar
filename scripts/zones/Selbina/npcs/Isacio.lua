@@ -74,5 +74,6 @@ function onEventFinish(player, csid, option)
         player:setCharVar("IsacioElderMemVar", 0)
         player:messageSpecial(ID.text.SUBJOB_UNLOCKED)
         player:completeQuest(OTHER_AREAS_LOG, tpz.quest.id.otherAreas.ELDER_MEMORIES)
+        player:addExp(EXP_RATE_QUEST*1000)
     end
 end

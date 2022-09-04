@@ -90,6 +90,7 @@ function onEventFinish(player, csid, option)
         player:addKeyItem(tpz.ki.BLUE_INVITATION_CARD)
         player:messageSpecial(ID.text.KEYITEM_LOST, tpz.ki.BLUE_SENTINEL_BADGE)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.BLUE_INVITATION_CARD)
+        player:addExp(EXP_RATE_QUEST*500)
     elseif (csid == 379) then
         player:tradeComplete()
         tpz.teleport.to(player, tpz.teleport.id.WHITEGATE)

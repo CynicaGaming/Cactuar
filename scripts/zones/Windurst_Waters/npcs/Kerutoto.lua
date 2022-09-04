@@ -145,6 +145,7 @@ function onEventFinish(player, csid, option)
         if (player:getCharVar("Kenapa_Food_var") == 4 and player:getCharVar("Ohbiru_Food_var") == 3) then -- If this is the last NPC to be fed
             player:completeQuest(WINDURST, tpz.quest.id.windurst.FOOD_FOR_THOUGHT)
             player:addFame(WINDURST, 100)
+            player:addExp(EXP_RATE_QUEST*500)
             player:addTitle(tpz.title.FAST_FOOD_DELIVERER)
             player:needToZone(true)
             player:setCharVar("Kerutoto_Food_var", 0)        -- ------------------------------------------
@@ -174,6 +175,7 @@ function onEventFinish(player, csid, option)
         player:completeQuest(WINDURST, tpz.quest.id.windurst.BLUE_RIBBON_BLUES)
         player:setCharVar("BlueRibbonBluesProg", 0)
         player:addFame(WINDURST, 140)
+        player:addExp(EXP_RATE_QUEST*1500)
         player:addTitle(tpz.title.GHOSTIE_BUSTER)
         player:needToZone(true)
     elseif (csid == 918) then    --diablos start

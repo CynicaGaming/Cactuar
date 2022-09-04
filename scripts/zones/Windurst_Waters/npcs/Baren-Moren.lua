@@ -136,6 +136,7 @@ printf("RESULT: %u", option)
             player:addFame(WINDURST, 8)
         end
         player:completeQuest(WINDURST, tpz.quest.id.windurst.HAT_IN_HAND)
+        player:addExp(EXP_RATE_QUEST*500)
         player:setCharVar("QuestHatInHand_count", 0)
         player:setCharVar("QuestHatInHand_var", 0)
         player:needToZone(true)
@@ -158,6 +159,7 @@ printf("RESULT: %u", option)
             player:setCharVar("QuestFeatherInOnesCap_var", 0)
         end
         player:addGil(GIL_RATE*1500)
+        player:addExp(EXP_RATE_QUEST*175)
         player:tradeComplete(trade)
         player:needToZone(true)
     end

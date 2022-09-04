@@ -229,6 +229,9 @@ function onGameIn(player, firstLogin, zoning)
 
     -- remember time player zoned in (e.g., to support zone-in delays)
     player:setLocalVar("ZoneInTime", os.time())
+    player:timer(2500, function(player)
+        tpz.events.loginCampaign.onGameIn(player)
+    end)
 end
 
 function onPlayerLevelUp(player)

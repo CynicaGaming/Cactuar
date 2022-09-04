@@ -17,6 +17,7 @@ function onTrade(player, npc, trade)
                 player:setCharVar("walahraCoinCount", walahraCoinCount - (1000 - TradeCount))
                 player:tradeComplete()
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 15270)
+                player:addExp(EXP_RATE_QUEST*1000) 
                 player:startEvent(102, 2184, 0, TradeCount)
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 15270)
@@ -28,10 +29,13 @@ function onTrade(player, npc, trade)
                 player:addItem(5354)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 5354)
                 player:startEvent(102, 2184, 0, TradeCount)
+                player:addExp(EXP_RATE_QUEST * (10 * tradecount)) 
+
             else
                 player:tradeComplete()
                 player:setCharVar("walahraCoinCount", walahraCoinCount + TradeCount)
                 player:startEvent(102, 2184, 0, TradeCount)
+                player:addExp(EXP_RATE_QUEST * (10 * tradecount)) 
             end
         end
     end

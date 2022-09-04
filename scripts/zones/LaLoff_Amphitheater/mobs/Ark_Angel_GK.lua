@@ -12,21 +12,21 @@ function onMobSpawn(mob)
     tpz.mix.jobSpecial.config(mob, {
         specials =
         {
-            {id = tpz.jsa.CALL_WYVERN, hpp = 100, cooldown = 60}, -- "Call Wyvern is used at the time of monster engage. Call Wyvern is used ~1 minute subsequent to Wyvern's death."
+            --{id = tpz.jsa.CALL_WYVERN, hpp = 100, cooldown = 7200}, -- "Call Wyvern is used at the time of monster engage. Call Wyvern is used ~1 minute subsequent to Wyvern's death."
             {id = tpz.jsa.MEIKYO_SHISUI, hpp = math.random(90, 95), cooldown = 90}, -- "Meikyo Shisui is used very frequently." 
         },
     })
 end
 
 function onMobEngaged(mob, target)
-    local mobid = mob:getID()
+    --local mobid = mob:getID()
 
-    for member = mobid-6, mobid+1 do
-        local m = GetMobByID(member)
-        if m:getCurrentAction() == tpz.act.ROAMING then
-            m:updateEnmity(target)
-        end
-    end
+    --for member = mobid-6, mobid+1 do
+        --local m = GetMobByID(member)
+        --if m:getCurrentAction() == tpz.act.ROAMING then
+           --m:updateEnmity(target)
+        --end
+    --end
 end
 
 function onMobWeaponSkill(target, mob, skill)

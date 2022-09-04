@@ -73,6 +73,8 @@ function onEventFinish(player, csid, option)
         local fame = player:hasCompletedQuest(BASTOK, tpz.quest.id.bastok.THE_ELVAAN_GOLDSMITH) and 8 or 100
         if (npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.THE_ELVAAN_GOLDSMITH, {gil=180, fame=fame})) then
             player:confirmTrade()
+            player:addExp(EXP_RATE_QUEST*150) 
+
         end
 
     -- DISTANT LOYALTIES
@@ -93,6 +95,8 @@ function onEventFinish(player, csid, option)
     elseif (csid == 241) then
         if (npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.FATHER_FIGURE, {gil=2200, fame=120})) then
             player:confirmTrade()
+            player:addExp(EXP_RATE_QUEST*2000) 
+
         end
     end
 end

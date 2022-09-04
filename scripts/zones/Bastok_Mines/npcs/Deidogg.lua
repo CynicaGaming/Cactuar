@@ -93,6 +93,8 @@ function onEventFinish(player, csid, option)
             player:needToZone(true)
             player:addFame(BASTOK, 40)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_TALEKEEPER_S_TRUTH)
+            player:addExp(EXP_RATE_QUEST*3000) 
+
         end
     elseif (csid == 172) then
         player:tradeComplete()

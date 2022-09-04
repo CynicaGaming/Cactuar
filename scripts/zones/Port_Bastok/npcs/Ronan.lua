@@ -60,6 +60,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 12501)
             player:addFame(BASTOK, 120)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.OUT_OF_ONE_S_SHELL)
+            player:addExp(EXP_RATE_QUEST*900)
         else
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12501)
         end

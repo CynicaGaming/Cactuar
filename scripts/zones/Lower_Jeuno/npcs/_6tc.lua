@@ -77,6 +77,8 @@ function onEventFinish(player, csid, option)
             player:addFame(NORG, 125)
             player:tradeComplete()
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.BEAT_AROUND_THE_BUSHIN)
+            player:addExp(EXP_RATE_QUEST*10000) 
+
         end
     end
 end

@@ -8,8 +8,8 @@ require("scripts/globals/settings")
 
 function onTrade(player, npc, trade)
     if (trade:getItemCount() == 1 and trade:hasItemQty(536, 1) == true) then
-        player:startEvent(10002, GIL_RATE*50)
-        player:addGil(GIL_RATE*50)
+        player:startEvent(10002, GIL_RATE*1000)
+        player:addGil(GIL_RATE*1000)
         player:tradeComplete()
     end
 end

@@ -772,7 +772,7 @@ tpz.caskets.onTrade = function(player, npc, trade)
     end
 
     if locked == 1 then
-        if player:getMainJob() == tpz.job.THF and npcUtil.tradeHasExactly(trade, 1022) then
+        if player:getMainJob() == tpz.job.THF or player:getSubJob() == tpz.job.THF  and npcUtil.tradeHasExactly(trade, 1022) then
             local splitNumbers = {}
             local tradeAttempt = math.random()
             local firstAttempt = npc:getLocalVar("[caskets]HINT_TRADE")

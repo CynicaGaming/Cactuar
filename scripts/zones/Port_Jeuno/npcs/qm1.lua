@@ -47,6 +47,7 @@ function onEventFinish(player, csid, option)
             player:setCharVar("BorghertzCS", 0)
             player:setCharVar("BorghertzAlreadyActiveWithJob", 0)
             player:addFame(JEUNO, 30)
+            player:addExp(EXP_RATE_QUEST*1000)
             player:completeQuest(JEUNO, NumQuest)
         end
     end

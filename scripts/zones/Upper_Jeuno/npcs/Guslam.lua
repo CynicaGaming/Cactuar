@@ -33,7 +33,7 @@ end
 
 function onTrigger(player, npc)
     -- TODO: table this stuff, rather than tall if-elseif
-    if (player:getMainLvl() >= 50 and player:getCharVar("BorghertzAlreadyActiveWithJob") == 0) then
+    if (player:getCharVar("BorghertzAlreadyActiveWithJob") == 0) then
         if
             player:getMainJob() == tpz.job.WAR and
             player:getQuestStatus(BASTOK, tpz.quest.id.bastok.THE_TALEKEEPER_S_TRUTH) ~= QUEST_AVAILABLE and

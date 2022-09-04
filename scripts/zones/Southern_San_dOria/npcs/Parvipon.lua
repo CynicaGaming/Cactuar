@@ -40,6 +40,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:addGil(GIL_RATE*120)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*120)
+        player:addExp(EXP_RATE_QUEST*90)
         if (player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.THE_MERCHANT_S_BIDDING) == QUEST_ACCEPTED) then
             player:addFame(SANDORIA, 30)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.THE_MERCHANT_S_BIDDING)

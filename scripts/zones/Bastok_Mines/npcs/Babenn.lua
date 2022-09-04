@@ -51,6 +51,7 @@ function onEventFinish(player, csid, option)
             player:addItem(16629)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 16629)
             player:addFame(BASTOK, 30)
+            player:addExp(EXP_RATE_QUEST*2000) 
             player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_ELEVENTH_S_HOUR)
         else
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 16629)

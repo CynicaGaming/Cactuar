@@ -116,6 +116,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("THE_ROAD_TO_AHT_URHGAN_Day", 0)
         player:setCharVar("THE_ROAD_TO_AHT_URHGAN_Year", 0)
         player:addFame(JEUNO, 30)
+        player:addExp(EXP_RATE_QUEST*5000) 
     elseif (csid == 10070) then
         player:addKeyItem(tpz.ki.BOARDING_PERMIT)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.BOARDING_PERMIT)
@@ -124,6 +125,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("THE_ROAD_TO_AHT_URHGAN_Day", 0)
         player:setCharVar("THE_ROAD_TO_AHT_URHGAN_Year", 0)
         player:addFame(JEUNO, 30)
+        player:addExp(EXP_RATE_QUEST*5000) 
         player:tradeComplete()
     end
 end

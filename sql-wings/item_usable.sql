@@ -1810,7 +1810,11 @@ INSERT INTO `item_usable` VALUES(6274, 'pukatrice_egg', 1, 1, 28, 0, 0, 0, 0, 0)
 INSERT INTO `item_usable` VALUES(6275, 'pukatrice_egg_+1', 1, 1, 28, 0, 0, 0, 0, 0);
 INSERT INTO `item_usable` VALUES(6276, 'deep-fried_shrimp', 1, 1, 28, 0, 0, 0, 0, 0);
 INSERT INTO `item_usable` VALUES(6277, 'deep-fried_shrimp_+1', 1, 1, 28, 0, 0, 0, 0, 0);
+INSERT INTO `item_usable` VALUES(6297, 'juji_shuriken_pouch', 1, 1, 55, 0, 0, 0, 0, 0);
+INSERT INTO `item_usable` VALUES(6298, 'manji_shuriken_pouch', 1, 1, 55, 0, 0, 0, 0, 0);
+INSERT INTO `item_usable` VALUES(6299, 'shuriken_pouch', 1, 1, 55, 0, 0, 0, 0, 0);
 INSERT INTO `item_usable` VALUES(6300, 'koga_shuriken_pouch', 1, 1, 55, 0, 0, 0, 0, 0);
+INSERT INTO `item_usable` VALUES(6302, 'fuma_shuriken_pouch', 1, 1, 55, 0, 0, 0, 0, 0);
 INSERT INTO `item_usable` VALUES(6339, 'rolanberry_daifuku', 1, 1, 28, 0, 0, 0, 0, 0);
 INSERT INTO `item_usable` VALUES(6340, 'rolanberry_daifuku_+1', 1, 1, 28, 0, 0, 0, 0, 0);
 INSERT INTO `item_usable` VALUES(6341, 'bean_daifuku', 1, 1, 28, 0, 0, 0, 0, 0);
@@ -1976,7 +1980,7 @@ INSERT INTO `item_usable` VALUES(15175, 'revilers_helm', 20, 1, 0, 0, 100, 30, 3
 INSERT INTO `item_usable` VALUES(15179, 'dream_hat_+1', 1, 2, 0, 0, 1, 30, 86400, 0);
 INSERT INTO `item_usable` VALUES(15182, 'zoolater_hat', 1, 3, 33, 0, 50, 30, 1800, 0);
 INSERT INTO `item_usable` VALUES(15194, 'maats_cap', 1, 8, 79, 0, 1, 30, 86400, 0);
-INSERT INTO `item_usable` VALUES(15198, 'sprout_beret', 4, 3, 0, 0, 1, 30, 600, 0);
+INSERT INTO `item_usable` VALUES(15198, 'sprout_beret', 1, 1, 0, 0, 1, 5, 30, 0); -- Cactuar Edit
 INSERT INTO `item_usable` VALUES(15199, 'guide_beret', 4, 3, 0, 0, 1, 30, 1800, 0);
 INSERT INTO `item_usable` VALUES(15204, 'mandragora_beret', 1, 1, 0, 0, 1, 30, 3600, 0);
 INSERT INTO `item_usable` VALUES(15211, 'reraise_hairpin', 1, 8, 33, 0, 10, 30, 60, 0);
@@ -2248,7 +2252,16 @@ INSERT INTO `item_usable` VALUES(25585, 'black_chocobo_cap', 1, 8, 79, 0, 1, 30,
 INSERT INTO `item_usable` VALUES(26517, 'shadow_lord_shirt', 1, 8, 79, 0, 1, 30, 72000, 0);
 INSERT INTO `item_usable` VALUES(26720, 'sheep_cap_+1', 1, 2, 55, 0, 1, 30, 86400, 0);
 INSERT INTO `item_usable` VALUES(27556, 'echad_ring', 1, 3, 76, 0, 1, 5, 7200, 0);
-INSERT INTO `item_usable` VALUES(28540, 'warp_ring', 1, 8, 80, 3, 1, 8, 600, 0);
+INSERT INTO `item_usable` VALUES(26166, 'invisible_ring', 1, 5, 10, 0, 1, 4, 900, 0);
+INSERT INTO `item_usable` VALUES(26167, 'sneak_ring', 1, 5, 24, 0, 1, 4, 900, 0);
+INSERT INTO `item_usable` VALUES(26169, 'reraise_ring', 1, 8, 33, 0, 1, 30, 72000, 0);
+INSERT INTO `item_usable` VALUES(18913, 'ark_sword', 1, 1, 0, 4, 1, 30, 3600, 0);
+INSERT INTO `item_usable` VALUES(18464, 'ark_tachi', 1, 1, 0, 4, 1, 30, 3600, 0);
+INSERT INTO `item_usable` VALUES(18563, 'ark_scythe', 1, 1, 0, 4, 1, 30, 3600, 0);
+INSERT INTO `item_usable` VALUES(18912, 'ark_saber', 1, 1, 0, 4, 1, 30, 3600, 0);
+INSERT INTO `item_usable` VALUES(18545, 'ark_taber', 1, 1, 0, 4, 1, 30, 3600, 0);
+
+
 
 --
 -- Indexes for dumped tables

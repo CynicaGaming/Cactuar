@@ -65,6 +65,8 @@ function onEventFinish(player, csid, option)
             player:addFame(JEUNO, 30)
             player:needToZone(true)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_WONDER_MAGIC_SET)
+            player:addExp(EXP_RATE_QUEST*500) 
+
         end
     elseif (csid == 30) then
         player:setCharVar("theLostCardianVar", 2)
@@ -79,6 +81,8 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 13596) -- Green Cape
             player:addFame(JEUNO, 30)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_KIND_CARDIAN)
+            player:addExp(EXP_RATE_QUEST*3000) 
+
         end
     end
 end

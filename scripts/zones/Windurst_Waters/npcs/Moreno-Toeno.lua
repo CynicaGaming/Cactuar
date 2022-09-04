@@ -128,6 +128,7 @@ function onEventFinish(player, csid, option)
         if (player:getQuestStatus(WINDURST, tpz.quest.id.windurst.TEACHER_S_PET) == QUEST_ACCEPTED) then
             player:completeQuest(WINDURST, tpz.quest.id.windurst.TEACHER_S_PET)
             player:addFame(WINDURST, 75)
+            player:addExp(EXP_RATE_QUEST*175)
         else
             player:addFame(WINDURST, 8)
         end

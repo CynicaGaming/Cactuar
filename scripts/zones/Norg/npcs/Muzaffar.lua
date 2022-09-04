@@ -46,6 +46,7 @@ function onEventFinish(player, csid, option)
     elseif (csid == 17) then
         player:addGil(GIL_RATE*1500)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*1500)
+        player:addExp(EXP_RATE_QUEST*500)
         if (player:getQuestStatus(NORG, tpz.quest.id.outlands.BLACK_MARKET) == QUEST_ACCEPTED) then
             player:completeQuest(NORG, tpz.quest.id.outlands.BLACK_MARKET)
         end
@@ -55,6 +56,7 @@ function onEventFinish(player, csid, option)
     elseif (csid == 18) then
         player:addGil(GIL_RATE*2000)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*2000)
+        player:addExp(EXP_RATE_QUEST*700)
         if (player:getQuestStatus(NORG, tpz.quest.id.outlands.BLACK_MARKET) == QUEST_ACCEPTED) then
             player:completeQuest(NORG, tpz.quest.id.outlands.BLACK_MARKET)
         end
@@ -63,6 +65,7 @@ function onEventFinish(player, csid, option)
         player:startEvent(20)
     elseif (csid == 19) then
         player:addGil(GIL_RATE*3000)
+        player:addExp(EXP_RATE_QUEST*900) 
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*3000)
         if (player:getQuestStatus(NORG, tpz.quest.id.outlands.BLACK_MARKET) == QUEST_ACCEPTED) then
             player:completeQuest(NORG, tpz.quest.id.outlands.BLACK_MARKET)

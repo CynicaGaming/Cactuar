@@ -21,8 +21,8 @@ function onTrigger(player, npc)
         16535,   246, 3, -- Bronze Sword
         16517,  9201, 3, -- Degen
         16551,   689, 3, -- Sapara
-        --16530,   618, 3, -- Xiphos
-        --16565,  1711, 3, -- Spatha
+        16530,   618, 3, -- Xiphos
+        16565,  1711, 3, -- Spatha
         16512,  3215, 3, -- Bilbo
         16465,   147, 3, -- bronze knife
         16405,   104, 3, -- cat baghnakhs

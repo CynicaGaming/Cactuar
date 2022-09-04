@@ -38,5 +38,6 @@ function onEventFinish(player, csid, option)
         player:addFame(BASTOK, 100)
         player:addTitle(tpz.title.STAR_OF_IFRIT)
         player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_STARS_OF_IFRIT)
+        player:addExp(EXP_RATE_QUEST*1750)
     end
 end

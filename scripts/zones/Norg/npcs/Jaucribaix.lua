@@ -127,6 +127,7 @@ function onEventFinish(player, csid, option)
         player:addQuest(OUTLANDS, tpz.quest.id.outlands.THE_SACRED_KATANA)
     elseif (csid == 141 and npcUtil.completeQuest(player, OUTLANDS, tpz.quest.id.outlands.THE_SACRED_KATANA, {item=17812, fame=20, fameArea=NORG})) then -- Magoroku
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*2000) 
         player:delKeyItem(tpz.ki.HANDFUL_OF_CRYSTAL_SCALES)
         player:needToZone(true)
 
@@ -143,6 +144,7 @@ function onEventFinish(player, csid, option)
         npcUtil.giveKeyItem(player, tpz.ki.YOMOTSU_HIRASAKA)
     elseif (csid == 156 and npcUtil.completeQuest(player, OUTLANDS, tpz.quest.id.outlands.YOMI_OKURI, {item=14100, fame=40, fameArea=NORG, var="yomiOkuriCS"})) then -- Myochin Sune-Ate
         player:delKeyItem(tpz.ki.FADED_YOMOTSU_HIRASAKA)
+        player:addExp(EXP_RATE_QUEST*2500) 
         player:needToZone(true)
 
     -- A THIEF IN NORG
@@ -159,6 +161,8 @@ function onEventFinish(player, csid, option)
         player:setCharVar("aThiefinNorgCS", 9)
         player:needToZone(true)
     elseif (csid == 164) then
+
+        player:addExp(EXP_RATE_QUEST*3000) 
         npcUtil.completeQuest(player, OUTLANDS, tpz.quest.id.outlands.A_THIEF_IN_NORG, {item=13868, title=tpz.title.PARAGON_OF_SAMURAI_EXCELLENCE, fame=60, fameArea=NORG, var={"aThiefinNorgCS"}})
 
     else

@@ -396,7 +396,7 @@ uint8 CMeritPoints::GetMeritMaxUpgrades(uint8 catid)
     if (catid == 3) // magic skills
         return 8;
     if (catid == 4) // others (crit rate, enmity, spell interruption)
-        return 4;
+        return 5;
     if (catid >= 5 && catid <= 24) // job-specific group1
         return 5;
     if (catid == 25) // weapon skills (OOE)

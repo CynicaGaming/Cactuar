@@ -216,6 +216,7 @@ function onEventFinish(player, csid, option)
             player:addItem(16409)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 16409) -- Lynx Baghnakhs
             player:addFame(SANDORIA, 30)
+            player:addExp(EXP_RATE_QUEST*1600) 
             player:completeQuest(SANDORIA, sandyQuests.THE_GENERAL_S_SECRET)
         end
     elseif (csid == 94 and option == 1) then

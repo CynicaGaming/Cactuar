@@ -51,8 +51,9 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_QUADAV_S_CURSE)
         player:addFame(BASTOK, 120)
-        player:addItem(12832)
-        player:messageSpecial(ID.text.ITEM_OBTAINED, 12832)
+        player:addItem(12892)
+        player:messageSpecial(ID.text.ITEM_OBTAINED, 12892)
+        player:addExp(EXP_RATE_QUEST*250)
     end
 
 end

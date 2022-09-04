@@ -50,10 +50,11 @@ function onEventFinish(player, csid, option)
             player:delKeyItem(tpz.ki.PAINTING_OF_A_WINDMILL)
             player:addTitle(tpz.title.TREASURE_SCAVENGER)
             player:addFame(BASTOK, 50)
-            player:addItem(12601)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 12601) -- Linen Robe
+            player:addItem(12626)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 12626) -- Linen Robe +1
+            player:addExp(EXP_RATE_QUEST*1000) 
         else
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12601)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12626)
         end
     end
 

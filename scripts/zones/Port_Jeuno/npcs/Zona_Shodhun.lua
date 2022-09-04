@@ -85,6 +85,7 @@ function onEventFinish(player, csid, option)
         player:moghouseFlag(8)
         player:messageSpecial(ID.text.MOGHOUSE_EXIT)
         player:addFame(JEUNO, 30)
+        player:addExp(EXP_RATE_QUEST*500)
         player:tradeComplete()
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.PRETTY_LITTLE_THINGS)
     elseif (csid == 10023 and option == 1) then

@@ -42,7 +42,9 @@ function onEventFinish(player, csid, option)
         player:addQuest(OTHER_AREAS_LOG, tpz.quest.id.otherAreas.BOMBS_AWAY)
     elseif csid == 8 and npcUtil.completeQuest(player, OTHER_AREAS_LOG, tpz.quest.id.otherAreas.BOMBS_AWAY, {item = 5267}) then -- shumeyo salt
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*300)
     elseif csid == 8 and npcUtil.giveItem(player, 5267) then -- shumeyo salt
+        player:addExp(EXP_RATE_QUEST*300)
         player:confirmTrade()
     end
 end

@@ -19,19 +19,19 @@ function onTrigger(player, npc)
             829,  36720,    -- Silk Cloth
             1240,   180,    -- Koma
             657,  10250,    -- Tama-Hagane
-            --1415, 67142,    -- Urushi
-            --1161,    75,    -- Uchitake
-            --1164,    75,    -- Tsurara
-            --1167,    75,    -- Kawahori-Ogi
-            --1170,    75,    -- Makibishi
-            --1173,    75,    -- Hiraishin
-            --1176,    75,    -- Mizu-Deppo
-            --1179,   125,    -- Shihei
-            --1182,   125,    -- Jusatsu
-            --1185,   125,    -- Kaginawa
-            --1188,   125,    -- Sairui-Ran
-            --1191,   125,    -- Kodoku
-            --1194,   125,    -- Shinobi-Tabi
+            1415, 67142,    -- Urushi
+            1161,    75,    -- Uchitake
+            1164,    75,    -- Tsurara
+            1167,    75,    -- Kawahori-Ogi
+            1170,    75,    -- Makibishi
+            1173,    75,    -- Hiraishin
+            1176,    75,    -- Mizu-Deppo
+            1179,   125,    -- Shihei
+            1182,   125,    -- Jusatsu
+            1185,   125,    -- Kaginawa
+            1188,   125,    -- Sairui-Ran
+            1191,   125,    -- Kodoku
+            1194,   125,    -- Shinobi-Tabi
             1471,   316,    -- Sticky Rice
             1554,   490,    -- Turmeric
             1555,  1110,    -- Coriander
@@ -41,12 +41,12 @@ function onTrigger(player, npc)
             1652,   175,    -- Rice Vinegar
             5237,   392,    -- Shirataki
             2702,  1500,    -- Buckwheat Flour
-            --4928,  2331,    -- Katon: Ichi
-            --4931,  2331,    -- Hyoton: Ichi
-            --4934,  2331,    -- Huton: Ichi
-            --4937,  2331,    -- Doton: Ichi
-            --4940,  2331,    -- Raiton: Ichi
-            --4943,  2331,    -- Suiton: Ichi
+            4928,  2331,    -- Katon: Ichi
+            4931,  2331,    -- Hyoton: Ichi
+            4934,  2331,    -- Huton: Ichi
+            4937,  2331,    -- Doton: Ichi
+            4940,  2331,    -- Raiton: Ichi
+            4943,  2331,    -- Suiton: Ichi
             --4949,  2849,    -- Jubaku: Ichi
             --4952,  2849,    -- Hojo: Ichi
             --4955,  2849,    -- Kurayami: Ichi
@@ -70,7 +70,7 @@ function onTrigger(player, npc)
             --4873, 32320,    -- Retrace
             --4882, 67818,    -- Sleepga II
             --4946, 13133,    -- Utsusemi: Ichi
-            --4994, 11830,    -- Mage's Ballad
+            4994, 11830,    -- Mage's Ballad
         }
 
         player:showText(npc, ID.text.AMALASANDA_SHOP_DIALOG)

@@ -70,6 +70,8 @@ function onEventFinish(player, csid, option)
             player:setCharVar("darkLegacyCS", 0)
             player:addFame(BASTOK, 20)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.DARK_LEGACY)
+            player:addExp(EXP_RATE_QUEST*2500) 
+
         end
     elseif (csid == 933) then
         player:setCharVar("WildcatBastok", utils.mask.setBit(player:getCharVar("WildcatBastok"), 5, true))

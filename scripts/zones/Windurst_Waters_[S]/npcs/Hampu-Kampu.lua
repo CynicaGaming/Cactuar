@@ -43,6 +43,7 @@ function onEventFinish(player, csid, option)
         }) then
             player:delKeyItem(tpz.ki.REPAIRED_HANDBAG)
             player:setCharVar("sayItWithAHandbagBonusCS", 1)
+            player:addExp(EXP_RATE_QUEST*750)
         end
     elseif csid == 172 then
         npcUtil.giveKeyItem(player, tpz.ki.TORN_PATCHES_OF_LEATHER)

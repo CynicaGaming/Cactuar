@@ -19,6 +19,7 @@ function onTrade(player, npc, trade)
             player:addGil(GIL_RATE*600)
             player:addTitle(tpz.title.BEAN_CUISINE_SALTER)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.LUFET_S_LAKE_SALT)
+            player:addExp(EXP_RATE_QUEST*250)
             player:startEvent(11)
         end
     end
@@ -47,5 +48,6 @@ function onEventFinish(player, csid, option)
         player:addQuest(SANDORIA, tpz.quest.id.sandoria.LUFET_S_LAKE_SALT)
     elseif (csid == 11) then
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*600)
+        player:addExp(EXP_RATE_QUEST*250)
     end
 end

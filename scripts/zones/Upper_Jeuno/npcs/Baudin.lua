@@ -82,6 +82,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("saveMySisterVar", 1)
         player:addKeyItem(tpz.ki.CREST_OF_DAVOI_KI)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.CREST_OF_DAVOI_KI)
+        player:addExp(EXP_RATE_QUEST*500)
         player:addFame(JEUNO, 30)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.CREST_OF_DAVOI)
 
@@ -89,15 +90,16 @@ function onEventFinish(player, csid, option)
         player:setCharVar("saveMySisterVar", 3)
     elseif (csid == 107) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 17041)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 17411)
         else
             player:addTitle(tpz.title.EXORCIST_IN_TRAINING)
             player:addGil(GIL_RATE*3000)
             player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*3000)
-            player:addItem(17041)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 17041)
+            player:addItem(17411)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 17411)
             player:tradeComplete()
             player:addFame(JEUNO, 30)
+            player:addExp(EXP_RATE_QUEST*1750)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.SAVE_MY_SISTER)
         end
     end

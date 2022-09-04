@@ -43,8 +43,7 @@ function onTrigger(player,npc)
         player:startEvent(10224, 1)
     elseif
         player:hasKeyItem(tpz.ki.CHOCOBO_LICENSE) and
-        player:getMainLvl() >= 20 and
-        player:hasKeyItem(tpz.ki.MAP_OF_THE_JEUNO_AREA)
+        player:getMainLvl() >= 20
     then
         player:startEvent(10223, 0, 0, 4)
     else
@@ -66,14 +65,8 @@ function onEventFinish(player,csid,option)
         -- Complete quest
         player:setCharVar("[QUEST]FullSpeedAhead", 0)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.FULL_SPEED_AHEAD)
+        player:addExp(EXP_RATE_QUEST*1000)
         npcUtil.giveKeyItem(player, tpz.ki.TRAINERS_WHISTLE)
-        npcUtil.giveKeyItem(player, tpz.ki.RAPTOR_COMPANION)
-    elseif csid == 10227 then
-        local rewardKI = player:getLocalVar("FullSpeedAheadReward")
-        player:setLocalVar("FullSpeedAheadReward", 0)
-        if rewardKI ~= tpz.ki.CHOCOBO_COMPANION then
-            player:tradeComplete()
-        end
-        npcUtil.giveKeyItem(player, rewardKI)
+        npcUtil.giveKeyItem(player, tpz.ki.CHOCOBO_COMPANION)
     end
 end

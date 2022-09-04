@@ -41,6 +41,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("LuckOfTheDraw", 6)
     elseif csid == 772 then
         npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.EQUIPPED_FOR_ALL_OCCASIONS, {item = 18702, var = {"EquippedforAllOccasions", "LuckOfTheDraw"}})
+        player:addExp(EXP_RATE_QUEST*2000) 
     elseif csid == 604 then
         npcUtil.giveKeyItem(player, tpz.ki.LIFE_FLOAT)
     end

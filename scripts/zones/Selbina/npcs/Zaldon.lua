@@ -356,6 +356,13 @@ local fishRewards =
             {chance = 1.2, itemId = 11492}, -- Risky Patch
         }
     },
+    [5455] = -- Abaia
+    {
+        gil = 500,
+        items =
+        {
+            {chance = 75, itemId = 5818}, -- Aurora Bass Cactuar Edit
+    },
 }
 
 local function tradeFish(player, fishId)
@@ -402,6 +409,7 @@ local function giveReward(player, csid)
         -- Regardless of success or failure, confirm the trade, give gil, and set the char vars to 0
         player:confirmTrade()
         player:addGil(GIL_RATE * reward.gil)
+        player:addExp(EXP_RATE_QUEST * reward.gil)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE * reward.gil)
 
         --If successful (other than gil) give the item

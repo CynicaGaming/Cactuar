@@ -99,6 +99,7 @@ function onEventFinish(player, csid, option)
     if csid == 285 and option ~= 2 then  -- option 2 is declining the quest for the second question
         player:addQuest(WINDURST, tpz.quest.id.windurst.THE_ALL_NEW_C_2000)
     elseif csid == 292 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.THE_ALL_NEW_C_2000, {fame=80, title=tpz.title.CARDIAN_TUTOR, gil=200}) then
+        player:addExp(EXP_RATE_QUEST*300)
         player:confirmTrade()
 
     -- LEGENDARY PLAN B
@@ -106,12 +107,14 @@ function onEventFinish(player, csid, option)
         player:addQuest(WINDURST, tpz.quest.id.windurst.LEGENDARY_PLAN_B)
     elseif csid == 314 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.LEGENDARY_PLAN_B, {item=12749, gil=700}) then
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*750)
         player:needToZone(true)
 
     -- THE ALL NEW C-3000
     elseif csid == 655 then
         player:addQuest(WINDURST, tpz.quest.id.windurst.THE_ALL_NEW_C_3000)
     elseif csid == 657 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.THE_ALL_NEW_C_3000, {fame=10, gil=600}) then
+        player:addExp(EXP_RATE_QUEST*200)
         player:confirmTrade()
     end
 end

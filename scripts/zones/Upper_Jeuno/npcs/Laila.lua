@@ -94,6 +94,7 @@ function onEventFinish(player, csid, option)
         player:unlockJob(tpz.job.DNC)
         player:messageSpecial(ID.text.UNLOCK_DANCER)
         player:addFame(JEUNO, 30)
+        player:addExp(EXP_RATE_QUEST*1000)
         player:delKeyItem(tpz.ki.STARDUST_PEBBLE)
         player:needToZone(true)
     elseif (csid== 10129) then
@@ -111,6 +112,7 @@ function onEventFinish(player, csid, option)
             player:setCharVar("QuestStatus_DNC_AF1", 0)
             player:addItem(19203) -- war hoop
             player:messageSpecial(ID.text.ITEM_OBTAINED, 19203)
+            player:addExp(EXP_RATE_QUEST*2000)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_UNFINISHED_WALTZ)
         end
 
@@ -140,6 +142,7 @@ function onEventFinish(player, csid, option)
             player:addItem(dancersTights)
             player:messageSpecial(ID.text.ITEM_OBTAINED, dancersTights)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_ROAD_TO_DIVADOM)
+            player:addExp(EXP_RATE_QUEST*3000)
             end
     -- Dancer AF: Comeback Queen
     elseif (csid == 10143) then

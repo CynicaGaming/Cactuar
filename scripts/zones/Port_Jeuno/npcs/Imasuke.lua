@@ -67,8 +67,7 @@ function onEventFinish(player, csid, option)
         else
             player:addGil(2000 * GIL_RATE)
             player:messageSpecial(ID.text.GIL_OBTAINED, 2000 * GIL_RATE)
-            player:addExp(2000 * EXP_RATE)
-        end
+            player:addExp(EXP_RATE_QUEST*2000)        end
         player:addFame(JEUNO, 30)
         player:tradeComplete(trade)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_ANTIQUE_COLLECTOR)

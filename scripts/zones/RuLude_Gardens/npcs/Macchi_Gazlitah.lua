@@ -16,8 +16,8 @@ function onTrigger(player, npc)
     {
         5703,    300,    -- Uleguerand Milk
         5684,    600,    -- Chalaimbille
+        17905,   100,    -- Wormy Broth -- Out of Era
         --[[
-        -- 17905,   100,    -- Wormy Broth -- Out of Era
         5686,    800,    -- Cheese Sandwich
         5729,   3360,    -- Bavarois
         5718,   1300,    -- Cream Puff
@@ -45,7 +45,7 @@ function onTrigger(player, npc)
         if timeDiff > 0 then
             -- Decay 10g every second, this really needs to be
             -- further investigated
-            Bought = Bought - (timeDiff * 10)
+            Bought = Bought - (timeDiff * 5)
             if Bought < 0 then
                 Bought = 0
             end
@@ -56,14 +56,14 @@ function onTrigger(player, npc)
         SetServerVariable("MacchiShopBought", 0)
     end
     
-    if Bought >= 250000 then
-        -- Full stock
+    if Bought >= 25000 then
+        -- Full stock 250000
         mess = mess + 2
         stock =
         {
             5703,    100,    -- Uleguerand Milk
             5684,    250,    -- Chalaimbille
-            -- 17905,   100,    -- Wormy Broth -- Out of Era
+            17905,   100,    -- Wormy Broth -- Out of Era
             5686,    800,    -- Cheese Sandwich
             5729,   3360,    -- Bavarois
             5718,   1300,    -- Cream Puff
@@ -83,7 +83,7 @@ function onTrigger(player, npc)
         {
             5703,    150,    -- Uleguerand Milk
             5684,    300,    -- Chalaimbille
-            -- 17905,   100,    -- Wormy Broth -- Out of Era
+            17905,   100,    -- Wormy Broth -- Out of Era
             5686,    800,    -- Cheese Sandwich
             5729,   3360,    -- Bavarois
             5718,   1300,    -- Cream Puff

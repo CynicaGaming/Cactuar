@@ -116,6 +116,7 @@ function onEventFinish(player, csid, option)
             player:setCharVar("theThreeMagiSupport", 0)
             player:addFame(WINDURST, 20)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.THE_THREE_MAGI)
+            player:addExp(EXP_RATE_QUEST*2500) 
         end
     elseif csid == 270 then
         player:addQuest(WINDURST, tpz.quest.id.windurst.RECOLLECTIONS)
@@ -132,6 +133,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 14092) -- wizards sabots
             player:addFame(WINDURST, 40)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.RECOLLECTIONS)
+            player:addExp(EXP_RATE_QUEST*3000) 
         end
     elseif csid == 276 then
         player:addQuest(WINDURST, tpz.quest.id.windurst.THE_ROOT_OF_THE_PROBLEM)
@@ -148,6 +150,8 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 13856)
             player:addTitle(tpz.title.PARAGON_OF_BLACK_MAGE_EXCELLENCE)
             player:delKeyItem(tpz.ki.SLUICE_SURVEYOR_MK_I)
+            player:addExp(EXP_RATE_QUEST*3500) 
+
         end
     end
 end

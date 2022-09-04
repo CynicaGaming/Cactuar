@@ -7865,7 +7865,7 @@ INSERT INTO `item_mods` VALUES (12316,54,2);
 INSERT INTO `item_mods` VALUES (12316,55,2);
 INSERT INTO `item_mods` VALUES (12316,58,-4);
 INSERT INTO `item_mods` VALUES (12317,1,12);      -- Flame Shield: DEF 12
-INSERT INTO `item_mods` VALUES (12317,54,20);     -- Fire resistance +20
+INSERT INTO `item_mods` VALUES (12317,54,30);     -- Fire resistance +30
 INSERT INTO `item_mods` VALUES (12317,499,1);     -- Blaze spikes
 INSERT INTO `item_mods` VALUES (12317,500,20);    -- Spikes damage +20
 INSERT INTO `item_mods` VALUES (12317,501,20);    -- Spikes chance +20%
@@ -12182,7 +12182,7 @@ INSERT INTO `item_mods` VALUES (13962,1,14);
 INSERT INTO `item_mods` VALUES (13962,2,14);
 INSERT INTO `item_mods` VALUES (13962,8,4);
 INSERT INTO `item_mods` VALUES (13962,61,10);
-INSERT INTO `item_mods` VALUES (13962,97,55);
+INSERT INTO `item_mods` VALUES (13962,97,625);  -- boost_effect +6.25%
 INSERT INTO `item_mods` VALUES (13963,1,14);
 INSERT INTO `item_mods` VALUES (13963,5,10);
 INSERT INTO `item_mods` VALUES (13963,8,5);
@@ -15284,7 +15284,7 @@ INSERT INTO `item_mods` VALUES (14890,109,15);
 INSERT INTO `item_mods` VALUES (14891,1,15);
 INSERT INTO `item_mods` VALUES (14891,2,14);
 INSERT INTO `item_mods` VALUES (14891,8,6);
-INSERT INTO `item_mods` VALUES (14891,97,55);
+INSERT INTO `item_mods` VALUES (14891,97,625);  -- boost_effect +6.25%
 INSERT INTO `item_mods` VALUES (14891,289,4);
 INSERT INTO `item_mods` VALUES (14892,1,14);
 INSERT INTO `item_mods` VALUES (14892,5,15);
@@ -20149,8 +20149,8 @@ INSERT INTO `item_mods` VALUES (16675,56,10);
 INSERT INTO `item_mods` VALUES (16675,57,10);
 INSERT INTO `item_mods` VALUES (16676,25,10);
 INSERT INTO `item_mods` VALUES (16676,68,-10);
-INSERT INTO `item_mods` VALUES (16678,8,2);
-INSERT INTO `item_mods` VALUES (16678,9,2);
+INSERT INTO `item_mods` VALUES (16678,8,2); -- STR +2 Razor Axe Cactuar
+INSERT INTO `item_mods` VALUES (16678,288,2); -- Double Attack +2
 INSERT INTO `item_mods` VALUES (16679,8,7);
 INSERT INTO `item_mods` VALUES (16679,9,-1);
 INSERT INTO `item_mods` VALUES (16679,10,-1);
@@ -20158,8 +20158,8 @@ INSERT INTO `item_mods` VALUES (16679,11,-1);
 INSERT INTO `item_mods` VALUES (16679,12,-1);
 INSERT INTO `item_mods` VALUES (16679,13,-1);
 INSERT INTO `item_mods` VALUES (16679,14,-1);
-INSERT INTO `item_mods` VALUES (16680,8,2);
-INSERT INTO `item_mods` VALUES (16680,14,2);
+INSERT INTO `item_mods` VALUES (16680,8,2); -- STR +2 Barbaroi Axe Cactuar Edit
+INSERT INTO `item_mods` VALUES (16680,14,2); -- CHR +2
 INSERT INTO `item_mods` VALUES (16684,13,3);
 INSERT INTO `item_mods` VALUES (16684,14,3);
 INSERT INTO `item_mods` VALUES (16684,25,4);
@@ -20229,8 +20229,10 @@ INSERT INTO `item_mods` VALUES (16754,110,10);
 INSERT INTO `item_mods` VALUES (16755,11,1);
 INSERT INTO `item_mods` VALUES (16755,26,10);
 INSERT INTO `item_mods` VALUES (16757,23,10);
-INSERT INTO `item_mods` VALUES (16764,9,2);
-INSERT INTO `item_mods` VALUES (16764,11,2);
+INSERT INTO `item_mods` VALUES (16764,9,2);  -- DEX +2 --Marauder's Knife Cactuar Edit 
+INSERT INTO `item_mods` VALUES (16764,11,2); -- AGI +11
+INSERT INTO `item_mods` VALUES (16764,298,3); -- Steal +1
+INSERT INTO `item_mods` VALUES (16764,68,2); -- EVA +2
 INSERT INTO `item_mods` VALUES (16765,8,-1);
 INSERT INTO `item_mods` VALUES (16765,9,-1);
 INSERT INTO `item_mods` VALUES (16765,10,-1);
@@ -20238,8 +20240,9 @@ INSERT INTO `item_mods` VALUES (16765,11,7);
 INSERT INTO `item_mods` VALUES (16765,12,-1);
 INSERT INTO `item_mods` VALUES (16765,13,-1);
 INSERT INTO `item_mods` VALUES (16765,14,-1);
-INSERT INTO `item_mods` VALUES (16766,11,2);
-INSERT INTO `item_mods` VALUES (16766,14,2);
+INSERT INTO `item_mods` VALUES (16766,11,2); -- AGI +2 Paper Knife Cactuar Edit
+INSERT INTO `item_mods` VALUES (16766,14,2); -- CHR +2
+INSERT INTO `item_mods` VALUES (16766,454,5); -- Song Effect Duration +5%
 INSERT INTO `item_mods` VALUES (16767,302,1);
 INSERT INTO `item_mods` VALUES (16771,9,4);
 INSERT INTO `item_mods` VALUES (16771,11,-4);
@@ -20262,8 +20265,11 @@ INSERT INTO `item_mods` VALUES (16791,431,1);
 INSERT INTO `item_mods` VALUES (16793,2,20);
 INSERT INTO `item_mods` VALUES (16793,58,10);
 INSERT INTO `item_mods` VALUES (16793,60,10);
-INSERT INTO `item_mods` VALUES (16798,8,2);
-INSERT INTO `item_mods` VALUES (16798,12,2);
+INSERT INTO `item_mods` VALUES (16798,8,2); -- STR +2 Raven Scythe Cactuar Edit
+INSERT INTO `item_mods` VALUES (16798,12,2); -- INT +2
+INSERT INTO `item_mods` VALUES (16798,25,1); -- ACC +1
+INSERT INTO `item_mods` VALUES (16798,23,2); -- ATT +2
+INSERT INTO `item_mods` VALUES (16798,315,10); -- DRAIN/ASPIR +10%
 INSERT INTO `item_mods` VALUES (16799,242,2);
 INSERT INTO `item_mods` VALUES (16805,25,6);
 INSERT INTO `item_mods` VALUES (16805,110,5);
@@ -20285,9 +20291,12 @@ INSERT INTO `item_mods` VALUES (16822,12,5);
 INSERT INTO `item_mods` VALUES (16824,431,1); -- carnage rapier hp_drain
 INSERT INTO `item_mods` VALUES (16826,431,1);
 INSERT INTO `item_mods` VALUES (16827,431,1);
-INSERT INTO `item_mods` VALUES (16829,5,10);
-INSERT INTO `item_mods` VALUES (16829,12,1);
-INSERT INTO `item_mods` VALUES (16829,13,1);
+INSERT INTO `item_mods` VALUES (16829,5,10); -- MP +10 Fencing Degen Cactuar Edit 
+INSERT INTO `item_mods` VALUES (16829,12,1); -- INT +1
+INSERT INTO `item_mods` VALUES (16829,13,1); -- MND +1
+INSERT INTO `item_mods` VALUES (16829,30,2); -- MACC +2
+INSERT INTO `item_mods` VALUES (16829,110,3); -- Parrying Skill +3
+INSERT INTO `item_mods` VALUES (16829,432,1); -- Enspell DMG +1
 INSERT INTO `item_mods` VALUES (16830,8,-1);
 INSERT INTO `item_mods` VALUES (16830,9,-1);
 INSERT INTO `item_mods` VALUES (16830,10,7);
@@ -20621,8 +20630,11 @@ INSERT INTO `item_mods` VALUES (17187,8,3);
 INSERT INTO `item_mods` VALUES (17187,11,3);
 INSERT INTO `item_mods` VALUES (17187,24,23);
 INSERT INTO `item_mods` VALUES (17187,26,2);
-INSERT INTO `item_mods` VALUES (17188,11,4);
-INSERT INTO `item_mods` VALUES (17189,26,3);
+INSERT INTO `item_mods` VALUES (17188,11,4); -- AGI +4 Sniping Bow Cactuar Edit 
+INSERT INTO `item_mods` VALUES (17188,27,-1); -- Enmity -1
+INSERT INTO `item_mods` VALUES (17188,26,10); -- RACC +10
+INSERT INTO `item_mods` VALUES (17188,24,5); -- RATT +5
+INSERT INTO `item_mods` VALUES (17189,26,3); 
 INSERT INTO `item_mods` VALUES (17190,8,1);
 INSERT INTO `item_mods` VALUES (17190,12,1);
 INSERT INTO `item_mods` VALUES (17190,26,8);
@@ -20809,9 +20821,14 @@ INSERT INTO `item_mods` VALUES (17420,3,1);
 INSERT INTO `item_mods` VALUES (17420,6,1);
 INSERT INTO `item_mods` VALUES (17421,3,1);
 INSERT INTO `item_mods` VALUES (17421,6,1);
-INSERT INTO `item_mods` VALUES (17422,5,10);
-INSERT INTO `item_mods` VALUES (17422,13,2);
-INSERT INTO `item_mods` VALUES (17423,5,20);
+INSERT INTO `item_mods` VALUES (17422,5,10); -- MP +10 Blessed Hammer Cactuar Edit
+INSERT INTO `item_mods` VALUES (17422,13,2); -- MND +2
+INSERT INTO `item_mods` VALUES (17422,374,5); -- Cure Potency +5% 
+INSERT INTO `item_mods` VALUES (17422,431,1); -- Add Effect Onhit
+INSERT INTO `item_mods` VALUES (17423,5,20); -- MP +20 Casting Wand Cactuar Edit
+INSERT INTO `item_mods` VALUES (17423,12,2); -- INT +2
+INSERT INTO `item_mods` VALUES (17423,28,3); -- MATT +3
+INSERT INTO `item_mods` VALUES (17423,487,5); -- Magic Burst Potency +5%
 INSERT INTO `item_mods` VALUES (17424,23,3);
 INSERT INTO `item_mods` VALUES (17425,23,5);
 INSERT INTO `item_mods` VALUES (17427,12,7);
@@ -20902,9 +20919,10 @@ INSERT INTO `item_mods` VALUES (17472,291,5);
 INSERT INTO `item_mods` VALUES (17473,9,2);
 INSERT INTO `item_mods` VALUES (17473,11,2);
 INSERT INTO `item_mods` VALUES (17473,25,5);
-INSERT INTO `item_mods` VALUES (17478,9,2);
-INSERT INTO `item_mods` VALUES (17478,10,2);
-INSERT INTO `item_mods` VALUES (17478,25,3);
+INSERT INTO `item_mods` VALUES (17478,9,2);  -- DEX +2 Beat Cesti Cactuar Edit
+INSERT INTO `item_mods` VALUES (17478,10,2); -- VIT +2
+INSERT INTO `item_mods` VALUES (17478,25,3); -- ACC +3
+INSERT INTO `item_mods` VALUES (17478,291,2); -- Counter +2
 INSERT INTO `item_mods` VALUES (17479,2,17);
 INSERT INTO `item_mods` VALUES (17479,25,4);
 INSERT INTO `item_mods` VALUES (17480,10,3);
@@ -20983,8 +21001,8 @@ INSERT INTO `item_mods` VALUES (17528,346,2);
 INSERT INTO `item_mods` VALUES (17530,2,20);
 INSERT INTO `item_mods` VALUES (17530,5,10);
 INSERT INTO `item_mods` VALUES (17531,9,3);
-INSERT INTO `item_mods` VALUES (17532,5,20);
-INSERT INTO `item_mods` VALUES (17533,2,14);
+INSERT INTO `item_mods` VALUES (17532,5,20); -- MP +20 Kukulcans Staff Cactuar Edit
+INSERT INTO `item_mods` VALUES (17533,2,14); 
 INSERT INTO `item_mods` VALUES (17533,5,7);
 INSERT INTO `item_mods` VALUES (17533,59,7);
 INSERT INTO `item_mods` VALUES (17533,431,1);
@@ -21319,8 +21337,10 @@ INSERT INTO `item_mods` VALUES (17637,8,3);
 INSERT INTO `item_mods` VALUES (17637,10,3);
 INSERT INTO `item_mods` VALUES (17637,11,3);
 INSERT INTO `item_mods` VALUES (17640,9,2);
-INSERT INTO `item_mods` VALUES (17643,10,2);
-INSERT INTO `item_mods` VALUES (17643,13,2);
+INSERT INTO `item_mods` VALUES (17643,10,2); -- VIT +2 Honor Sword Cactuar Edit
+INSERT INTO `item_mods` VALUES (17643,13,2); -- MND +2
+INSERT INTO `item_mods` VALUES (17643,27,1); -- Enmity +1
+INSERT INTO `item_mods` VALUES (17643,387,-2); -- Physical damage taken -2%
 INSERT INTO `item_mods` VALUES (17645,10,3);
 INSERT INTO `item_mods` VALUES (17645,13,3);
 INSERT INTO `item_mods` VALUES (17645,23,7);
@@ -21419,9 +21439,11 @@ INSERT INTO `item_mods` VALUES (17714,23,11);
 INSERT INTO `item_mods` VALUES (17714,25,-4);
 INSERT INTO `item_mods` VALUES (17714,27,4);
 INSERT INTO `item_mods` VALUES (17716,25,-8);
-INSERT INTO `item_mods` VALUES (17717,5,10);
-INSERT INTO `item_mods` VALUES (17717,8,1);
-INSERT INTO `item_mods` VALUES (17717,12,1);
+INSERT INTO `item_mods` VALUES (17717,5,10); -- MP +10 Immortals Scimitar Cactuar Edit
+INSERT INTO `item_mods` VALUES (17717,8,1); -- STR +1
+INSERT INTO `item_mods` VALUES (17717,12,1); -- INT +1
+INSERT INTO `item_mods` VALUES (17717,25,2); -- ACC +2
+INSERT INTO `item_mods` VALUES (17717,28,2); -- MATT +2
 INSERT INTO `item_mods` VALUES (17718,5,12);
 INSERT INTO `item_mods` VALUES (17721,2,20);
 INSERT INTO `item_mods` VALUES (17721,5,20);
@@ -21505,10 +21527,12 @@ INSERT INTO `item_mods` VALUES (17762,366,4);
 INSERT INTO `item_mods` VALUES (17763,366,6);
 INSERT INTO `item_mods` VALUES (17768,431,1);
 INSERT INTO `item_mods` VALUES (17770,431,1);
-INSERT INTO `item_mods` VALUES (17771,8,-1);
-INSERT INTO `item_mods` VALUES (17771,9,2);
-INSERT INTO `item_mods` VALUES (17772,8,2);
-INSERT INTO `item_mods` VALUES (17772,9,-1);
+INSERT INTO `item_mods` VALUES (17771,8,-1); -- STR -1 Anju Cactuar Edit
+INSERT INTO `item_mods` VALUES (17771,9,2); -- DEX +2
+INSERT INTO `item_mods` VALUES (17771,68,2); -- EVA +2
+INSERT INTO `item_mods` VALUES (17772,8,2); -- STR +2 Zushio Cactuar Edit
+INSERT INTO `item_mods` VALUES (17772,9,-1); -- DEX -1
+INSERT INTO `item_mods` VALUES (17772,23,3); -- ATT +3
 INSERT INTO `item_mods` VALUES (17773,2,20);
 INSERT INTO `item_mods` VALUES (17773,54,10);
 INSERT INTO `item_mods` VALUES (17773,60,10);
@@ -21552,8 +21576,9 @@ INSERT INTO `item_mods` VALUES (17810,9,8);
 INSERT INTO `item_mods` VALUES (17810,73,8);
 INSERT INTO `item_mods` VALUES (17811,8,1);
 INSERT INTO `item_mods` VALUES (17811,9,1);
-INSERT INTO `item_mods` VALUES (17812,8,1);
-INSERT INTO `item_mods` VALUES (17812,11,1);
+INSERT INTO `item_mods` VALUES (17812,8,2); -- STR +2 Magoroku Cactuar Edit
+INSERT INTO `item_mods` VALUES (17812,11,2); -- AGI +2
+INSERT INTO `item_mods` VALUES (17812,73,3); -- StoreTP +3
 INSERT INTO `item_mods` VALUES (17814,25,3);
 INSERT INTO `item_mods` VALUES (17814,169,-12);
 INSERT INTO `item_mods` VALUES (17815,2,20);
@@ -22190,6 +22215,32 @@ INSERT INTO `item_mods` VALUES (18330,355,185); -- Gate of Tartarus
 INSERT INTO `item_mods` VALUES (18330,431,1); -- Additional Effect - scripts\globals\items\claustrum.lua
 INSERT INTO `item_mods` VALUES (18330,506,50); -- Extra DMG Chance 5%
 INSERT INTO `item_mods` VALUES (18330,507,250); -- Extra DMG X2.5
+INSERT INTO `item_mods` VALUES (18330,902,30);	  -- "Occult Acumen" +50
+INSERT INTO `item_mods` VALUES (18330,347,3);     -- Fire affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,350,3);     -- Earth affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,352,3);     -- Water affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,348,3);     -- Ice affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,351,3);     -- Thunder affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,349,3);     -- Wind affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,353,3);     -- Light affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,354,3);     -- Dark affinity damage +15%
+INSERT INTO `item_mods` VALUES (18330,544,3);     -- Fire affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,547,3);     -- Earth affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,549,3);     -- Water affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,545,3);     -- Ice affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,548,3);     -- Thunder affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,546,3);     -- Wind affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,550,3);     -- Light affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,551,3);     -- Dark affinity accuracy +30
+INSERT INTO `item_mods` VALUES (18330,553,3);     -- Fire affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,556,3);     -- Earth affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,558,3);     -- Water affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,554,3);     -- Ice affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,557,3);     -- Thunder affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,555,3);     -- Wind affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,559,3);     -- Light affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,560,3);     -- Dark affinity perpetuation cost -3
+INSERT INTO `item_mods` VALUES (18330,566,1);     -- Iridescence
 INSERT INTO `item_mods` VALUES (18331,25,25); -- Claustrum LV80 - ACC +25
 INSERT INTO `item_mods` VALUES (18331,256,12); -- Aftermath
 INSERT INTO `item_mods` VALUES (18331,355,185); -- Gate of Tartarus
@@ -23002,8 +23053,10 @@ INSERT INTO `item_mods` VALUES (18701,11,4);
 INSERT INTO `item_mods` VALUES (18701,24,24);
 INSERT INTO `item_mods` VALUES (18701,54,14);
 INSERT INTO `item_mods` VALUES (18701,61,14);
-INSERT INTO `item_mods` VALUES (18702,11,2);
-INSERT INTO `item_mods` VALUES (18702,26,2);
+INSERT INTO `item_mods` VALUES (18702,11,2); -- AGI +2 Trump Gun Cactuar Edit
+INSERT INTO `item_mods` VALUES (18702,26,3); -- RACC +3
+INSERT INTO `item_mods` VALUES (18702,30,1); -- MACC +1
+INSERT INTO `item_mods` VALUES (18702,28,1); -- MATT +1
 INSERT INTO `item_mods` VALUES (18703,26,5);
 INSERT INTO `item_mods` VALUES (18704,26,4);
 INSERT INTO `item_mods` VALUES (18705,26,6);
@@ -23085,7 +23138,7 @@ INSERT INTO `item_mods` VALUES (18775,68,5);
 INSERT INTO `item_mods` VALUES (18777,25,7);      -- Magnus Sainti: Accuracy+7
 INSERT INTO `item_mods` VALUES (18778,25,7);      -- Marotte Claws: Accuracy+7
 INSERT INTO `item_mods` VALUES (18779,8,6);
-INSERT INTO `item_mods` VALUES (18779,97,55);
+INSERT INTO `item_mods` VALUES (18779,97,625);    -- boost_effect +6.25%
 INSERT INTO `item_mods` VALUES (18779,289,10);
 INSERT INTO `item_mods` VALUES (18780,8,5);       -- Burattinaios: STR+5
 INSERT INTO `item_mods` VALUES (18780,9,5);       -- DEX+5
@@ -23818,7 +23871,8 @@ INSERT INTO `item_mods` VALUES (19196,431,1);
 INSERT INTO `item_mods` VALUES (19199,26,6);
 INSERT INTO `item_mods` VALUES (19202,26,-4); -- Smart Grenade - RACC -4
 INSERT INTO `item_mods` VALUES (19202,23,4); -- ATT +4
-INSERT INTO `item_mods` VALUES (19203,14,3);
+INSERT INTO `item_mods` VALUES (19203,14,3); -- CHR +3 War Hoop Cactuar Edit
+INSERT INTO `item_mods` VALUES (19203,491,5); -- Waltz Potency +3
 INSERT INTO `item_mods` VALUES (19206,26,6);
 INSERT INTO `item_mods` VALUES (19207,26,8);
 INSERT INTO `item_mods` VALUES (19208,26,10);
@@ -28613,7 +28667,7 @@ INSERT INTO `item_mods` VALUES (23175,25,38);     -- Accuracy+38
 INSERT INTO `item_mods` VALUES (23175,29,1);      -- Magic Defense Bonus+1
 INSERT INTO `item_mods` VALUES (23175,31,36);     -- Magic Evasion+36
 INSERT INTO `item_mods` VALUES (23175,68,32);     -- Evasion+32
-INSERT INTO `item_mods` VALUES (23175,97,70);     -- Boost Effect+70
+INSERT INTO `item_mods` VALUES (23175,97,750);    -- boost_effect 20% from 12.5% = 7.5%
 INSERT INTO `item_mods` VALUES (23175,289,8);     -- Subtle Blow+8
 INSERT INTO `item_mods` VALUES (23175,384,500);    -- Haste +5%
 INSERT INTO `item_mods` VALUES (23175,841,5);     -- Weapon Skill Damage+5%
@@ -30604,7 +30658,7 @@ INSERT INTO `item_mods` VALUES (23510,25,48);     -- Accuracy+48
 INSERT INTO `item_mods` VALUES (23510,29,2);      -- Magic Defense Bonus+2
 INSERT INTO `item_mods` VALUES (23510,31,46);     -- Magic Evasion+46
 INSERT INTO `item_mods` VALUES (23510,68,42);     -- Evasion+42
-INSERT INTO `item_mods` VALUES (23510,97,72);     -- Boost Effect+72
+INSERT INTO `item_mods` VALUES (23510,97,750);    -- boost_effect 20% from 12.5% = 7.5%
 INSERT INTO `item_mods` VALUES (23510,289,11);    -- Subtle Blow+11
 INSERT INTO `item_mods` VALUES (23510,384,500);   -- Haste +5%
 INSERT INTO `item_mods` VALUES (23510,841,10);    -- Weapon Skill Damage+10%
@@ -46346,7 +46400,7 @@ INSERT INTO `item_mods` VALUES (27944,13,17);
 INSERT INTO `item_mods` VALUES (27944,14,10);
 INSERT INTO `item_mods` VALUES (27944,31,18);
 INSERT INTO `item_mods` VALUES (27944,68,10);
-INSERT INTO `item_mods` VALUES (27944,97,68);
+INSERT INTO `item_mods` VALUES (27944,97,750);    -- boost_effect 20% from 12.5% = 7.5%
 INSERT INTO `item_mods` VALUES (27944,289,5);
 INSERT INTO `item_mods` VALUES (27944,384,400);
 INSERT INTO `item_mods` VALUES (27945,1,59);
@@ -46671,7 +46725,7 @@ INSERT INTO `item_mods` VALUES (27965,14,16);
 INSERT INTO `item_mods` VALUES (27965,29,1);      -- Magic Def. Bonus+1
 INSERT INTO `item_mods` VALUES (27965,31,26);
 INSERT INTO `item_mods` VALUES (27965,68,22);
-INSERT INTO `item_mods` VALUES (27965,97,68);
+INSERT INTO `item_mods` VALUES (27965,97,750);    -- boost_effect 20% from 12.5% = 7.5%
 INSERT INTO `item_mods` VALUES (27965,289,5);
 INSERT INTO `item_mods` VALUES (27965,384,500);
 INSERT INTO `item_mods` VALUES (27966,1,83);

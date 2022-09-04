@@ -49,6 +49,7 @@ function onEventFinish(player, csid, option)
         player:completeQuest(SANDORIA, tpz.quest.id.sandoria.THE_DISMAYED_CUSTOMER)
         player:addGil(560*GIL_RATE)
         player:messageSpecial(ID.text.GIL_OBTAINED, 560*GIL_RATE)
+        player:addExp(EXP_RATE_QUEST*800)
     end
 
 end

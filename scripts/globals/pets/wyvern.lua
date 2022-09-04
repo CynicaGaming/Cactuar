@@ -81,6 +81,7 @@ function onMobSpawn(mob)
         mob:addJobTraits(master:getSubJob(), master:getSubLvl())
     end
     mob:addMod(tpz.mod.DMG, -40)
+    mob:addMod(tpz.mod.ENSPELL_DMG_BONUS, 20)
     local wyvernType = wyvernTypes[master:getSubJob()]
 
     if (master:getSubJob() ~= tpz.job.DRG) then

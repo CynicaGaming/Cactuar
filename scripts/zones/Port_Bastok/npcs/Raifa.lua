@@ -47,6 +47,7 @@ function onEventFinish(player, csid, option)
         fame = 80,
         var = "EcoStatus"
     }) then
+        player:addExp(EXP_RATE_QUEST*2000)
         player:delKeyItem(tpz.ki.INDIGESTED_ORE)
         player:setCharVar("EcoReset", getConquestTally())
     end

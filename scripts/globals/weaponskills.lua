@@ -62,8 +62,39 @@ function getSingleHitDamage(attacker, target, dmg, wsParams, calcParams, isRange
                 magicdmg = target:magicDmgTaken(magicdmg)
                 magicdmg = adjustForTarget(target, magicdmg, wsParams.ele)
 
-                finaldmg = finaldmg + magicdmg
-            end
+                local mab2 = 1
+            
+                if params ~= nil and params.bonusmab ~= nil and params.includemab == true then
+                    mab2 = (100 + attacker:getMod(tpz.mod.MATT) + params.bonusmab) / (100 + target:getMod(tpz.mod.MDEF))
+                elseif params == nil or (params ~= nil and params.includemab == true) then
+                    mab2 = (100 + attacker:getMod(tpz.mod.MATT)) / (100 + target:getMod(tpz.mod.MDEF))
+                end
+            
+
+                	--Ninjutsu spell debuff  --(To do) -Umeboshi
+    --if wsParams.element ~= nil then
+		--if target:getNinDebuff() == wsParams.element then
+			--dmg = dmg * params.elementmult
+			--target:setNinDebuff(205)
+		--end
+	--end
+                                --Divine/Elemental Seal Bonus
+
+                local magicseal = 1
+                if wsParams.ele ~= nil and wsParams.ele ~= tpz.magic.ele.LIGHT and (attacker:hasStatusEffect(tpz.effect.ELEMENTAL_SEAL)) then
+                    magicseal = math.floor(math.random(210,235)/100)
+                    attacker:delStatusEffect(tpz.effect.ELEMENTAL_SEAL)
+
+                  --target:delStatusEffect(tpz.effect.ninjutsu_ele_debuff)
+
+                elseif wsParams.ele ~= nil and wsParams.ele == tpz.magic.ele.LIGHT and (attacker:hasStatusEffect(tpz.effect.DIVINE_SEAL)) then
+                    magicseal = math.floor(math.random(225,245)/80)
+                    attacker:delStatusEffect(tpz.effect.DIVINE_SEAL)
+                end
+
+                finaldmg = (finaldmg + (magicdmg * (mab2 * 1.5 * magicseal)))
+            end   
+            
             -- if criticalHit == false then
                 --testEntity:PrintToPlayer(string.format("non-critical WS hit for %i",finaldmg))
             -- else
@@ -217,7 +248,7 @@ function calculateRawWSDmg(attacker, target, wsID, tp, action, wsParams, calcPar
     finaldmg = finaldmg + hitdmg
 
     -- Have to calculate added bonus for SA/TA here since it is done outside of the fTP multiplier
-    if attacker:getMainJob() == tpz.job.THF then
+    if attacker:getMainJob() == tpz.job.THF or attacker:getSubJob() == tpz.job.THF then
         -- Add DEX/AGI bonus to first hit if THF main and valid Sneak/Trick Attack
         if calcParams.sneakApplicable then
             finaldmg = finaldmg +
@@ -340,7 +371,8 @@ function doPhysicalWeaponskill(attacker, target, wsID, wsParams, tp, action, pri
     calcParams.forcedFirstCrit = calcParams.sneakApplicable or calcParams.assassinApplicable
     calcParams.extraOffhandHit = attacker:isDualWielding() or attack.weaponType == tpz.skill.HAND_TO_HAND
     calcParams.hybridHit = wsParams.hybridWS
-    calcParams.flourishEffect = wsParams.violentFlourish == nil and attacker:getStatusEffect(tpz.effect.BUILDING_FLOURISH) or nil -- violent flourish (even though it's coded as a WS) isn't boosted by building flourish
+     -- various job abilities are abusing this ws function, don't boost them or remove building flourish
+    calcParams.flourishEffect = wsParams.preserveBuildingFlourish == nil and attacker:getStatusEffect(tpz.effect.BUILDING_FLOURISH) or nil
     calcParams.fencerBonus = fencerBonus(attacker)
     calcParams.bonusTP = wsParams.bonusTP or 0
     calcParams.bonusfTP = gorgetBeltFTP or 0
@@ -352,6 +384,11 @@ function doPhysicalWeaponskill(attacker, target, wsID, wsParams, tp, action, pri
     else
         calcParams.firstHitRateBonus = 50
     end
+
+    if calcParams.flourishEffect ~= nil then
+        calcParams.bonusAcc = calcParams.bonusAcc + 20 + calcParams.flourishEffect:getSubPower()*2 
+    end
+
     calcParams.hitRate = getHitRate(attacker, target, false, calcParams.bonusAcc)
 
     -- allow crit if building flourish is on (3+ moves)
@@ -363,7 +400,7 @@ function doPhysicalWeaponskill(attacker, target, wsID, wsParams, tp, action, pri
 
     -- Delete statuses that may have been spent by the WS
     attacker:delStatusEffectsByFlag(tpz.effectFlag.ATTACK)
-    if wsParams.violentFlourish == nil then attacker:delStatusEffectSilent(tpz.effect.BUILDING_FLOURISH) end
+    if wsParams.preserveBuildingFlourish == nil then attacker:delStatusEffectSilent(tpz.effect.BUILDING_FLOURISH) end
 
     local h2hres = target:getMod(tpz.mod.H2HRES)
     local pierceres = target:getMod(tpz.mod.PIERCERES)
@@ -475,7 +512,7 @@ end
         mightyStrikesApplicable = false,
         forcedFirstCrit = false,
         extraOffhandHit = false,
-        flourishEffect = false,
+        flourishEffect = nil,
         fencerBonus = fencerBonus(attacker),
         bonusTP = wsParams.bonusTP or 0,
         bonusfTP = gorgetBeltFTP or 0,
@@ -488,6 +525,11 @@ end
     end
 
     calcParams.firstHitRateBonus = 0
+
+    if calcParams.flourishEffect ~= nil then
+        calcParams.bonusAcc = calcParams.bonusAcc + 20 + calcParams.flourishEffect:getSubPower()*2 
+    end
+
     calcParams.hitRate = getHitRate(attacker, target, false, calcParams.bonusAcc, true)
 
     -- Send our params off to calculate our raw WS damage, hits landed, and shadows absorbed
@@ -497,6 +539,16 @@ end
     -- Delete statuses that may have been spent by the WS
     attacker:delStatusEffectsByFlag(tpz.effectFlag.ATTACK)
     attacker:delStatusEffectSilent(tpz.effect.BUILDING_FLOURISH)
+
+        -- Ws Specific DMG Bonus -Umeboshi
+        if (attacker:getMod(tpz.mod.WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
+            bonusdmg = bonusdmg + attacker:getMod(tpz.mod.WEAPONSKILL_DAMAGE_BASE + wsID)
+        end
+        
+        if wsParams.meleedmg ~= nil and finaldmg > 0 then
+            finaldmg = finaldmg + wsParams.meleedmg
+        end
+    
 
     -- Calculate reductions
     finaldmg = target:rangedDmgTaken(attacker, finaldmg)
@@ -564,9 +616,13 @@ function doMagicWeaponskill(attacker, target, wsID, wsParams, tp, action, primar
         ['shadowsAbsorbed'] = 0,
         ['tpHitsLanded'] = 1,
         ['extraHitsLanded'] = 0,
-        ['bonusTP'] = wsParams.bonusTP or 0
+        ['bonusTP'] = wsParams.bonusTP or 0,
+        ['flourishEffect'] = wsParams.preserveBuildingFlourish == nil and attacker:getStatusEffect(tpz.effect.BUILDING_FLOURISH) or nil -- various job abilities are abusing this ws function, don't boost them or remove building flourish
     }
 
+    -- Delete statuses that may have been spent by the WS
+    if wsParams.preserveBuildingFlourish == nil then attacker:delStatusEffectSilent(tpz.effect.BUILDING_FLOURISH) end
+    
     local bonusfTP, bonusacc = handleWSGorgetBelt(attacker)
     -- There is an assumed +100 macc bonus for magical weaponskills
     -- https://www.bg-wiki.com/ffxi/Category:Elemental_Weapon_Skill
@@ -682,6 +738,21 @@ function doMagicWeaponskill(attacker, target, wsID, wsParams, tp, action, primar
     else
         calcParams.shadowsAbsorbed = 1
     end
+
+        --Divine/Elemental Seal Bonus
+    if wsParams.ele ~= nil and wsParams.ele ~= tpz.magic.ele.LIGHT and (attacker:hasStatusEffect(tpz.effect.ELEMENTAL_SEAL)) then
+        dmg = math.floor(math.random(210,235)/100*dmg)
+            if wsParams.ele == tpz.magic.ele.LIGHT and wsParams.skill == tpz.skill.STAFF then -- Sunburst
+                   dmg = dmg * 1.52 + math.random(1,5)
+                    end
+            attacker:delStatusEffect(tpz.effect.ELEMENTAL_SEAL)
+                elseif wsParams.ele ~= nil and wsParams.ele == tpz.magic.ele.LIGHT and (attacker:hasStatusEffect(tpz.effect.DIVINE_SEAL)) then
+                    dmg = math.floor(math.random(225,245)/100*dmg)
+                    if wsParams.ele == tpz.magic.ele.DARK and wsParams.skill == tpz.skill.STAFF then -- Sunburst
+                        dmg = dmg * 1.52 + math.random(1,5)
+                         end
+                    attacker:delStatusEffect(tpz.effect.DIVINE_SEAL)
+                end
     
     calcParams.finalDmg = dmg
     dmg = takeWeaponskillDamage(target, attacker, wsParams, primaryMsg, attack, calcParams, action)
@@ -827,9 +898,6 @@ end
 function getHitRate(attacker, target, capHitRate, bonus, isRanged)
     local acc = isRanged and attacker:getRACC() or attacker:getACC()
     local eva = target:getEVA()
-
-    local flourisheffect = attacker:getStatusEffect(tpz.effect.BUILDING_FLOURISH)
-    if flourisheffect ~= nil then acc = acc + 20 + flourisheffect:getSubPower()*2 end
 
     if (bonus == nil) then
         bonus = 0

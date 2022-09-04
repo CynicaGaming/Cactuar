@@ -41,5 +41,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("VANISHING_ACT_waitJPMidnight", 0)
     elseif csid == 45 and npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.VANISHING_ACT, {item=2185, var="vanishingactCS"}) then
         player:delKeyItem(tpz.ki.RAINBOW_BERRY)
+        player:addExp(EXP_RATE_QUEST*1000) 
+
     end
 end

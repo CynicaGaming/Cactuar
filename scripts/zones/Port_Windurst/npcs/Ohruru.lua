@@ -91,6 +91,7 @@ function onEventFinish(player, csid, option)
 
         if (player:getQuestStatus(WINDURST, tpz.quest.id.windurst.CATCH_IT_IF_YOU_CAN) == QUEST_ACCEPTED) then
             player:completeQuest(WINDURST, tpz.quest.id.windurst.CATCH_IT_IF_YOU_CAN)
+            player:addExp(EXP_RATE_QUEST*750)
             player:addFame(WINDURST, 75)
         else
             player:addFame(WINDURST, 8)

@@ -27,5 +27,6 @@ end
 function onEventFinish(player, csid, option)
     if csid == 204 then
         npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.LOVERS_IN_THE_DUSK, {item = 17346, fame = 120})
+        player:addExp(EXP_RATE_QUEST*2000)
     end
 end

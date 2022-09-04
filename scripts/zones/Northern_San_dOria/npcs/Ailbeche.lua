@@ -109,6 +109,7 @@ function onEventFinish(player, csid, option)
             player:addTitle(tpz.title.LOST_CHILD_OFFICER)
             player:setCharVar("QuestfatherAndSonVar", 0)
             player:addFame(SANDORIA, 30)
+            player:addExp(EXP_RATE_QUEST*200) 
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.FATHER_AND_SON)
         end
     elseif (csid == 61) then
@@ -132,6 +133,8 @@ function onEventFinish(player, csid, option)
             player:setCharVar("sharpeningTheSwordCS", 0)
             player:addFame(SANDORIA, 30)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.SHARPENING_THE_SWORD)
+            player:addExp(EXP_RATE_QUEST*2000) 
+
         end
     -- "A Boy's Dream"
     elseif ((csid == 41 or csid == 40) and option == 1) then

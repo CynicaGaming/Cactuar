@@ -39,5 +39,6 @@ function onEventFinish(player, csid, option)
         player:addQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.REQUIEM_FOR_THE_DEPARTED)
     elseif csid == 107 and npcUtil.completeQuest(player, CRYSTAL_WAR, tpz.quest.id.crystalWar.REQUIEM_FOR_THE_DEPARTED, {item = 4689}) then
         player:delKeyItem(tpz.ki.SHEAF_OF_HANDMADE_INCENSE)
+        player:addExp(EXP_RATE_QUEST*1500)
     end
 end

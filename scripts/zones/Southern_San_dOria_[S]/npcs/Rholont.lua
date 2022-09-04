@@ -99,6 +99,7 @@ function onEventFinish(player, csid, option)
             player:setCharVar("GiftsOfGriffonProg", 0)
             player:setCharVar("GiftsOfGriffonPlumes", 0)
             player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.GIFTS_OF_THE_GRIFFON)
+            player:addExp(EXP_RATE_QUEST*1000)
             player:setCharVar("WotG_Sandoria_DayWait", VanadielDayOfTheYear())
         end
     elseif (csid == 34) then
@@ -123,6 +124,7 @@ function onEventFinish(player, csid, option)
         player:addQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.WRATH_OF_THE_GRIFFON)
     elseif (csid == 60) then
         player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.WRATH_OF_THE_GRIFFON)
+        player:addExp(EXP_RATE_QUEST*2000)
         player:setCharVar("WrathOfTheGriffon", 0)
         player:addKeyItem(tpz.ki.MILITARY_SCRIP)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.MILITARY_SCRIP)

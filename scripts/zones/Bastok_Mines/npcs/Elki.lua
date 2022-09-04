@@ -49,15 +49,17 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.BOUQUETS_FOR_THE_PIONEERS)
     elseif (csid == 42) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12840)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12899)
         else
             player:addTitle(tpz.title.PURSUER_OF_THE_PAST)
-            player:addItem(12840)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 12840)
+            player:addItem(12899)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 12899)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.HEARTS_OF_MYTHRIL)
             player:addFame(BASTOK, 80)
             player:setCharVar("HeartsOfMythril", 0)
             player:needToZone(true)
+            player:addExp(EXP_RATE_QUEST*400) 
+
         end
     elseif (csid == 43 and option == 1) then
         player:addQuest(BASTOK, tpz.quest.id.bastok.THE_ELEVENTH_S_HOUR)

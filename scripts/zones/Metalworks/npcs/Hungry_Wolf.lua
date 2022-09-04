@@ -43,6 +43,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:addGil(GIL_RATE*300)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*300)
+        player:addExp(EXP_RATE_QUEST*500) 
         player:addTitle(tpz.title.HOT_DOG)
         if (player:getQuestStatus(BASTOK, tpz.quest.id.bastok.SMOKE_ON_THE_MOUNTAIN) == QUEST_ACCEPTED) then
             player:addFame(BASTOK, 30)

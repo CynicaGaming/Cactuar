@@ -42,14 +42,15 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.SCRIPTURE_OF_WIND)
     elseif (csid == 620) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13584)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 15485)
         else
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.GATES_TO_PARADISE)
             player:addFame(SANDORIA, 30)
             player:addTitle(tpz.title.THE_PIOUS_ONE)
             player:delKeyItem(tpz.ki.SCRIPTURE_OF_WATER)
-            player:addItem(13584, 1)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 13584)
+            player:addItem(15485, 1)
+            player:addExp(EXP_RATE_QUEST*1000)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 15485) -- Default: Cotton Cape 13584
         end
     end
 

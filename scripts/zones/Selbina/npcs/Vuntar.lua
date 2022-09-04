@@ -56,14 +56,17 @@ function onEventFinish(player, csid, option)
         if option == 1 then
             player:addGil(800)
             player:messageSpecial(ID.text.GIL_OBTAINED, 800)
+            player:addExp(EXP_RATE_QUEST*500)
             player:confirmTrade()
         elseif option == 2 then
             player:addGil(2000)
             player:messageSpecial(ID.text.GIL_OBTAINED, 2000)
+            player:addExp(EXP_RATE_QUEST*750)
             player:confirmTrade()
         elseif option == 3 then
             player:addGil(3000)
             player:messageSpecial(ID.text.GIL_OBTAINED, 3000)
+            player:addExp(EXP_RATE_QUEST*1000)
             player:confirmTrade()
         end
     end

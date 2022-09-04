@@ -42,13 +42,13 @@ CREATE TABLE `abilities_charges` (
 -- Dumping data for table `abilities_charges`
 --
 
-INSERT INTO `abilities_charges` VALUES(231, 20, 10, 1, 240, 0);
-INSERT INTO `abilities_charges` VALUES(231, 20, 30, 2, 120, 0);
+INSERT INTO `abilities_charges` VALUES(231, 20, 10, 1, 240, 0); -- sch
+INSERT INTO `abilities_charges` VALUES(231, 20, 30, 2, 120, 0); 
 INSERT INTO `abilities_charges` VALUES(231, 20, 50, 3, 80, 0);
 INSERT INTO `abilities_charges` VALUES(231, 20, 70, 4, 60, 0);
-INSERT INTO `abilities_charges` VALUES(231, 20, 90, 5, 48, 0);
-INSERT INTO `abilities_charges` VALUES(195, 17, 40, 2, 60, 1410);
-INSERT INTO `abilities_charges` VALUES(102, 9, 25, 3, 60, 902);
+INSERT INTO `abilities_charges` VALUES(231, 20, 90, 5, 48, 0); -- sch
+INSERT INTO `abilities_charges` VALUES(195, 17, 40, 2, 60, 1410); -- cor
+INSERT INTO `abilities_charges` VALUES(102, 9, 25, 3, 60, 902); -- bst
 
 --
 -- Indexes for dumped tables

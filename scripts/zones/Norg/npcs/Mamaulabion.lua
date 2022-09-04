@@ -123,6 +123,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 14625) -- Evokers Ring
         else
             player:addItem(14625) -- Evokers Ring
+            player:addExp(EXP_RATE_QUEST*3000) 
             player:messageSpecial(ID.text.ITEM_OBTAINED, 14625) -- Evokers Ring
             player:addFame(NORG, 30) --idk how much fame the quest adds, just left at 30 which the levi quest gave.
             player:completeQuest(OUTLANDS, tpz.quest.id.outlands.MAMA_MIA)

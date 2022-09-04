@@ -61,6 +61,7 @@ function onEventFinish(player, csid, option)
         if (TheDarksmith == QUEST_ACCEPTED) then
             player:addFame(BASTOK, 30)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_DARKSMITH)
+            player:addExp(EXP_RATE_QUEST*1000) 
         else
             player:addFame(BASTOK, 5)
         end

@@ -44,6 +44,7 @@ function onEventFinish(player, csid, option)
         if player:getFreeSlotsCount() >= 1 then
             player:addItem(2217)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 2217)
+            player:addExp(EXP_RATE_QUEST*2000) 
             player:delKeyItem(tpz.ki.DKHAAYAS_RESEARCH_JOURNAL)
             player:delKeyItem(tpz.ki.ELECTROLOCOMOTIVE)
             player:delKeyItem(tpz.ki.ELECTROPOT)

@@ -83,6 +83,7 @@ function onEventFinish(player, csid, option)
             if (player:getQuestStatus(JEUNO, tpz.quest.id.jeuno.EMPTY_MEMORIES) == QUEST_ACCEPTED) then
                 player:addFame(JEUNO, 30)
                 player:completeQuest(JEUNO, tpz.quest.id.jeuno.EMPTY_MEMORIES)
+                player:addExp(EXP_RATE_QUEST*500)
             else
             player:addFame(JEUNO, 5)
             end

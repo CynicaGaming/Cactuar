@@ -160,6 +160,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 70 then
         player:addQuest(JEUNO, tpz.quest.id.jeuno.PATH_OF_THE_BEASTMASTER)
         npcUtil.completeQuest(player, JEUNO, tpz.quest.id.jeuno.PATH_OF_THE_BEASTMASTER, {title = tpz.title.ANIMAL_TRAINER})
+        player:addExp(EXP_RATE_QUEST*1000)
         player:unlockJob(tpz.job.BST)
         player:messageSpecial(ID.text.YOU_CAN_NOW_BECOME_A_BEASTMASTER)
 
@@ -178,6 +179,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 144 then
         player:setCharVar("scatIntoShadowCS", 1)
     elseif csid == 135 then
+        player:addExp(EXP_RATE_QUEST*3000)
         npcUtil.completeQuest(player, JEUNO, tpz.quest.id.jeuno.SCATTERED_INTO_SHADOW, {item = 14097, fame = 40, var = "scatIntoShadowCS"})
 
     -- AXE THE COMPETITION

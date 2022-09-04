@@ -60,6 +60,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:addItem(4869)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 4869)
+        player:addExp(EXP_RATE_QUEST*500) 
     end
 
 end

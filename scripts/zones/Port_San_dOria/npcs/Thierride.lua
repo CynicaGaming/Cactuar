@@ -58,6 +58,7 @@ function onEventFinish(player, csid, option)
         player:addFame(SANDORIA, 30)
         player:addGil(GIL_RATE*150)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*150)
+        player:addExp(EXP_RATE_QUEST*300)
         player:completeQuest(SANDORIA, tpz.quest.id.sandoria.A_TASTE_FOR_MEAT)
         player:addTitle(tpz.title.RABBITER)
     end

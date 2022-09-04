@@ -67,6 +67,7 @@ Fame       = player:getFameLevel(WINDURST);
                 if (FreeSlots >= 1) then
                     player:completeQuest(WINDURST,tpz.quest.id.windurst.THE_PROMISE);
                     player:addFame(WINDURST,150);
+                    player:addExp(EXP_RATE_QUEST*1750)
                     player:delKeyItem(tpz.ki.INVISIBLE_MAN_STICKER);
                     player:addItem(13135);
                     player:messageSpecial(ID.text.ITEM_OBTAINED,13135);
@@ -202,6 +203,7 @@ function onEventFinish(player,csid,option)
         if (FreeSlots >= 1) then
             player:completeQuest(WINDURST,tpz.quest.id.windurst.TRUTH_JUSTICE_AND_THE_ONION_WAY);
             player:addFame(WINDURST,75);
+            player:addExp(EXP_RATE_QUEST*500)
             player:addTitle(tpz.title.STAR_ONION_BRIGADE_MEMBER);
             player:tradeComplete();
             player:addItem(13093);
@@ -230,6 +232,7 @@ function onEventFinish(player,csid,option)
     elseif (csid == 386 or csid == 400) then
         player:completeQuest(WINDURST,tpz.quest.id.windurst.KNOW_ONE_S_ONIONS);
         player:addFame(WINDURST,80);
+        player:addExp(EXP_RATE_QUEST*800)
         player:addTitle(tpz.title.SOB_SUPER_HERO);
         player:setCharVar("KnowOnesOnions",0);
         player:setCharVar("KnowOnesOnionsTime",0);
@@ -264,6 +267,7 @@ function onEventFinish(player,csid,option)
         player:completeQuest(WINDURST,tpz.quest.id.windurst.ONION_RINGS);
         player:addFame(WINDURST,100);
         player:addTitle(tpz.title.STAR_ONION_BRIGADIER);
+        player:addExp(EXP_RATE_QUEST*1000)
         player:delKeyItem(tpz.ki.OLD_RING);
         player:setCharVar("OnionRingsTime",0);
         player:setCharVar("OnionRings",2);
@@ -295,6 +299,7 @@ function onEventFinish(player,csid,option)
         if (FreeSlots >= 1) then
             player:completeQuest(WINDURST,tpz.quest.id.windurst.THE_PROMISE);
             player:addFame(WINDURST,150);
+            player:addExp(EXP_RATE_QUEST*2500)
             player:delKeyItem(tpz.ki.INVISIBLE_MAN_STICKER);
             player:addItem(13135);
             player:messageSpecial(ID.text.ITEM_OBTAINED,13135);

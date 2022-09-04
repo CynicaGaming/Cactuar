@@ -79,6 +79,7 @@ function onEventFinish(player, csid, option)
         if (player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.BLACKMAIL) == QUEST_ACCEPTED) then
             player:addFame(SANDORIA, 30)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.BLACKMAIL)
+            player:addExp(EXP_RATE_QUEST*500) 
         else
             player:addFame(SANDORIA, 5)
         end

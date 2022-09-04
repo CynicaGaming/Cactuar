@@ -42,5 +42,6 @@ function onEventFinish(player, csid, option)
             item = 15998,
             var = {"RedeemingDay"}
         })
+        player:addExp(EXP_RATE_QUEST*1750)
     end
 end

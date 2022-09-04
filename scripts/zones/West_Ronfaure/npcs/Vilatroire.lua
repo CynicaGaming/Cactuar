@@ -138,18 +138,21 @@ function onEventFinish(player, csid, option)
                 fame = 80, -- fame defaults to 30 if not set
                 title = tpz.title.THIRDRATE_ORGANIZER,
             })
+            player:addExp(EXP_RATE_QUEST*500)
         elseif questIntermediateTeamwork == QUEST_ACCEPTED and player:getLocalVar("intermedTmwrk_pass") == 1 then
             npcUtil.completeQuest(player, SANDORIA, tpz.quest.id.sandoria.INTERMEDIATE_TEAMWORK, {
                 item = 4994,
                 fame = 80, -- fame defaults to 30 if not set
                 title = tpz.title.SECONDRATE_ORGANIZER,
             })
+            player:addExp(EXP_RATE_QUEST*750)
         elseif questAdvancedTeamwork == QUEST_ACCEPTED and player:getLocalVar("advTmwrk_pass") == 1 then
             npcUtil.completeQuest(player, SANDORIA, tpz.quest.id.sandoria.ADVANCED_TEAMWORK, {
                 item = 13459,
                 fame = 80, -- fame defaults to 30 if not set
                 title = tpz.title.FIRSTRATE_ORGANIZER,
             })
+            player:addExp(EXP_RATE_QUEST*1000)
         end
     elseif csid == 131 and option == 1 then
         -- 131 is the third and last quest

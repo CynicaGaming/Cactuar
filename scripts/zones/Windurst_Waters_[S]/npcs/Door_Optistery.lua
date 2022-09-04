@@ -45,6 +45,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("LostBookTrade", vanaDay())
         player:delKeyItem(tpz.ki.LYNX_PELT)
     elseif csid == 147 then
+        player:addExp(EXP_RATE_QUEST*1500)
         npcUtil.completeQuest(player, CRYSTAL_WAR, tpz.quest.id.crystalWar.THE_LOST_BOOK, {item=4873, var={"TheLostBookProgress", "LostBookTrade"}})
     end
 end

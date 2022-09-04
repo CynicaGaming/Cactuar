@@ -832,7 +832,7 @@ INSERT INTO `item_weapon` VALUES(17184, 'assassins_bow', 25, 0, 0, 0, 0, 1, 1, 3
 INSERT INTO `item_weapon` VALUES(17185, 'siege_bow', 25, 0, 0, 0, 0, 1, 1, 540, 83, 0, 1);
 INSERT INTO `item_weapon` VALUES(17186, 'sagittarius_bow', 25, 0, 0, 0, 0, 1, 1, 330, 34, 0, 0);
 INSERT INTO `item_weapon` VALUES(17187, 'eurytos_bow', 25, 0, 0, 0, 0, 1, 1, 490, 71, 0, 1);
-INSERT INTO `item_weapon` VALUES(17188, 'sniping_bow', 25, 0, 0, 0, 0, 1, 1, 360, 27, 0, 0);
+INSERT INTO `item_weapon` VALUES(17188, 'sniping_bow', 25, 0, 0, 0, 0, 1, 1, 540, 56, 0, 0); --Cactuar Edit
 INSERT INTO `item_weapon` VALUES(17189, 'rapid_bow_+1', 25, 0, 0, 0, 0, 1, 1, 350, 38, 0, 0);
 INSERT INTO `item_weapon` VALUES(17190, 'sarnga', 25, 0, 0, 0, 0, 1, 1, 720, 72, 0, 1);
 INSERT INTO `item_weapon` VALUES(17191, 'pharaohs_bow', 25, 0, 0, 0, 0, 1, 1, 360, 36, 0, 0);

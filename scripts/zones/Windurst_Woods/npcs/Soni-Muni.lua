@@ -81,6 +81,7 @@ function onEventFinish(player, csid, option)
         player:addQuest(WINDURST, tpz.quest.id.windurst.THE_AMAZIN_SCORPIO)
     elseif csid == 484 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.THE_AMAZIN_SCORPIO, {fame=80, title=tpz.title.GREAT_GRAPPLER_SCORPIO, gil=1500}) then
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*1250)
     elseif csid == 735 then
         player:setCharVar("WildcatWindurst", utils.mask.setBit(player:getCharVar("WildcatWindurst"), 0, true))
     end

@@ -59,6 +59,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("gotitallCS", 8)
     elseif csid == 528 then
         npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.GOT_IT_ALL, {item=18257, var={"Wait1DayForgotitallCS_date", "gotitallCS"}})
+        player:addExp(EXP_RATE_QUEST*500) 
     elseif csid == 843 and option == 1 then
         player:setCharVar("threemenandaclosetCS", 6)
     end

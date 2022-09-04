@@ -50,5 +50,7 @@ function onEventFinish(player, csid, option)
         player:addFame(BASTOK, 50)
         player:addItem(1236, 4) -- Reward for quest completion: Cactus Stems x 4
         player:messageSpecial(ID.text.ITEM_OBTAINED, 1236)
+        player:addExp(EXP_RATE_QUEST*3000) 
+
     end
 end

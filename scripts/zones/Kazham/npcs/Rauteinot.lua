@@ -58,6 +58,7 @@ function onEventFinish(player, csid, option)
             player:addItem(4728)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 4728)
             player:addFame(WINDURST, 30)
+            player:addExp(EXP_RATE_QUEST*3000) 
             player:completeQuest(OUTLANDS, tpz.quest.id.outlands.MISSIONARY_MAN)
         end
     end

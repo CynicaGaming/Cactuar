@@ -20,8 +20,8 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
 
     local params = {}
     params.numHits = 1
-    params.ftp100 = 1 params.ftp200 = 2 params.ftp300 = 2.5
-    params.str_wsc = 0.2 params.dex_wsc = 0.0 params.vit_wsc = 0.0 params.agi_wsc = 0.0 params.int_wsc = 0.0 params.mnd_wsc = 0.2 params.chr_wsc = 0.0
+    params.ftp100 = 1.15 params.ftp200 = 2.25 params.ftp300 = 3.5
+    params.str_wsc = 0.4 params.dex_wsc = 0.0 params.vit_wsc = 0.0 params.agi_wsc = 0.0 params.int_wsc = 0.0 params.mnd_wsc = 0.5 params.chr_wsc = 0.0
     params.ele = tpz.magic.ele.LIGHT
     params.skill = tpz.skill.SWORD
     params.includemab = true
