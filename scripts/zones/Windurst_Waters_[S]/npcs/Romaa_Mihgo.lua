@@ -25,5 +25,6 @@ end
 function onEventFinish(player, csid, option)
     if csid == 154 then
         npcUtil.completeQuest(player, CRYSTAL_WAR, tpz.quest.id.crystalWar.A_MANIFEST_PROBLEM, {item=5708, title=tpz.title.FRIEND_OF_LEHKO_HABHOKA, var="ManifestProblem"})
+        player:addExp(EXP_RATE_QUEST*1750)
     end
 end

@@ -54,16 +54,18 @@ function onEventFinish(player, csid, option)
         player:setCharVar("Groceries", 0)
         player:addGil(GIL_RATE*10)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*10)
+        player:addExp(EXP_RATE_QUEST*30) 
     elseif (csid == 113) then
         if (player:getFreeSlotsCount() >= 1) then
             player:tradeComplete()
             player:setCharVar("Groceries", 0)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.GROCERIES)
             player:addFame(BASTOK, 75)
-            player:addItem(13594) -- Rabbit Mantle
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 13594)
+            player:addItem(13599) -- Rabbit Mantle
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 13599)
+            player:addExp(EXP_RATE_QUEST*300) 
         else
-            player:messageSpecial(ID.text.FULL_INVENTORY_AFTER_TRADE, 13594)
+            player:messageSpecial(ID.text.FULL_INVENTORY_AFTER_TRADE, 13599)
         end
     end
 end

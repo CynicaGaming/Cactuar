@@ -140,8 +140,10 @@ function onEventFinish(player, csid, option)
             var = {"AllInTheCards_date"}
         }) then
             player:tradeComplete()
+            player:addExp(EXP_RATE_QUEST*1500)
         end
     elseif csid == 197 then
+        player:addExp(EXP_RATE_QUEST*2000) 
         npcUtil.completeQuest(player, JEUNO, tpz.quest.id.jeuno.RUBBISH_DAY, {
             gil = 6000,
             item = 13083,

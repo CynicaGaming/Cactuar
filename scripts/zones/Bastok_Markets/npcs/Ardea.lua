@@ -40,6 +40,7 @@ function onEventFinish(player, csid, option)
     if (csid == 261 and option ~= 1) then
         player:delKeyItem(tpz.ki.SHARP_GRAY_STONE)
         player:addGil(GIL_RATE*10)
+        player:addExp(EXP_RATE_QUEST*3000) 
         player:setCharVar("rockracketeer_sold", 1)
     elseif (csid == 261 and option ~= 2) then
         player:setCharVar("rockracketeer_sold", 2)

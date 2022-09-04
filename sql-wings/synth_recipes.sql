@@ -1848,7 +1848,7 @@ INSERT INTO `synth_recipes` VALUES(1751, 0, 0, 11, 0, 2, 0, 0, 0, 0, 0, 4099, 42
 INSERT INTO `synth_recipes` VALUES(1752, 0, 0, 26, 7, 0, 0, 0, 0, 0, 0, 4099, 4241, 662, 707, 707, 0, 0, 0, 0, 0, 12291, 12319, 12319, 12319, 1, 1, 1, 1, 'Elm Shield');
 INSERT INTO `synth_recipes` VALUES(1753, 0, 0, 34, 8, 0, 0, 0, 0, 0, 0, 4099, 4241, 662, 717, 717, 0, 0, 0, 0, 0, 12292, 12334, 12334, 12334, 1, 1, 1, 1, 'Mahogany Shield');
 INSERT INTO `synth_recipes` VALUES(1754, 0, 0, 48, 11, 0, 0, 0, 0, 0, 0, 4099, 4241, 662, 716, 716, 0, 0, 0, 0, 0, 12293, 12331, 12331, 12331, 1, 1, 1, 1, 'Oak Shield');
-INSERT INTO `synth_recipes` VALUES(1755, 0, 0, 0, 0, 0, 0, 50, 0, 0, 0, 4099, 4241, 851, 853, 12289, 0, 0, 0, 0, 0, 12294, 12329, 12329, 12329, 1, 1, 1, 1, 'Leather Shield');
+INSERT INTO `synth_recipes` VALUES(1755, 0, 0, 0, 0, 0, 0, 51, 0, 0, 0, 4099, 4241, 851, 853, 12289, 0, 0, 0, 0, 0, 12294, 12329, 12329, 12329, 1, 1, 1, 1, 'Leather Shield');
 INSERT INTO `synth_recipes` VALUES(1756, 0, 0, 74, 19, 0, 0, 0, 0, 0, 0, 4099, 4241, 662, 716, 717, 0, 0, 0, 0, 0, 12295, 12352, 12352, 12352, 1, 1, 1, 1, 'Round Shield');
 INSERT INTO `synth_recipes` VALUES(1757, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 4096, 4238, 660, 660, 715, 0, 0, 0, 0, 0, 12299, 12325, 12325, 12325, 1, 1, 1, 1, 'Aspis');
 INSERT INTO `synth_recipes` VALUES(1758, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 4096, 4238, 662, 662, 714, 0, 0, 0, 0, 0, 12300, 12335, 12335, 12335, 1, 1, 1, 1, 'Targe');
@@ -3186,7 +3186,7 @@ INSERT INTO `synth_recipes` VALUES(3089, 0, 0, 0, 0, 48, 0, 0, 0, 95, 0, 4096, 4
 INSERT INTO `synth_recipes` VALUES(3090, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 4098, 4240, 652, 818, 0, 0, 0, 0, 0, 0, 17301, 17301, 17301, 17301, 33, 66, 99, 99, 'Shuriken');
 INSERT INTO `synth_recipes` VALUES(3091, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 4098, 4240, 652, 662, 0, 0, 0, 0, 0, 0, 17302, 17302, 17302, 17302, 33, 66, 99, 99, 'Juji Shuriken');
 INSERT INTO `synth_recipes` VALUES(3092, 0, 0, 0, 65, 0, 0, 0, 0, 0, 0, 4098, 4240, 657, 664, 0, 0, 0, 0, 0, 0, 17303, 17303, 17303, 17303, 33, 66, 99, 99, 'Manji Shuriken');
-INSERT INTO `synth_recipes` VALUES(3093, 0, 0, 0, 84, 53, 0, 0, 0, 0, 0, 4098, 4240, 657, 663, 745, 914, 0, 0, 0, 0, 17304, 17304, 17304, 17304, 3, 6, 9, 12, 'Fuma Shuriken');
+INSERT INTO `synth_recipes` VALUES(3093, 0, 0, 0, 84, 53, 0, 0, 0, 0, 0, 4098, 4240, 657, 663, 745, 914, 0, 0, 0, 0, 17304, 17304, 17304, 17304, 33, 66, 99, 99, 'Fuma Shuriken');
 INSERT INTO `synth_recipes` VALUES(3094, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 4098, 4240, 840, 840, 891, 937, 0, 0, 0, 0, 17307, 17307, 17307, 17307, 8, 16, 20, 24, 'Dart');
 INSERT INTO `synth_recipes` VALUES(3095, 0, 0, 0, 0, 1, 35, 0, 0, 0, 0, 4098, 4240, 744, 841, 841, 937, 0, 0, 0, 0, 17308, 17308, 17308, 17308, 8, 12, 16, 20, 'Hawkeye');
 INSERT INTO `synth_recipes` VALUES(3096, 0, 0, 0, 37, 0, 77, 0, 0, 0, 0, 4098, 4240, 652, 937, 1134, 1134, 0, 0, 0, 0, 17309, 17309, 17309, 17309, 8, 12, 16, 20, 'Pinwheel');
@@ -3824,7 +3824,7 @@ INSERT INTO `synth_recipes` VALUES(4099, 0, 2040, 0, 0, 0, 0, 0, 0, 0, 64, 4099,
 INSERT INTO `synth_recipes` VALUES(4100, 0, 2040, 0, 0, 0, 0, 0, 0, 0, 64, 4099, 4241, 620, 1652, 4509, 5164, 5962, 5962, 5962, 0, 5693, 5694, 5694, 5694, 4, 6, 2, 4, 'Octopus Sushi');
 INSERT INTO `synth_recipes` VALUES(4101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 4096, 4238, 610, 633, 4297, 4570, 0, 0, 0, 0, 5758, 5758, 5764, 5764, 6, 8, 6, 8, 'Black Curry Bun');
 INSERT INTO `synth_recipes` VALUES(4104, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 4096, 4238, 631, 898, 900, 924, 936, 4448, 4509, 16995, 4465, 4465, 4465, 4465, 1, 1, 1, 1, 'Goblin Stew');
-INSERT INTO `synth_recipes` VALUES(4109, 0, 2041, 0, 0, 0, 0, 0, 0, 0, 71, 4096, 4238, 614, 633, 936, 1776, 5123, 5194, 5448, 5473, 5719, 5719, 5720, 5720, 2, 4, 2, 4, 'Marinara');
+INSERT INTO `synth_recipes` VALUES(4109, 0, 2041, 0, 0, 0, 0, 0, 0, 0, 72, 4096, 4238, 614, 633, 936, 1776, 5123, 5194, 5448, 5473, 5719, 5719, 5720, 5720, 2, 4, 2, 4, 'Marinara');
 INSERT INTO `synth_recipes` VALUES(4110, 0, 2042, 0, 0, 0, 0, 0, 0, 0, 72, 4096, 4238, 610, 628, 4352, 4363, 4370, 4570, 5703, 0, 5777, 5777, 5778, 5778, 2, 4, 2, 4, 'Pear Crepe');
 INSERT INTO `synth_recipes` VALUES(4111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 74, 4096, 4238, 610, 626, 936, 4366, 4378, 5755, 0, 0, 5760, 5761, 5761, 5761, 1, 1, 1, 1, 'Kohlrouladen');
 INSERT INTO `synth_recipes` VALUES(4122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 83, 4096, 4238, 610, 626, 4375, 4448, 4570, 4571, 5703, 0, 5773, 5773, 5774, 5774, 2, 4, 2, 4, 'Mushroom Crepe');
@@ -4028,6 +4028,96 @@ INSERT INTO `synth_recipes` VALUES(4594, 0, 0, 0, 0, 0, 33, 0, 0, 48, 0, 4101, 4
 INSERT INTO `synth_recipes` VALUES(4595, 1, 0, 0, 0, 0, 0, 74, 0, 0, 0, 4100, 4242, 16213, 0, 0, 0, 0, 0, 0, 0, 2296, 1869, 1869, 1869, 1, 1, 2, 2, 'Lamia_Mantle_Desynth');
 INSERT INTO `synth_recipes` VALUES(4596, 1, 0, 0, 0, 0, 0, 85, 0, 0, 0, 4100, 4242, 16235, 0, 0, 0, 0, 0, 0, 0, 820, 2512, 2512, 2512, 1, 1, 1, 1, 'Lynx_Mantle_Desynth)');
 INSERT INTO `synth_recipes` VALUES(4597, 1, 0, 0, 0, 0, 0, 59, 0, 0, 0, 4100, 4242, 12995, 0, 0, 0, 0, 0, 0, 0, 826, 819, 853, 853, 1, 2, 1, 1, 'Moccasins_Desynth)');
+INSERT INTO `synth_recipes` VALUES(4598, 1, 0, 0, 0, 85, 0, 0, 0, 0, 0, 4100, 4242, 13318, 0, 0, 0, 0, 0, 0, 0, 789, 789, 746, 746, 1, 1, 1, 2, 'Topaz_Earring_Desynth');
+INSERT INTO `synth_recipes` VALUES(4599, 0, 0, 0, 0, 0, 0, 0, 0, 0, 98, 4098, 4240, 612, 633, 936, 1555, 4273, 4387, 4390, 5650, 5701, 5702, 5702, 5702, 1, 1, 1, 1,'Nopales Salad');
+INSERT INTO `synth_recipes` VALUES(4600, 1, 0, 0, 0, 0, 8, 34, 0, 0, 0, 4100, 4242, 12994, 0, 0, 0, 0, 0, 0, 0, 818, 818, 848, 848, 2, 3, 1, 2, 'Shoes_Desynth');
+-- Cactuar Additions Below This Line
+INSERT INTO `synth_recipes` VALUES(4601, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 4099, 4241, 17545, 17547, 17549, 17551, 17553, 17555, 17557, 17559, 18632, 18632, 18632, 18632, 1, 1, 1, 1, 'Iridal Staff');
+INSERT INTO `synth_recipes` VALUES(4602, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 4099, 4241, 17546, 17548, 17550, 17552, 17554, 17556, 17558, 17560, 18633, 18633, 18633, 18633, 1, 1, 1, 1, 'Chatoyant Staff');
+INSERT INTO `synth_recipes` VALUES(4603, 0, 0, 0, 100, 0, 0, 0, 0, 0, 0, 4099, 4241, 15495, 15496, 15497, 15498, 15499, 15500, 15501, 15502, 27510, 27510, 27510, 27510, 1, 1, 1, 1, 'Fotia Gorget');
+INSERT INTO `synth_recipes` VALUES(4604, 0, 0, 0, 0, 100, 0, 0, 0, 0, 0, 4099, 4241, 15435, 15436, 15437, 15438, 15439, 15440, 15441, 15442, 28419, 28419, 28419, 28419, 1, 1, 1, 1, 'Hachirin-no-Obi');
+INSERT INTO `synth_recipes` VALUES(4605, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 4096, 4238, 4277, 4578, 4578, 4590, 5568, 5688, 5907, 0, 6381, 6381, 6381, 6381, 1, 1, 1, 1, 'Fishermans Feast');
+INSERT INTO `synth_recipes` VALUES(4606, 0, 0, 0, 0, 0, 0, 0, 0, 0, 98, 4097, 4239, 4154, 4441, 5562, 0, 0, 0, 0, 0, 5411, 5411, 5411, 5411, 1, 1, 1, 1, 'Dawn Mulsum');
+INSERT INTO `synth_recipes` VALUES(4607, 0, 0, 0, 0, 0, 0, 0, 0, 0, 81, 4096, 4238, 627, 1471, 2215, 4509, 8800, 0, 0, 0, 6260, 6261, 6261, 6261, 2, 2, 3, 4, 'Akamochi');
+INSERT INTO `synth_recipes` VALUES(4608, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 4098, 4240, 627, 1523, 4363, 4392, 4432, 4445, 4468, 5703, 6063, 6064, 6064, 6064, 1, 1, 1, 1, 'Fruit Parfait');
+INSERT INTO `synth_recipes` VALUES (4609,0,0,0,0,0,50,0,0,0,0,4096,4238,1590,2561,4390,5194,5684,8740,0,0,6213,6213,6214,6214,6,8,6,8, 'Margherita_Pizza_Slice'); -- slice of margherita pizza
+INSERT INTO `synth_recipes` VALUES (4610,0,0,0,0,0,59,0,0,0,0,4096,4238,2561,5194,5195,5660,5680,5684,8740,0,6215,6215,6216,6216,6,8,6,8,'Pepperoni_Pizza_Slice'); -- slice of pepperoni pizza
+INSERT INTO `synth_recipes` VALUES (4611,0,0,0,0,0,68,0,0,0,0,4096,4238,622,1590,2561,5194,5652,5684,8740,0,6217,6217,6218,6218,6,8,6,8, 'Anchovy_Pizza_Slice'); -- slice of anchovy pizza
+INSERT INTO `synth_recipes` VALUES (4612,0,0,0,0,0,0,0,0,15,0,4096,4238,651,714,0,0,0,0,0,0,8740,8740,8740,8740,6,8,10,12, 'Pizza_Cutter'); -- pizza cutter
+INSERT INTO `synth_recipes` VALUES (4613,1,0,0,0,0,0,0,0,73,0,4100,4242,16652,0,0,0,0,0,0,0,707,707,654,654,1,1,1,1,'Darksteel_Pick_Desynth'); -- Darksteel Pick (desynth)
+INSERT INTO `synth_recipes` VALUES (4614,1,0,0,0,90,0,0,0,0,0,4100,4242,13208,0,0,0,0,0,0,0,823,821,821,821,1,1,2,3,'Rainbow_Obi_Desynth'); -- Rainbow Obi (desynth)
+INSERT INTO `synth_recipes` VALUES (4615,1,0,0,0,0,0,0,33,0,0,4100,4242,13571,0,0,0,0,0,0,0,858,858,820,820,1,1,1,1,'Wolf_Mantle_Desynth'); -- Wolf Mantle (desynth)
+INSERT INTO `synth_recipes` VALUES (4616,1,0,0,0,46,0,0,0,0,0,4100,4242,12723,0,0,0,0,0,0,0,834,820,820,820,2,5,6,7,'Wool_Bracers_Desynth'); -- Wool Bracers (desynth)
+INSERT INTO `synth_recipes` VALUES (4617,1,0,0,0,0,0,31,0,0,0,4100,4242,18868,0,0,0,0,0,0,0,650,650,650,650,1,1,1,1,'Lady_Bell_Desynth'); -- Lady Bell (desynth)
+INSERT INTO `synth_recipes` VALUES (4618,1,0,0,0,0,0,85,0,0,0,4100,4242,13356,0,0,0,0,0,0,0,746,812,812,812,1,1,1,1,'Death_Earring_Desynth'); -- Death Earring (desynth)
+INSERT INTO `synth_recipes` VALUES (4619,1,0,0,0,19,0,0,0,0,0,4100,4242,12849,0,0,0,0,0,0,0,850,818,818,818,1,5,6,7,'Cotton_Brais_Desynth'); -- Cotton Brais (desynth)
+INSERT INTO `synth_recipes` VALUES (4620,1,0,0,0,0,0,0,0,100,0,4100,4242,17252,0,0,0,0,0,0,0,1231,717,654,655,1,1,1,1,'Culverin_Desynth'); -- Culverin (desynth)
+INSERT INTO `synth_recipes` VALUES (4621,1,0,0,67,0,0,0,0,0,0,4100,4242,12838,0,0,0,0,0,0,0,826,851,896,896,1,1,1,1,'Scorpion_Subligar_Desynth'); -- Scorpion Subligar (desynth)
+INSERT INTO `synth_recipes` VALUES (4622,1,0,0,0,0,0,99,0,0,0,4100,4242,15771,0,0,0,0,0,0,0,747,747,2275,2275,1,1,1,1,'Shining_Ring_Desynth'); -- Shining Ring (desynth)
+INSERT INTO `synth_recipes` VALUES (4623,0,2045,0,0,0,117,0,0,0,0,4096,4238,2110,4509,5134,5233,5234,5236,5237,5680,5893,5894,5894,5894,1,1,1,1,'Marine_Stewpot'); -- Marine Stewpot (117 cooking) https://www.bg-wiki.com/bg/Marine_Stewpot
+INSERT INTO `synth_recipes` VALUES (4624,1,0,0,0,0,0,85,0,0,0,4100,4242,13354,0,0,0,0,0,0,0,804,804,746,746,1,1,1,2,'Spinel_Earring_Desynth'); -- Spinel Earring (desynth)
+INSERT INTO `synth_recipes` VALUES (4625,1,0,0,0,0,0,0,0,0,41,4100,4242,17142,0,0,0,0,0,0,0,716,716,716,716,1,1,1,1,'Oak_Cudgel_+1_Desynth'); -- Oak Cudgel +1 (desynth)
+INSERT INTO `synth_recipes` VALUES (4626,1,0,0,0,0,0,93,0,0,0,4100,4242,13466,0,0,0,0,0,0,0,747,747,747,747,1,1,2,2,'Orichalcum_Ring_Desynth'); -- Orichalcum Ring (desynth)
+INSERT INTO `synth_recipes` VALUES (4627,1,0,0,0,0,0,93,0,0,0,4100,4242,14616,0,0,0,0,0,0,0,747,747,747,747,1,1,2,2,'Triton_Ring_Desynth'); -- Triton Ring (desynth)
+INSERT INTO `synth_recipes` VALUES (4628,1,0,0,99,0,0,0,0,0,0,4100,4242,13467,0,0,0,0,0,0,0,903,903,903,903,1,1,1,1,'Dragon_Ring_Desynth'); -- Dragon Ring (desynth)
+INSERT INTO `synth_recipes` VALUES (4629,0,0,1,0,0,0,0,0,0,90,4096,4238,709,709,947,2533,0,0,0,0,295,295,295,295,1,1,1,1,'Bonfire');
+INSERT INTO `synth_recipes` VALUES (4630,0,0,0,0,0,93,0,0,0,0,4101,4243,610,4509,5818,0,0,0,0,0,17906,17906,17906,17906,4,4,4,4,'Auroral_Broth'); -- Auroral Broth (cook 93) https://www.bg-wiki.com/bg/Auroral_Broth
+INSERT INTO `synth_recipes` VALUES (4631,0,0,1,0,0,0,0,0,0,30,4099,4241,717,1886,1887,1888,17296,0,0,0,3704,3704,3704,3704,1,1,1,1,'Transom');
+INSERT INTO `synth_recipes` VALUES (4632,0,0,1,0,0,0,0,0,0,20,4099,4241,718,1886,1887,0,0,0,0,0,3703,3703,3703,3703,1,1,1,1,'Square_Jalousie');
+INSERT INTO `synth_recipes` VALUES (4633,0,0,1,0,0,0,0,0,0,20,4099,4241,711,1886,1887,0,0,0,0,0,3702,3702,3702,3702,1,1,1,1,'Triangular_Jalousie');
+INSERT INTO `synth_recipes` VALUES (4634,0,0,0,0,0,0,1,0,0,80,4099,4241,718,719,719,719,719,719,745,745,428,428,428,428,1,1,1,1,'Semanier');
+INSERT INTO `synth_recipes` VALUES (4635,1,1986,0,0,0,0,0,0,0,80,4098,4240,692,692,692,1657,0,0,0,0,709,709,709,709,3,6,9,12,'Beech_Lumber');
+INSERT INTO `synth_recipes` VALUES (4636,1,0,0,0,0,0,0,0,0,80,4098,4240,692,0,0,0,0,0,0,0,709,709,709,709,1,2,3,4,'Beech_Lumber');
+INSERT INTO `synth_recipes` VALUES (4637,0,0,0,0,0,0,1,0,0,70,4099,4241,711,711,711,711,717,717,745,0,444,444,444,444,1,1,1,1,'Luxurious_Chest');
+INSERT INTO `synth_recipes` VALUES (4638,0,0,0,0,0,0,1,0,0,96,4099,4241,711,711,711,745,1588,1588,1588,0,3591,3591,3591,3591,1,1,1,1,'Marbled_Drawers');
+INSERT INTO `synth_recipes` VALUES (4639,0,0,0,0,0,0,1,0,0,73,4099,4241,711,711,711,711,717,717,745,745,446,446,446,446,1,1,1,1,'Gilded_Shelf');
+INSERT INTO `synth_recipes` VALUES (4640,0,0,0,0,0,0,1,0,0,74,4099,4241,711,718,719,719,745,0,0,0,436,436,436,436,1,1,1,1,'Jeunoan_Armoire');
+INSERT INTO `synth_recipes` VALUES (4641,0,0,0,0,0,0,1,0,0,74,4099,4241,711,711,718,719,719,719,719,745,435,435,435,435,1,1,1,1,'Jeunoan_Dresser');
+INSERT INTO `synth_recipes` VALUES (4642,0,0,1,0,0,0,0,0,0,20,4099,4241,707,1886,1887,0,0,0,0,0,3701,3701,3701,3701,1,1,1,1,'Awning');
+INSERT INTO `synth_recipes` VALUES (4643,0,0,0,0,0,0,0,0,0,67,4099,4241,719,719,719,719,0,0,0,0,427,427,427,427,1,1,1,1,'Rococo_Table');
+INSERT INTO `synth_recipes` VALUES (4644,0,0,0,0,0,0,1,0,0,66,4099,4241,711,711,711,718,745,0,0,0,447,447,447,447,1,1,1,1,'Mensa_Lunata');
+INSERT INTO `synth_recipes` VALUES (4645,0,0,0,0,0,0,1,0,0,64,4099,4241,718,719,745,0,0,0,0,0,437,437,437,437,1,1,1,1,'Floral_Nightstand');
+INSERT INTO `synth_recipes` VALUES (4646,0,0,0,0,0,0,1,0,0,65,4099,4241,711,717,717,745,0,0,0,0,442,442,442,442,1,1,1,1,'Gilded_Chest');
+INSERT INTO `synth_recipes` VALUES (4647,0,0,0,0,0,0,1,0,0,62,4099,4241,711,711,717,745,0,0,0,0,443,443,443,443,1,1,1,1,'Aureous_Chest');
+INSERT INTO `synth_recipes` VALUES (4648,0,0,0,0,0,0,1,0,0,60,4099,4241,711,718,745,0,0,0,0,0,449,449,449,449,1,1,1,1,'Personal_Table');
+INSERT INTO `synth_recipes` VALUES (4649,0,0,0,0,0,0,1,0,0,61,4099,4241,711,711,718,745,0,0,0,0,448,448,448,448,1,1,1,1,'Gueridon');
+INSERT INTO `synth_recipes` VALUES (4650,0,0,0,0,1,0,0,0,0,50,4098,4240,649,718,825,825,834,834,17316,0,3696,3696,3696,3696,1,1,1,1,'Kotatsu_Table');
+INSERT INTO `synth_recipes` VALUES (4651,0,0,0,0,0,0,32,0,0,106,4099,4241,745,2535,2535,2535,2535,2535,0,0,434,434,434,434,1,1,1,1,'Isula_Sideboard');
+INSERT INTO `synth_recipes` VALUES (4652,0,0,0,0,54,0,0,0,0,110,4099,4241,745,829,829,1409,1462,1462,1462,1700,439,439,439,439,1,1,1,1,'Planus_Table');
+INSERT INTO `synth_recipes` VALUES (4653,1,0,0,0,99,0,0,0,0,0,4100,4242,15891,0,0,0,0,0,0,0,2287,823,2304,2304,1,1,1,1,'Al_Zhabi_Sash_Desynth');
+INSERT INTO `synth_recipes` VALUES (4654,0,2016,0,0,0,0,0,24,0,0,4103,4245,695,1640,1645,1645,1647,4509,0,0,1971,1971,1971,1971,1,1,1,1,'Soft_Bugard_Leather');
+INSERT INTO `synth_recipes` VALUES (4655,0,2016,0,0,0,0,0,61,0,0,4103,4245,635,1644,1644,1648,2518,4509,0,0,2733,2733,2733,2733,1,1,1,1,'Spirit_Smilodon_Leather');
+INSERT INTO `synth_recipes` VALUES (4656,0,2016,0,0,0,0,0,61,0,0,4103,4245,695,1644,1644,1648,2518,4509,0,0,2733,2733,2733,2733,1,1,1,1,'Spirit_Smilodon_Leather');
+INSERT INTO `synth_recipes` VALUES (4657,0,0,0,0,0,0,85,0,0,0,4098,4240,800,929,1134,1836,0,0,0,0,348,348,348,348,1,1,1,1,'Marble_Plaque'); 
+INSERT INTO `synth_recipes` VALUES (4658,0,0,0,0,0,102,0,0,0,0,4103,4245,95,583,612,614,936,1891,4273,0,5909,5909,5909,5909,1,1,1,1,'Pickled_Rarpab_Tail');
+INSERT INTO `synth_recipes` VALUES (4659,0,0,0,0,0,103,0,0,0,0,4096,4238,615,627,2237,4509,5568,5661,0,0,5922,5923,5923,5923,33,33,66,99,'Walnut_Cookie');
+INSERT INTO `synth_recipes` VALUES (4660,0,0,0,0,0,90,0,0,0,0,4096,4238,633,4356,4570,5948,5948,0,0,0,6276,6276,6277,6277,6,8,6,8,'Deep_Fried_Shrimp');
+INSERT INTO `synth_recipes` VALUES (4661,0,0,0,0,0,90,0,0,0,0,4096,4238,633,4356,4435,4570,5569,0,0,0,6274,6274,6275,6275,6,8,6,8,'Pukatrice_Egg');
+INSERT INTO `synth_recipes` VALUES (4662,0,0,0,0,0,90,0,0,0,0,4096,4238,619,633,4356,4570,0,0,0,0,6272,6272,6273,6273,6,8,6,8,'Fried_Popoto');
+INSERT INTO `synth_recipes` VALUES (4663,0,0,0,0,0,81,0,0,0,0,4096,4238,627,1471,2215,4365,4365,4509,8800,0,6339,6340,6340,6340,2,2,3,4,'Rolanberry_Daifuku');
+INSERT INTO `synth_recipes` VALUES (4664,0,0,0,0,0,0,0,0,0,81,4096,4238,627,1471,2215,4509,5541,5541,8800,0,6343,6344,6344,6344,2,2,3,4,'Grape Daifuku');
+INSERT INTO `synth_recipes` VALUES (4665,0,0,0,0,0,81,0,0,0,0,4096,4238,618,627,1471,2215,4509,8800,0,0,6341,6342,6342,6342,2,2,3,4,'Bean_Daifuku');
+INSERT INTO `synth_recipes` VALUES (4666,0,0,0,0,0,81,0,0,0,0,4096,4238,1471,2215,4509,0,0,0,0,0,6258,6259,6259,6259,2,2,3,4,'Shiromochi');
+INSERT INTO `synth_recipes` VALUES (4667,0,0,0,0,0,0,0,0,0,81,4096,4238,1471,1524,2215,4509,0,0,0,0,6262,6263,6263,6263,2,2,3,4,'Kusamochi');
+INSERT INTO `synth_recipes` VALUES (4668,0,0,0,0,0,75,0,0,0,0,4096,4238,627,633,2237,4570,5131,5473,5475,5703,5888,5888,5888,5888,2,4,6,8,'Maringna');
+INSERT INTO `synth_recipes` VALUES (4669,0,0,0,0,0,75,0,0,0,0,4096,4238,627,936,2237,4409,4509,5196,5684,5907,5892,5892,5892,5892,2,4,6,8,'B.E.W_Pitaru');
+INSERT INTO `synth_recipes` VALUES (4670,0,0,0,0,0,15,0,0,0,0,4096,4238,619,627,633,2237,4387,4435,4570,5740,5885,5885,5885,5885,2,4,6,8,'Saltena');
+INSERT INTO `synth_recipes` VALUES (4671,0,0,0,0,0,15,0,0,0,0,4096,4238,627,936,2237,4372,4390,4509,5688,5740,5889,5889,5889,5889,2,4,6,8,'Stuffed_Pitaru');
+INSERT INTO `synth_recipes` VALUES (4672,0,0,0,0,0,110,0,0,0,0,4096,4238,626,638,936,4356,4387,4435,4570,5152,5924,5925,5925,5925,1,1,1,1,'Smoldering_Salisbury_Steak');
+INSERT INTO `synth_recipes` VALUES (4673,0,0,0,0,0,111,0,0,0,0,4096,4238,615,619,4273,4389,6416,0,0,0,6464,6465,6465,6465,1,1,1,1,'Behemoth_Steak');
+INSERT INTO `synth_recipes` VALUES (4674,0,0,0,0,0,105,0,0,0,0,4096,4238,627,2156,4509,5566,0,0,0,0,5926,5927,5927,5927,1,1,1,1,'Date_Tea');
+INSERT INTO `synth_recipes` VALUES (4675,0,0,0,0,0,107,0,0,0,0,4096,4238,620,629,936,4509,5152,5651,0,0,5928,5929,5929,5929,4,1,1,1,'Himesama_Rice_Ball');
+INSERT INTO `synth_recipes` VALUES (4676,0,0,0,0,0,103,0,0,0,0,4096,4238,615,627,2237,4509,5568,5661,0,0,5922,5923,5923,5923,33,33,66,99,'Walnut_Cookie');
+INSERT INTO `synth_recipes` VALUES (4677,0,0,0,0,0,0,0,0,0,100,4101,4243,4273,4273,4273,4273,0,0,0,0,5932,5932,5932,5932,1,1,1,1,'Kitron Juice');
+INSERT INTO `synth_recipes` VALUES (4678,0,0,0,0,0,0,0,0,0,30,4096,4238,627,633,936,2237,4435,4509,5568,5688,5890,5890,5890,5890,2,4,6,8,'Poultry Pitaru');
+INSERT INTO `synth_recipes` VALUES (4679,0,0,0,0,0,0,0,0,0,30,4096,4238,615,627,633,2237,4373,4447,4448,4570,5886,5886,5886,5886,2,4,6,8,'Elshena');
+INSERT INTO `synth_recipes` VALUES (4680,0,0,0,0,0,0,0,0,0,50,4096,4238,627,936,2237,4387,4509,5688,5908,17394,5891,5891,5891,5891,2,4,6,8,'Seafood Pitaru');
+INSERT INTO `synth_recipes` VALUES (4681,0,0,0,0,0,0,0,0,0,50,4096,4238,614,627,633,1695,2237,4570,5152,5651,5887,5887,5887,5887,2,4,6,8,'Montagna');
+INSERT INTO `synth_recipes` VALUES (4682,0,0,0,0,0,0,0,0,0,70,4096,4238,615,4356,4409,5688,0,0,0,0,6599,6599,6600,6600,6,8,6,8,'Egg Sandwich');
+INSERT INTO `synth_recipes` VALUES (4683,0,0,0,0,0,0,0,0,0,101,4096,4238,615,4356,5568,5569,5688,0,0,0,6601,6601,6602,6602,6,8,6,8,'Omelette Sandwich');
+
+
+
 
 -- -----------
 -- RECIPES END

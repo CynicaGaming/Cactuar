@@ -85,6 +85,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:setCharVar("ToBeeOrNot_var", 5)
         player:addFame(WINDURST, 30)
+        player:addExp(EXP_RATE_QUEST*500)
         player:completeQuest(WINDURST, tpz.quest.id.windurst.TO_BEE_OR_NOT_TO_BEE)
         player:needToZone(true)
     end

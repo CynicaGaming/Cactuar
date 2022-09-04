@@ -4,6 +4,8 @@
 require("scripts/globals/common")
 require("scripts/globals/status")
 require("scripts/globals/weaponskillids")
+require("scripts/globals/pets")
+
 
 tpz = tpz or {}
 
@@ -39,13 +41,14 @@ tpz.aftermath.effects =
     [5]  = { mods = { tpz.mod.ATTP, 15 }, duration = getTier1RelicDuration }, -- Guttler (Tonberry custom, attack % increased by 5%.)
     [6]  = { mods = { tpz.mod.HASTE_GEAR, 1000 }, duration = getTier1RelicDuration }, -- Bravura (Tonberry custom, gear haste +10%.)
     [7]  = { mods = { tpz.mod.HASTE_GEAR, 1000 }, duration = getTier1RelicDuration }, -- Apocalypse
-    [8]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Gungnir (Cactuar custom, increased crit rate 10%)
+    [8]  = { mods = { tpz.mod.ENSPELL, tpz.subEffect.LIGHTNING_DAMAGE, tpz.mod.ENSPELL_DMG_BONUS, 20, tpz.mod.SPIKES, tpz.subEffect.SHOCK_SPIKES, tpz.mod.SPIKES_DMG, 15, tpz.mod.CRITHITRATE, 5 }, duration = getTier1RelicDuration, includePets = true }, -- Gungnir (Cactuar custom, increased crit rate 10%)
+    -- [8]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration, includePets = true }, -- Gungnir (Cactuar custom, increased crit rate 10%)
     [9]  = { mods = { tpz.mod.CRITHITRATE, 10 }, duration = getTier1RelicDuration }, -- Kikoku (Tonberry custom, increased critical rate by 10%.)
-    [10] = { mods = { tpz.mod.STORETP, 7 }, duration = getTier1RelicDuration }, -- Amanomurakumo
+    [10] = { mods = { tpz.mod.STORETP, 7, tpz.mod.SAVETP, 25 }, duration = getTier1RelicDuration }, -- Amanomurakumo
     [11] = { mods = { tpz.mod.ACC, 40 }, duration = getTier1RelicDuration }, -- Mjollnir (Tonberry custom, double accuracy bonus.)
-    [12] = { mods = { tpz.mod.REFRESH, 8 }, duration = getTier1RelicDuration }, -- Claustrum
-    [13] = { mods = { tpz.mod.RACC, 20 }, duration = getTier1RelicDuration }, -- Yoichinoyumi
-    [14] = { mods = { tpz.mod.ENMITY, -20 }, duration = getTier1RelicDuration }, -- Annihilator
+    [12] = { mods = { tpz.mod.REFRESH, 10, tpz.mod.MATT, 20 }, duration = getTier1RelicDuration }, -- Claustrum
+    [13] = { mods = { tpz.mod.RACC, 20, tpz.mod.SNAP_SHOT, 5 }, duration = getTier1RelicDuration }, -- Yoichinoyumi
+    [14] = { mods = { tpz.mod.ENMITY, -20, tpz.mod.RATTP, 5 }, duration = getTier1RelicDuration }, -- Annihilator
 
 
     -----------------------------------

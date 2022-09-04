@@ -46,6 +46,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 4729)
             player:addFame(RABAO, 30)
             player:completeQuest(OUTLANDS, tpz.quest.id.outlands.THE_MISSING_PIECE)
+            player:addExp(EXP_RATE_QUEST*3000) 
         end
 
     end

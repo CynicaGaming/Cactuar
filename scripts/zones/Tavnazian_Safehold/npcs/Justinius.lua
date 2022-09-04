@@ -91,10 +91,12 @@ function onEventFinish(player, csid, option)
             if rewardId == 1 then
                 if npcUtil.completeQuest(player, OTHER_AREAS_LOG, tpz.quest.id.otherAreas.UNINVITED_GUESTS, {gil = 10000, title=tpz.title.MONARCH_LINN_PATROL_GUARD, var = {"UninvitedGuestsStatus", "UninvitedGuestsReward"}}) then
                     updateUninvitedGuests(player, false)
+                    player:addExp(EXP_RATE_QUEST*2000)
                 end
             else
                 if npcUtil.completeQuest(player, OTHER_AREAS_LOG, tpz.quest.id.otherAreas.UNINVITED_GUESTS, {item = rewardId, title=tpz.title.MONARCH_LINN_PATROL_GUARD, var = {"UninvitedGuestsStatus", "UninvitedGuestsReward"}}) then
                     updateUninvitedGuests(player, false)
+                    player:addExp(EXP_RATE_QUEST*2000)
                 end
             end
         else

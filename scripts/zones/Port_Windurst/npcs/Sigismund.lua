@@ -42,8 +42,10 @@ function onEventFinish(player, csid, option)
         player:tradeComplete(trade)
         player:completeQuest(WINDURST, tpz.quest.id.windurst.TO_CATCH_A_FALLIHG_STAR)
         player:addFame(WINDURST, 75)
+        player:addExp(EXP_RATE_QUEST*750)
         player:addItem(12316)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 12316)
+        
         player:setCharVar("QuestCatchAFallingStar_prog", 2)
     end
 end

@@ -203,6 +203,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 325 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.CAN_CARDIANS_CRY, {
         gil = 5000
     }) then
+        player:addExp(EXP_RATE_QUEST*1750)
         player:confirmTrade()
 
         -- TRUST

@@ -86,6 +86,8 @@ function onEventFinish(player, csid, option)
             if questStatus == QUEST_ACCEPTED then
                 player:addFame(JEUNO, 30)
                 player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_GOBLIN_TAILOR)
+                player:addExp(EXP_RATE_QUEST*1500) 
+
             end
 
             player:delKeyItem(tpz.ki.MAGICAL_PATTERN)

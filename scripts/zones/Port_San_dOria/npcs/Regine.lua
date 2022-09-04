@@ -54,6 +54,7 @@ function onEventFinish(player, csid, option)
             player:addQuest(SANDORIA, tpz.quest.id.sandoria.FLYERS_FOR_REGINE)
         end
     elseif csid == 603 then
+        player:addExp(EXP_RATE_QUEST*600)
         npcUtil.completeQuest(
             player, SANDORIA, tpz.quest.id.sandoria.FLYERS_FOR_REGINE,
             {

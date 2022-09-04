@@ -56,6 +56,7 @@ function onEventFinish(player, csid, option)
         player:confirmTrade()
         player:setCharVar("IndomitableSpiritTimer", getConquestTally()) -- Player must wait until next CQ tally
     elseif csid == 134 then
+        player:addExp(EXP_RATE_QUEST*15000)
         npcUtil.completeQuest(player, OUTLANDS, tpz.quest.id.outlands.INDOMITABLE_SPIRIT, {item=17011, fameArea=RABAO, fame=100, title=tpz.title.INDOMITABLE_FISHER, var="IndomitableSpiritTimer"})
     end
 end

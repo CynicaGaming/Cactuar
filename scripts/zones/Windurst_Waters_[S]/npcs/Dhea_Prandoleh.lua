@@ -45,6 +45,7 @@ function onEventFinish(player, csid, option)
         player:addItem(139)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 139)
         player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.THE_TIGRESS_STRIKES)
+        player:addExp(EXP_RATE_QUEST*2000)
         player:needToZone(true)
         player:addTitle(tpz.title.AJIDOMARUJIDOS_MINDER)
     end

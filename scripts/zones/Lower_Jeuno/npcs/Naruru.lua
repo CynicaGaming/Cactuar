@@ -70,6 +70,8 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 13446) -- Mythril Ring
             player:addFame(JEUNO, 30)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.COOK_S_PRIDE)
+            player:addExp(EXP_RATE_QUEST*3500) 
+
         end
     elseif (csid == 10053) then
         player:setCharVar("WildcatJeuno", utils.mask.setBit(player:getCharVar("WildcatJeuno"), 13, true))

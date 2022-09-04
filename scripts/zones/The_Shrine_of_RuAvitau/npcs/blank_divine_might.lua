@@ -98,8 +98,10 @@ function onEventFinish(player, csid, option)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, reward)
                 if (csid == 55) then
                     player:completeQuest(OUTLANDS, tpz.quest.id.outlands.DIVINE_MIGHT)
+                    player:addExp(EXP_RATE_QUEST*1500)
                 else
                     player:completeQuest(OUTLANDS, tpz.quest.id.outlands.DIVINE_MIGHT_REPEAT)
+                    player:addExp(EXP_RATE_QUEST*1500)
                     player:delKeyItem(tpz.ki.MOONLIGHT_ORE)
                 end
                 player:setCharVar("DivineMight", 0)

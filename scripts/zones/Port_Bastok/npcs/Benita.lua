@@ -58,6 +58,7 @@ function onEventFinish(player, csid, option)
             player:addFame(BASTOK, 120)
             player:addItem(12500)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 12500)
+            player:addExp(EXP_RATE_QUEST*500)
         end
     end
 

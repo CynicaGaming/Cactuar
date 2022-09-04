@@ -188,6 +188,8 @@ function onEventFinish(player, csid, option)
             player:addItem(5268)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 5268)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.CHIPS)
+            player:addExp(EXP_RATE_QUEST*750) 
+
         end
     elseif (csid == 850) then
         player:setCharVar("PromathiaStatus", 0)
@@ -242,12 +244,13 @@ function onEventFinish(player, csid, option)
         if (player:getFreeSlotsCount(0) >= 1) then
             player:delKeyItem(tpz.ki.UNFINISHED_LETTER)
             player:setCharVar("CidsSecret_Event", 0)
-            player:addItem(13570)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 13570) -- Ram Mantle
+            player:addItem(15487) -- High Breath Mantle
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 15487) -- Default: Ram Mantle
             player:addFame(BASTOK, 30)
+            player:addExp(EXP_RATE_QUEST*2500) 
             player:completeQuest(BASTOK, tpz.quest.id.bastok.CID_S_SECRET)
         else
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13570)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 15487)
         end
     else
         tpz.wsquest.handleEventFinish(wsQuest, player, csid, option, ID.text.DETONATOR_LEARNED)

@@ -31,6 +31,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 16 then
         if npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.FEAR_OF_THE_DARK_II, {title=tpz.title.DARK_RESISTANT, gil=200}) then
             player:confirmTrade()
+            player:addExp(EXP_RATE_QUEST*200
         end
     end
 end

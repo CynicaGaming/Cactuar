@@ -26,8 +26,8 @@ function onEventFinish(player, csid, option)
 
     if (csid == 8) then
         player:tradeComplete()
-        player:addGil(GIL_RATE*50)
-        player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*50)
+        player:addGil(GIL_RATE*1000)
+        player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*1000)
     end
 
 end

@@ -118,6 +118,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 14215) -- Temple Hose
             player:addFame(BASTOK, 60)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.TRUE_STRENGTH)
+            player:addExp(EXP_RATE_QUEST*3000) 
         end
     elseif (csid == 935) then
         player:setCharVar("WildcatBastok", utils.mask.setBit(player:getCharVar("WildcatBastok"), 9, true))

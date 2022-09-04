@@ -43,8 +43,10 @@ function onEventFinish(player, csid, option)
         if player:getQuestStatus(WINDURST, tpz.quest.id.windurst.CREEPY_CRAWLIES) == QUEST_AVAILABLE then
             npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.CREEPY_CRAWLIES, {fame=0, title=tpz.title.CRAWLER_CULLER})
             npcUtil.giveCurrency(player, "gil", 600, hideMessage)
+            player:addExp(EXP_RATE_QUEST*150)
         else
             npcUtil.giveCurrency(player, "gil", 600, hideMessage)
+            player:addExp(EXP_RATE_QUEST*150)
         end
         player:confirmTrade()
     end

@@ -79,6 +79,8 @@ function onEventFinish(player, csid, option)
                 player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.THE_FIGHTING_FOURTH)
                 player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.BRONZE_RIBBON_OF_SERVICE)
                 player:messageSpecial(ID.text.ITEM_OBTAINED, 15754)
+                player:addExp(EXP_RATE_QUEST*1000) 
+
             else
                 player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 15754)
             end
@@ -87,6 +89,8 @@ function onEventFinish(player, csid, option)
             player:setCharVar("BLUE_R_LETTER_USED", 0)
             player:addTitle(tpz.title.FOURTH_DIVISION_SOLDIER)
             player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.THE_FIGHTING_FOURTH)
+            player:addExp(EXP_RATE_QUEST*1000) 
+
         end
     end
 end

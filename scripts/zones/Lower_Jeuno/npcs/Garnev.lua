@@ -43,5 +43,6 @@ function onEventFinish(player, csid, option)
         player:addFame(JEUNO, 30)
         player:tradeComplete(trade)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.DEAL_WITH_TENSHODO)
+        player:addExp(EXP_RATE_QUEST*2000) 
     end
 end

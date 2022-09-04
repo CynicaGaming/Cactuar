@@ -42,6 +42,8 @@ function onEventFinish(player, csid, option)
             player:completeQuest(OUTLANDS, tpz.quest.id.outlands.PERSONAL_HYGIENE)
             player:addItem(13247) -- Mithran Stone
             player:messageSpecial(ID.text.ITEM_OBTAINED, 13247)
+            player:addExp(EXP_RATE_QUEST*3000) 
+
         end
     end
 end

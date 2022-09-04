@@ -39,6 +39,6 @@ end
 function onEventFinish(player, csid, option)
     if csid == 10010 then
         player:confirmTrade()
-        player:addGil(GIL_RATE * 50)
+        player:addGil(GIL_RATE * 1000)
     end
 end

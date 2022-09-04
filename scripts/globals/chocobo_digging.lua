@@ -830,17 +830,17 @@ local function calculateSkillUp(player)
     local realSkill = player:getCharSkillLevel(tpz.skill.DIG)
 	local digsNeeded = 40000
 
-	if     skillRank == 0 then digsNeeded =  1600
-	elseif skillRank == 1 then digsNeeded =  3600
-	elseif skillRank == 2 then digsNeeded =  6000
-	elseif skillRank == 3 then digsNeeded =  9000
-	elseif skillRank == 4 then digsNeeded = 12600
-	elseif skillRank == 5 then digsNeeded = 16200
-	elseif skillRank == 6 then digsNeeded = 21000
-	elseif skillRank == 7 then digsNeeded = 27000
-	elseif skillRank == 8 then digsNeeded = 33000
-	elseif skillRank == 9 then digsNeeded = 39000
-	else return end
+    if     skillRank == 0 then digsNeeded =  2000
+    elseif skillRank == 1 then digsNeeded =  2500
+    elseif skillRank == 2 then digsNeeded =  3300
+    elseif skillRank == 3 then digsNeeded =  5000
+    elseif skillRank == 4 then digsNeeded = 10000
+    elseif skillRank == 5 then digsNeeded = 11100
+    elseif skillRank == 6 then digsNeeded = 12500
+    elseif skillRank == 7 then digsNeeded = 14300
+    elseif skillRank == 8 then digsNeeded = 16700
+    elseif skillRank == 9 then digsNeeded = 20000
+    else return end
 
     if math.random(1, digsNeeded/100) == 1 then
 		player:setSkillLevel(tpz.skill.DIG, realSkill + 1)

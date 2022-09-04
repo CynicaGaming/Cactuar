@@ -24,14 +24,14 @@ function onMobEngaged(mob, target)
         the pet as a victory condition.  Therefore, Mandragora just isn't used at this time.
     ]]
 
-    local mobid = mob:getID()
+    --local mobid = mob:getID()
 
-    for member = mobid-1, mobid+6 do
-        local m = GetMobByID(member)
-        if m:getCurrentAction() == tpz.act.ROAMING then
-            m:updateEnmity(target)
-        end
-    end
+    --for member = mobid-1, mobid+6 do
+        --local m = GetMobByID(member)
+        --if m:getCurrentAction() == tpz.act.ROAMING then
+            --m:updateEnmity(target)
+        --end
+    --end
 end
 
 function onMobFight(mob, target)

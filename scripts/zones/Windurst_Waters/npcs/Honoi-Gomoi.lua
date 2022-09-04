@@ -88,6 +88,7 @@ function onEventFinish(player, csid, option)
             fame=120,
             var="CryingOverOnions",
         })
+        player:addExp(EXP_RATE_QUEST*2000)
     then
         player:needToZone(true)
 
@@ -101,6 +102,7 @@ function onEventFinish(player, csid, option)
             fame=135,
             var="WildCard",
         })
+        player:addExp(EXP_RATE_QUEST*2000)
     then
         player:needToZone(true)
 

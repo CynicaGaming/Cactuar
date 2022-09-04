@@ -23,6 +23,7 @@ function onTrigger(player, npc)
             player:delKeyItem(tpz.ki.SCROLL_OF_TREASURE)
             player:addGil(GIL_RATE*3000)
             player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*3000)
+            player:addExp(EXP_RATE_QUEST*1000) 
         else
             player:startEvent(5)
         end

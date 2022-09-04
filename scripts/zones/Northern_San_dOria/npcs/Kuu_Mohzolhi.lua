@@ -67,6 +67,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:completeQuest(SANDORIA, tpz.quest.id.sandoria.GROWING_FLOWERS)
         player:addFame(SANDORIA, 120)
+        player:addExp(EXP_RATE_QUEST*500)
         player:moghouseFlag(1)
         player:messageSpecial(ID.text.MOGHOUSE_EXIT)
     elseif (csid == 605 and option == 10) then

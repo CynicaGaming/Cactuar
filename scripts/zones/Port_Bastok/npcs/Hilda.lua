@@ -181,6 +181,7 @@ function onEventFinish(player, csid, option)
             player:addItem(17170)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 17170) -- Speed Bow
             player:addFame(BASTOK, 30)
+            player:addExp(EXP_RATE_QUEST*1250)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_USUAL)
         end
     elseif (csid == 255) then

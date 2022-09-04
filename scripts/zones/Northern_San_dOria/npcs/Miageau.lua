@@ -51,6 +51,7 @@ function onEventFinish(player, csid, option)
             player:addFame(SANDORIA, 30)
             player:addTitle(tpz.title.THE_PURE_ONE)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.WATER_OF_THE_CHEVAL)
+            player:addExp(EXP_RATE_QUEST*500)
         end
     elseif (csid == 504) then
         player:addQuest(SANDORIA, tpz.quest.id.sandoria.WATER_OF_THE_CHEVAL)

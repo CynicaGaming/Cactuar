@@ -49,6 +49,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:addGil(GIL_RATE*10000)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*10000)
+        player:addExp(EXP_RATE_QUEST*4000)
         player:addFame(SANDORIA, 30)
         player:completeQuest(SANDORIA, tpz.quest.id.sandoria.THE_SETTING_SUN)
     end

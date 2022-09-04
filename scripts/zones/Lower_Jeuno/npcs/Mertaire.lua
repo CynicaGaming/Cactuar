@@ -76,6 +76,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*2100)
         player:tradeComplete()
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.A_MINSTREL_IN_DESPAIR)
+        player:addExp(EXP_RATE_QUEST*750) 
         player:addFame(JEUNO, 30)
 
         -- Placing this here allows the player to get additional poetic

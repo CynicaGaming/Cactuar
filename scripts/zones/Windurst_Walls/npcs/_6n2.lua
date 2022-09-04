@@ -100,6 +100,7 @@ function onEventFinish(player, csid, option)
     elseif (csid == 289) then
         player:completeQuest(WINDURST,tpz.quest.id.windurst.ONION_RINGS);
         player:addFame(WINDURST,100);
+        player:addExp(EXP_RATE_QUEST*1250)
         player:addTitle(tpz.title.STAR_ONION_BRIGADIER);
         player:delKeyItem(tpz.ki.OLD_RING);
         player:setCharVar("OnionRingsTime",0);

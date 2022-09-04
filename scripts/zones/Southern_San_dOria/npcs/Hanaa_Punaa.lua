@@ -88,14 +88,15 @@ function onEventFinish(player, csid, option)
         player:setCharVar("theSeamStress", 0)
     elseif (csid == 530) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12696) -- Leather Gloves
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12784) -- Leather Gloves
         else
             player:tradeComplete()
             player:addTitle(tpz.title.SILENCER_OF_THE_LAMBS)
-            player:addItem(12696)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 12696) -- Leather Gloves
+            player:addItem(12784)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 12784) -- Leather Gloves
             if (player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.THE_SEAMSTRESS) == QUEST_ACCEPTED) then
                 player:addFame(SANDORIA, 30)
+                player:addExp(EXP_RATE_QUEST*150)
                 player:completeQuest(SANDORIA, tpz.quest.id.sandoria.THE_SEAMSTRESS)
             else
                 player:addFame(SANDORIA, 5)
@@ -116,6 +117,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 12697) -- Lizard Gloves
             if (player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.LIZARD_SKINS) == QUEST_ACCEPTED) then
                 player:addFame(SANDORIA, 30)
+                player:addExp(EXP_RATE_QUEST*200)
                 player:completeQuest(SANDORIA, tpz.quest.id.sandoria.LIZARD_SKINS)
             else
                 player:addFame(SANDORIA, 5)
@@ -135,6 +137,7 @@ function onEventFinish(player, csid, option)
             player:addItem(13119)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 13119) -- Tyger Stole
             player:addFame(SANDORIA, 30)
+            player:addExp(EXP_RATE_QUEST*750)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.BLACK_TIGER_SKINS)
         end
     end

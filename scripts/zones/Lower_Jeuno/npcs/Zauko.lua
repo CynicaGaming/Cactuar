@@ -132,6 +132,8 @@ function onEventFinish(player, csid, option)
             end
         end
         npcUtil.completeQuest(player, JEUNO, tpz.quest.id.jeuno.COMMUNITY_SERVICE, params)
+        player:addExp(EXP_RATE_QUEST*200) 
+
 
     elseif (csid == 118 and option == 1) then
         -- player drops membership card

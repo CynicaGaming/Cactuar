@@ -43,6 +43,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("envelopedInDarkness_timer", os.time() + 30) -- Set timer
         player:messageSpecial(ID.text.YOU_BURY_THE, tpz.ki.OLD_BOOTS, tpz.ki.CRAWLER_BLOOD)
     elseif csid == 5 then
+        player:addExp(EXP_RATE_QUEST*2500) 
         npcUtil.completeQuest(player, SANDORIA, tpz.quest.id.sandoria.ENVELOPED_IN_DARKNESS, {
             item = 14093, -- Warlock's Boots
             fame = 40,

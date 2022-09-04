@@ -88,6 +88,7 @@ function onEventFinish(player, csid, option)
         player:addGil(GIL_RATE*6000)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*6000)
         player:addFame(WINDURST, 150)
+        player:addExp(EXP_RATE_QUEST*2000)
         player:completeQuest(WINDURST, tpz.quest.id.windurst.MAKING_AMENS)
     else
         tpz.wsquest.handleEventFinish(wsQuest, player, csid, option, ID.text.BLACK_HALO_LEARNED)

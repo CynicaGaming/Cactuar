@@ -72,6 +72,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("AReputationInRuins_ki", 0)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.A_REPUTATION_IN_RUINS)
         player:addGil(3500)
+        player:addExp(EXP_RATE_QUEST*2000)
         player:messageSpecial(ID.text.GIL_OBTAINED, 3500)
     end
 end

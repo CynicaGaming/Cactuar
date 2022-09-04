@@ -39,13 +39,14 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.WEAPONS_ORDER)
     elseif (csid == 607) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 17090) -- Elm Staff
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 17126) -- Elm Staff
         else
             player:addTitle(tpz.title.ARMS_TRADER)
             player:delKeyItem(tpz.ki.WEAPONS_RECEIPT)
-            player:addItem(17090)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 17090) -- Elm Staff
+            player:addItem(17126)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 17126) -- Elm Staff
             player:addFame(SANDORIA, 30)
+            player:addExp(EXP_RATE_QUEST*900)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.A_PURCHASE_OF_ARMS)
         end
     end

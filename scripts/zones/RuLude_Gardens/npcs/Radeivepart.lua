@@ -72,6 +72,7 @@ function onEventFinish(player, csid, option)
     elseif (csid == 61) then
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.NORTHWARD)
         player:addTitle(tpz.title.ENVOY_TO_THE_NORTH)
+        player:addExp(EXP_RATE_QUEST*2000)
         if (player:hasKeyItem(tpz.ki.MAP_OF_CASTLE_ZVAHL) == false) then
             player:addKeyItem(tpz.ki.MAP_OF_CASTLE_ZVAHL)
             player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.MAP_OF_CASTLE_ZVAHL)

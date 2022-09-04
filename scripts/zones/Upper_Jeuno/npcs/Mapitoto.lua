@@ -65,6 +65,7 @@ function onEventFinish(player,csid,option)
         -- Complete quest
         player:setCharVar("[QUEST]FullSpeedAhead", 0)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.FULL_SPEED_AHEAD)
+        player:addExp(EXP_RATE_QUEST*1000)
         npcUtil.giveKeyItem(player, tpz.ki.TRAINERS_WHISTLE)
         npcUtil.giveKeyItem(player, tpz.ki.CHOCOBO_COMPANION)
     end

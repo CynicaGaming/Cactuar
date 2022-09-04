@@ -53,8 +53,10 @@ function onTrade(player, npc, trade)
 
         if mihgosAmigo == QUEST_ACCEPTED then
             player:startEvent(88, GIL_RATE * 200)
+            player:addExp(EXP_RATE_QUEST*175)
         elseif mihgosAmigo == QUEST_COMPLETED then
             player:startEvent(494, GIL_RATE * 200)
+            player:addExp(EXP_RATE_QUEST*175)
         end
     end
 end
@@ -226,6 +228,7 @@ function onEventFinish(player, csid, option)
         item = 12514,
         var = "thickAsThievesGamblingCS"
     })) then
+        player:addExp(EXP_RATE_QUEST*3000)
         player:delKeyItem(tpz.ki.GANG_WHEREABOUTS_NOTE)
         player:delKeyItem(tpz.ki.FIRST_SIGNED_FORGED_ENVELOPE)
         player:delKeyItem(tpz.ki.SECOND_SIGNED_FORGED_ENVELOPE)
@@ -258,12 +261,14 @@ function onEventFinish(player, csid, option)
         fameArea = NORG,
         fame = 60
     }) then
+        player:addExp(EXP_RATE_QUEST*175)
         player:confirmTrade()
         player:needToZone(true)
     elseif csid == 494 then
         player:confirmTrade()
         player:addTitle(tpz.title.CAT_BURGLAR_GROUPIE)
         player:addGil(GIL_RATE * 200)
+        player:addExp(EXP_RATE_QUEST*175)
         player:addFame(NORG, 30)
 
     elseif csid == 865 and option == 2 then

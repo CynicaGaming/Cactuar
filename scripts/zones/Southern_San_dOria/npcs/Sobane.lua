@@ -74,12 +74,14 @@ function onEventFinish(player, csid, option)
         player:confirmTrade()
     elseif csid == 736 and npcUtil.completeQuest(player, SANDORIA, tpz.quest.id.sandoria.SIGNED_IN_BLOOD, {item = 14760, gil = 3500, var = "SIGNED_IN_BLOOD_Prog"}) then
         player:delKeyItem(tpz.ki.TORN_OUT_PAGES)
+        player:addExp(EXP_RATE_QUEST*1500)
         player:confirmTrade()
     elseif csid == 735 then
         player:needToZone(true)
     elseif csid == 738 then
         player:addQuest(SANDORIA, tpz.quest.id.sandoria.TEA_WITH_A_TONBERRY)
     elseif csid == 740 and npcUtil.completeQuest(player, SANDORIA, tpz.quest.id.sandoria.TEA_WITH_A_TONBERRY, {item = 13174}) then
+        player:addExp(EXP_RATE_QUEST*2000)
         player:setCharVar("TEA_WITH_A_TONBERRY_PROG", 0)
     end
 end

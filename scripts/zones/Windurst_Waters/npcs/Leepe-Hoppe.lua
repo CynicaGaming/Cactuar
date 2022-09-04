@@ -246,6 +246,7 @@ function onEventFinish(player, csid, option)
         gil = 4000,
         title = tpz.title.FINE_TUNER,
     }) then
+        player:addExp(EXP_RATE_QUEST*2000)
         player:tradeComplete()
 
     -- Tuning Out
@@ -257,6 +258,7 @@ function onEventFinish(player, csid, option)
         item = 15180, -- Cache-Nez
         title = tpz.title.FRIEND_OF_THE_HELMED,
     }) then
+        player:addExp(EXP_RATE_QUEST*2500)
         player:setCharVar("TuningOut_Progress", 0) -- zero when quest is done
     end
 end

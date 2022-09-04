@@ -59,6 +59,7 @@ function onEventFinish(player, csid, option)
         player:addGil(GIL_RATE*560)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*560)
         player:addFame(SANDORIA, 30)
+        player:addExp(EXP_RATE_QUEST*400)
         player:completeQuest(SANDORIA, tpz.quest.id.sandoria.GRAVE_CONCERNS)
     end
 

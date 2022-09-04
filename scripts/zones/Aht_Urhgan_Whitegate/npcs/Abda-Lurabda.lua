@@ -12,7 +12,7 @@ function onTrade(player, npc, trade)
 end
 
 function onTrigger(player, npc)
-    if player:getMainJob() == tpz.job.PUP then
+    if player:getMainJob() == tpz.job.PUP or player:getSubJob() == tpz.job.PUP then -- Cactuar Edit
         player:startEvent(648, 0, 9800, player:getGil())
     else
         player:startEvent(257)

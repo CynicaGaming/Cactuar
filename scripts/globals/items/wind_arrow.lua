@@ -29,11 +29,11 @@ function onAdditionalEffect(player, target, damage)
             dmg = 1
         end
         dmg = utils.clamp(dmg, 0, 10)
-        dmg = dmg + player:getMod(tpz.mod.INT)/3
+        dmg = dmg + player:getMod(tpz.mod.INT)/3 + player:getMod(tpz.mod.MATT)
         dmg = utils.clamp(dmg, 0, 67)
         local params = {}
         params.bonusmab = 0
-        params.includemab = false
+        params.includemab = true
         dmg = addBonusesAbility(player, tpz.magic.ele.WIND, target, dmg, params)
         dmg = dmg * applyResistanceAddEffect(player,target,tpz.magic.ele.WIND,0)
         dmg = adjustForTarget(target,dmg,tpz.magic.ele.WIND)

@@ -58,11 +58,12 @@ function onEventFinish(player, csid, option)
         player:setCharVar("AGreetingCardian_Event", 4)
     elseif csid == 303 then
         if player:getFreeSlotsCount() == 0 then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13330) -- Tourmaline Earring
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13373) -- Tourmaline Earring
         else
             player:addItem(13330)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 13330) -- Tourmaline Earring
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 13373) -- Tourmaline Earring
             player:addFame(WINDURST, 30)
+            player:addExp(EXP_RATE_QUEST*750)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.A_GREETING_CARDIAN)
             player:needToZone(true) -- zone before starting Legendary Plan B
             player:setCharVar("AGreetingCardian_timer", 0)

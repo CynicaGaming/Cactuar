@@ -191,14 +191,15 @@ end
 function onEventFinish(player, csid, option)
     if (csid == 173) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 17081)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 17148)
         else
             player:tradeComplete()
             player:setCharVar("CursesFoiledAgainDay", VanadielDayOfTheYear())
             player:setCharVar("CursesFoiledAgainYear", VanadielYear())
             player:addFame(WINDURST, 80)
+            player:addExp(EXP_RATE_QUEST*500)
             player:addItem(17081)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 17081)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 17148)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.CURSES_FOILED_AGAIN_1)
         end
     elseif (csid == 171 and option ~= 1) then
@@ -228,6 +229,7 @@ function onEventFinish(player, csid, option)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.CURSES_FOILED_AGAIN_2)
             player:needToZone(true)
             player:addFame(WINDURST, 90)
+            player:addExp(EXP_RATE_QUEST*750)
         end
 
     elseif (csid == 340) then
@@ -247,6 +249,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 4870)
             player:setTitle(tpz.title.DOCTOR_SHANTOTTOS_FLAVOR_OF_THE_MONTH)
             player:addFame(WINDURST, 120)
+            player:addExp(EXP_RATE_QUEST*2000)
         end
     elseif (csid == 409) then
         player:setCharVar("ClassReunionProgress", 4)

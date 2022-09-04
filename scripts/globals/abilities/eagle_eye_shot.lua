@@ -28,7 +28,6 @@ function onAbilityCheck(player, target, ability)
 end
 
 function onUseAbility(player, target, ability, action)
-
     if target:getID() == (17449008) then
         return 0
     end
@@ -38,12 +37,11 @@ function onUseAbility(player, target, ability, action)
     end
     local params = {}
     params.numHits = 1
-    local ftp = 5
+    local ftp = 10
     params.ftp100 = ftp params.ftp200 = ftp params.ftp300 = ftp
     params.str_wsc = 0.0 params.dex_wsc = 0.0 params.vit_wsc = 0.0 params.agi_wsc = 0.0 params.int_wsc = 0.0 params.mnd_wsc = 0.0 params.chr_wsc = 0.0
-    params.crit100 = 0.0 params.crit200 = 0.0 params.crit300 = 0.0
-    params.canCrit = true
-    params.acc100 = 0.0 params.acc200= 0.0 params.acc300= 0.0
+    params.canCrit = true params.crit100 = 0.0 params.crit200 = 0.0 params.crit300 = 0.0
+    params.guaranteedHit = true params.acc100 = 0.0 params.acc200= 0.0 params.acc300= 0.0
     params.atk100 = 1 params.atk200 = 1 params.atk300 = 1
     params.enmityMult = 0.5
 

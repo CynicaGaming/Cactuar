@@ -73,6 +73,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.TESTIMONIAL)
             player:setCharVar("theCompetitionFishCountVar", 0)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.THE_COMPETITION)
+            player:addExp(EXP_RATE_QUEST*10000)
         end
     elseif (csid == 304 and option == 700) then
         player:addQuest(SANDORIA, tpz.quest.id.sandoria.THE_COMPETITION)

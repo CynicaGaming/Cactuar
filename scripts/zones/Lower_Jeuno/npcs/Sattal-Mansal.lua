@@ -40,11 +40,15 @@ function onEventFinish(player, csid, option)
         player:addFame(JEUNO, 30)
         player:tradeComplete(trade)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.MYSTERIES_OF_BEADEAUX_I)
+        player:addExp(EXP_RATE_QUEST*1500) 
+
     elseif (csid == 92) then
         player:addKeyItem(tpz.ki.BLACK_MATINEE_NECKLACE)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.BLACK_MATINEE_NECKLACE)
         player:addFame(JEUNO, 30)
         player:tradeComplete(trade)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.MYSTERIES_OF_BEADEAUX_II)
+        player:addExp(EXP_RATE_QUEST*1500) 
+
     end
 end

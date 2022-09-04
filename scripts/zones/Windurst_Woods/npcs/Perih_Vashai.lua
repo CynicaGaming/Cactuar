@@ -112,6 +112,7 @@ function onEventFinish(player, csid, option)
         player:delKeyItem(tpz.ki.OLD_TIGERS_FANG)
         player:unlockJob(tpz.job.RNG)
         player:messageSpecial(ID.text.PERIH_VASHAI_DIALOG)
+        player:addExp(EXP_RATE_QUEST*1000)
 
     -- SIN HUNTING
     elseif csid == 523 then -- start quest RNG AF1
@@ -121,6 +122,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 527 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.SIN_HUNTING, {item=17188, var="sinHunting"}) then -- complete quest RNG AF1
         player:delKeyItem(tpz.ki.CHIEFTAINNESS_TWINSTONE_EARRING)
         player:delKeyItem(tpz.ki.PERCHONDS_ENVELOPE)
+        player:addExp(EXP_RATE_QUEST*2000)
 
     -- FIRE AND BRIMSTONE
     elseif csid == 531 then -- start RNG AF2
@@ -130,6 +132,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("fireAndBrimstone", 5)
     elseif csid == 537 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.FIRE_AND_BRIMSTONE, {item=12518, var="fireAndBrimstone"}) then -- complete quest RNG AF2
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*3000)
 
     -- UNBRIDLED PASSION
     elseif csid == 541 then -- start RNG AF3
@@ -137,6 +140,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("unbridledPassion", 1)
     elseif csid == 546 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.UNBRIDLED_PASSION, {item=14099, var="unbridledPassion"}) then -- complete quest RNG AF3
         player:delKeyItem(tpz.ki.KOHS_LETTER)
+        player:addExp(EXP_RATE_QUEST*3000)
 
     -- FROM SAPLINGS GROW
     else

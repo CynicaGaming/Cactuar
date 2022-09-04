@@ -50,6 +50,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("theSandCharmVar", 4)
     elseif (csid == 127) then
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*4000) 
         npcUtil.completeQuest(player, OTHER_AREAS_LOG, tpz.quest.id.otherAreas.THE_SAND_CHARM, {
             ki = tpz.ki.MAP_OF_BOSTAUNIEUX_OUBLIETTE,
             fame_area = MHAURA,

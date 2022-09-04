@@ -86,6 +86,7 @@ function onEventFinish(player, csid, option, npc)
             player:tradeComplete()
             player:addFame(KAZHAM, 75)
             player:completeQuest(OUTLANDS, tpz.quest.id.outlands.THE_OPO_OPO_AND_I)
+            player:addExp(EXP_RATE_QUEST*5000) 
             player:addItem(13870)   -- opo opo crown
             player:messageSpecial(ID.text.ITEM_OBTAINED, 13870)
             player:addItem(4468, 3)  -- 3 pamamas

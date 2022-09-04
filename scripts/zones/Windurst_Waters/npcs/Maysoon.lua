@@ -40,6 +40,7 @@ function onEventFinish(player, csid, option)
         player:addKeyItem(tpz.ki.SUPER_SOUP_POT)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.SUPER_SOUP_POT)
         player:addFame(WINDURST, 30)
+        player:addExp(EXP_RATE_QUEST*1000)
         player:tradeComplete()
     end
 end

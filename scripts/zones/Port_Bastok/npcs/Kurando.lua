@@ -51,6 +51,7 @@ function onEventFinish(player, csid, option)
             player:setTitle(tpz.title.AIRSHIP_DENOUNCER)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.FEAR_OF_FLYING)
             player:addFame(BASTOK, 30)
+            player:addExp(EXP_RATE_QUEST*1500)
         end
     end
 end

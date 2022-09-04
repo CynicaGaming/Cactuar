@@ -210,6 +210,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.PAY_DIVINATION) -- You pay 1000 gil for the divination.
     elseif csid == 707 then
         npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.BEGINNINGS, {item=17717})
+        player:addExp(EXP_RATE_QUEST*2000) 
 
     -- OMENS
     elseif csid == 710 and beginnings == QUEST_COMPLETED then
