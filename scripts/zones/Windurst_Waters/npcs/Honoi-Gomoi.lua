@@ -81,6 +81,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("CryingOverOnions", 1)
     elseif csid == 775 and npcUtil.giveItem(player, 13136) then
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*2000)
         player:setCharVar("CryingOverOnions", 3)
     elseif
         csid == 776 and
@@ -88,7 +89,6 @@ function onEventFinish(player, csid, option)
             fame=120,
             var="CryingOverOnions",
         })
-        player:addExp(EXP_RATE_QUEST*2000)
     then
         player:needToZone(true)
 
@@ -102,8 +102,8 @@ function onEventFinish(player, csid, option)
             fame=135,
             var="WildCard",
         })
-        player:addExp(EXP_RATE_QUEST*2000)
     then
+        player:addExp(EXP_RATE_QUEST*2000)
         player:needToZone(true)
 
     -- "Hat in Hand"

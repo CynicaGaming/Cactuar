@@ -362,7 +362,8 @@ local fishRewards =
         items =
         {
             {chance = 75, itemId = 5818}, -- Aurora Bass Cactuar Edit
-    },
+        },
+    }
 }
 
 local function tradeFish(player, fishId)
