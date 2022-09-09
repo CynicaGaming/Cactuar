@@ -2,9 +2,12 @@
 -- Area: Lufaise Meadows
 --  Mob: Colorful Leshy
 -----------------------------------
+require("scripts/globals/settings")
+
 
 function onMobInitialize(mob)
     mob:setLocalVar("timeToGrow", os.time() + math.random(43200, 86400)) -- Colorful in 12 to 24 hours
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
 end
 
 function disturbMob(mob)

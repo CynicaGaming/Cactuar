@@ -4,6 +4,8 @@
 -----------------------------------
 require("scripts/globals/hunts")
 require("scripts/globals/mobs")
+require("scripts/globals/settings")
+
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -11,6 +13,7 @@ function onMobInitialize(mob)
     mob:setMobMod(tpz.mobMod.AUTO_SPIKES, 1)
     mob:addStatusEffect(tpz.effect.SHOCK_SPIKES, 50, 0, 0)
     mob:getStatusEffect(tpz.effect.SHOCK_SPIKES):setFlag(tpz.effectFlag.DEATH)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
 end
 
 function onAdditionalEffect(mob, target, damage)

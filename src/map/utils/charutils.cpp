@@ -4057,20 +4057,6 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                             //default: exp *= (1.8f / pcinzone); break;
                         }
                     }
-
-                    if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && region == 17 || region == 18) //Movalpolos/Tavnazia Zones with no books
-                    {
-                        switch (pcinzone)
-                        {
-                            case 1: exp *= 1.00f; break;
-                            case 2: exp *= 0.75f; break;
-                            case 3: exp *= 0.55f; break;
-                            case 4: exp *= 0.45f; break;
-                            case 5: exp *= 0.39f; break;
-                            case 6: exp *= 0.35f; break;
-                            default: exp *= (1.8f / pcinzone); break;
-                        }
-                    }
                     else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SANCTION) && region >= 28 && region <= 32)
                     {
                         switch (pcinzone)

@@ -6,10 +6,13 @@
 -----------------------------------
 require("scripts/globals/hunts")
 require("scripts/globals/status")
+require("scripts/globals/mobs")
+require("scripts/globals/settings")
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMod(tpz.mod.REGAIN, 200) -- "Seemed to have very high TP gain." (guessing 200 after watching video)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
 end
 
 function onMobDeath(mob, player, isKiller)

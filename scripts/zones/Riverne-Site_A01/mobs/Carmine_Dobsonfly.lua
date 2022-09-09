@@ -4,7 +4,11 @@
 -----------------------------------
 local ID = require("scripts/zones/Riverne-Site_A01/IDs")
 require("scripts/globals/status")
+require("scripts/globals/settings")
 -----------------------------------
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
 
 function onMobSpawn(mob)
     mob:setMobMod(tpz.mobMod.SUPERLINK, ID.mob.CARMINE_DOBSONFLY_OFFSET)

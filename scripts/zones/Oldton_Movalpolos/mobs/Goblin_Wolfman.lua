@@ -6,10 +6,12 @@ require("scripts/globals/hunts")
 mixins = {require("scripts/mixins/job_special")}
 require("scripts/globals/status")
 require("scripts/globals/magic")
+require("scripts/globals/settings")
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(tpz.mobMod.IDLE_DESPAWN, 180)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
 end
 
 function onMobSpawn(mob)

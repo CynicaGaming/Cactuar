@@ -6,6 +6,12 @@ require("scripts/globals/status")
 require("scripts/globals/titles")
 require("scripts/globals/mobs")
 mixins = {require("scripts/mixins/families/wyrm_wakeup")}
+require("scripts/globals/settings")
+-----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (100 + COP_EXP_SCALING))
+end
 
 function onMobSpawn(mob)
     mob:SetMobSkillAttack(0) -- resetting so it doesn't respawn in flight mode.

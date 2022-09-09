@@ -5,7 +5,13 @@
 require("scripts/globals/hunts")
 require("scripts/globals/world")
 require("scripts/globals/mobs")
-------------------------------
+require("scripts/globals/settings")
+-----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
+
 
 function onMobRoam(mob)
     if mob:getWeather() ~= tpz.weather.FOG then

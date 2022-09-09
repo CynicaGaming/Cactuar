@@ -5,7 +5,9 @@
 local ID = require("scripts/zones/Lufaise_Meadows/IDs")
 require("scripts/globals/status")
 require("scripts/globals/msg")
--------------------------------------------------------
+require("scripts/globals/settings")
+-----------------------------------
+
 local hutPosition = { x = -247.06, y = -16.05, z = 41.40}
 
 local function drinkTheSoup(mob, target)
@@ -84,6 +86,8 @@ function onMobInitialize(mob)
     mob:setMod(tpz.mod.SILENCERES, 100)
     mob:setMobMod(tpz.mobMod.IDLE_DESPAWN, 300)
     mob:setMobMod(tpz.mobMod.NO_STANDBACK, 1)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+
 end
 
 function onCastStarting(mob, spell)

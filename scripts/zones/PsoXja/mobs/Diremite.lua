@@ -3,6 +3,12 @@
 --  Mob: Diremite
 -----------------------------------
 local ID = require("scripts/zones/PsoXja/IDs")
+require("scripts/globals/settings")
+-----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
 
 local GyreCarlinPlaceholderSpawnPoints = {
     [0] = {x = 34.057,  z = -0.352, y = 165.306},

@@ -3,8 +3,12 @@
 --   NM: Bugbear Matman
 ------------------------------
 require("scripts/globals/hunts")
-------------------------------
+require("scripts/globals/settings")
+-----------------------------------
 
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (15 + COP_EXP_SCALING))
+end
 function onMobSpawn(mob)
     mob:addMod(tpz.mod.REGAIN, 50)
 end

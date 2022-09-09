@@ -4,6 +4,7 @@
 -----------------------------------
 mixins = {require("scripts/mixins/families/antlion_ambush_noaggro")}
 require("scripts/globals/mobs")
+require("scripts/globals/settings")
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -18,6 +19,7 @@ function onMobInitialize(mob)
     mob:setMod(tpz.mod.SLOWRESTRAIT,200)
     mob:setMod(tpz.mod.BLINDRESTRAIT,200)
     mob:setMod(tpz.mod.SUSC_TO_WS_STUN,1)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
 end
 
 function onAdditionalEffect(mob, target, damage)

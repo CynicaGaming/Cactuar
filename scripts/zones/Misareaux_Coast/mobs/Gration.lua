@@ -4,7 +4,12 @@
 -----------------------------------
 mixins = {require("scripts/mixins/fomor_hate")}
 require("scripts/globals/status")
+require("scripts/globals/settings")
 -----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
 
 function onMobSpawn(mob)
     local shield = GetNPCByID(16879918):getLocalVar("shield")
