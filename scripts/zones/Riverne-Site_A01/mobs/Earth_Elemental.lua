@@ -3,10 +3,12 @@
 -- Notes: Assists Ouryu in Ouryu Cometh
 -----------------------------------
 require("scripts/globals/mobs")
+require("scripts/globals/settings")
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(tpz.mobMod.ROAM_DISTANCE, 500)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
 end
 
 function onMobSpawn(mob)

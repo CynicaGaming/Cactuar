@@ -38,5 +38,6 @@ function onEventFinish(player, csid, option)
         player:setCharVar("rockracketeer_sold", 5)
     elseif csid == 102 and npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.ROCK_RACKETEER, {gil=2100, var="rockracketeer_sold"}) then
         player:confirmTrade()
+        player:addExp(EXP_RATE_QUEST*1500)
     end
 end

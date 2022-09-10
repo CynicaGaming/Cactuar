@@ -75,13 +75,14 @@ function onEventFinish(player, csid, option)
         end
     elseif (csid == 525) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12600) -- Robe
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12615) -- Robe
         else
             player:tradeComplete()
             player:addTitle(tpz.title.GREEN_GROCER)
-            player:addItem(12600)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 12600) -- Robe
+            player:addItem(12615)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 12615) -- Robe
             player:addFame(SANDORIA, 30)
+            player:addExp(EXP_RATE_QUEST*400) 
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.THE_TRADER_IN_THE_FOREST)
         end
     -- "The Medicine Woman" Quest
@@ -93,6 +94,7 @@ function onEventFinish(player, csid, option)
         player:addGil(GIL_RATE*2100)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*2100)
         player:addFame(SANDORIA, 30)
+        player:addExp(EXP_RATE_QUEST*800) 
         player:completeQuest(SANDORIA, tpz.quest.id.sandoria.THE_MEDICINE_WOMAN)
     end
 

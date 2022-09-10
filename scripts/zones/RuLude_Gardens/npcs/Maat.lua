@@ -133,6 +133,7 @@ function onEventFinish(player, csid, option)
         player:levelCap(55)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.IN_DEFIANT_CHALLENGE)
         player:addFame(JEUNO, 30)
+        player:addExp(EXP_RATE_QUEST*1500)
     -- Genkai 2
     elseif (csid == 82 and option == 1) then
         player:addQuest(JEUNO, tpz.quest.id.jeuno.ATOP_THE_HIGHEST_MOUNTAINS)
@@ -145,6 +146,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.YOUR_LEVEL_LIMIT_IS_NOW_60)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.ATOP_THE_HIGHEST_MOUNTAINS)
         player:addFame(JEUNO, 40)
+        player:addExp(EXP_RATE_QUEST*2000)
     -- Genkai 3
     elseif (csid == 85 and option == 1) then
         player:addQuest(JEUNO, tpz.quest.id.jeuno.WHENCE_BLOWS_THE_WIND)
@@ -157,6 +159,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.YOUR_LEVEL_LIMIT_IS_NOW_65)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.WHENCE_BLOWS_THE_WIND)
         player:addFame(JEUNO, 50)
+        player:addExp(EXP_RATE_QUEST*3000)
     elseif (csid == 88) then
         if (option == 1) then
             player:addQuest(JEUNO, tpz.quest.id.jeuno.RIDING_ON_THE_CLOUDS)
@@ -176,6 +179,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.YOUR_LEVEL_LIMIT_IS_NOW_70)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.RIDING_ON_THE_CLOUDS)
         player:addFame(JEUNO, 60)
+        player:addExp(EXP_RATE_QUEST*3500)
     elseif (csid == 92) then
         player:addQuest(JEUNO, tpz.quest.id.jeuno.SHATTERING_STARS)
     elseif (csid == 64 and option == 1) then
@@ -192,6 +196,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.YOUR_LEVEL_LIMIT_IS_NOW_75)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.SHATTERING_STARS)
         player:addFame(JEUNO, 80)
+        player:addExp(EXP_RATE_QUEST*3500)
     elseif (csid==74) then
         if (player:getFreeSlotsCount() > 0) then
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.BEYOND_THE_SUN)
@@ -199,6 +204,7 @@ function onEventFinish(player, csid, option)
             player:setCharVar("maatsCap", 0)
             player:addItem(15194)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 15194)
+            player:addExp(EXP_RATE_QUEST*13337)
         end
     end
 end

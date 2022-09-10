@@ -46,6 +46,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("UnexpectedTreasure", 0)
         player:setCharVar("CupboardPlaced", 0)
         player:delKeyItem(tpz.keyItem.SMALL_TEACUP)
+        player:addExp(EXP_RATE_QUEST*1000) 
         player:completeQuest(SANDORIA, tpz.quest.id.sandoria.UNEXPECTED_TREASURE)
     end 
 end

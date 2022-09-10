@@ -696,6 +696,10 @@ INSERT INTO `item_latents` VALUES(15186, 5, 14, 51, 20);
 INSERT INTO `item_latents` VALUES(15187, 288, 3, 7, 1000);
 INSERT INTO `item_latents` VALUES(15188, 288, 2, 7, 1000);
 INSERT INTO `item_latents` VALUES(15197, 25, 3, 26, 1);
+INSERT INTO `item_latents` VALUES(15198, 64, 7, 50, 30); --Sprout Beret Combat Skill Gain +7 under 30 Cactuar Edit
+INSERT INTO `item_latents` VALUES(15198, 65, 7, 50, 30); --Sprout Beret Magic Skill Gain +7 under 30
+INSERT INTO `item_latents` VALUES(15198, 169, 7, 50, 30); --Sprout Beret MovementSpeed +7 under 30
+INSERT INTO `item_latents` VALUES(15198, 382, 100, 50, 30); --Sprout Beret EXP + 100% under 30
 INSERT INTO `item_latents` VALUES(15209, 8, 4, 1, 75);
 INSERT INTO `item_latents` VALUES(15210, 8, 5, 1, 75);
 INSERT INTO `item_latents` VALUES(15220, 370, 1, 52, 6);
@@ -1467,6 +1471,9 @@ INSERT INTO `item_latents` VALUES(19125, 9, 1, 16, 3);
 INSERT INTO `item_latents` VALUES(19125, 9, 1, 16, 4);
 INSERT INTO `item_latents` VALUES(19125, 9, 1, 16, 5);
 INSERT INTO `item_latents` VALUES(19125, 9, 1, 16, 6);
+INSERT INTO `item_latents` VALUES(19126, 23, 14, 6, 1000); --Kirpan Latent Effects
+INSERT INTO `item_latents` VALUES(19126, 25, 5, 6, 1000);
+INSERT INTO `item_latents` VALUES(19126, 366, 7, 6, 1000);
 INSERT INTO `item_latents` VALUES(19158, 165, 7, 59, 14);
 INSERT INTO `item_latents` VALUES(19161, 8, 1, 16, 3);
 INSERT INTO `item_latents` VALUES(19161, 8, 1, 16, 4);

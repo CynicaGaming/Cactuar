@@ -35,6 +35,8 @@ function onEventFinish(player, csid, option)
         local fame = player:hasCompletedQuest(BASTOK, tpz.quest.id.bastok.THE_COLD_LIGHT_OF_DAY) and 8 or 50
         if (npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.THE_COLD_LIGHT_OF_DAY, {title=tpz.title.CRAB_CRUSHER, gil=500, fame=fame})) then
             player:confirmTrade()
+            player:addExp(EXP_RATE_QUEST*400) 
+
         end
 
     -- WISH UPON A STAR

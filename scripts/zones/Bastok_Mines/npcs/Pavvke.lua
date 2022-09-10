@@ -51,10 +51,13 @@ function onEventFinish(player, csid, option)
         player:completeQuest(BASTOK, tpz.quest.id.bastok.FALLEN_COMRADES)
         player:addFame(BASTOK, 120)
         player:addGil(GIL_RATE*550)
+        player:addExp(EXP_RATE_QUEST*300) 
+
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*550)
     elseif (csid == 92) then
         player:addFame(BASTOK, 8)
         player:addGil(GIL_RATE*550)
+        player:addExp(EXP_RATE_QUEST*300) 
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*550)
     end
 

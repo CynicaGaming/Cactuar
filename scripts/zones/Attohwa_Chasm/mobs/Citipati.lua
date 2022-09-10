@@ -4,7 +4,12 @@
 -----------------------------------
 require("scripts/globals/hunts")
 require("scripts/globals/world")
+require("scripts/globals/settings")
 local ID = require("scripts/zones/Attohwa_Chasm/IDs")
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
 
 function onMobSpawn(mob)
     mob:setMod(tpz.mod.TRIPLE_ATTACK, 20)

@@ -43,6 +43,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 4144)
         player:delKeyItem(tpz.ki.SMALL_STARFRUIT)
         player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.THE_TIGRESS_STIRS)
+        player:addExp(EXP_RATE_QUEST*750)
     elseif csid == 151 then
         player:addQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.KNOT_QUITE_THERE)
     end

@@ -27,6 +27,7 @@ function onEventFinish(player, csid, option)
     if csid == 559 then
         if npcUtil.giveItem(player, 15470) then
             player:setCharVar("InSearchOfTheTruthReward", 0)
+            player:addExp(EXP_RATE_QUEST*750)
         end
     end
 end

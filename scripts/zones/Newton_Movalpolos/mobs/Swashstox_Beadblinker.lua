@@ -4,7 +4,12 @@
 ------------------------------
 local ID = require("scripts/zones/Newton_Movalpolos/IDs")
 require("scripts/globals/hunts")
-------------------------------
+require("scripts/globals/settings")
+-----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
 
 function onMobSpawn(mob)
     local mobId = mob:getID()

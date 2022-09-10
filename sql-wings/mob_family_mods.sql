@@ -287,6 +287,7 @@ INSERT INTO `mob_family_mods` VALUES(57, 36, 50, 1);
 INSERT INTO `mob_family_mods` VALUES(57, 51, 4, 1);
 INSERT INTO `mob_family_mods` VALUES(57, 52, 30, 1);
 INSERT INTO `mob_family_mods` VALUES(62, 36, 50, 1);
+-- INSERT INTO `mob_family_mods` VALUES(80, 28, 200, 1); -- EXP Boost
 INSERT INTO `mob_family_mods` VALUES(80, 36, 30, 1);
 INSERT INTO `mob_family_mods` VALUES(80, 51, 2, 1);
 INSERT INTO `mob_family_mods` VALUES(80, 52, 30, 1);

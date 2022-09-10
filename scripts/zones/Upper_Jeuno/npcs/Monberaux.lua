@@ -131,6 +131,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.TWO_OF_SWORDS) -- Two of Swords (Key Item)
         player:addFame(JEUNO, 30)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_LOST_CARDIAN)
+        player:addExp(EXP_RATE_QUEST*1250)
         player:addQuest(JEUNO, tpz.quest.id.jeuno.THE_KIND_CARDIAN) -- Start next quest "THE_KING_CARDIAN"
     elseif (csid == 33 and option == 1) then
         player:setCharVar("theLostCardianVar", 3)

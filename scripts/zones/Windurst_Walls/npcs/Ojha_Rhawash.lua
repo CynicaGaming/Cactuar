@@ -69,6 +69,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:completeQuest(WINDURST, tpz.quest.id.windurst.FLOWER_CHILD)
         player:addFame(WINDURST, 120)
+        player:addExp(EXP_RATE_QUEST*500)
         player:moghouseFlag(4)
         player:messageSpecial(ID.text.MOGHOUSE_EXIT)
     elseif (csid == 10000 and option == 10) then

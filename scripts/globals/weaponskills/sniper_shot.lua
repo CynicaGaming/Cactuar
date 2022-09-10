@@ -32,9 +32,14 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
 
     local damage, criticalHit, tpHits, extraHits = doRangedWeaponskill(player, target, wsID, params, tp, action, primary)
 
+
     if (damage > 0 and target:hasStatusEffect(tpz.effect.INT_DOWN) == false) then
-        target:addStatusEffect(tpz.effect.INT_DOWN, 10, 0, 140)
+        local duration = (120 + (tp/1000 * 60)) * applyResistanceAddEffect(player, target, tpz.magic.ele.ICE, 0)
+        target:addStatusEffect(tpz.effect.INT_DOWN, 20, 0, duration)
     end
+    --if (damage > 0 and target:hasStatusEffect(tpz.effect.INT_DOWN) == false) then
+    --    target:addStatusEffect(tpz.effect.INT_DOWN, 10, 0, 140)
+    --end
 	if damage > 0 then player:trySkillUp(target, tpz.skill.MARKSMANSHIP, tpHits+extraHits) end
 	if damage > 0 then target:tryInterruptSpell(player, tpHits+extraHits) end
     return tpHits, extraHits, criticalHit, damage

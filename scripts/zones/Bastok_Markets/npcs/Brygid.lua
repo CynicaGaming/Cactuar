@@ -125,11 +125,12 @@ function onEventFinish(player, csid, option)
         player:addQuest(BASTOK, tpz.quest.id.bastok.BRYGID_THE_STYLIST)
     elseif (csid == 311) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12720)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12721)
         else
             player:addTitle(tpz.title.BRYGIDAPPROVED)
-            player:addItem(12720)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 12720)
+            player:addItem(12721)
+            player:addExp(EXP_RATE_QUEST*300) 
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 12721)
             player:addFame(BASTOK, 30)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.BRYGID_THE_STYLIST)
         end
@@ -146,6 +147,7 @@ function onEventFinish(player, csid, option)
         player:addItem(14400+wantsSubligar)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 14400+wantsSubligar)
         player:addFame(BASTOK, 30)
+        player:addExp(EXP_RATE_QUEST*2000) 
         player:completeQuest(BASTOK, tpz.quest.id.bastok.BRYGID_THE_STYLIST_RETURNS)
     end
 end

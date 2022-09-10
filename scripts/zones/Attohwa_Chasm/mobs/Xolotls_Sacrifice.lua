@@ -5,12 +5,14 @@
 -----------------------------------
 local ID = require("scripts/zones/Attohwa_Chasm/IDs")
 require("scripts/globals/world")
+require("scripts/globals/settings")
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMod(tpz.mod.RESBUILD_LULLABY,33) --"Will quickly build resistance to Lullaby."
     mob:setMod(tpz.mod.RESBUILD_BIND,10)    --"Will build resistance (after about 10 casts) to Gravity and Bind."
     mob:setMod(tpz.mod.RESBUILD_GRAVITY,10)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
 end
 
 function onMobRoam(mob)

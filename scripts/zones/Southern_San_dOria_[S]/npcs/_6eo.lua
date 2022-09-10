@@ -29,6 +29,7 @@ function onEventFinish(player, csid, option)
         else
             player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.KNOT_QUITE_THERE)
             player:addItem(751)
+            player:addExp(EXP_RATE_QUEST*2000)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 751) --Platinum Beastcoin
             player:setCharVar("KnotQuiteThere", 0)
         end

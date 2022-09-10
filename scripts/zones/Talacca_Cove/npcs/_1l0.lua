@@ -42,6 +42,7 @@ function onEventFinish(player, csid, option)
             player:unlockJob(tpz.job.COR)
             player:messageSpecial(ID.text.YOU_CAN_NOW_BECOME_A_CORSAIR)
             player:completeQuest(AHT_URHGAN, tpz.quest.id.ahtUrhgan.LUCK_OF_THE_DRAW)
+            player:addExp(EXP_RATE_QUEST*1000)
         end
     elseif (EventFinishBCNM(player, csid, option)) then
         return

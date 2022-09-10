@@ -20,9 +20,9 @@ function onTrigger(player, npc)
         217,   900, 3,    --Brass Flowerpot
         605,   180, 3,    --Pickaxe
         4150, 2387, 3,    --Eye Drops
-        4148,   290, 3,    --Antidote
+        4148,   290, 3,   --Antidote
         17320,   7, 3,    --Iron Arrow
-        17336,   5, 3,     --Crossbow Bolt
+        17336,   5, 3,    --Crossbow Bolt
     }
 
     local rank = getNationRank(tpz.nation.BASTOK)

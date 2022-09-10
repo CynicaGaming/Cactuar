@@ -3,7 +3,13 @@
 --  Mob: Leshy
 -----------------------------------
 local ID = require("scripts/zones/Lufaise_Meadows/IDs")
+require("scripts/globals/settings")
 -----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
+
 
 function disturbMob(mob)
     local offset = mob:getID() - ID.mob.LESHY_OFFSET

@@ -8,6 +8,12 @@
 -- Also, may only use Soul Accretion at night.
 -- Special Attacks: Hits harder at night than during the day.
 -- Earring may or may not drop only if the ToD was at night.
+require("scripts/globals/settings")
+-----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
 
 function onMobDeath(mob, player, isKiller)
 end

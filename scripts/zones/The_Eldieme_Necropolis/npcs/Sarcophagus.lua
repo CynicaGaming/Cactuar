@@ -74,6 +74,7 @@ function onEventFinish(player, csid, option)
     -- A NEW DAWN
     elseif csid == 45 and npcUtil.completeQuest(player, JEUNO, tpz.quest.id.jeuno.A_NEW_DAWN, {item = 14222, title = tpz.title.PARAGON_OF_BEASTMASTER_EXCELLENCE}) then
         player:setCharVar("ANewDawn_Event", 6)
+        player:addExp(EXP_RATE_QUEST*3000)
         player:delKeyItem(tpz.ki.TAMERS_WHISTLE)
     end
 end

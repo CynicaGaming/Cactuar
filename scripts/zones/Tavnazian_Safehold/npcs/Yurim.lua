@@ -117,6 +117,7 @@ function onEventFinish(player, csid, option)
         local itemInProgress = player:getCharVar("NAME_OF_SCIENCE_target")
         if npcUtil.completeQuest(player, OTHER_AREAS_LOG, tpz.quest.id.otherAreas.IN_THE_NAME_OF_SCIENCE, {item=itemInProgress, var={"NAME_OF_SCIENCE_target"}}) then
             player:confirmTrade()
+            player:addExp(EXP_RATE_QUEST*1500)
         end
     end
 end

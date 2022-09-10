@@ -8,7 +8,12 @@
 -- !pos -141.523 -15.529 91.709 24
 -----------------------------------
 local ID = require("scripts/zones/Lufaise_Meadows/IDs")
+require("scripts/globals/settings")
 -----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (COP_EXP_SCALING))
+end
 
 function onMobSpawn(mob)
     if mob:getID() == ID.mob.PADFOOT[GetServerVariable("realPadfoot")] then

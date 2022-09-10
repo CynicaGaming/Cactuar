@@ -94,5 +94,7 @@ function onEventFinish(player, csid, option)
         player:addFame(JEUNO, 30)
         player:tradeComplete(trade)
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.SAVE_THE_CLOCK_TOWER)
+        player:addExp(EXP_RATE_QUEST*1500) 
+
     end
 end

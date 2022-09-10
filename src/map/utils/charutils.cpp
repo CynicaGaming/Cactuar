@@ -3820,7 +3820,7 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
         if (baseExp == 100) return EMobDifficulty::EvenMatch;         // 100
         if (baseExp >= 80) return EMobDifficulty::DecentChallenge;    //  80 -  99
         if (baseExp >= 1) return EMobDifficulty::EasyPrey;            //   1 -  79
-        //if (baseExp >= 14) return EMobDifficulty::IncrediblyEasyPrey;
+        if (baseExp >= 14) return EMobDifficulty::IncrediblyEasyPrey;
 
         return EMobDifficulty::TooWeak;
     }
@@ -4017,9 +4017,9 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                         {
                         case 1:                break;
                         case 2:                break;
-                        case 3:  exp *= 0.70f; break;
-                        case 4:  exp *= 0.40f; break;
-                        case 5:  exp *= 0.10f; break;
+                        case 3:  exp *= 0.90f; break;
+                        case 4:  exp *= 0.75f; break;
+                        case 5:  exp *= 0.50f; break;
                         default: exp *= 0.05f; break;
                         }
                         const uint8 test = '1';
@@ -4048,6 +4048,13 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                             case 5: exp *= 0.39f; break;
                             case 6: exp *= 0.35f; break;
                             default: exp *= (1.8f / pcinzone); break;
+                            //case 1: exp *= 1.25f; break; 
+                            //case 2: exp *= 1.00f; break;
+                            //case 3: exp *= 0.80f; break;
+                            //case 4: exp *= 0.65f; break;
+                            //case 5: exp *= 0.59f; break;
+                            //case 6: exp *= 0.45f; break;
+                            //default: exp *= (1.8f / pcinzone); break;
                         }
                     }
                     else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SANCTION) && region >= 28 && region <= 32)
@@ -4062,10 +4069,15 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                             case 6: exp *= 0.35f; break;
                             default: exp *= (1.8f / pcinzone); break;
                         }
+                        // Signet bonus for parties under 6
+                        if (pcinzone < 6)
+                        {
+                            exp *= 1.25f; // 25% bonus XP
+                        }
 
                         // TODO: This needs to be a formula using
                         // Astral Candescence and Imperial Defense Rating when besieged is added.
-                        exp *= 1.10f; // 10% bonus XP because we assume Astral Candescence is active.
+                        exp *= 1.25f; // 25% bonus XP because we assume Astral Candescence is active.
                     }
                     else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGIL) && region >= 33 && region <= 40)
                     {
@@ -4082,7 +4094,7 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                         // Sigil bonus for parties under 6
                         if (pcinzone < 6)
                         {
-                            exp *= 1.20f; // 20% bonus XP
+                            exp *= 1.40f; // 40% bonus XP
                         }
                     }
                     else
@@ -4095,6 +4107,12 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                             case 4: exp *= 0.40f; break;
                             case 5: exp *= 0.37f; break;
                             case 6: exp *= 0.35f; break;
+                            //case 1: exp *= 1.00f; break; 
+                            //case 2: exp *= 1.20f; break;
+                            //case 3: exp *= 0.85f; break;
+                            //case 4: exp *= 0.65f; break;
+                            //case 5: exp *= 0.57f; break;
+                            //case 6: exp *= 0.53f; break;
                             default: exp *= (1.8f / pcinzone); break;
                         }
                     }
@@ -4108,18 +4126,23 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                     // Per monster caps pulled from: https://ffxiclopedia.fandom.com/wiki/Experience_Points
                     if (PMember->GetMLevel() <= 50)
                     {
-                        exp = std::fmin(exp, 200.f);
+                        exp = std::fmin(exp, 400.f);
                     }
                     else if (PMember->GetMLevel() <= 60)
                     {
-                        exp = std::fmin(exp, 250.f);
+                        exp = std::fmin(exp, 600.f);
+                    }
+                    else if (PMember->GetMLevel() <= 70)
+                    {
+                        exp = std::fmin(exp, 800.f);
                     }
                     else
                     {
-                        exp = std::fmin(exp, 300.f);
+                        exp = std::fmin(exp, 400.f);
                     }
 
-                    if (PMember->GetMLevel() <= PMob->GetMLevel()) // chain stuff requires EM or greater
+                    //if (PMember->GetMLevel() <= PMob->GetMLevel()) // chain stuff requires EM or greater
+                      if (mobCheck >= EMobDifficulty::DecentChallenge)
                     {
 
                         if (PMember->expChain.chainTime > gettick() || PMember->expChain.chainTime == 0)
@@ -4127,13 +4150,13 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                             chainactive = true;
                             switch (PMember->expChain.chainNumber)
                             {
-                                case 0: exp *= 1.0f; break;
-                                case 1: exp *= 1.2f; break;
-                                case 2: exp *= 1.25f; break;
-                                case 3: exp *= 1.3f; break;
-                                case 4: exp *= 1.4f; break;
-                                case 5: exp *= 1.5f; break;
-                                default: exp *= 1.5f; break;
+                            case 1: exp *= 2.0f; break; 
+                            case 2: exp *= 1.5f; break;
+                            case 3: exp *= 1.40f; break;
+                            case 4: exp *= 1.35f; break;
+                            case 5: exp *= 1.25f; break;
+                            case 6: exp *= 1.20f; break;
+                                default: exp *= 1.55f; break;
                             }
                         }
                         else
@@ -4222,7 +4245,7 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
                     }
                     // pet or companion exp penalty needs to be added here
                     if (PMember->m_PFellow != nullptr)
-                        exp *= 0.7f;
+                        exp *= 1.0f; //default 0.7
                     // Adventuring Fellows no longer reduce exp earned as of ~2014
 
                     if (distanceSquared(PMember->loc.p, PMob->loc.p) > 100*100)
@@ -4399,7 +4422,7 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
         // exp added from raise shouldn't display a message. Don't need a message for zero exp either
         if (!expFromRaise && exp > 0)
         {
-            if (mobCheck >= EMobDifficulty::EvenMatch && isexpchain)
+            if (mobCheck >= EMobDifficulty::DecentChallenge && isexpchain)
             {
                 if (PChar->expChain.chainNumber != 0)
                 {

@@ -35,6 +35,7 @@ function onEventFinish(player, csid, option)
         else
         player:addItem(14094)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 14094)
+        player:addExp(EXP_RATE_QUEST*3000) 
         player:tradeComplete()
         player:completeQuest(WINDURST, tpz.quest.id.windurst.HITTING_THE_MARQUISATE)
         player:addTitle(tpz.title.PARAGON_OF_THIEF_EXCELLENCE)

@@ -110,6 +110,7 @@ function onEventFinish(player, csid, option)
         title = tpz.title.SUPER_MODEL,
         var = {"QuestAPoseByOtherName_time", "QuestAPoseByOtherName_equip", "QuestAPoseByOtherName_prog"},
     }) then
+        player:addExp(EXP_RATE_QUEST*650)
         player:needToZone(true)
 
     -- fail quest

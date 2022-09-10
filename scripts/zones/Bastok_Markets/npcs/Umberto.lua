@@ -32,6 +32,8 @@ function onEventFinish(player, csid, option)
             player:addFame(BASTOK, 30)
             player:setCharVar("TOO_MANY_CHEFS", 0)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.TOO_MANY_CHEFS)
+            player:addExp(EXP_RATE_QUEST*5000) 
+
         end
     end
 end

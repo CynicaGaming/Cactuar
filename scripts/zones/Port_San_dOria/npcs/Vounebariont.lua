@@ -49,6 +49,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:addTitle(tpz.title.BUG_CATCHER)
         player:addGil(GIL_RATE*750)
+        player:addExp(EXP_RATE_QUEST*500)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*750)
     end
 

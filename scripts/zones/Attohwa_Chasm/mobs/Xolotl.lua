@@ -4,6 +4,7 @@
 -----------------------------------
 require("scripts/globals/titles")
 require("scripts/globals/world")
+require("scripts/globals/settings")
 local ID = require("scripts/zones/Attohwa_Chasm/IDs")
 -----------------------------------
 
@@ -13,6 +14,7 @@ function onMobInitialize(mob)
     mob:setMod(tpz.mod.RESBUILD_PARALYZE,10)
     mob:setMod(tpz.mod.RESBUILD_SLOW,10)
     mob:setMod(tpz.mod.RESBUILD_SILENCE,10)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (25 + COP_EXP_SCALING))
 end
 
 function onMobSpawn(mob)

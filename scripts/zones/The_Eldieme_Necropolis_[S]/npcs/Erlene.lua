@@ -129,6 +129,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("SheetsofVellum", 0)
         player:messageSpecial(ID.text.YOU_CAN_NOW_BECOME_A_SCHOLAR)
         player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.A_LITTLE_KNOWLEDGE)
+        player:addExp(EXP_RATE_QUEST*1000)
     elseif (csid == 47) then
         if (player:canLearnSpell(478) and player:canLearnSpell(502)) then
             player:addSpell(478, true)
@@ -147,6 +148,7 @@ function onEventFinish(player, csid, option)
             player:delKeyItem(tpz.ki.ULBRECHTS_SEALED_LETTER)
             player:delKeyItem(tpz.ki.SCHULTS_SEALED_LETTER)
             player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.ON_SABBATICAL)
+            player:addExp(EXP_RATE_QUEST*2000)
             player:addItem(6058) --klimaform
             player:messageSpecial(ID.text.ITEM_OBTAINED, 6058)
             player:setCharVar("onSabbatical", 0)
@@ -167,6 +169,7 @@ function onEventFinish(player, csid, option)
             player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.DOWNWARD_HELIX)
             player:addItem(15004) -- Schlar's Bracers
             player:messageSpecial(ID.text.ITEM_OBTAINED, 15004)
+            player:addExp(EXP_RATE_QUEST*1500)
             player:setCharVar("DownwardHelix", 0)
             player:setCharVar("Erlene_DownwardHelix_Timer", VanadielDayOfTheYear())
             player:needToZone(true)
@@ -189,6 +192,7 @@ function onEventFinish(player, csid, option)
             player:addItem(16140) -- Schlar's Mortarboard
             player:messageSpecial(ID.text.ITEM_OBTAINED, 16140)
             player:setCharVar("SeeingBloodRed", 0)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     elseif (csid == 38) then
         player:tradeComplete()

@@ -41,13 +41,14 @@ function onEventFinish(player, csid, option)
         player:addQuest(BASTOK, tpz.quest.id.bastok.PAST_PERFECT)
     elseif (csid == 131) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12560)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12661)
         else
-            if (player:addItem(12560)) then
+            if (player:addItem(12661)) then
                 player:delKeyItem(tpz.ki.TATTERED_MISSION_ORDERS)
                 player:setCharVar("PastPerfectVar", 0)
-                player:messageSpecial(ID.text.ITEM_OBTAINED, 12560)
+                player:messageSpecial(ID.text.ITEM_OBTAINED, 12661)
                 player:addFame(BASTOK, 110)
+                player:addExp(EXP_RATE_QUEST*500)
                 player:completeQuest(BASTOK, tpz.quest.id.bastok.PAST_PERFECT)
             end
         end

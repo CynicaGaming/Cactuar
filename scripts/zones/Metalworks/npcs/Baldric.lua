@@ -39,6 +39,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:addGil(300)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*300)
+        player:addExp(EXP_RATE_QUEST*500) 
         player:completeQuest(BASTOK, tpz.quest.id.bastok.STARDUST)
     end
 end

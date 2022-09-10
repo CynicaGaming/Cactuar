@@ -113,6 +113,8 @@ function onEventFinish(player, csid, option)
         player:addTitle(tpz.title.DRACHENFALL_ASCETIC)
         player:addGil(GIL_RATE*2000)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*2000)
+        player:addExp(EXP_RATE_QUEST*2500) 
+
     end
 
 end

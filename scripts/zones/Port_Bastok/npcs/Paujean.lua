@@ -55,6 +55,7 @@ function onEventFinish(player, csid, option)
         player:addItem(13201)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 13201)
         player:addTitle(tpz.title.PURPLE_BELT)
+        player:addExp(EXP_RATE_QUEST*2000)
     elseif (csid == 355) then
         player:setCharVar("WildcatBastok", utils.mask.setBit(player:getCharVar("WildcatBastok"), 2, true))
     end

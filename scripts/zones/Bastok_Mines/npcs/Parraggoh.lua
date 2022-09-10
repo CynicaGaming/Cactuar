@@ -55,9 +55,11 @@ function onEventFinish(player,csid,option)
             player:delKeyItem(tpz.ki.PALBOROUGH_MINES_LOGS)
             player:addFame(BASTOK, 75)
             player:addItem(16465)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 16465)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 16614) -- Default: 16465 Bronze Knife
+            player:addExp(EXP_RATE_QUEST*200) 
+
         else
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 16465)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 16614)
         end
     end
 end

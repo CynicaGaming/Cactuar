@@ -59,11 +59,13 @@ function onEventFinish(player, csid, option)
             player:tradeComplete()
             player:addTitle(tpz.title.KULATZ_BRIDGE_COMPANION)
             player:addItem(12498)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 12498)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 12536)
             player:addFame(BASTOK, 80)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_RETURN_OF_THE_ADVENTURER)
+            player:addExp(EXP_RATE_QUEST*150) 
+
         else
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12498)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 12536)
         end
     end
 

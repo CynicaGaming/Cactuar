@@ -25,7 +25,8 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `item_mods_pet`
+-- Table structure for table `item_mods_pet` 
+--Umeboshi: "0=PET 1=Avatar 2=Wyvern 3=Automaton"
 --
 
 DROP TABLE IF EXISTS `item_mods_pet`;
@@ -33,7 +34,7 @@ CREATE TABLE `item_mods_pet` (
   `itemId` smallint(5) UNSIGNED NOT NULL,
   `modId` smallint(5) UNSIGNED NOT NULL,
   `value` smallint(5) NOT NULL DEFAULT 0,
-  `petType` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
+  `petType` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 
 ) ENGINE=MyISAM AVG_ROW_LENGTH=13 DEFAULT CHARSET=utf8 PACK_KEYS=1;
 
 --
@@ -117,7 +118,7 @@ INSERT INTO `item_mods_pet` VALUES(13975, 27, -2, 1);
 INSERT INTO `item_mods_pet` VALUES(14103, 27, -2, 1);
 INSERT INTO `item_mods_pet` VALUES(14103, 68, 5, 1);
 INSERT INTO `item_mods_pet` VALUES(14227, 3, 10, 2);
-INSERT INTO `item_mods_pet` VALUES(14228, 25, 10, 1);
+INSERT INTO `item_mods_pet` VALUES(14228, 25, 10, 1); --Evoker's spats
 INSERT INTO `item_mods_pet` VALUES(14228, 27, -2, 1);
 INSERT INTO `item_mods_pet` VALUES(14405, 2, 65, 2);
 INSERT INTO `item_mods_pet` VALUES(14405, 72, 65, 2);
@@ -172,8 +173,15 @@ INSERT INTO `item_mods_pet` VALUES(16352, 30, 5, 3);
 INSERT INTO `item_mods_pet` VALUES(16353, 30, 7, 3);
 INSERT INTO `item_mods_pet` VALUES(16368, 25, 10, 0);
 INSERT INTO `item_mods_pet` VALUES(16654, 368, 10, 0);
+INSERT INTO `item_mods_pet` VALUES(16680, 25, 2, 0); --ACC +2 --Barbaroi Axe Cactuar Edit
+INSERT INTO `item_mods_pet` VALUES(16680, 23, 3, 0); --ATT +3
 INSERT INTO `item_mods_pet` VALUES(16843, 25, 10, 2);
 INSERT INTO `item_mods_pet` VALUES(16843, 23, 10, 2);
+INSERT INTO `item_mods_pet` VALUES(16887, 2, 15, 2); -- HP +15 -- Peregrine Cactuar Edit
+INSERT INTO `item_mods_pet` VALUES(16887, 25, 1, 2); -- ACC +1
+INSERT INTO `item_mods_pet` VALUES(16887, 23, 3, 2); -- ATT +3
+INSERT INTO `item_mods_pet` VALUES(17532, 25, 3, 1); -- ACC +2 --Kukulcan's Staff Cactuar Edit
+INSERT INTO `item_mods_pet` VALUES(17532, 384, 3, 1); --Haste +2%
 INSERT INTO `item_mods_pet` VALUES(17579, 2, 50, 2);
 INSERT INTO `item_mods_pet` VALUES(17857, 2, 50, 4);
 INSERT INTO `item_mods_pet` VALUES(17857, 5, 50, 4);

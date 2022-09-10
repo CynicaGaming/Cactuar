@@ -47,6 +47,8 @@ function onEventFinish(player, csid, option)
             player:setCharVar("theTenshodoShowdownCS", 0)
             player:addFame(WINDURST, 30)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.THE_TENSHODO_SHOWDOWN)
+            player:addExp(EXP_RATE_QUEST*2000) 
+
         end
     end
 

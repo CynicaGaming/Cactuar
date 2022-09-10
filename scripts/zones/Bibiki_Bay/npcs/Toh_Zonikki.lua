@@ -130,6 +130,8 @@ function onEventFinish(player, csid, option)
             player:setCharVar("ClammingKitWeight", 0)
             player:delKeyItem(tpz.ki.CLAMMING_KIT)
             player:messageSpecial(ID.text.YOU_RETURN_THE, tpz.ki.CLAMMING_KIT)
+            player:addExp(EXP_RATE_QUEST*200) 
+
 
             giveClammedItems(player)
 

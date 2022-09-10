@@ -120,7 +120,7 @@ end
 function doEnspell(caster, target, spell, effect)
     -- Calculate Bonus duration
     local baseDuration = 0
-    if caster:getEquipID(tpz.slot.MAIN) == 17696 then
+    if caster:getEquipID(tpz.slot.MAIN) == 17696 then --Buzzard Tuck
         baseDuration = 210
     else
         baseDuration = 180
@@ -132,7 +132,7 @@ function doEnspell(caster, target, spell, effect)
     local magicskill = caster:getSkillLevel(tpz.skill.ENHANCING_MAGIC)
     -- Add effect bonuses from equipment
     local potencybonus = 0
-    if caster:getEquipID(tpz.slot.MAIN) == 17696 then -- Buzzard Tusk
+    if caster:getEquipID(tpz.slot.MAIN) == 17696 then -- Buzzard Tuck
         potencybonus = 2 + potencybonus
     elseif caster:getEquipID(tpz.slot.EAR1) == 16011 or caster:getEquipID(tpz.slot.EAR2) == 16011 then -- Lycopodium Earring
         potencybonus = 2 + potencybonus
@@ -142,6 +142,8 @@ function doEnspell(caster, target, spell, effect)
         potencybonus = 5 + potencybonus
     elseif caster:getEquipID(tpz.slot.MAIN) == 16605 then -- Enhancing Sword
         potencybonus = 5 + potencybonus
+    elseif caster:getEquipID(tpz.slot.MAIN) == 16829 then -- Fencing Degen Cactuar Edit
+        potencybonus = 1 + potencybonus
     end
 
     -- Potency with Effect Bonus
@@ -158,6 +160,15 @@ function doEnspell(caster, target, spell, effect)
             potency = 3 + math.floor(6 * magicskill / 100)
         elseif magicskill > 200 then
             potency = 5 + math.floor(5 * magicskill / 100)
+        end
+        --2H Buff
+        if (caster:getWeaponSkillType(tpz.slot.MAIN) == tpz.skill.GREAT_SWORD or caster:getWeaponSkillType(tpz.slot.MAIN) == tpz.skill.POLEARM or caster:getWeaponSkillType(tpz.slot.MAIN) == tpz.skill.SCYTHE or 
+        caster:getWeaponSkillType(tpz.slot.MAIN) == tpz.skill.STAFF or caster:getWeaponSkillType(tpz.slot.MAIN) == tpz.skill.GREAT_KATANA or caster:getWeaponSkillType(tpz.slot.MAIN) == tpz.skill.GREAT_AXE) then
+            if magicskill <= 200 then
+                potency = 3 + potencybonus + math.floor(6 * magicskill / 75)
+            elseif magicskill > 200 then
+                potency = 5 + potencybonus + math.floor(5 * magicskill / 75)
+            end
         end
     end
 
@@ -1047,7 +1058,7 @@ function addBonusesAbility(caster, ele, target, dmg, params)
 
     if mab < 0 then mab = 0 end
 
-    dmg = math.floor(dmg * mab)
+    dmg = math.floor(dmg * (mab * 1.50))  --Umeboshi "+1.50" 
 
     return dmg
 end

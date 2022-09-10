@@ -42,6 +42,7 @@ end
 function onEventFinish(player, csid, option)
     if (csid == 13) then
         player:addKeyItem(tpz.ki.ZEPHYR_FAN)
+        player:addExp(EXP_RATE_QUEST*500)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.ZEPHYR_FAN)
         player:setCharVar("[ENM]ZephyrFan", os.time()+(ENM_COOLDOWN*3600)) -- Current time + (ENM_COOLDOWN*1hr in seconds)
     elseif (csid == 14) then

@@ -6,6 +6,9 @@
 local ID = require("scripts/zones/Uleguerand_Range/IDs")
 require("scripts/globals/mobs")
 -----------------------------------
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (25 + COP_EXP_SCALING))
+end
 
 function onMobDeath(mob, player, isKiller)
 end

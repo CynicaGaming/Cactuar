@@ -46,11 +46,14 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.ITEM_OBTAINED, 16974)
         player:completeQuest(OUTLANDS, tpz.quest.id.outlands.DONT_FORGET_THE_ANTIDOTE)
         player:addFame(RABAO, 60)
+        player:addExp(EXP_RATE_QUEST*1000)
     elseif (csid == 4) then --Subsequent completions
         player:tradeComplete()
         player:addGil(GIL_RATE*1800)
         player:messageSpecial(ID.text.GIL_OBTAINED, 1800)
         player:addFame(RABAO, 30)
+        player:addExp(EXP_RATE_QUEST*500)
+
     end
 
 end

@@ -43,12 +43,14 @@ function onEventFinish(player, csid, option)
         if player:getQuestStatus(OTHER_AREAS_LOG, tpz.quest.id.otherAreas.SECRETS_OF_OVENS_LOST) == QUEST_ACCEPTED then
             if npcUtil.completeQuest(player, OTHER_AREAS_LOG, tpz.quest.id.otherAreas.SECRETS_OF_OVENS_LOST, {item = 4247}) then
                 player:setCharVar("SecretsOfOvensLostReset", getConquestTally())
+                player:addExp(EXP_RATE_QUEST*2000)
                 player:delKeyItem(tpz.ki.TAVNAZIAN_COOKBOOK)
             end
         else
             if(npcUtil.giveItem(player, 4247)) then
                 player:setCharVar("SecretsOfOvensLostReset", getConquestTally())
                 player:setCharVar("SecretsOfOvensLostRepeat", 0)
+                player:addExp(EXP_RATE_QUEST*2000)
                 player:delKeyItem(tpz.ki.TAVNAZIAN_COOKBOOK)
             end
         end

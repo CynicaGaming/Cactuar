@@ -4,7 +4,12 @@
 -----------------------------------
 require("scripts/globals/titles")
 mixins = { require("scripts/mixins/job_special") }
+require("scripts/globals/settings")
 -----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (20 + COP_EXP_SCALING))
+end
 
 function onMobSpawn(mob)
     mob:setMod(tpz.mod.FASTCAST, 20)

@@ -82,6 +82,7 @@ function onEventFinish(player, csid, option)
             player:needToZone(true)
             player:addFame(JEUNO, 30)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.A_CANDLELIGHT_VIGIL)
+            player:addExp(EXP_RATE_QUEST*750)
         end
 
     elseif (csid == 197 and option == 0) then --quest denied, special eventIDs available
@@ -102,6 +103,7 @@ function onEventFinish(player, csid, option)
             player:addItem(4882)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 4882)
             player:addFame(JEUNO, 30)
+            player:addExp(EXP_RATE_QUEST*2000)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.SEARCHING_FOR_THE_RIGHT_WORDS)
             player:setCharVar("SearchingForRightWords_postcs", -2)
         end

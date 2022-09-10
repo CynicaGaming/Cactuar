@@ -20,7 +20,7 @@ local loginCampaignDay = 10
 local loginCampaignDuration = 23 -- Duration is set in Earth days (Average is 23 days)
 
 -- Checks if a Login Campaign is active.
-function isLoginCampaignEnabled()
+function isStarlightEnabled()
     local option = 0
     if (LOGIN_CAMPAIGN == 1) then
         option = 1
@@ -30,7 +30,7 @@ end
 
 -- Gives Login Points once a day.
 tpz.events.loginCampaign.onGameIn = function(player)
-    local contentEnabled = isLoginCampaignEnabled()
+    local contentEnabled = isStarlightEnabled()
 
     if (contentEnabled == 0) then
         -- TODO: What do the moogles do when the campaign isn't active?
@@ -85,7 +85,7 @@ end
 -- Beginning of CS with Greeter Moogle.
 -- Handles showing the correct list of prices and hiding the options that are not available
 tpz.events.loginCampaign.onTrigger = function(player, csid)
-    local contentEnabled = isLoginCampaignEnabled()
+    local contentEnabled = isStarlightEnabled()
 
     if (contentEnabled == 0) then
         -- TODO: What do the moogles do when the campaign isn't active?
@@ -136,7 +136,7 @@ end
 -- Shows list of items depending on option selected.
 -- It also is in charge of purchasing selected item.
 tpz.events.loginCampaign.onEventUpdate = function(player, csid, option)
-    local contentEnabled = isLoginCampaignEnabled()
+    local contentEnabled = isStarlightEnabled()
 
     if (contentEnabled == 0) then
         -- TODO: What do the moogles do when the campaign isn't active?

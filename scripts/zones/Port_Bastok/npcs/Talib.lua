@@ -74,6 +74,7 @@ function onEventFinish(player, csid, option)
         player:tradeComplete()
         player:addGil(GIL_RATE*350)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*350)
+        player:addExp(EXP_RATE_QUEST*125)
     end
 
 end

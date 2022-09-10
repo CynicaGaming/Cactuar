@@ -40,6 +40,7 @@ function onEventFinish(player, csid, option)
             player:delKeyItem(tpz.ki.VUNKERL_HERB)
             player:addItem(17384)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 17384) --Carbon Fishing Rod
+            player:addExp(EXP_RATE_QUEST*1000)
         end
     elseif (csid == 109) then
         player:delKeyItem(tpz.ki.VUNKERL_HERB)

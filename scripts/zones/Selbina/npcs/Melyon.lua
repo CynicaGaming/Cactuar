@@ -53,6 +53,7 @@ function onEventFinish(player, csid, option)
         player:addFame(SANDORIA, 10)
         player:addFame(JEUNO, 10)
         player:completeQuest(OTHER_AREAS_LOG, tpz.quest.id.otherAreas.ONLY_THE_BEST)
+        player:addExp(EXP_RATE_QUEST*25)
         player:confirmTrade()
     elseif (csid == 63) then
         player:addGil(120)
@@ -61,6 +62,7 @@ function onEventFinish(player, csid, option)
         player:addFame(SANDORIA, 20)
         player:addFame(JEUNO, 20)
         player:completeQuest(OTHER_AREAS_LOG, tpz.quest.id.otherAreas.ONLY_THE_BEST)
+        player:addExp(EXP_RATE_QUEST*30)
         player:confirmTrade()
     elseif (csid == 64) then
         player:addGil(600)
@@ -69,6 +71,7 @@ function onEventFinish(player, csid, option)
         player:addFame(SANDORIA, 30)
         player:addFame(JEUNO, 30)
         player:completeQuest(OTHER_AREAS_LOG, tpz.quest.id.otherAreas.ONLY_THE_BEST)
+        player:addExp(EXP_RATE_QUEST*100)
         player:confirmTrade()
     end
 end

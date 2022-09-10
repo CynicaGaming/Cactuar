@@ -41,6 +41,7 @@ function onEventFinish(player, csid, option)
     elseif (csid == 18) then
         player:tradeComplete()
         player:addGil(GIL_RATE*200)
+        player:addExp(EXP_RATE_QUEST*75) 
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*200)
         if (player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.FEAR_OF_THE_DARK) == QUEST_ACCEPTED) then
             player:addFame(SANDORIA, 30)

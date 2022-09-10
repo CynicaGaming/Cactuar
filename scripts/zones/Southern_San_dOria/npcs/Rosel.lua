@@ -45,6 +45,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("RefuseRoselTheArmorerQuest", 0)
         player:addKeyItem(tpz.ki.RECEIPT_FOR_THE_PRINCE)
         player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.RECEIPT_FOR_THE_PRINCE)
+        player:addExp(EXP_RATE_QUEST*300)
     -- Rosel the Armorer, finished quest, recieve 200gil
     elseif (csid == 527) then
         npcUtil.completeQuest(player, SANDORIA, tpz.quest.id.sandoria.ROSEL_THE_ARMORER, {

@@ -47,12 +47,13 @@ function onEventFinish(player, csid, option)
         player:setCharVar("DistantLoyaltiesProgress", 1)
     elseif (csid == 665) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13585)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13618)
         else
             player:delKeyItem(tpz.ki.MYTHRIL_HEARTS)
-            player:addItem(13585, 1)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 13585)
+            player:addItem(13618, 1)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 13618)
             player:setCharVar("DistantLoyaltiesProgress", 0)
+            player:addExp(EXP_RATE_QUEST*1000)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.DISTANT_LOYALTIES)
         end
     end

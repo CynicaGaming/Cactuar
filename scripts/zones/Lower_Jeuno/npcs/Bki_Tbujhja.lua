@@ -91,6 +91,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 14098) -- Choral Slippers
             player:addFame(JEUNO, 30)
             player:completeQuest(JEUNO, tpz.quest.id.jeuno.THE_REQUIEM)
+            player:addExp(EXP_RATE_QUEST*3500) 
         end
     end
 end

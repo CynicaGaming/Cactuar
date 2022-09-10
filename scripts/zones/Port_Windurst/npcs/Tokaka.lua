@@ -59,6 +59,7 @@ function onEventFinish(player, csid, option)
 
         if (SomethingFishy == QUEST_ACCEPTED) then
             player:completeQuest(WINDURST, tpz.quest.id.windurst.SOMETHING_FISHY)
+            player:addExp(EXP_RATE_QUEST*75)
             player:addFame(WINDURST, 60)
         else
             player:addFame(WINDURST, 10)

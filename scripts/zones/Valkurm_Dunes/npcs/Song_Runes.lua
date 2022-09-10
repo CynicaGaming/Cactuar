@@ -34,6 +34,7 @@ function onEventFinish(player, csid, option)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*3000)
         player:addTitle(tpz.title.WANDERING_MINSTREL)
         player:unlockJob(tpz.job.BRD) -- Bard
+        player:addExp(EXP_RATE_QUEST*1000)
         player:messageSpecial(ID.text.UNLOCK_BARD)  --You can now become a bard!
         player:setCharVar("PathOfTheBard_Event", 0)
         player:addFame(JEUNO, 30)

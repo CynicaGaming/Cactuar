@@ -68,6 +68,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.MAP_OF_THE_HORUTOTO_RUINS)
         end
         player:addFame(WINDURST, 120)
+        player:addExp(EXP_RATE_QUEST*2000)
         player:completeQuest(WINDURST, tpz.quest.id.windurst.GLYPH_HANGER)
     elseif (csid == 413 and option == 0) then
         player:addQuest(WINDURST, tpz.quest.id.windurst.A_SMUDGE_ON_ONE_S_RECORD)
@@ -75,6 +76,7 @@ function onEventFinish(player, csid, option)
         player:needToZone(true)
         player:addGil(GIL_RATE*3000)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*3000)
+        player:addExp(EXP_RATE_QUEST*2000)
         if (player:hasKeyItem(tpz.ki.MAP_OF_FEIYIN) == false) then
             player:addKeyItem(tpz.ki.MAP_OF_FEIYIN)
             player:messageSpecial(ID.text.KEYITEM_OBTAINED, tpz.ki.MAP_OF_FEIYIN)

@@ -41,5 +41,7 @@ function onEventFinish(player,csid,option)
             var = {"Quest[7][1]Prog"}
         })
         player:setCharVar("WindsPostCS", 1)
+		player:addExp(EXP_RATE_QUEST*2000) 
+
     end
 end

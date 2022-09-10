@@ -1688,7 +1688,7 @@ void CCharEntity::OnAbility(CAbilityState& state, action_t& action)
             }
         }
 
-        battleutils::HandlePlayerAbilityUsed(this, PAbility, &action);
+        //battleutils::HandlePlayerAbilityUsed(this, PAbility, &action); //Tethra Disabled
 
         PRecastContainer->Add(RECAST_ABILITY, PAbility->getRecastId(), action.recast, chargeTime);
 
@@ -1975,6 +1975,12 @@ void CCharEntity::OnRangedAttack(CRangeState& state, action_t& action)
         ((CMobEntity*)PTarget)->m_autoTargetKiller = this;
         ((CMobEntity*)PTarget)->DoAutoTarget();
     }
+    else if (hitOccured == false && PTarget->objtype == TYPE_MOB)
+    {
+        // 1 ce for a missed attack for TH application
+        ((CMobEntity*)PTarget)->PEnmityContainer->UpdateEnmity((CBattleEntity*)this, 1, 0);
+    }
+
 
     // Try to double shot
     //#TODO: figure out the packet structure of double/triple shot

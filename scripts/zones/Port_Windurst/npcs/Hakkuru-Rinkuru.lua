@@ -111,6 +111,7 @@ function onEventFinish(player, csid, option)
     elseif (csid == 277) then
             player:addGil(GIL_RATE*1500)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.MAKING_AMENDS)
+            player:addExp(EXP_RATE_QUEST*750)
             player:addFame(WINDURST, 75)
             player:addTitle(tpz.title.QUICK_FIXER)
             player:needToZone(true)
@@ -166,6 +167,7 @@ function onEventFinish(player, csid, option)
             player:tradeComplete()
             player:addGil(GIL_RATE*4800)
             player:messageSpecial(ID.text.GIL_OBTAINED, 4800)
+            player:addExp(EXP_RATE_QUEST*1250)
             player:addItem(12750) -- New Moon Armlets
             player:messageSpecial(ID.text.ITEM_OBTAINED, 12750) -- New Moon Armlets
             player:addFame(WINDURST, 150)

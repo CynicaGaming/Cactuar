@@ -121,5 +121,6 @@ function onEventFinish(player, csid, option)
         player:addFame(JEUNO, 30)
         player:tradeComplete()
         player:completeQuest(JEUNO, tpz.quest.id.jeuno.CHOCOBO_S_WOUNDS)
+        player:addExp(EXP_RATE_QUEST*750)
     end
 end

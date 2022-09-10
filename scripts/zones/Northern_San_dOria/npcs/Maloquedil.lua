@@ -60,6 +60,7 @@ function onEventFinish(player, csid, option)
         player:addTitle(tpz.title.VAMPIRE_HUNTER_DMINUS)
         player:addGil(GIL_RATE*900)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*900)
+        player:addExp(EXP_RATE_QUEST*300)
         if (player:getQuestStatus(SANDORIA, tpz.quest.id.sandoria.WARDING_VAMPIRES) == QUEST_ACCEPTED) then
             player:addFame(SANDORIA, 30)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.WARDING_VAMPIRES)

@@ -62,6 +62,7 @@ function onEventFinish(player, csid, option)
             player:tradeComplete()
             player:addFame(SANDORIA, 20)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.MESSENGER_FROM_BEYOND)
+            player:addExp(EXP_RATE_QUEST*2000)
         end
     elseif (csid == 691) then
         if (player:getFreeSlotsCount() == 0) then
@@ -72,6 +73,7 @@ function onEventFinish(player, csid, option)
             player:tradeComplete()
             player:addFame(SANDORIA, 40)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.PRELUDE_OF_BLACK_AND_WHITE)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     elseif (csid == 692) then
         if (player:getFreeSlotsCount() == 0) then
@@ -84,6 +86,7 @@ function onEventFinish(player, csid, option)
             player:tradeComplete()
             player:addFame(SANDORIA, 60)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.PIEUJE_S_DECISION)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     end
 

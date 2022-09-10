@@ -46,13 +46,14 @@ function onEventFinish(player, csid, option)
         if (player:getFreeSlotsCount(0) >= 1) then
             player:addTitle(tpz.title.STAMPEDER)
             player:addItem(13081)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, 13081) -- Leather Gorget
+            player:messageSpecial(ID.text.ITEM_OBTAINED, 13082) -- Leather Gorget +1
+            player:addExp(EXP_RATE_QUEST*500) 
             player:delKeyItem(tpz.ki.STAMP_SHEET)
             player:setCharVar("StampHunt_Mask", 0)
             player:addFame(BASTOK, 50)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.STAMP_HUNT)
         else
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13081)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 13082)
         end
     elseif (csid == 429) then
         player:setCharVar("WildcatBastok", utils.mask.setBit(player:getCharVar("WildcatBastok"), 11, true))

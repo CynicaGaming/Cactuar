@@ -142,6 +142,7 @@ function onEventFinish(player, csid, option)
                 player:confirmTrade()
                 player:addGil(GIL_RATE * ZoneID[zone+1])
                 player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE * ZoneID[zone+1])
+                player:addExp(EXP_RATE_QUEST*1000)
                 player:setCharVar("anExplorer-CurrentTablet", 0)
                 break
             end
@@ -149,6 +150,7 @@ function onEventFinish(player, csid, option)
 
         if csid == 47 then
             player:completeQuest(OTHER_AREAS_LOG, tpz.quest.id.otherAreas.AN_EXPLORER_S_FOOTSTEPS)
+            player:addExp(EXP_RATE_QUEST*10000)
             player:setCharVar("anExplorer-ClayTablets", 0)
         end
 

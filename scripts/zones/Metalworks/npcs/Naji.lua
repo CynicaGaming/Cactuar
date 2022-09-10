@@ -121,6 +121,7 @@ function onEventFinish(player, csid, option)
             player:setCharVar("theDoormanCS", 0)
             player:addFame(BASTOK, 30)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_DOORMAN)
+            player:addExp(EXP_RATE_QUEST*2500) 
         else
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, 16678) -- Razor Axe
         end

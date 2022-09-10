@@ -44,5 +44,6 @@ function onEventFinish(player, csid, option)
     if (csid == 10 and npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.BLADE_OF_DEATH, {item=16637, title=tpz.title.BLACK_DEATH, var="ChaosbringerKills"})) then
         player:confirmTrade()
         player:delKeyItem(tpz.ki.LETTER_FROM_ZEID)
+        player:addExp(EXP_RATE_QUEST*4000) 
     end
 end

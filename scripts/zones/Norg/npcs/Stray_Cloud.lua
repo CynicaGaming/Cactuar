@@ -50,6 +50,7 @@ function onEventFinish(player, csid, option)
         })
     then
         player:delKeyItem(tpz.ki.CALIGINOUS_BLADE)
+        player:addExp(EXP_RATE_QUEST*1500) 
     end
 
 end

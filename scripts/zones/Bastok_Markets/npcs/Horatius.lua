@@ -37,6 +37,8 @@ function onEventFinish(player, csid, option)
     elseif (csid == 101) then
         if (npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.BREAKING_STONES, {gil=400})) then
             player:confirmTrade()
+            player:addExp(EXP_RATE_QUEST*300) 
+
         end
     elseif (csid == 428) then
         player:setCharVar("WildcatBastok", utils.mask.setBit(player:getCharVar("WildcatBastok"), 12, true))

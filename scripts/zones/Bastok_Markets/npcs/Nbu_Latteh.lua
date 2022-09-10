@@ -74,6 +74,7 @@ function onEventFinish(player, csid, option)
         player:addTitle(tpz.title.RINGBEARER)
         player:addGil(GIL_RATE*gilReward)
         player:messageSpecial(ID.text.GIL_OBTAINED, GIL_RATE*gilReward)
+        player:addExp(EXP_RATE_QUEST*100) 
         player:setCharVar("MomTheAdventurer_Event", 0)
 
         if (player:getQuestStatus(BASTOK, tpz.quest.id.bastok.MOM_THE_ADVENTURER) == QUEST_ACCEPTED) then

@@ -12,5 +12,5 @@ function onMobDeath(mob, player, isKiller)
 end
 
 function onMobDespawn(mob)
-    mob:setRespawnTime(43200) -- 12 hours
+    mob:setRespawnTime(7200) -- Default:12 hours Nobody has time to camp this thing for 12 hours on a boat. Changed to 2 hours -Umeboshi
 end

@@ -3,10 +3,14 @@
 --   NM: Frost Flambeau
 -----------------------------------
 require("scripts/globals/hunts")
+require("scripts/globals/mobs")
+require("scripts/globals/settings")
+-----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(tpz.mobMod.MAGIC_COOL, 15)
     mob:setMod(tpz.mod.UFASTCAST, 50)
+    mob:setMobMod(tpz.mobMod.EXP_BONUS, (20 + COP_EXP_SCALING))
 end
 
 function onMobDeath(mob, player, isKiller)

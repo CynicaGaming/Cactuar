@@ -61,6 +61,7 @@ function onEventFinish(player, csid, option)
             player:needToZone(true)
             player:addFame(BASTOK, 20)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.GHOSTS_OF_THE_PAST)
+            player:addExp(EXP_RATE_QUEST*2000)
         end
     elseif (csid == 233) then
         player:addQuest(BASTOK, tpz.quest.id.bastok.THE_FIRST_MEETING)
@@ -74,6 +75,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 14090) -- Temple Gaiters
             player:addFame(BASTOK, 40)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.THE_FIRST_MEETING)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     else
         tpz.wsquest.handleEventFinish(wsQuest, player, csid, option, ID.text.ASURAN_FISTS_LEARNED)

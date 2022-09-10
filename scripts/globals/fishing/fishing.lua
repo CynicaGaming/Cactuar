@@ -1092,6 +1092,7 @@ function onFishingReelIn(player, catchType, fishingSkillLevel, fishLevel, loseCh
     local Snap = false
     local Reason = fishing.failType.NONE
     local FishingSkill = math.floor(fishingSkillLevel / 10) + player:getMod(tpz.mod.FISH)
+    local exp = math.random(15, 30) 
 
     if loseChance > 0 or snapChance > 0 or breakChance > 0 then
         -- if we didn't even get 1 more than 0 on lose, snap or break, then don't bother calculating
@@ -1216,6 +1217,14 @@ function onFishingReelIn(player, catchType, fishingSkillLevel, fishLevel, loseCh
             GetMobByID(nmId):setLocalVar('lastTOD', os.time())
         end
     end
+
+    if Caught then
+        if catchType == fishing.catchType.ITEM then player:addExp(10 + exp) 
+         elseif catchType == fishing.catchType.SMALLFISH then player:addExp((fishLevel * 1.25 + (exp + 25))) 
+         elseif catchType == fishing.catchType.BIGFISH then player:addExp((fishLevel * 1.30 + (exp + 50))) 
+         elseif catchType == fishing.catchType.MOB then player:addExp(150 + exp) 
+    end
+end
     return fishingToken, Caught, Broke, Snap, Reason
 end
 

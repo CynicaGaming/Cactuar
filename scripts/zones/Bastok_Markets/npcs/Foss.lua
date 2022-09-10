@@ -32,6 +32,8 @@ function onEventFinish(player, csid, option)
         local fame = player:hasCompletedQuest(BASTOK, tpz.quest.id.bastok.BUCKETS_OF_GOLD) and 8 or 75
         if (npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.BUCKETS_OF_GOLD, {title=tpz.title.BUCKET_FISHER, gil=300, fame=fame})) then
             player:confirmTrade()
+            player:addExp(EXP_RATE_QUEST*200) 
+
         end
     end
 end

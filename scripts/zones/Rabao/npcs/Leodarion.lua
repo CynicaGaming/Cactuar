@@ -75,6 +75,7 @@ function onEventFinish(player, csid, option)
         player:delKeyItem(tpz.ki.OLD_TRICK_BOX)
         player:setCharVar("trueWillCS", 2)
     elseif (csid == 99) then
+        player:addExp(EXP_RATE_QUEST*3000)
         if npcUtil.completeQuest(player, OUTLANDS, tpz.quest.id.outlands.TRUE_WILL, {
                 item = 13782, -- Ninja Chainmail
                 fameArea = NORG,

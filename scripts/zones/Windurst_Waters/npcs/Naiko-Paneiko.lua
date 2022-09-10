@@ -82,6 +82,7 @@ function onEventFinish(player, csid, option)
         player:delKeyItem(tpz.ki.PORT_WINDURST_SCOOP)
         player:setCharVar("QuestMakingHeadlines_var", 0)
         player:addFame(WINDURST, 30)
+        player:addExp(EXP_RATE_QUEST*750)
         player:completeQuest(WINDURST, tpz.quest.id.windurst.MAKING_HEADLINES)
     end
 

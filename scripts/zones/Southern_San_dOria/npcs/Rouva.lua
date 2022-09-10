@@ -48,6 +48,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 725 then
         if npcUtil.completeQuest(player, SANDORIA, tpz.quest.id.sandoria.SPICE_GALS, {item = 4247}) then
             player:setCharVar("SpiceGalsReset", getConquestTally())
+            player:addExp(EXP_RATE_QUEST*1500)
             player:delKeyItem(tpz.ki.RIVERNEWORT)
         end
     elseif csid == 726 then

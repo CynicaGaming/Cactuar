@@ -36,5 +36,7 @@ function onEventFinish(player, csid, option)
         player:addFame(NORG, 75)
         player:addTitle(tpz.title.CRACKER_OF_THE_SECRET_CODE)
         player:completeQuest(OUTLANDS, tpz.quest.id.outlands.SECRET_OF_THE_DAMP_SCROLL)
+        player:addExp(EXP_RATE_QUEST*2000) 
+
     end
 end

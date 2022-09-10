@@ -95,6 +95,7 @@ function onEventFinish(player, csid, option)
             player:setCharVar("GREEN_R_LETTER_USED", 0)
             player:addTitle(tpz.title.COBRA_UNIT_MERCENARY)
             player:completeQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.SNAKE_ON_THE_PLAINS)
+            player:addExp(EXP_RATE_QUEST*1000)
             player:setCharVar("SEALED_DOORS", 0)
         end
     end

@@ -77,17 +77,21 @@ function onEventFinish(player, csid, option)
 
         local gil=350
         local fame=120
+        local exp=200
         if (csid == 201) then
             gil=200
+            exp=150
         elseif (csid == 203) then
             gil=100
             fame=60
+            exp=75
         end
 
         player:addGil(gil*GIL_RATE)
         player:messageSpecial(ID.text.GIL_OBTAINED, gil*GIL_RATE)
         player:addFame(BASTOK, fame)
         player:addTitle(tpz.title.MOMMYS_HELPER)
+        player:addExp(EXP_RATE_QUEST*exp) 
         player:needToZone(true)
     end
 end

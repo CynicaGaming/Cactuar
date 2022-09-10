@@ -81,6 +81,7 @@ function onEventFinish(player, csid, option)
             player:needToZone()
             player:setCharVar("twentyInPirateYearsCS", 0)
             player:addFame(NORG, 30)
+            player:addExp(EXP_RATE_QUEST*2000) 
             player:completeQuest(OUTLANDS, tpz.quest.id.outlands.TWENTY_IN_PIRATE_YEARS)
         end
     elseif (csid == 135) then

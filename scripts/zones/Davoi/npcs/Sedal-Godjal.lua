@@ -94,5 +94,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("countRedPoolForORB", 0)
         player:delKeyItem(tpz.ki.CURSED_ORB)
         npcUtil.giveKeyItem(player, tpz.ki.CRIMSON_ORB)
+        player:addExp(EXP_RATE_QUEST*1000) 
+
     end
 end

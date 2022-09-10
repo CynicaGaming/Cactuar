@@ -62,6 +62,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 4731) -- Scroll of Teleport-Dem
             player:addFame(BASTOK, 30)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.ALTANA_S_SORROW)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     elseif (csid == 680) then
         if (player:getFreeSlotsCount() == 0) then
@@ -73,6 +74,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 4732) -- Scroll of Teleport-Mea
             player:addFame(WINDURST, 30)
             player:completeQuest(WINDURST, tpz.quest.id.windurst.ACTING_IN_GOOD_FAITH)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     elseif (csid == 681 and option == 0) then
         player:addQuest(SANDORIA, tpz.quest.id.sandoria.HEALING_THE_LAND)
@@ -88,6 +90,7 @@ function onEventFinish(player, csid, option)
             player:needToZone(true)
             player:addFame(SANDORIA, 30)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.HEALING_THE_LAND)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     elseif (csid == 685 and option == 0) then
         player:addQuest(SANDORIA, tpz.quest.id.sandoria.SORCERY_OF_THE_NORTH)
@@ -100,6 +103,7 @@ function onEventFinish(player, csid, option)
             player:messageSpecial(ID.text.ITEM_OBTAINED, 4747) -- Scroll of Teleport-Vahzl
             player:addFame(SANDORIA, 30)
             player:completeQuest(SANDORIA, tpz.quest.id.sandoria.SORCERY_OF_THE_NORTH)
+            player:addExp(EXP_RATE_QUEST*3000)
         end
     end
 

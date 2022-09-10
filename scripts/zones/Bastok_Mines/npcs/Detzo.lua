@@ -62,13 +62,15 @@ function onEventFinish(player, csid, option)
         player:addQuest(BASTOK, tpz.quest.id.bastok.RIVALS)
     elseif (csid == 94) then
         if (player:getFreeSlotsCount() == 0) then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED,13089)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED,13070)
         else
             player:addTitle(tpz.title.CONTEST_RIGGER)
             player:addItem(13089)
-            player:messageSpecial(ID.text.ITEM_OBTAINED,13089)
+            player:messageSpecial(ID.text.ITEM_OBTAINED,13070)
             player:addFame(BASTOK, 30)
             player:completeQuest(BASTOK, tpz.quest.id.bastok.RIVALS)
+            player:addExp(EXP_RATE_QUEST*800) 
+
         end
     end
 
