@@ -6,6 +6,7 @@ require("scripts/globals/hook")
 require("scripts/globals/teleports")
 require("scripts/globals/titles")
 require("scripts/globals/zone")
+require("scripts/globals/events/login_campaign")
 -----------------------------------
 require("scripts/quests/full_speed_ahead")
 -----------------------------------
