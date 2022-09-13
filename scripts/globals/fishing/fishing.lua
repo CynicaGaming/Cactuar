@@ -1219,10 +1219,10 @@ function onFishingReelIn(player, catchType, fishingSkillLevel, fishLevel, loseCh
     end
 
     if Caught then
-        if catchType == fishing.catchType.ITEM then player:addExp(10 + exp) 
-         elseif catchType == fishing.catchType.SMALLFISH then player:addExp((fishLevel * 1.25 + (exp + 25))) 
-         elseif catchType == fishing.catchType.BIGFISH then player:addExp((fishLevel * 1.30 + (exp + 50))) 
-         elseif catchType == fishing.catchType.MOB then player:addExp(150 + exp) 
+        if catchType == fishing.catchType.ITEM then player:addExp(10 + exp * FISHING_EXP) 
+         elseif catchType == fishing.catchType.SMALLFISH then player:addExp((fishLevel * 1.15 + exp + 25) * FISHING_EXP) 
+         elseif catchType == fishing.catchType.BIGFISH then player:addExp((fishLevel * 1.25 + exp + 50) * FISHING_EXP)
+         elseif catchType == fishing.catchType.MOB then player:addExp(150 + exp * FISHING_EXP) 
     end
 end
     return fishingToken, Caught, Broke, Snap, Reason

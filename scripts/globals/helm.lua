@@ -1601,7 +1601,7 @@ tpz.helm.onTrade = function(player, npc, trade, helmType, csid)
     local info = helmInfo[helmType]
     local zoneId = player:getZoneID()
     local regionId = player:getCurrentRegion()
-    local randomexp = math.random(25, 75)
+    local randomexp = math.random(25, 46)
 
     if trade:hasItemQty(info.tool, 1) and trade:getItemCount() == 1 then
         -- start event
@@ -1614,62 +1614,63 @@ tpz.helm.onTrade = function(player, npc, trade, helmType, csid)
         -- success! reward item and decrement number of remaining uses on the point
         if item ~= 0 and full == 0 then
             player:addItem(item)
-            player:addExp(randomexp)
 
             --MINING
-        if item == 645 then player:addExp(175) --darksteel ore
-        elseif item == 646 then player:addExp(250) --adaman ore
-        elseif item == 647 then player:addExp(350) --molybdenum ore
-        elseif item == 678 then player:addExp(100) --aluminium ore
-        elseif item == 685 then player:addExp(200) --khroma ore
-        elseif item == 737 then player:addExp(100) --gold ore
-        elseif item == 644 then player:addExp(100) --mythril ore
-        elseif item == 738 then player:addExp(175) --platinum ore
-        elseif item == 739 then player:addExp(350) --orichalcum ore
-        elseif item == 2228 then player:addExp(400) --luminium ore
-        elseif item == 1469 then player:addExp(500) --wootz ore
-        elseif item == 1467 then player:addExp(500) --relic steel
-        elseif item == 1460 then player:addExp(750) --Koh-I-Noor
+        if item == 645 then player:addExp(150 * HELM_EXP) --darksteel ore
+        elseif item == 646 then player:addExp(250 * HELM_EXP) --adaman ore
+        elseif item == 647 then player:addExp(350 * HELM_EXP) --molybdenum ore
+        elseif item == 678 then player:addExp(140 * HELM_EXP) --aluminium ore
+        elseif item == 685 then player:addExp(200 * HELM_EXP) --khroma ore
+        elseif item == 737 then player:addExp(100 * HELM_EXP) --gold ore
+        elseif item == 644 then player:addExp(100 * HELM_EXP) --mythril ore
+        elseif item == 738 then player:addExp(175 * HELM_EXP) --platinum ore
+        elseif item == 739 then player:addExp(350 * HELM_EXP) --orichalcum ore
+        elseif item == 2228 then player:addExp(400 * HELM_EXP) --luminium ore
+        elseif item == 1469 then player:addExp(500 * HELM_EXP) --wootz ore
+        elseif item == 1467 then player:addExp(500 * HELM_EXP) --relic steel
+        elseif item == 1460 then player:addExp(750 * HELM_EXP) --Koh-I-Noor
 
 
 
 
             --HARVESTING
-        elseif item == 4386 then player:addExp(100) --king truffle
-        elseif item == 4449 then player:addExp(200) --reishi mushroom
-        elseif item == 4447 then player:addExp(150) --scream fungus
-        elseif item == 4450 then player:addExp(150) --coral fungus
+        elseif item == 4386 then player:addExp(150 * HELM_EXP) --king truffle
+        elseif item == 4449 then player:addExp(200 * HELM_EXP) --reishi mushroom
+        elseif item == 4447 then player:addExp(150 * HELM_EXP) --scream fungus
+        elseif item == 4450 then player:addExp(150 * HELM_EXP) --coral fungus
 
             --LOGGING
-        elseif item == 699 then player:addExp(100) --oak log
-        elseif item == 702 then player:addExp(150) --ebony log
-        elseif item == 701 then player:addExp(125) --rosewood log
-        elseif item == 729 then player:addExp(175) --bloodwood log
-        elseif item == 2532 then player:addExp(175) --teak log
-        elseif item == 2534 then player:addExp(200) --jacaranda log
-        elseif item == 4273 then player:addExp(150) --kitron
-        elseif item == 4274 then player:addExp(200) --persikos
-        elseif item == 1464 then player:addExp(300) --lancewood
+        elseif item == 699 then player:addExp(100 * HELM_EXP) --oak log
+        elseif item == 702 then player:addExp(150 * HELM_EXP) --ebony log
+        elseif item == 701 then player:addExp(125 * HELM_EXP) --rosewood log
+        elseif item == 729 then player:addExp(175 * HELM_EXP) --bloodwood log
+        elseif item == 2532 then player:addExp(175 * HELM_EXP) --teak log
+        elseif item == 2534 then player:addExp(200 * HELM_EXP) --jacaranda log
+        elseif item == 4273 then player:addExp(150 * HELM_EXP) --kitron
+        elseif item == 4274 then player:addExp(200 * HELM_EXP) --persikos
+        elseif item == 1464 then player:addExp(300 * HELM_EXP) --lancewood
 
             --EXCAVATION
-        elseif item == 703 then player:addExp(200) --petrified log
-        elseif item == 887 then player:addExp(150) --coral fragment
-        elseif item == 1311 then player:addExp(300) --oxblood
-        elseif item == 1312 then player:addExp(300) --angelskin
-        elseif item == 1586 then player:addExp(300) --titanicus shell
-        elseif item == 1473 then player:addExp(100) --HQ scorp shell
-        elseif item == 1771 then player:addExp(300) -- Dragonbone 
-        elseif item == 1458 then player:addExp(500) -- Mamomoth Tusk
-        elseif item == 1518 then player:addExp(500) -- Collosal Skull
-        elseif item == 1463 then player:addExp(500) -- Chronoss Tooth
-        elseif item == 883 then player:addExp(500) --  Behemoth Horn
-        elseif item == 1521 then player:addExp(500) --  Slime Juice
+        elseif item == 703 then player:addExp(200 * HELM_EXP) --petrified log
+        elseif item == 887 then player:addExp(150 * HELM_EXP) --coral fragment
+        elseif item == 1311 then player:addExp(300 * HELM_EXP) --oxblood
+        elseif item == 1312 then player:addExp(300 * HELM_EXP) --angelskin
+        elseif item == 1586 then player:addExp(300 * HELM_EXP) --titanicus shell
+        elseif item == 1473 then player:addExp(300 * HELM_EXP) --HQ scorp shell
+        elseif item == 1771 then player:addExp(300 * HELM_EXP) -- Dragonbone 
+        elseif item == 1458 then player:addExp(300 * HELM_EXP) -- Mamomoth Tusk
+        elseif item == 1518 then player:addExp(300 * HELM_EXP) -- Collosal Skull
+        elseif item == 1463 then player:addExp(300 * HELM_EXP) -- Chronoss Tooth
+        elseif item == 883 then player:addExp(300 * HELM_EXP) --  Behemoth Horn
+        elseif item == 1521 then player:addExp(300 * HELM_EXP) --  Slime Juice
+        elseif item ~= 0 then player:addExp(randomexp * HELM_EXP)
 
+        end
             local uses = (npc:getLocalVar("uses") - 1) % 4
             npc:setLocalVar("uses", uses)
             if uses == 0 then
                 movePoint(npc, zoneId, info)
-            end
+            
         end
     end
 
