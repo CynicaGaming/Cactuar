@@ -1614,10 +1614,9 @@ tpz.helm.onTrade = function(player, npc, trade, helmType, csid)
         -- success! reward item and decrement number of remaining uses on the point
         if item ~= 0 and full == 0 then
             player:addItem(item)
-            player:addExp(randomexp * HELM_EXP)
 
             --MINING
-        elseif item == 645 then player:addExp(150 * HELM_EXP) --darksteel ore
+        if item == 645 then player:addExp(150 * HELM_EXP) --darksteel ore
         elseif item == 646 then player:addExp(250 * HELM_EXP) --adaman ore
         elseif item == 647 then player:addExp(350 * HELM_EXP) --molybdenum ore
         elseif item == 678 then player:addExp(140 * HELM_EXP) --aluminium ore
@@ -1664,6 +1663,7 @@ tpz.helm.onTrade = function(player, npc, trade, helmType, csid)
         elseif item == 1463 then player:addExp(300 * HELM_EXP) -- Chronoss Tooth
         elseif item == 883 then player:addExp(300 * HELM_EXP) --  Behemoth Horn
         elseif item == 1521 then player:addExp(300 * HELM_EXP) --  Slime Juice
+        elseif item ~= 0 then player:addExp(randomexp * HELM_EXP)
 
         end
             local uses = (npc:getLocalVar("uses") - 1) % 4
