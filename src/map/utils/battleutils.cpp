@@ -5932,6 +5932,83 @@ namespace battleutils
         }
     }
 
+    	void AddTraitsSJ(CBattleEntity* PEntity, TraitList_t* traitList, uint8 level, uint8 cutoff)  //Cactuar Umeboshi "Handling for subjob traits stacking with main job."
+    {
+        CCharEntity* PChar = PEntity->objtype == TYPE_PC ? static_cast<CCharEntity*>(PEntity) : nullptr;
+
+        for (auto&& PTrait : *traitList)
+        {
+            if (level >= PTrait->getLevel() && PTrait->getLevel() > 0)
+            {
+                uint8 cutoffActual = cutoff;
+                if (PTrait->getID() == 18) // is dual wield
+                {
+                    cutoffActual = 0; // check the entire list
+                }
+
+                bool add = true;
+
+                for (uint8 j = cutoffActual; j < PEntity->TraitList.size(); ++j)
+                {
+                    CTrait* PExistingTrait = PEntity->TraitList.at(j);
+
+                    if (PExistingTrait->getID() == PTrait->getID())
+                    {
+                        // Check if we still have the merit required for this trait
+                        if (PChar)
+                        {
+                            if (PExistingTrait->getMeritID() > 0)
+                            {
+                                if (PChar->PMeritPoints->GetMerit((MERIT_TYPE)PExistingTrait->getMeritID())->count == 0)
+                                {
+                                    PEntity->delTrait(PExistingTrait);
+                                    break;
+                                }
+                                else if (PExistingTrait->getMeritID() == PTrait->getMeritID())
+                                {
+                                    add = false;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (PExistingTrait->getRank() < PTrait->getRank())
+                        {
+                            PEntity->delTrait(PExistingTrait);
+                            break;
+                        }
+                        else if (PExistingTrait->getRank() > PTrait->getRank())
+                        {
+                            add = false;
+                            break;
+                        }
+                        else if (PExistingTrait->getMod() == PTrait->getMod())
+                        {
+                            add = false;
+                            break;
+                        }
+                    }
+                }
+
+                // Don't add traits that aren't merited yet
+                if (PChar)
+                {
+                    if (PTrait->getMeritID() > 0 && PChar->PMeritPoints->GetMerit((MERIT_TYPE)PTrait->getMeritID())->count == 0)
+                    {
+                        add = false;
+                    }
+                }
+
+                if (add)
+                {
+                    PEntity->addTrait(PTrait);
+                }
+            }
+        }
+    }
+
+
+
     bool HasClaim(CBattleEntity* PEntity, CBattleEntity* PTarget)
     {
         TPZ_DEBUG_BREAK_IF(PTarget == nullptr);
