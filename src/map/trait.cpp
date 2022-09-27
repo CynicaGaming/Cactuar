@@ -100,7 +100,7 @@ namespace traits
 			    CBlueTrait* PTrait = new CBlueTrait(Sql_GetIntData(SqlHandle,0), Sql_GetIntData(SqlHandle,2));
 
 			    PTrait->setJob(JOB_BLU);
-                PTrait->setRank(1);
+                PTrait->setRank(1); //Default = 1 Cactuar Umeboshi
                 PTrait->setPoints(Sql_GetIntData(SqlHandle,1));
                 PTrait->setMod(static_cast<Mod>(Sql_GetIntData(SqlHandle,3)));
                 PTrait->setValue(Sql_GetIntData(SqlHandle,4));

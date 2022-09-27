@@ -475,14 +475,14 @@ void CalculateTraits(CCharEntity* PChar)
                             }
                             else if (PExistingTrait->getRank() > PTrait->getRank())
                             {
-                                add = false;
+                                add = true;
                                 break;
                             }
                             else
                             {
                                 if (PExistingTrait->getMod() == PTrait->getMod())
                                 {
-                                    add = false;
+                                    add = true;
                                     break;
                                 }
                             }
