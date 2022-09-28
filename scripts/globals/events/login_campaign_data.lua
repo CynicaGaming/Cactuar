@@ -15,6 +15,14 @@ local prizes =
         {
             1126, -- Beastmen's Seal
             1127, -- Kindred's Seal
+            4107, -- Earth Cluster
+            4109, -- Water Cluster
+            4106, -- Wind Cluster
+            4104, -- Fire Cluster
+            4105, -- Ice Cluster
+            4108, -- Lightning Cluster
+            4110, -- Light Cluster
+            4111, -- Dark Cluster
             -- 2955, -- Kindred's Crest
             -- 2956, -- High Kindred's Crest
             -- 2957, -- Sacred Kindred's Crest
@@ -26,8 +34,11 @@ local prizes =
         ["price"] = 100,
         ["items"] =
         {
-            17006, -- Drill Calamary
-            17007, -- Dwarf Pugil
+            1456, -- 100 Byne Bill
+            1453, -- M. Silverpiece
+            1450, -- L. Jadeshell
+            2488, -- Alexandrite
+            
         },
     },
 
@@ -53,6 +64,9 @@ local prizes =
             1420, -- Gem of the South
             1422, -- Gem of the West
             1424, -- Gem of the North
+            1850, -- First Virtue
+            1853, -- Second Virtue
+            1856, -- Third Virtue
 
     },
 },
@@ -88,6 +102,9 @@ local prizes =
             1986, -- Orchid Chip
             1987, -- Charcoal Chip
             1988, -- Magenta Chip
+            1848, -- Fourth Virtue
+            1847, -- Fifth Virtue
+            1849, -- Sixth Virtue
             3340, -- Sweet Tea
             3342, -- Savory Shank
             3344, -- Red Pondweed
@@ -127,11 +144,21 @@ local prizes =
         ["price"] = 4000,
         ["items"] =
         {
-            11403, -- Talaria
             11538, -- Nexus Cape
-            26166, -- Invisible Ring
-            26167, -- Sneak Ring
-            26169, -- Reraise Ring
+        -- 26166, -- Invisible Ring
+        -- 26167, -- Sneak Ring
+        -- 26169, -- Reraise Ring
+            10924, -- Chocobo Torque
+            10925, -- Fisher's Torque
+            10926, -- Field Torque 
+            10948, -- Carver's Torque
+            10949, -- Smith's Torque
+            10950, -- Goldsm. Torque
+            10951, -- Weaver's Torque
+            10952, -- Taner's Torque 
+            10953, -- Bone Torque 
+            10954, -- Alchemist Torque 
+            10955, -- Culin. Torque 
          -- 10050, -- ♪Tiger
          -- 10051, -- ♪Crab
          -- 10052, -- ♪Red Crab
