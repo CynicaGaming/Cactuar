@@ -3342,7 +3342,8 @@ void CheckValidEquipment(CCharEntity* PChar)
         memset(&PChar->m_TraitList, 0, sizeof(PChar->m_TraitList));
 
         battleutils::AddTraits(PChar, traits::GetTraits(PChar->GetMJob()), PChar->GetMLevel());
-        battleutils::AddTraits(PChar, traits::GetTraits(PChar->GetSJob()), PChar->GetSLevel());
+        battleutils::AddTraitsSJ(PChar, traits::GetTraits(PChar->GetSJob()), PChar->GetSLevel(), PChar->TraitList.size());
+        //battleutils::AddTraits(PChar, traits::GetTraits(PChar->GetSJob()), PChar->GetSLevel());
 
         if (PChar->GetMJob() == JOB_BLU || PChar->GetSJob() == JOB_BLU)
         {

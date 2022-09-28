@@ -247,6 +247,7 @@ namespace battleutils
     void                DoWildCardToEntity(CCharEntity* PCaster, CCharEntity* PTarget, uint8 roll);
     bool                DoRandomDealToEntity(CCharEntity* PChar, CCharEntity* PTarget);
     void                AddTraits(CBattleEntity* PEntity, TraitList_t* TraitList, uint8 level);
+    void                AddTraitsSJ(CBattleEntity* PEntity, TraitList_t* traitList, uint8 level, uint8 cutoff); //Cactuar Umeboshi
     bool                HasClaim(CBattleEntity* PEntity, CBattleEntity* PTarget);
 
     uint32              CalculateSpellCastTime(CBattleEntity*, CMagicState*);
