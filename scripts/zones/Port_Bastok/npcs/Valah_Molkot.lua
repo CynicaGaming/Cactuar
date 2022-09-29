@@ -72,9 +72,9 @@ function onEventFinish(player, csid, option)
         player:completeQuest(BASTOK, tpz.quest.id.bastok.A_LADY_S_HEART)
         player:addFame(BASTOK, 120)
         player:moghouseFlag(2)
+        player:addExp(EXP_RATE_QUEST*500)
         player:messageSpecial(ID.text.MOGHOUSE_EXIT)
     elseif (csid == 160 and option == 10) then
         player:addQuest(BASTOK, tpz.quest.id.bastok.A_LADY_S_HEART)
-        player:addExp(EXP_RATE_QUEST*500)
     end
 end
