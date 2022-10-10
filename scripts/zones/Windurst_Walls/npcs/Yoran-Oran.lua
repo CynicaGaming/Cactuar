@@ -106,7 +106,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 253 then
         npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.MANDRAGORA_MAD, { fame = 60 })
         player:addGil(GIL_RATE*1200)
-        player:addExp(EXP_RATE_QUEST*200)
+        player:addExp(EXP_RATE_QUEST*75)
         player:confirmTrade()
     elseif csid == 254 then
         npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.MANDRAGORA_MAD, { fame = 18 })
@@ -116,7 +116,7 @@ function onEventFinish(player, csid, option)
     elseif csid == 255 then
         npcUtil.completeQuest(player, WINDURST, tpz.quest.id.windurst.MANDRAGORA_MAD, { fame = 80 })
         player:addGil(GIL_RATE*5500)
-        player:addExp(EXP_RATE_QUEST*175)
+        player:addExp(EXP_RATE_QUEST*125)
         player:confirmTrade()
     end
 end

@@ -164,6 +164,7 @@ src/common/stamp-h1
 navmeshes/*.nav
 tags
 log/tpz.leaks
+log/*
 
 # Lua Developement Tools project files
 .metadata/**
@@ -219,3 +220,6 @@ libzmq-d.dll
 lua51.dll
 /conf/default
 /conf/old-login.conf
+
+#Data Files
+scripts/globals/events/login_campaign_data.lua

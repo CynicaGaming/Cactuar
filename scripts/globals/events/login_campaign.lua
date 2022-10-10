@@ -15,12 +15,12 @@ tpz.events.loginCampaign = tpz.events.loginCampaign or {}
 -- Change vars below to modify settings for current login campaign
 -- NOTE: the year and month values are used in the Moogle's Event!
 local loginCampaignYear = 2022
-local loginCampaignMonth = 8
+local loginCampaignMonth = 9
 local loginCampaignDay = 10
-local loginCampaignDuration = 23 -- Duration is set in Earth days (Average is 23 days)
+local loginCampaignDuration = 21 -- Duration is set in Earth days (Average is 23 days)
 
 -- Checks if a Login Campaign is active.
-function isStarlightEnabled()
+function isLoginCampaignEnabled()
     local option = 0
     if (LOGIN_CAMPAIGN == 1) then
         option = 1
@@ -28,11 +28,30 @@ function isStarlightEnabled()
     return option
 end
 
+local contentEnabled = isLoginCampaignEnabled()
+
+tpz.events.loginCampaign.isCampaignActive = function()
+    if (contentEnabled == 1) then
+        local localUtcOffset = os.time() - os.time(os.date('!*t'))
+        local jstUtcOffset = 9 * 60 * 60
+        local campaignStartDate = os.time({
+            year = loginCampaignYear,
+            month = loginCampaignMonth,
+            day = loginCampaignDay,
+            hour = 0,
+            min = 0,
+            sec = 0
+        }) + localUtcOffset + jstUtcOffset
+        local campaignEndDate = campaignStartDate + loginCampaignDuration * 24 * 60 * 60
+
+        if os.time() < campaignEndDate and os.time() > campaignStartDate then
+            return true
+        end
+    end
+end
 -- Gives Login Points once a day.
 tpz.events.loginCampaign.onGameIn = function(player)
-    local contentEnabled = isStarlightEnabled()
-
-    if (contentEnabled == 0) then
+    if not tpz.events.loginCampaign.isCampaignActive() then
         -- TODO: What do the moogles do when the campaign isn't active?
         return
     end
@@ -85,9 +104,7 @@ end
 -- Beginning of CS with Greeter Moogle.
 -- Handles showing the correct list of prices and hiding the options that are not available
 tpz.events.loginCampaign.onTrigger = function(player, csid)
-    local contentEnabled = isStarlightEnabled()
-
-    if (contentEnabled == 0) then
+    if not tpz.events.loginCampaign.isCampaignActive() then
         -- TODO: What do the moogles do when the campaign isn't active?
         return
     end
@@ -136,9 +153,7 @@ end
 -- Shows list of items depending on option selected.
 -- It also is in charge of purchasing selected item.
 tpz.events.loginCampaign.onEventUpdate = function(player, csid, option)
-    local contentEnabled = isStarlightEnabled()
-
-    if (contentEnabled == 0) then
+    if not tpz.events.loginCampaign.isCampaignActive() then
         -- TODO: What do the moogles do when the campaign isn't active?
         return
     end
