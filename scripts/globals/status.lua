@@ -1776,6 +1776,8 @@ tpz.mod =
     PENGUIN_RING_EFFECT = 1000,     -- +2 on fishing arrow delay / fish movement for mini - game
     ALBATROSS_RING_EFFECT = 1001,   -- adds 30 seconds to mini - game time
     PELICAN_RING_EFFECT = 1002,      -- adds extra skillup roll for fishing
+    FISHING_SKILL_GAIN = 155,     -- food for fishing skill ups
+
 
     VERMIN_CIRCLE = 1224,
     BIRD_CIRCLE = 1225,

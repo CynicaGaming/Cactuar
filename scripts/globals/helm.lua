@@ -954,6 +954,8 @@ local helmInfo =
                     {  120,  644}, -- Mythril Ore 80
                     {  100,  737}, -- Gold Ore 70
                     {  100,  738}, -- Platium Ore 70
+                    { 400,   769}, -- Colored Rock
+
                 },
                 points =
                 {
@@ -971,7 +973,7 @@ local helmInfo =
                     { -27.353,  11.397, -141.638}, -- {R}I-11
                     { -26.393,  11.359, -141.096},
                 },
-                eleChance = 5, --Default: 15
+                eleChance = 15, --Default: 15
 				eleWeak1 = 5, -- lightning
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -992,8 +994,8 @@ local helmInfo =
                     { 140,  737}, -- Gold Ore
                     { 340,  738}, -- Platium Ore
                     {  70,  769}, -- Colored Rock
-                    { 50,   1469}, -- Wootz Ore
-                    { 55,   1467}, -- Relic Steel
+                    { 50,  1469}, -- Wootz Ore
+                    { 55,  1467}, -- Relic Steel
                     { 5,   1460}, -- Koh-I-Noor
 
 
@@ -1011,7 +1013,7 @@ local helmInfo =
                     {  69.433,  19.221,  185.247}, -- {R}I-6
                     { 109.614,  19.689, -104.522}, -- {R}I-10
                 },
-                eleChance = 7, --Default:15
+                eleChance = 15, --Default:15
 				eleWeak1 = 1, -- earth
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -1034,9 +1036,10 @@ local helmInfo =
                     { 210,  902}, -- Demon Horn
                     { 140,  646}, -- Adaman Ore
                     {  50,  685}, -- Khroma Ore 30
-                    { 70,   1469}, -- Wootz Ore +
-                    { 90,   1467}, -- Relic Steel
-
+                    { 70,  1469}, -- Wootz Ore +
+                    { 2,   1467}, -- Relic Steel
+                    { 90,  1466}, -- Relic Iron
+                    { 400,  769}, -- Colored Rock
 
                 },
                 points =
@@ -1064,7 +1067,7 @@ local helmInfo =
                     { 775.692, -16.750,  163.576},
                     { 783.844, -15.593,  172.404},
                 },
-				eleChance = 8, --Default: 17
+				eleChance = 17, --Default: 17
 				eleWeak1 = 3, -- wind
 				eleWeak2 = 6, -- light
 				eleStrong = 7, -- dark
@@ -1088,8 +1091,9 @@ local helmInfo =
                     { 480, 2160}, -- Troll Pauldron
                     { 330, 2161}, -- Troll Vambrace
                     { 70,   1469}, -- Wootz Ore
-                    { 75,   1467}, -- Relic Steel
-
+                    { 2,   1467}, -- Relic Steel
+                    { 75,   1466}, -- Relic Iron
+                    { 400,   769}, -- Colored Rock
 
                 },
                 points =
@@ -1115,7 +1119,7 @@ local helmInfo =
                     { 269.172,   3.433,  228.107}, -- {R}K-6
                     { 270.880,   2.490,  226.690},
                 },
-                eleChance = 9, --Default: 16
+                eleChance = 16, --Default: 16
 				eleWeak1 = 4, -- ice
 				eleWeak2 = 2, -- water
 				eleStrong = 3, -- wind
@@ -1137,8 +1141,9 @@ local helmInfo =
                     {  50,  1631}, -- Moblin Armor
                     { 160,   738}, -- Platium Ore
                     { 75,   1469}, -- Wootz Ore
-                    { 50,   1467}, -- Relic Steel
-
+                    { 3,    1467}, -- Relic Steel
+                    { 50,   1466}, -- Relic Iron
+                    { 400,   769}, -- Colored Rock
                 },
                 points =
                 {
@@ -1172,7 +1177,7 @@ local helmInfo =
                     { 376.297, -31.999, 1100.808},
                     { 394.958, -20.922,  458.055},
                 },
-                eleChance = 3, --Default: 2
+                eleChance = 2, --Default: 2
 				eleWeak1 = 4, -- ice
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -1229,7 +1234,7 @@ local helmInfo =
                     { 330.931, -24.900,  239.451},
                     { 363.273, -24.758,  164.485},
                 },
-                eleChance = 2, --Default: 14
+                eleChance = 14, --Default: 14
 				eleWeak1 = 0, -- fire
 				eleWeak2 = 1, -- earth
 				eleStrong = 5, -- lightning
@@ -1246,6 +1251,7 @@ local helmInfo =
                     { 900,   736}, -- Silver Ore
                     { 800,   640}, -- Copper Ore
                     { 100,   738}, -- Platinum Ore
+                    { 400,   769}, -- Colored Rock
                 },
                 points =
                 {
@@ -1271,7 +1277,7 @@ local helmInfo =
                     { 290.244, -15.718,  104.856},
                     { 306.015, -16.275,   49.876},
                 },
-                eleChance = 5, --Default: 16
+                eleChance = 16, --Default: 16
 				eleWeak1 = 6, -- light
 				eleWeak2 = 5, -- lightning
 				eleStrong = 4, -- ice
@@ -1288,6 +1294,7 @@ local helmInfo =
                     { 550,  1984}, -- Snapping Mole
                     { 180,   736}, -- Silver Ore
                     {  40,   645}, -- Darksteel Ore
+                    { 400,   769}, -- Colored Rock
                 },
                 points =
                 {
@@ -1356,7 +1363,7 @@ local helmInfo =
                     { 145.349, -40.450,   24.710}, -- {R}I-8
                     { 155.746, -20.678,  216.857}, -- {R}I-9
                 },
-                eleChance = 6, --Default:17
+                eleChance = 17, --Default:17
 				eleWeak1 = 7, -- dark
 				eleWeak2 = 3, -- wind
 				eleStrong = 1, -- earth
@@ -1403,7 +1410,7 @@ local helmInfo =
                     {  96.820,   8.636,  141.280}, -- Map 7 K-4 -- {R}K-4
                     { 139.082,   3.224,  -61.040}, -- Map 1 G-8
                 },
-                eleChance = 8, --Default: 21
+                eleChance = 21, --Default: 21
 				eleWeak1 = 4, -- ice
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -1608,6 +1615,11 @@ tpz.helm.onTrade = function(player, npc, trade, helmType, csid)
         local item  = pickItem(player, info)
         local broke = doesToolBreak(player, info) and 1 or 0
         local full  = (player:getFreeSlotsCount() == 0) and 1 or 0
+
+        if (item ~= 0 and helmType == 4 and tryEleOre(info, zoneId) == 1) then -- if helmtype is mining and we succeeded at the ele ore roll
+			item = setEleOre(VanadielDayElement())
+		end
+
         player:startEvent(csid, item, broke, full)
         player:sendEmote(npc, info.animation, tpz.emoteMode.MOTION)
 
@@ -1627,6 +1639,7 @@ tpz.helm.onTrade = function(player, npc, trade, helmType, csid)
         elseif item == 739 then player:addExp(350 * HELM_EXP) --orichalcum ore
         elseif item == 2228 then player:addExp(400 * HELM_EXP) --luminium ore
         elseif item == 1469 then player:addExp(500 * HELM_EXP) --wootz ore
+        elseif item == 1466 then player:addExp(500 * HELM_EXP) --relic iron
         elseif item == 1467 then player:addExp(500 * HELM_EXP) --relic steel
         elseif item == 1460 then player:addExp(750 * HELM_EXP) --Koh-I-Noor
 

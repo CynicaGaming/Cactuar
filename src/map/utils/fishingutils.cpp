@@ -1,4 +1,4 @@
-/*
+﻿/*
 ===========================================================================
 
   Copyright (c) 2010-2015 Darkstar Dev Teams
@@ -893,6 +893,14 @@ namespace fishingutils
 
         // Minimum 4% chance
         maxChance = std::max(4, distMod + lowerLevelBonus - skillLevelPenalty);
+
+        // Configuration multiplier.
+        maxChance = maxChance * (map_config.fishing_skill_multiplier);
+
+        // Mod bonus (Example: Fisherman's Feast)
+        maxChance = maxChance * ((100.f + PChar->getMod(Mod::FISHING_SKILL_GAIN)) / 100.f);
+        //int16 modFISHING_SKILL_GAIN = PChar->getMod(Mod::FISHING_SKILL_GAIN);
+        //maxChance += (double)modFISHING_SKILL_GAIN * 0.01;
 
         // Moon phase skillup modifiers
         uint8 phase = CVanaTime::getInstance()->getMoonPhase();

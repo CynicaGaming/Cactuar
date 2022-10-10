@@ -6040,7 +6040,7 @@ INSERT INTO `item_basic` VALUES(6377, 0, 'imperial_chair_set', 'imperial_chair',
 INSERT INTO `item_basic` VALUES(6378, 0, 'decorative_chair_set', 'decorative_chair', 1, 63048, 0, 0, 0);
 INSERT INTO `item_basic` VALUES(6379, 0, 'ornate_stool_set', 'ornate_stool', 1, 63048, 0, 0, 0);
 INSERT INTO `item_basic` VALUES(6380, 0, 'refined_chair_set', 'refined_chair', 1, 63048, 0, 0, 0);
-INSERT INTO `item_basic` VALUES(6381, 0, 'fishermans_feast', 'fishermans_feast', 12, 1548, 66, 0, 0);
+INSERT INTO `item_basic` VALUES(6381, 0, 'fishermans_feast', 'fishermans_feast', 12, 1548, 66, 0, 765);
 INSERT INTO `item_basic` VALUES(6382, 0, 'garbage_gels_coffer', 'garbages_coffer', 99, 30288, 0, 0, 0);
 INSERT INTO `item_basic` VALUES(6383, 0, 'bakunawas_coffer', 'bakunawas_coffer', 99, 30288, 0, 0, 0);
 INSERT INTO `item_basic` VALUES(6384, 0, 'azure-toothed_clawberrys_coffer', 'clawberrys_coffer', 99, 30288, 0, 0, 0);

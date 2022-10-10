@@ -41,7 +41,6 @@ CREATE TABLE `item_usable` (
   `reuseDelay` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `aoe` tinyint(1) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 CHECKSUM=1 PACK_KEYS=1;
-
 --
 -- Dumping data for table `item_usable`
 --
@@ -2260,8 +2259,7 @@ INSERT INTO `item_usable` VALUES(18464, 'ark_tachi', 1, 1, 0, 4, 1, 30, 3600, 0)
 INSERT INTO `item_usable` VALUES(18563, 'ark_scythe', 1, 1, 0, 4, 1, 30, 3600, 0);
 INSERT INTO `item_usable` VALUES(18912, 'ark_saber', 1, 1, 0, 4, 1, 30, 3600, 0);
 INSERT INTO `item_usable` VALUES(18545, 'ark_taber', 1, 1, 0, 4, 1, 30, 3600, 0);
-
-
+INSERT INTO `item_usable` VALUES(6381, 'fishermans_feast', 1, 1, 25, 0, 0, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
