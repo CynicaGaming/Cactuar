@@ -954,6 +954,8 @@ local helmInfo =
                     {  120,  644}, -- Mythril Ore 80
                     {  100,  737}, -- Gold Ore 70
                     {  100,  738}, -- Platium Ore 70
+                    { 400,   769}, -- Colored Rock
+
                 },
                 points =
                 {
@@ -971,7 +973,7 @@ local helmInfo =
                     { -27.353,  11.397, -141.638}, -- {R}I-11
                     { -26.393,  11.359, -141.096},
                 },
-                eleChance = 5, --Default: 15
+                eleChance = 15, --Default: 15
 				eleWeak1 = 5, -- lightning
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -992,8 +994,8 @@ local helmInfo =
                     { 140,  737}, -- Gold Ore
                     { 340,  738}, -- Platium Ore
                     {  70,  769}, -- Colored Rock
-                    { 50,   1469}, -- Wootz Ore
-                    { 55,   1467}, -- Relic Steel
+                    { 50,  1469}, -- Wootz Ore
+                    { 55,  1467}, -- Relic Steel
                     { 5,   1460}, -- Koh-I-Noor
 
 
@@ -1011,7 +1013,7 @@ local helmInfo =
                     {  69.433,  19.221,  185.247}, -- {R}I-6
                     { 109.614,  19.689, -104.522}, -- {R}I-10
                 },
-                eleChance = 7, --Default:15
+                eleChance = 15, --Default:15
 				eleWeak1 = 1, -- earth
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -1034,9 +1036,10 @@ local helmInfo =
                     { 210,  902}, -- Demon Horn
                     { 140,  646}, -- Adaman Ore
                     {  50,  685}, -- Khroma Ore 30
-                    { 70,   1469}, -- Wootz Ore +
-                    { 90,   1467}, -- Relic Steel
-
+                    { 70,  1469}, -- Wootz Ore +
+                    { 2,   1467}, -- Relic Steel
+                    { 90,  1466}, -- Relic Iron
+                    { 400,  769}, -- Colored Rock
 
                 },
                 points =
@@ -1064,7 +1067,7 @@ local helmInfo =
                     { 775.692, -16.750,  163.576},
                     { 783.844, -15.593,  172.404},
                 },
-				eleChance = 8, --Default: 17
+				eleChance = 17, --Default: 17
 				eleWeak1 = 3, -- wind
 				eleWeak2 = 6, -- light
 				eleStrong = 7, -- dark
@@ -1088,8 +1091,9 @@ local helmInfo =
                     { 480, 2160}, -- Troll Pauldron
                     { 330, 2161}, -- Troll Vambrace
                     { 70,   1469}, -- Wootz Ore
-                    { 75,   1467}, -- Relic Steel
-
+                    { 2,   1467}, -- Relic Steel
+                    { 75,   1466}, -- Relic Iron
+                    { 400,   769}, -- Colored Rock
 
                 },
                 points =
@@ -1115,7 +1119,7 @@ local helmInfo =
                     { 269.172,   3.433,  228.107}, -- {R}K-6
                     { 270.880,   2.490,  226.690},
                 },
-                eleChance = 9, --Default: 16
+                eleChance = 16, --Default: 16
 				eleWeak1 = 4, -- ice
 				eleWeak2 = 2, -- water
 				eleStrong = 3, -- wind
@@ -1137,8 +1141,9 @@ local helmInfo =
                     {  50,  1631}, -- Moblin Armor
                     { 160,   738}, -- Platium Ore
                     { 75,   1469}, -- Wootz Ore
-                    { 50,   1467}, -- Relic Steel
-
+                    { 3,    1467}, -- Relic Steel
+                    { 50,   1466}, -- Relic Iron
+                    { 400,   769}, -- Colored Rock
                 },
                 points =
                 {
@@ -1172,7 +1177,7 @@ local helmInfo =
                     { 376.297, -31.999, 1100.808},
                     { 394.958, -20.922,  458.055},
                 },
-                eleChance = 3, --Default: 2
+                eleChance = 2, --Default: 2
 				eleWeak1 = 4, -- ice
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -1229,7 +1234,7 @@ local helmInfo =
                     { 330.931, -24.900,  239.451},
                     { 363.273, -24.758,  164.485},
                 },
-                eleChance = 2, --Default: 14
+                eleChance = 14, --Default: 14
 				eleWeak1 = 0, -- fire
 				eleWeak2 = 1, -- earth
 				eleStrong = 5, -- lightning
@@ -1246,6 +1251,7 @@ local helmInfo =
                     { 900,   736}, -- Silver Ore
                     { 800,   640}, -- Copper Ore
                     { 100,   738}, -- Platinum Ore
+                    { 400,   769}, -- Colored Rock
                 },
                 points =
                 {
@@ -1271,7 +1277,7 @@ local helmInfo =
                     { 290.244, -15.718,  104.856},
                     { 306.015, -16.275,   49.876},
                 },
-                eleChance = 5, --Default: 16
+                eleChance = 16, --Default: 16
 				eleWeak1 = 6, -- light
 				eleWeak2 = 5, -- lightning
 				eleStrong = 4, -- ice
@@ -1288,6 +1294,7 @@ local helmInfo =
                     { 550,  1984}, -- Snapping Mole
                     { 180,   736}, -- Silver Ore
                     {  40,   645}, -- Darksteel Ore
+                    { 400,   769}, -- Colored Rock
                 },
                 points =
                 {
@@ -1356,7 +1363,7 @@ local helmInfo =
                     { 145.349, -40.450,   24.710}, -- {R}I-8
                     { 155.746, -20.678,  216.857}, -- {R}I-9
                 },
-                eleChance = 6, --Default:17
+                eleChance = 17, --Default:17
 				eleWeak1 = 7, -- dark
 				eleWeak2 = 3, -- wind
 				eleStrong = 1, -- earth
@@ -1403,7 +1410,7 @@ local helmInfo =
                     {  96.820,   8.636,  141.280}, -- Map 7 K-4 -- {R}K-4
                     { 139.082,   3.224,  -61.040}, -- Map 1 G-8
                 },
-                eleChance = 8, --Default: 21
+                eleChance = 21, --Default: 21
 				eleWeak1 = 4, -- ice
 				eleWeak2 = 2, -- water
 				eleStrong = 0, -- fire
@@ -1601,75 +1608,82 @@ tpz.helm.onTrade = function(player, npc, trade, helmType, csid)
     local info = helmInfo[helmType]
     local zoneId = player:getZoneID()
     local regionId = player:getCurrentRegion()
-    local randomexp = math.random(25, 75)
+    local randomexp = math.random(25, 46)
 
     if trade:hasItemQty(info.tool, 1) and trade:getItemCount() == 1 then
         -- start event
         local item  = pickItem(player, info)
         local broke = doesToolBreak(player, info) and 1 or 0
         local full  = (player:getFreeSlotsCount() == 0) and 1 or 0
+
+        if (item ~= 0 and helmType == 4 and tryEleOre(info, zoneId) == 1) then -- if helmtype is mining and we succeeded at the ele ore roll
+			item = setEleOre(VanadielDayElement())
+		end
+
         player:startEvent(csid, item, broke, full)
         player:sendEmote(npc, info.animation, tpz.emoteMode.MOTION)
 
         -- success! reward item and decrement number of remaining uses on the point
         if item ~= 0 and full == 0 then
             player:addItem(item)
-            player:addExp(randomexp)
 
             --MINING
-        if item == 645 then player:addExp(175) --darksteel ore
-        elseif item == 646 then player:addExp(250) --adaman ore
-        elseif item == 647 then player:addExp(350) --molybdenum ore
-        elseif item == 678 then player:addExp(100) --aluminium ore
-        elseif item == 685 then player:addExp(200) --khroma ore
-        elseif item == 737 then player:addExp(100) --gold ore
-        elseif item == 644 then player:addExp(100) --mythril ore
-        elseif item == 738 then player:addExp(175) --platinum ore
-        elseif item == 739 then player:addExp(350) --orichalcum ore
-        elseif item == 2228 then player:addExp(400) --luminium ore
-        elseif item == 1469 then player:addExp(500) --wootz ore
-        elseif item == 1467 then player:addExp(500) --relic steel
-        elseif item == 1460 then player:addExp(750) --Koh-I-Noor
+        if item == 645 then player:addExp(150 * HELM_EXP) --darksteel ore
+        elseif item == 646 then player:addExp(250 * HELM_EXP) --adaman ore
+        elseif item == 647 then player:addExp(350 * HELM_EXP) --molybdenum ore
+        elseif item == 678 then player:addExp(140 * HELM_EXP) --aluminium ore
+        elseif item == 685 then player:addExp(200 * HELM_EXP) --khroma ore
+        elseif item == 737 then player:addExp(100 * HELM_EXP) --gold ore
+        elseif item == 644 then player:addExp(100 * HELM_EXP) --mythril ore
+        elseif item == 738 then player:addExp(175 * HELM_EXP) --platinum ore
+        elseif item == 739 then player:addExp(350 * HELM_EXP) --orichalcum ore
+        elseif item == 2228 then player:addExp(400 * HELM_EXP) --luminium ore
+        elseif item == 1469 then player:addExp(500 * HELM_EXP) --wootz ore
+        elseif item == 1466 then player:addExp(500 * HELM_EXP) --relic iron
+        elseif item == 1467 then player:addExp(500 * HELM_EXP) --relic steel
+        elseif item == 1460 then player:addExp(750 * HELM_EXP) --Koh-I-Noor
 
 
 
 
             --HARVESTING
-        elseif item == 4386 then player:addExp(100) --king truffle
-        elseif item == 4449 then player:addExp(200) --reishi mushroom
-        elseif item == 4447 then player:addExp(150) --scream fungus
-        elseif item == 4450 then player:addExp(150) --coral fungus
+        elseif item == 4386 then player:addExp(150 * HELM_EXP) --king truffle
+        elseif item == 4449 then player:addExp(200 * HELM_EXP) --reishi mushroom
+        elseif item == 4447 then player:addExp(150 * HELM_EXP) --scream fungus
+        elseif item == 4450 then player:addExp(150 * HELM_EXP) --coral fungus
 
             --LOGGING
-        elseif item == 699 then player:addExp(100) --oak log
-        elseif item == 702 then player:addExp(150) --ebony log
-        elseif item == 701 then player:addExp(125) --rosewood log
-        elseif item == 729 then player:addExp(175) --bloodwood log
-        elseif item == 2532 then player:addExp(175) --teak log
-        elseif item == 2534 then player:addExp(200) --jacaranda log
-        elseif item == 4273 then player:addExp(150) --kitron
-        elseif item == 4274 then player:addExp(200) --persikos
-        elseif item == 1464 then player:addExp(300) --lancewood
+        elseif item == 699 then player:addExp(100 * HELM_EXP) --oak log
+        elseif item == 702 then player:addExp(150 * HELM_EXP) --ebony log
+        elseif item == 701 then player:addExp(125 * HELM_EXP) --rosewood log
+        elseif item == 729 then player:addExp(175 * HELM_EXP) --bloodwood log
+        elseif item == 2532 then player:addExp(175 * HELM_EXP) --teak log
+        elseif item == 2534 then player:addExp(200 * HELM_EXP) --jacaranda log
+        elseif item == 4273 then player:addExp(150 * HELM_EXP) --kitron
+        elseif item == 4274 then player:addExp(200 * HELM_EXP) --persikos
+        elseif item == 1464 then player:addExp(300 * HELM_EXP) --lancewood
 
             --EXCAVATION
-        elseif item == 703 then player:addExp(200) --petrified log
-        elseif item == 887 then player:addExp(150) --coral fragment
-        elseif item == 1311 then player:addExp(300) --oxblood
-        elseif item == 1312 then player:addExp(300) --angelskin
-        elseif item == 1586 then player:addExp(300) --titanicus shell
-        elseif item == 1473 then player:addExp(100) --HQ scorp shell
-        elseif item == 1771 then player:addExp(300) -- Dragonbone 
-        elseif item == 1458 then player:addExp(500) -- Mamomoth Tusk
-        elseif item == 1518 then player:addExp(500) -- Collosal Skull
-        elseif item == 1463 then player:addExp(500) -- Chronoss Tooth
-        elseif item == 883 then player:addExp(500) --  Behemoth Horn
-        elseif item == 1521 then player:addExp(500) --  Slime Juice
+        elseif item == 703 then player:addExp(200 * HELM_EXP) --petrified log
+        elseif item == 887 then player:addExp(150 * HELM_EXP) --coral fragment
+        elseif item == 1311 then player:addExp(300 * HELM_EXP) --oxblood
+        elseif item == 1312 then player:addExp(300 * HELM_EXP) --angelskin
+        elseif item == 1586 then player:addExp(300 * HELM_EXP) --titanicus shell
+        elseif item == 1473 then player:addExp(300 * HELM_EXP) --HQ scorp shell
+        elseif item == 1771 then player:addExp(300 * HELM_EXP) -- Dragonbone 
+        elseif item == 1458 then player:addExp(300 * HELM_EXP) -- Mamomoth Tusk
+        elseif item == 1518 then player:addExp(300 * HELM_EXP) -- Collosal Skull
+        elseif item == 1463 then player:addExp(300 * HELM_EXP) -- Chronoss Tooth
+        elseif item == 883 then player:addExp(300 * HELM_EXP) --  Behemoth Horn
+        elseif item == 1521 then player:addExp(300 * HELM_EXP) --  Slime Juice
+        elseif item ~= 0 then player:addExp(randomexp * HELM_EXP)
 
+        end
             local uses = (npc:getLocalVar("uses") - 1) % 4
             npc:setLocalVar("uses", uses)
             if uses == 0 then
                 movePoint(npc, zoneId, info)
-            end
+            
         end
     end
 

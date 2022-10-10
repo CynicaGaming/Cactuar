@@ -2708,6 +2708,7 @@ int32 map_config_default()
     map_config.mob_speed_mod = 0;
     map_config.skillup_chance_multiplier = 1.0f;
     map_config.craft_chance_multiplier = 1.0f;
+    map_config.fishing_skill_multiplier = 1.0f;
     map_config.skillup_amount_multiplier = 1;
     map_config.craft_amount_multiplier = 1;
     map_config.garden_day_matters = false;
@@ -3403,6 +3404,10 @@ int32 map_config_read(const int8* cfgName)
             else if (strcmp(w1, "adventuring_fellow_dualwield") == 0)
             {
                 map_config.adventuring_fellow_dualwield = atoi(w2);
+            }
+            else if (strcmp(w1, "fishing_skill_multiplier") == 0)
+            {
+                map_config.fishing_skill_multiplier = atoi(w2);
             }
             else
             {
