@@ -20,6 +20,7 @@ function onTrade(player, npc, trade)
    local count = trade:getItemCount()
    local buying = false
    local exchange = {}
+   local quantity = 1
    local gil = trade:getGil()
 
    if player:hasKeyItem(tpz.ki.VIAL_OF_SHROUDED_SAND) == true then
@@ -39,27 +40,38 @@ function onTrade(player, npc, trade)
             player:startEvent(58, 1451, 1450, CURRENCY_EXCHANGE_RATE)
 
          -- Currency Shop
+         elseif (count == 1 and trade:hasItemQty(1450, 1)) then -- T. Whiteshell (1449)
+            buying = true
+            exchange = {1, 1449}
+            quantity = 100
          elseif (count == 7 and trade:hasItemQty(1450, 7)) then -- Angel Skin (1312)
             buying = true
             exchange = {7, 1312}
+            quantity = 1
          elseif (count == 23 and trade:hasItemQty(1450, 23)) then -- Chronos Tooth (1463)
             buying = true
             exchange = {23,1463}
+            quantity = 1
          elseif (count == 8 and trade:hasItemQty(1450, 8)) then -- Colossal Skull (1518)
             buying = true
             exchange = {8, 1518}
+            quantity = 1
          elseif (count == 28 and trade:hasItemQty(1450, 28)) then -- Damascus Ingot (658)
             buying = true
             exchange = {28, 658}
+            quantity = 1
          elseif (count == 9 and trade:hasItemQty(1450, 9)) then -- Lancewood Log (1464)
             buying = true
             exchange = {9, 1464}
+            quantity = 1
          elseif (count == 25 and trade:hasItemQty(1450, 25)) then -- Lancewood Lumber (1462)
             buying = true
             exchange = {25, 1462}
+            quantity = 1
          elseif (count == 24 and trade:hasItemQty(1450, 24)) then -- Relic Steel (1467)
             buying = true
             exchange = {24, 1467}
+            quantity = 1
          end
       end
    end
@@ -72,7 +84,7 @@ function onTrade(player, npc, trade)
       else
          player:startEvent(57, 1450, exchange[1], exchange[2])
          player:tradeComplete()
-         player:addItem(exchange[2])
+         player:addItem(exchange[2], quantity)
          player:messageSpecial(ID.text.ITEM_OBTAINED, exchange[2])
       end
    end
