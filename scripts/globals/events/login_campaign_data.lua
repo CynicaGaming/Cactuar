@@ -34,6 +34,7 @@ local prizes =
         ["price"] = 100,
         ["items"] =
         {
+            4176, -- Mysterious Gift
             1456, -- 100 Byne Bill
             1453, -- M. Silverpiece
             1450, -- L. Jadeshell
@@ -145,6 +146,7 @@ local prizes =
         ["items"] =
         {
             11538, -- Nexus Cape
+            15554, -- Pelican Ring
         -- 26166, -- Invisible Ring
         -- 26167, -- Sneak Ring
         -- 26169, -- Reraise Ring
