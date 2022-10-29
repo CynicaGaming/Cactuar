@@ -1,7 +1,7 @@
 -----------------------------------------
--- ID: 18385
--- Item: Algol
--- Additional Effect: Fire Damage
+-- ID: 17434
+-- Item: Holy Wand +1
+-- Additional Effect: Light Damage
 -----------------------------------------
 require("scripts/globals/status")
 require("scripts/globals/magic")
@@ -9,28 +9,28 @@ require("scripts/globals/msg")
 -----------------------------------
 
 function onAdditionalEffect(player, target, damage)
-    local chance = 30
-
-    if VanadielDayOfTheWeek() == tpz.day.FIRESDAY then
+    local chance = 15
+    
+    if VanadielDayOfTheWeek() == tpz.day.LIGHTSDAY then
         chance = chance+6
     end
 
-    if player:getWeather() == tpz.weather.HOT_SPELL then
+    if player:getWeather() == tpz.weather.AURORAS  then
         chance = chance+4
-    elseif player:getWeather() == tpz.weather.HEAT_WAVE then
+    elseif player:getWeather() == tpz.weather.STELLAR_GLARE then
         chance = chance+6
     end
     if (math.random(0, 99) >= chance) then
         return 0, 0, 0
     else
-        local dmg = math.random(23, 35)
+        local dmg = math.random(18, 39)
         local params = {}
         params.bonusmab = 0
         params.includemab = false
-        dmg = addBonusesAbility(player, tpz.magic.ele.FIRE, target, dmg, params)
-        dmg = dmg * applyResistanceAddEffect(player, target, tpz.magic.ele.FIRE, 0)
-        dmg = adjustForTarget(target, dmg, tpz.magic.ele.FIRE)
-        dmg = finalMagicNonSpellAdjustments(player, target, tpz.magic.ele.FIRE, dmg)
+        dmg = addBonusesAbility(player, tpz.magic.ele.LIGHT, target, dmg, params)
+        dmg = dmg * applyResistanceAddEffect(player, target, tpz.magic.ele.LIGHT, 0)
+        dmg = adjustForTarget(target, dmg, tpz.magic.ele.LIGHT)
+        dmg = finalMagicNonSpellAdjustments(player, target, tpz.magic.ele.LIGHT, dmg)
 
         local message = tpz.msg.basic.ADD_EFFECT_DMG
         if (dmg < 0) then
@@ -38,6 +38,6 @@ function onAdditionalEffect(player, target, damage)
             dmg = -dmg
         end
 
-        return tpz.subEffect.FIRE_DAMAGE, message, dmg
+        return tpz.subEffect.LIGHT_DAMAGE, message, dmg
     end
 end

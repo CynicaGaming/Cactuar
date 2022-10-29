@@ -9,7 +9,7 @@ require("scripts/globals/magic")
 require("scripts/globals/msg")
 -----------------------------------
 function onAdditionalEffect(player,target,damage)
-    local chance = 10
+    local chance = 15
 
 	if math.random(100) >= chance or target:getSystem() ~= tpz.ecosystem.PLANTOID then
         return 0,0,0

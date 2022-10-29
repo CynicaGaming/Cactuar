@@ -1,6 +1,6 @@
 -----------------------------------------
--- ID: 18762
--- Item: Custodes
+-- ID: 17737
+-- Item: Corsair's Scimitar  
 -- Additional Effect: Paralysis
 -----------------------------------------
 require("scripts/globals/status")
@@ -9,7 +9,7 @@ require("scripts/globals/msg")
 -----------------------------------
 
 function onAdditionalEffect(player, target, damage)
-    local chance = 5
+    local chance = 12
 
     if VanadielDayOfTheWeek() == tpz.day.ICEDAY then
         chance = chance+6
@@ -24,7 +24,7 @@ function onAdditionalEffect(player, target, damage)
         if (math.random(0, 99) >= chance or applyResistanceAddEffect(player, target, tpz.magic.ele.ICE, 0) <= 0.5) then
             return 0, 0, 0
         else
-            target:addStatusEffect(tpz.effect.PARALYSIS, 10, 0, 30)
+            target:addStatusEffect(tpz.effect.PARALYSIS, 15, 0, 30)
             return tpz.subEffect.PARALYSIS, tpz.msg.basic.ADD_EFFECT_STATUS, tpz.effect.PARALYSIS
         end
     end

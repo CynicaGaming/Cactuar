@@ -1,6 +1,6 @@
 -----------------------------------------
--- ID: 18385
--- Item: Algol
+-- ID: 19152
+-- Item: Bahadur +1
 -- Additional Effect: Fire Damage
 -----------------------------------------
 require("scripts/globals/status")
@@ -9,7 +9,7 @@ require("scripts/globals/msg")
 -----------------------------------
 
 function onAdditionalEffect(player, target, damage)
-    local chance = 30
+    local chance = 20
 
     if VanadielDayOfTheWeek() == tpz.day.FIRESDAY then
         chance = chance+6
@@ -23,7 +23,7 @@ function onAdditionalEffect(player, target, damage)
     if (math.random(0, 99) >= chance) then
         return 0, 0, 0
     else
-        local dmg = math.random(23, 35)
+        local dmg = math.random(20, 40)
         local params = {}
         params.bonusmab = 0
         params.includemab = false
