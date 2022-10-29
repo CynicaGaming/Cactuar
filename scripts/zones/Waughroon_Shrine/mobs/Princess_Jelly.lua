@@ -31,7 +31,7 @@ function onMobInitialize(mob)
     mob:setMobMod(tpz.mobMod.SUPERLINK, mob:getShortID())
     mob:setMod(tpz.mod.SLEEPRESTRAIT, 100) -- immune to sleep
     mob:setMod(tpz.mod.LULLABYRESTRAIT, 100)
-    mob:speed(2)
+    mob:speed(-10)
 end
 
 function onMobSpawn(mob)

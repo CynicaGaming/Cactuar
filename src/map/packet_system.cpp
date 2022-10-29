@@ -448,10 +448,10 @@ void SmallPacket0x00C(map_session_data_t* const PSession, CCharEntity* const PCh
         // only respawn pet in valid zones
         if (PChar->loc.zone->CanUseMisc(MISC_PET) && !PChar->m_moghouseID)
         {
-            if (PChar->petZoningInfo.petType != PETTYPE_JUG_PET)
-            {
+            //if (PChar->petZoningInfo.petType != PETTYPE_JUG_PET) //Umeboshi "Controls Jug pets Zoning with player"
+            //{
                 petutils::SpawnPet(PChar, PChar->petZoningInfo.petID, true, nullptr);
-            }
+            //}
         }
     }
     // Reset the petZoning info
