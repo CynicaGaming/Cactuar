@@ -1055,7 +1055,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.QUICKSAND_CAVES] =
     {
-        --regionalItems = {10952}, -- Tanner's Torque
+        regionalItems = {10952}, -- Tanner's Torque
         regionalItems = { },
         temps =
         {
@@ -1092,7 +1092,7 @@ tpz.casket_loot.casketItems =
             { 525,   823}, -- Gold Thread
             { 190,   844}, -- Phoenix Feather
             { 780,  1443}, -- Dried Mugwort
-            --{ 240,  3309}, -- Barrage Turbine
+            { 240,  3309}, -- Barrage Turbine
             --{1500,  3450}, -- Voiddust
             {5000,  4116}, -- Hi-Potion
             {4500,  4117}, -- Hi-Potion +1
@@ -2099,7 +2099,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.THE_BOYAHDA_TREE] =
     {
-        --regionalItems = {11038, 10948}, -- Dragonkin Earring | Carver's Torque
+        regionalItems = {11038, 10948}, -- Dragonkin Earring | Carver's Torque
         regionalItems = { },
         temps =
         {
@@ -2274,7 +2274,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.TEMPLE_OF_UGGALEPIH] =
     {
-        --regionalItems = {10953}, -- Boneworker's Torque
+        regionalItems = {10953}, -- Boneworker's Torque
         regionalItems = { },
         temps =
         {
@@ -2330,7 +2330,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.DEN_OF_RANCOR] =
     {
-        --regionalItems = {10950, 10991}, -- Goldsm. Torque | Rancorous Mantle
+        regionalItems = {10950}, -- 10991}, -- Goldsm. Torque | Rancorous Mantle
         regionalItems = { },
         temps =
         {
@@ -2580,7 +2580,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.ZERUHN_MINES] =
     {
-        --regionalItems = {11677}, -- Prouesse Ring
+        regionalItems = {11677}, -- Prouesse Ring
         regionalItems = { },
         tempsLow =
         {
@@ -3041,7 +3041,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.THE_SHRINE_OF_RUAVITAU] =
     {
-        --regionalItems = {11040, 10951}, -- Terminus Earring | Weaver's Torque
+        regionalItems = {10951}, -- Terminus Earring 11040,  | Weaver's Torque
         regionalItems = { },
         temps =
         {
@@ -3171,7 +3171,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.KING_RANPERRES_TOMB] =
     {
-        --regionalItems = {10924}, -- Chocobo Torque
+        regionalItems = {10924}, -- Chocobo Torque
         regionalItems = { },
         tempsLow =
         {
@@ -3616,7 +3616,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.OUTER_HORUTOTO_RUINS] =
     {
-        --regionalItems = {10925}, -- Fisher's Torque
+        regionalItems = {10925}, -- Fisher's Torque
         regionalItems = { },
         tempsLow =
         {
@@ -3821,7 +3821,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.GUSGEN_MINES] =
     {
-        --regionalItems = {10926}, -- Field Torque
+        regionalItems = {10926}, -- Field Torque
         regionalItems = { },
         tempsLow =
         {
@@ -4289,7 +4289,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.IFRITS_CAULDRON] =
     {
-        --regionalItems = {10949}, -- Smithy's Torque
+        regionalItems = {10949}, -- Smithy's Torque
         regionalItems = { },
         temps =
         {
@@ -4362,7 +4362,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.GUSTAV_TUNNEL] =
     {
-        -- regionalItems = {10955, 11041}, -- Culinarian's Torque | Liminus Earring
+        regionalItems = {10955}, -- Culinarian's Torque | Liminus Earring , 11041
         regionalItems = { },
         temps =
         {
