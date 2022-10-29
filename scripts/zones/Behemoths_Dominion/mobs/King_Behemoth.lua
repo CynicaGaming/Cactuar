@@ -84,6 +84,9 @@ function onMobDeath(mob, player, isKiller)
 end
 
 function onMobDespawn(mob)
+    if LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0 then
+        GetNPCByID(ID.npc.BEHEMOTH_QM):setStatus(tpz.status.Normal)
+    end
     -- Set King_Behemoth's Window Open Time
     if LandKingSystem_HQ ~= 1 then
         local wait = 72 * 3600
