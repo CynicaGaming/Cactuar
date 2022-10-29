@@ -40,5 +40,17 @@ end
 
 function onItemUse(target)
     local effect = tpz.effect.ENLIGHT
-    doEnspell(target, target, nil, effect)
+    local duration = 180
+    local magicskill = target:getSkillLevel(tpz.skill.DIVINE_MAGIC)
+    local potency = 0
+
+    if magicskill <= 200 then
+        potency = math.floor(magicskill / 20 * 3) + (12 - math.floor(magicskill / 40))
+    elseif magicskill > 200 then
+        potency = math.floor(magicskill / 20 * 3) + (12 - math.floor(magicskill / 40))
+    end
+
+    potency = utils.clamp(potency, 3, 75)
+
+    target:addStatusEffect(effect, potency, 0, 180) doEnspell(target, target, nil, effect)
 end
