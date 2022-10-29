@@ -718,9 +718,11 @@ namespace battleutils
             {
                 case SPIKE_BLAZE:
                 case SPIKE_ICE:
-                case SPIKE_SHOCK:
-                    PAttacker->takeDamage(Action->spikesParam / getElementalSDTDivisor(PAttacker, element), PDefender, ATTACK_MAGICAL, GetSpikesDamageType(Action->spikesEffect));
-                    break;
+                case SPIKE_SHOCK: // See MR !2167 - Retail behavior is that spike damage does not break bind. Only direct damage as a result of a
+                                  // spell/attack/job ability/weaponskill can break it.
+                    PAttacker->takeDamage(Action->spikesParam / getElementalSDTDivisor(PAttacker, element), PDefender, ATTACK_MAGICAL,
+                                          GetSpikesDamageType(Action->spikesEffect), false);
+
 
                 case SPIKE_DREAD:
                     if (getElementalSDTDivisor(PAttacker, element) == 2)
@@ -752,14 +754,18 @@ namespace battleutils
                             }
                             PDefender->addHP(Action->spikesParam);
                         }
-                        PAttacker->takeDamage(Action->spikesParam, PDefender, ATTACK_MAGICAL, DAMAGE_DARK);
+                        // See MR !2167 - Retail behavior is that spike damage does not break bind. Only direct damage as a result of a spell/attack/job
+                        // ability/weaponskill can break it.
+                        PAttacker->takeDamage(Action->spikesParam, PDefender, ATTACK_MAGICAL, DAMAGE_DARK, false);
                     }
                     break;
 
                 case SPIKE_REPRISAL:
                     if (Action->reaction == REACTION_BLOCK)
                     {
-                        PAttacker->takeDamage(Action->spikesParam, PDefender, ATTACK_MAGICAL, DAMAGE_LIGHT);
+                        // See MR !2167 - Retail behavior is that spike damage does not break bind. Only direct damage as a result of a spell/attack/job
+                        // ability/weaponskill can break it.
+                        PAttacker->takeDamage(Action->spikesParam, PDefender, ATTACK_MAGICAL, DAMAGE_LIGHT, false);
                         auto PEffect = PDefender->StatusEffectContainer->GetStatusEffect(EFFECT_REPRISAL);
                         if (PEffect)
                         {
@@ -859,7 +865,9 @@ namespace battleutils
             {
                 auto ratio = std::clamp<uint8>(damage / 4, 1, 255);
                 Action->spikesParam = HandleStoneskin(PAttacker, damage - tpzrand::GetRandomNumber<uint16>(ratio) + tpzrand::GetRandomNumber<uint16>(ratio));
-                PAttacker->takeDamage(Action->spikesParam, PDefender, ATTACK_MAGICAL, GetSpikesDamageType(spikesType));
+                // See MR !2167 - Retail behavior is that spike damage does not break bind. Only direct damage as a result of a spell/attack/job
+                // ability/weaponskill can break it.
+                PAttacker->takeDamage(Action->spikesParam, PDefender, ATTACK_MAGICAL, GetSpikesDamageType(spikesType), false);
             }
 
             // Temp till moved to script.
@@ -2130,8 +2138,8 @@ namespace battleutils
                         absorb -= PDefender->getMod(Mod::SHIELD_DEF_BONUS); // Include Shield Defense Bonus in absorb amount
 
                         // Shield Mastery
-                        if ((std::max(damage - (PDefender->getMod(Mod::PHALANX) + PDefender->getMod(Mod::STONESKIN)), 0) > 0)
-                            && charutils::hasTrait((CCharEntity*)PDefender, TRAIT_SHIELD_MASTERY))
+                        if ((std::max(damage - (PDefender->getMod(Mod::PHALANX) + PDefender->getMod(Mod::STONESKIN)), 0) > 0) &&
+                            PDefender->getMod(Mod::SHIELD_MASTERY_TP) > 0)
                         {
                             // If the player blocked with a shield and has shield mastery, add shield mastery TP bonus
                             // unblocked damage (before block but as if affected by stoneskin/phalanx) must be greater than zero
@@ -2143,8 +2151,8 @@ namespace battleutils
                         absorb = 50;
 
                         //Shield Mastery
-                        if ((std::max(damage - (PDefender->getMod(Mod::PHALANX) + PDefender->getMod(Mod::STONESKIN)), 0) > 0)
-                            && (PDefender->getMod(Mod::SHIELD_MASTERY_TP)))
+                        if ((std::max(damage - (PDefender->getMod(Mod::PHALANX) + PDefender->getMod(Mod::STONESKIN)), 0) > 0) &&
+                            PDefender->getMod(Mod::SHIELD_MASTERY_TP) > 0)
                         {
                             // If the player blocked with a shield and has shield mastery, add shield mastery TP bonus
                             // unblocked damage (before block but as if affected by stoneskin/phalanx) must be greater than zero
@@ -2240,8 +2248,7 @@ namespace battleutils
             }
 
             // try to interrupt spell if not a ranged attack and not blocked by Shield Mastery
-            if ((!isRanged)
-                && !((isBlocked) && (PDefender->objtype == TYPE_PC) && (charutils::hasTrait((CCharEntity*)PDefender, TRAIT_SHIELD_MASTERY))))
+            if ((!isRanged) && !((isBlocked) && (PDefender->objtype == TYPE_PC) && PDefender->getMod(Mod::SHIELD_MASTERY_TP) > 0))
             {
                 PDefender->TryHitInterrupt(PAttacker);
             }
@@ -3586,9 +3593,10 @@ namespace battleutils
         //            TODO:     × (1 + Staff Affinity)
 
         auto damage = (int32)floor((double)(abs(lastSkillDamage))
-            * g_SkillChainDamageModifiers[chainLevel][chainCount] / 1000);
-        //OOE    * (100 + PAttacker->getMod(Mod::SKILLCHAINBONUS)) / 100
-        //OOE    * (100 + PAttacker->getMod(Mod::SKILLCHAINDMG)) / 100);
+            * g_SkillChainDamageModifiers[chainLevel][chainCount] / 1000
+            * (100 + PAttacker->getMod(Mod::SKILLCHAINBONUS)) / 100
+            * (10000 + PAttacker->getMod(Mod::SKILLCHAINDMG)) / 10000);
+
         // ShowDebug("RawDamage: %u\n,", damage);
         auto PChar = dynamic_cast<CCharEntity *>(PAttacker);
         if (PChar && PChar->StatusEffectContainer->HasStatusEffect(EFFECT_INNIN) && behind(PChar->loc.p, PDefender->loc.p, 64))
