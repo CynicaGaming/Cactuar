@@ -5,6 +5,7 @@ require("scripts/globals/settings")
 require("scripts/globals/status")
 require("scripts/globals/monstertpmoves")
 require("scripts/globals/ability")
+require("scripts/globals/magic")
 
 ---------------------------------------------------
 
@@ -26,14 +27,45 @@ function onUseAbility(pet, target, skill, action)
     end
     
     local bonus = master:getMerit(tpz.merit.STRAFE)
+    local tp = pet:getTP()
+    local ftp
 
-    local gear = master:getMod(tpz.mod.WYVERN_BREATH) / 256 -- Master gear that enhances breath
+    if tp >= 3000 then
+        ftp = 2.25
+    elseif tp >= 2000 then
+        ftp = 1.55 + ((0.75/3000) * tp)
+    else
+        ftp = 1.0 + ((0.25/3000) * tp)
+    end
 
-    local dmgmod = MobBreathMove(pet, target, 0.185, pet:getMainLvl() * 15, tpz.magic.ele.EARTH, nil, bonus)  -- Works out to (hp/6) + 15, as desired
-    dmgmod = (dmgmod * (1 + gear)) * deep
+    local gear = master:getMod(tpz.mod.WYVERN_BREATH)/256 -- Master gear that enhances breath
+    local bonusmatt = pet:getMod(tpz.mod.MATT)/64 + 1
+    local dmgmod = MobBreathMove(pet, target, 0.185, pet:getMainLvl()*15, tpz.magic.ele.EARTH, nil, bonus) -- Works out to (hp/6) + 15, as desired
+    dmgmod = (dmgmod * (1+gear))*deep*ftp*bonusmatt
     pet:setTP(0)
 
+    local ele = tpz.damageType.EARTH
+    local skillchainburst = 1.0
+    local skillchainTier, skillchainCount = FormMagicBurst(ele - 5, target)
+    if skillchainTier > 0 then
+        if skillchainCount == 1 then -- two weaponskills
+            skillchainburst = 1.5
+        elseif skillchainCount == 2 then -- three weaponskills
+            skillchainburst = 1.65
+        elseif skillchainCount == 3 then -- four weaponskills
+             skillchainburst = 1.75
+        elseif skillchainCount == 4 then -- five weaponskills
+            skillchainburst = 1.87
+        elseif skillchainCount == 5 then -- six weaponskills
+            skillchainburst = 2.25
+        elseif skillchainCount == 6 then -- seven weaponskills
+            skillchainburst = 2.5
+        else
+            skillchainburst = 1.5 -- eight or more? shouldn't be possible
+        end
+    end
+        dmgmod = dmgmod * skillchainburst
     local dmg = AbilityFinalAdjustments(dmgmod, pet, skill, target, tpz.attackType.BREATH, tpz.damageType.EARTH, MOBPARAM_IGNORE_SHADOWS)
-    target:takeDamage(dmg, pet, tpz.attackType.BREATH, tpz.damageType.EARTH)
-    return dmg
-end
+    if (skillchainTier > 0) then
+        skill:setMsg(747)
+    end
