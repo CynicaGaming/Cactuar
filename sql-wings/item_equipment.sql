@@ -810,7 +810,7 @@ INSERT INTO `item_equipment` VALUES(11034, 'evergreen_earring', 92, 0, 4194303, 
 INSERT INTO `item_equipment` VALUES(11035, 'strophadic_earring', 95, 0, 4194303, 0, 0, 0, 6144, 0, 255);
 INSERT INTO `item_equipment` VALUES(11036, 'enchntr._earring', 94, 0, 4194303, 0, 0, 0, 6144, 0, 255);
 INSERT INTO `item_equipment` VALUES(11037, 'earthcry_earring', 93, 0, 4194303, 0, 0, 0, 6144, 0, 255);
-INSERT INTO `item_equipment` VALUES(11038, 'dragonkin_earring', 95, 0, 8641, 0, 0, 0, 6144, 0, 255);
+INSERT INTO `item_equipment` VALUES(11038, 'dragonkin_earring', 70, 0, 8641, 0, 0, 0, 6144, 0, 255);
 INSERT INTO `item_equipment` VALUES(11039, 'brachyura_earring', 91, 0, 4194303, 0, 0, 0, 6144, 0, 255);
 INSERT INTO `item_equipment` VALUES(11040, 'terminus_earring', 91, 0, 4194303, 0, 0, 0, 6144, 0, 255);
 INSERT INTO `item_equipment` VALUES(11041, 'liminus_earring', 91, 0, 4194303, 0, 0, 0, 6144, 0, 255);
@@ -1446,7 +1446,7 @@ INSERT INTO `item_equipment` VALUES(11673, 'demonry_ring', 88, 0, 2369954, 0, 0,
 INSERT INTO `item_equipment` VALUES(11674, 'archon_ring', 90, 0, 4194303, 0, 0, 0, 24576, 0, 255);
 INSERT INTO `item_equipment` VALUES(11675, 'fervor_ring', 87, 0, 4194303, 0, 0, 0, 24576, 0, 255);
 INSERT INTO `item_equipment` VALUES(11676, 'flock_ring', 87, 0, 4194303, 0, 0, 0, 24576, 0, 255);
-INSERT INTO `item_equipment` VALUES(11677, 'prouesse_ring', 77, 0, 4194303, 0, 0, 0, 24576, 0, 255);
+INSERT INTO `item_equipment` VALUES(11677, 'prouesse_ring', 75, 0, 4194303, 0, 0, 0, 24576, 0, 255);
 INSERT INTO `item_equipment` VALUES(11678, 'flame_earring', 76, 0, 4194303, 0, 0, 0, 6144, 0, 255);
 INSERT INTO `item_equipment` VALUES(11679, 'thunder_earring', 76, 0, 4194303, 0, 0, 0, 6144, 0, 255);
 INSERT INTO `item_equipment` VALUES(11680, 'soil_earring', 76, 0, 4194303, 0, 0, 0, 6144, 0, 255);
@@ -6299,7 +6299,7 @@ INSERT INTO `item_equipment` VALUES(16551, 'sapara', 7, 0, 34977, 255, 0, 0, 3, 
 INSERT INTO `item_equipment` VALUES(16552, 'scimitar', 13, 0, 34977, 256, 0, 0, 3, 0, 255);
 INSERT INTO `item_equipment` VALUES(16553, 'tulwar', 36, 0, 34977, 257, 0, 0, 3, 0, 255);
 INSERT INTO `item_equipment` VALUES(16554, 'hanger', 57, 0, 34977, 258, 0, 0, 3, 0, 255);
-INSERT INTO `item_equipment` VALUES(16555, 'ridill', 70, 0, 36257, 259, 0, 0, 3, 0, 255); --3489
+INSERT INTO `item_equipment` VALUES(16555, 'ridill', 70, 0, 36257, 259, 0, 0, 3, 0, 255); -- 3489
 INSERT INTO `item_equipment` VALUES(16556, 'bloody_blade', 58, 0, 36257, 262, 0, 0, 3, 0, 255);
 INSERT INTO `item_equipment` VALUES(16557, 'msk.cmd._falchion', 55, 0, 36257, 262, 0, 0, 3, 0, 255);
 INSERT INTO `item_equipment` VALUES(16558, 'falchion', 44, 0, 36257, 262, 0, 0, 3, 0, 255);
@@ -7636,8 +7636,8 @@ INSERT INTO `item_equipment` VALUES(17901, 'b._carrion_broth', 93, 0, 256, 0, 0,
 INSERT INTO `item_equipment` VALUES(17902, 'lucky_broth', 86, 0, 256, 0, 0, 0, 8, 0, 255);
 INSERT INTO `item_equipment` VALUES(17903, 'shadowy_broth', 96, 0, 256, 0, 0, 0, 8, 0, 255);
 INSERT INTO `item_equipment` VALUES(17904, 'briny_broth', 76, 0, 256, 0, 0, 0, 8, 0, 255);
-INSERT INTO `item_equipment` VALUES(17905, 'wormy_broth', 23, 0, 256, 0, 0, 0, 8, 0, 255);
-INSERT INTO `item_equipment` VALUES(17906, 'auroral_broth', 75, 0, 256, 0, 0, 0, 8, 0, 255);
+INSERT INTO `item_equipment` VALUES(17905, 'wormy_broth', 76, 0, 256, 0, 0, 0, 8, 0, 255); -- Default Level 23 Set to 99 to disable for bug fix.
+INSERT INTO `item_equipment` VALUES(17906, 'auroral_broth', 76, 0, 256, 0, 0, 0, 8, 0, 255); -- Default Level 23 Set to 99 to disable for bug fix.
 INSERT INTO `item_equipment` VALUES(17907, 'swirling_broth', 99, 0, 256, 0, 0, 0, 8, 0, 255);
 INSERT INTO `item_equipment` VALUES(17908, 'shimmering_broth', 99, 0, 256, 0, 0, 0, 8, 0, 255);
 INSERT INTO `item_equipment` VALUES(17909, 'spicy_broth', 99, 0, 256, 0, 0, 0, 8, 0, 255);
