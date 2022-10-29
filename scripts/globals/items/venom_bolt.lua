@@ -21,7 +21,7 @@ function onAdditionalEffect(player, target, damage)
     else
         if target:getMod(tpz.mod.STATUSRES) < 100 and target:getMod(tpz.mod.POISONRES) < 100 then
             if (not target:hasStatusEffect(tpz.effect.POISON)) then
-                target:addStatusEffect(tpz.effect.POISON, 4, 3, 30)
+                target:addStatusEffect(tpz.effect.POISON, 5, 3, 30) -- Default 4
             end
             return tpz.subEffect.POISON, tpz.msg.basic.ADD_EFFECT_STATUS, tpz.effect.POISON
         end
