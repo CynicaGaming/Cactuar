@@ -3134,7 +3134,7 @@ INSERT INTO `item_mods` VALUES (11036,14,4);
 INSERT INTO `item_mods` VALUES (11036,30,2);
 INSERT INTO `item_mods` VALUES (11037,57,10);     -- Earthcry Earring: Earth resistance +10
 INSERT INTO `item_mods` VALUES (11037,539,10);    -- Enhances Stoneskin effect +10
-INSERT INTO `item_mods` VALUES (11038,23,7);
+INSERT INTO `item_mods` VALUES (11038,23,3); -- Dragonkin Earring
 INSERT INTO `item_mods` VALUES (11039,5,20);
 INSERT INTO `item_mods` VALUES (11040,2,10);      -- terminus_earring HP+10
 INSERT INTO `item_mods` VALUES (11040,64,1);      -- combat skill +1
@@ -4397,8 +4397,9 @@ INSERT INTO `item_mods` VALUES (11337,59,2);
 INSERT INTO `item_mods` VALUES (11337,127,1);
 INSERT INTO `item_mods` VALUES (11338,1,21);
 INSERT INTO `item_mods` VALUES (11338,289,3);
-INSERT INTO `item_mods` VALUES (11339,1,21);
-INSERT INTO `item_mods` VALUES (11339,5,3);
+INSERT INTO `item_mods` VALUES (11339,1,21); -- Channeling Robe
+INSERT INTO `item_mods` VALUES (11339,5,3); -- MP +3
+INSERT INTO `item_mods` VALUES (11339,487,3); -- Magic Burst +3%
 INSERT INTO `item_mods` VALUES (11340,1,21);
 INSERT INTO `item_mods` VALUES (11340,2,4);
 INSERT INTO `item_mods` VALUES (11340,5,4);
@@ -4501,8 +4502,9 @@ INSERT INTO `item_mods` VALUES (11366,1,16);
 INSERT INTO `item_mods` VALUES (11366,27,-3);
 INSERT INTO `item_mods` VALUES (11366,71,3);
 INSERT INTO `item_mods` VALUES (11366,114,3);
-INSERT INTO `item_mods` VALUES (11367,1,18);
+INSERT INTO `item_mods` VALUES (11367,1,18); -- Nobushi Kyahan
 INSERT INTO `item_mods` VALUES (11367,25,4);
+INSERT INTO `item_mods` VALUES (11367,73,4);
 INSERT INTO `item_mods` VALUES (11368,1,12);
 INSERT INTO `item_mods` VALUES (11368,2,-10);
 INSERT INTO `item_mods` VALUES (11368,11,4);
@@ -19988,10 +19990,13 @@ INSERT INTO `item_mods` VALUES (16397,25,3);
 INSERT INTO `item_mods` VALUES (16398,25,3);
 INSERT INTO `item_mods` VALUES (16398,431,1);
 INSERT INTO `item_mods` VALUES (16403,431,1);
+INSERT INTO `item_mods` VALUES (16404,431,1); -- Venom Katars
 INSERT INTO `item_mods` VALUES (16410,431,1);
 INSERT INTO `item_mods` VALUES (16416,54,5);
 INSERT INTO `item_mods` VALUES (16417,431,1);
+INSERT INTO `item_mods` VALUES (16418,431,1); -- Venom Claws
 INSERT INTO `item_mods` VALUES (16423,10,2);
+INSERT INTO `item_mods` VALUES (16425,431,1); -- Venom Claws +1
 INSERT INTO `item_mods` VALUES (16426,1,-10);
 INSERT INTO `item_mods` VALUES (16426,23,10);
 INSERT INTO `item_mods` VALUES (16428,165,3);
@@ -20053,21 +20058,29 @@ INSERT INTO `item_mods` VALUES (16497,431,1);
 INSERT INTO `item_mods` VALUES (16498,8,5);
 INSERT INTO `item_mods` VALUES (16498,24,12);
 INSERT INTO `item_mods` VALUES (16498,27,4);
+INSERT INTO `item_mods` VALUES (16499,431,1); -- Venom Kris
 INSERT INTO `item_mods` VALUES (16500,8,10);     -- aluh_jambiya STR+10
 INSERT INTO `item_mods` VALUES (16500,10,-10);   -- VIT-10
 INSERT INTO `item_mods` VALUES (16500,23,15);    -- Attack+15
 INSERT INTO `item_mods` VALUES (16500,421,3);    -- Crit Hit Damage+3%
 INSERT INTO `item_mods` VALUES (16500,303,69);   -- Treasure Hunter +69.  For testing purposes only.  Will guarantee all drops on mob's table.
 INSERT INTO `item_mods` VALUES (16501,431,1);
+INSERT INTO `item_mods` VALUES (16502,431,1); -- Venom Knife
 INSERT INTO `item_mods` VALUES (16504,250,2);
 INSERT INTO `item_mods` VALUES (16504,431,1);
+INSERT INTO `item_mods` VALUES (16505,431,1); -- Venom Kukri
+INSERT INTO `item_mods` VALUES (16507,431,1); -- Venom Baselard
 INSERT INTO `item_mods` VALUES (16508,431,1);
 INSERT INTO `item_mods` VALUES (16509,431,1);
+INSERT INTO `item_mods` VALUES (16510,431,1); -- Venom Baselard +1
 INSERT INTO `item_mods` VALUES (16520,5,18);
 INSERT INTO `item_mods` VALUES (16520,110,7);
 INSERT INTO `item_mods` VALUES (16521,110,5);
+INSERT INTO `item_mods` VALUES (16523,431,1); -- Holy degen
+INSERT INTO `item_mods` VALUES (16525,431,1); -- Hornet Fleuret
 INSERT INTO `item_mods` VALUES (16527,25,2);
 INSERT INTO `item_mods` VALUES (16528,431,1); -- bloody rapier hp_drain
+INSERT INTO `item_mods` VALUES (16533,431,1); -- Ancient Sword
 INSERT INTO `item_mods` VALUES (16540,5,25);     -- tyrfing MP+25
 INSERT INTO `item_mods` VALUES (16541,8,2);
 INSERT INTO `item_mods` VALUES (16541,10,2);
@@ -20102,6 +20115,7 @@ INSERT INTO `item_mods` VALUES (16580,14,-8);
 INSERT INTO `item_mods` VALUES (16581,431,1);
 INSERT INTO `item_mods` VALUES (16582,2,30);     -- vetala_sword HP+30
 INSERT INTO `item_mods` VALUES (16582,8,3);      -- STR+3
+INSERT INTO `item_mods` VALUES (16583,431,1); -- Ancient Sword
 INSERT INTO `item_mods` VALUES (16587,25,4);
 INSERT INTO `item_mods` VALUES (16588,431,1);
 INSERT INTO `item_mods` VALUES (16594,431,1);
@@ -20142,8 +20156,10 @@ INSERT INTO `item_mods` VALUES (16660,11,3);
 INSERT INTO `item_mods` VALUES (16662,9,4);
 INSERT INTO `item_mods` VALUES (16662,11,4);
 INSERT INTO `item_mods` VALUES (16669,23,5);
+INSERT INTO `item_mods` VALUES (16672,431,1); -- Tigerhunter
 INSERT INTO `item_mods` VALUES (16673,8,1);
 INSERT INTO `item_mods` VALUES (16673,9,1);
+INSERT INTO `item_mods` VALUES (16674,431,1); -- Emeth Pick
 INSERT INTO `item_mods` VALUES (16675,55,-10);
 INSERT INTO `item_mods` VALUES (16675,56,10);
 INSERT INTO `item_mods` VALUES (16675,57,10);
@@ -20229,6 +20245,8 @@ INSERT INTO `item_mods` VALUES (16754,110,10);
 INSERT INTO `item_mods` VALUES (16755,11,1);
 INSERT INTO `item_mods` VALUES (16755,26,10);
 INSERT INTO `item_mods` VALUES (16757,23,10);
+INSERT INTO `item_mods` VALUES (16761,431,1); -- Venom Kris +1
+INSERT INTO `item_mods` VALUES (16762,431,1); -- Venom Knife +1
 INSERT INTO `item_mods` VALUES (16764,9,2);  -- DEX +2 --Marauder's Knife Cactuar Edit 
 INSERT INTO `item_mods` VALUES (16764,11,2); -- AGI +11
 INSERT INTO `item_mods` VALUES (16764,298,3); -- Steal +1
@@ -20254,8 +20272,10 @@ INSERT INTO `item_mods` VALUES (16773,431,1);
 INSERT INTO `item_mods` VALUES (16777,431,1);
 INSERT INTO `item_mods` VALUES (16780,8,2);
 INSERT INTO `item_mods` VALUES (16780,10,-1);
+INSERT INTO `item_mods` VALUES (16783,431,1); -- Plantreaper
 INSERT INTO `item_mods` VALUES (16784,55,6);
 INSERT INTO `item_mods` VALUES (16784,431,1);
+INSERT INTO `item_mods` VALUES (16785,431,1); -- Harvester
 INSERT INTO `item_mods` VALUES (16786,23,25);
 INSERT INTO `item_mods` VALUES (16786,25,-5);
 INSERT INTO `item_mods` VALUES (16787,61,12);
@@ -20282,6 +20302,7 @@ INSERT INTO `item_mods` VALUES (16808,68,3);
 INSERT INTO `item_mods` VALUES (16809,23,14);
 INSERT INTO `item_mods` VALUES (16810,23,12);
 INSERT INTO `item_mods` VALUES (16816,431,1);
+INSERT INTO `item_mods` VALUES (16817,431,1); -- Holy Degen +1
 INSERT INTO `item_mods` VALUES (16818,23,5);
 INSERT INTO `item_mods` VALUES (16819,9,3);
 INSERT INTO `item_mods` VALUES (16820,11,3);
@@ -20319,6 +20340,7 @@ INSERT INTO `item_mods` VALUES (16840,10,2);
 INSERT INTO `item_mods` VALUES (16841,10,4);
 INSERT INTO `item_mods` VALUES (16841,11,4);
 INSERT INTO `item_mods` VALUES (16849,25,2);
+INSERT INTO `item_mods` VALUES (16853,431,1); -- Lizard Piercer
 INSERT INTO `item_mods` VALUES (16854,23,10);
 INSERT INTO `item_mods` VALUES (16854,73,5);
 INSERT INTO `item_mods` VALUES (16855,2,25);
@@ -20328,13 +20350,15 @@ INSERT INTO `item_mods` VALUES (16856,8,1);
 INSERT INTO `item_mods` VALUES (16856,12,-1);
 INSERT INTO `item_mods` VALUES (16856,13,-1);
 INSERT INTO `item_mods` VALUES (16857,56,4);
+INSERT INTO `item_mods` VALUES (16858,431,1); -- Sacred Lance
 INSERT INTO `item_mods` VALUES (16863,12,2);
 INSERT INTO `item_mods` VALUES (16863,13,-2);
 INSERT INTO `item_mods` VALUES (16863,60,-2);
 INSERT INTO `item_mods` VALUES (16863,61,2);
 INSERT INTO `item_mods` VALUES (16863,431,1);
-INSERT INTO `item_mods` VALUES (16867,2,7);
+INSERT INTO `item_mods` VALUES (16867,2,7); -- Orc Piercer
 INSERT INTO `item_mods` VALUES (16867,14,4);
+INSERT INTO `item_mods` VALUES (16867,431,1);
 INSERT INTO `item_mods` VALUES (16868,68,-3);
 INSERT INTO `item_mods` VALUES (16869,9,3);
 INSERT INTO `item_mods` VALUES (16869,55,11);
@@ -20375,12 +20399,14 @@ INSERT INTO `item_mods` VALUES (16893,244,2);
 INSERT INTO `item_mods` VALUES (16894,2,11);
 INSERT INTO `item_mods` VALUES (16894,9,3);
 INSERT INTO `item_mods` VALUES (16894,10,3);
+INSERT INTO `item_mods` VALUES (16897,431,1); -- Kageboshi
 INSERT INTO `item_mods` VALUES (16899,25,3);
 INSERT INTO `item_mods` VALUES (16904,165,3);
 INSERT INTO `item_mods` VALUES (16905,431,1);
 INSERT INTO `item_mods` VALUES (16906,431,1);
 INSERT INTO `item_mods` VALUES (16907,431,1);
 INSERT INTO `item_mods` VALUES (16908,431,1);
+INSERT INTO `item_mods` VALUES (16909,431,1); -- Kororito
 INSERT INTO `item_mods` VALUES (16910,431,1);
 INSERT INTO `item_mods` VALUES (16911,25,-1);
 INSERT INTO `item_mods` VALUES (16913,9,3);
@@ -20399,21 +20425,26 @@ INSERT INTO `item_mods` VALUES (16936,61,8);
 INSERT INTO `item_mods` VALUES (16936,431,1);
 INSERT INTO `item_mods` VALUES (16937,55,8);
 INSERT INTO `item_mods` VALUES (16937,431,1);
-INSERT INTO `item_mods` VALUES (16938,60,12);
+INSERT INTO `item_mods` VALUES (16938,60,12); -- Glorious Sword
+INSERT INTO `item_mods` VALUES (16938,431,1);
 INSERT INTO `item_mods` VALUES (16941,13,3);
 INSERT INTO `item_mods` VALUES (16941,23,7);
 INSERT INTO `item_mods` VALUES (16942,3,-5);
 INSERT INTO `item_mods` VALUES (16942,23,13);
 INSERT INTO `item_mods` VALUES (16942,25,5);
+INSERT INTO `item_mods` VALUES (16942,431,1); -- Balmung
 INSERT INTO `item_mods` VALUES (16943,8,3);
 INSERT INTO `item_mods` VALUES (16943,10,3);
 INSERT INTO `item_mods` VALUES (16943,13,3);
+INSERT INTO `item_mods` VALUES (16944,431,1); -- Lockheart
 INSERT INTO `item_mods` VALUES (16945,54,7);
 INSERT INTO `item_mods` VALUES (16945,59,7);
 INSERT INTO `item_mods` VALUES (16946,5,6);
 INSERT INTO `item_mods` VALUES (16946,23,7);
 INSERT INTO `item_mods` VALUES (16947,5,8);
 INSERT INTO `item_mods` VALUES (16947,23,7);
+INSERT INTO `item_mods` VALUES (16950,431,1); -- Mythril Heart
+INSERT INTO `item_mods` VALUES (16951,431,1); -- Mythril Heart +1
 INSERT INTO `item_mods` VALUES (16952,2,20);
 INSERT INTO `item_mods` VALUES (16952,55,10);
 INSERT INTO `item_mods` VALUES (16952,57,10);
@@ -20424,7 +20455,8 @@ INSERT INTO `item_mods` VALUES (16954,10,2);
 INSERT INTO `item_mods` VALUES (16955,2,11);
 INSERT INTO `item_mods` VALUES (16955,9,3);
 INSERT INTO `item_mods` VALUES (16955,10,3);
-INSERT INTO `item_mods` VALUES (16956,25,3);
+INSERT INTO `item_mods` VALUES (16956,25,3); -- Skofnung
+INSERT INTO `item_mods` VALUES (16956,431,1);
 INSERT INTO `item_mods` VALUES (16961,3,-5);
 INSERT INTO `item_mods` VALUES (16961,54,16);
 INSERT INTO `item_mods` VALUES (16963,9,4);
@@ -20508,7 +20540,9 @@ INSERT INTO `item_mods` VALUES (17081,12,1);
 INSERT INTO `item_mods` VALUES (17082,5,5);
 INSERT INTO `item_mods` VALUES (17082,12,5);
 INSERT INTO `item_mods` VALUES (17082,13,5);
-INSERT INTO `item_mods` VALUES (17085,111,4);
+INSERT INTO `item_mods` VALUES (17083,431,1); -- Time Hammer
+INSERT INTO `item_mods` VALUES (17085,111,4); -- Holy Wand
+INSERT INTO `item_mods` VALUES (17085,431,1);
 INSERT INTO `item_mods` VALUES (17087,12,2);
 INSERT INTO `item_mods` VALUES (17087,13,2);
 INSERT INTO `item_mods` VALUES (17088,2,2);
@@ -20731,6 +20765,7 @@ INSERT INTO `item_mods` VALUES (17283,24,5);
 INSERT INTO `item_mods` VALUES (17283,26,5);
 INSERT INTO `item_mods` VALUES (17291,54,4);
 INSERT INTO `item_mods` VALUES (17292,11,2);
+INSERT INTO `item_mods` VALUES (17293,431,1); -- Yagudo Freezer
 INSERT INTO `item_mods` VALUES (17294,2,15);
 INSERT INTO `item_mods` VALUES (17294,5,15);
 INSERT INTO `item_mods` VALUES (17294,24,20);
@@ -20809,8 +20844,10 @@ INSERT INTO `item_mods` VALUES (17414,25,5);
 INSERT INTO `item_mods` VALUES (17414,60,3);
 INSERT INTO `item_mods` VALUES (17414,61,3);
 INSERT INTO `item_mods` VALUES (17414,431,1);
-INSERT INTO `item_mods` VALUES (17415,2,7);
+INSERT INTO `item_mods` VALUES (17415,2,7); -- Shellbuster
 INSERT INTO `item_mods` VALUES (17415,14,4);
+INSERT INTO `item_mods` VALUES (17415,431,1);
+INSERT INTO `item_mods` VALUES (17416,431,1); -- Time Hammer
 INSERT INTO `item_mods` VALUES (17417,3,1);
 INSERT INTO `item_mods` VALUES (17417,6,1);
 INSERT INTO `item_mods` VALUES (17418,3,1);
@@ -20840,7 +20877,8 @@ INSERT INTO `item_mods` VALUES (17432,23,12);
 INSERT INTO `item_mods` VALUES (17433,12,9);
 INSERT INTO `item_mods` VALUES (17433,13,9);
 INSERT INTO `item_mods` VALUES (17433,61,20);
-INSERT INTO `item_mods` VALUES (17434,111,5);
+INSERT INTO `item_mods` VALUES (17434,111,5); -- Holy Wand +1
+INSERT INTO `item_mods` VALUES (17434,431,1);
 INSERT INTO `item_mods` VALUES (17435,2,16);
 INSERT INTO `item_mods` VALUES (17436,2,19);
 INSERT INTO `item_mods` VALUES (17437,2,9);
@@ -20929,6 +20967,7 @@ INSERT INTO `item_mods` VALUES (17480,10,3);
 INSERT INTO `item_mods` VALUES (17480,25,3);
 INSERT INTO `item_mods` VALUES (17481,14,3);
 INSERT INTO `item_mods` VALUES (17481,25,3);
+INSERT INTO `item_mods` VALUES (17483,431,1); -- Venom Katars +1
 INSERT INTO `item_mods` VALUES (17485,54,6);
 INSERT INTO `item_mods` VALUES (17486,431,1); -- Stun claws +1 - Additional effect: "Stun"
 INSERT INTO `item_mods` VALUES (17487,431,1);
@@ -21204,10 +21243,12 @@ INSERT INTO `item_mods` VALUES (17560,550,-3);
 INSERT INTO `item_mods` VALUES (17560,551,3);
 INSERT INTO `item_mods` VALUES (17560,559,-3);
 INSERT INTO `item_mods` VALUES (17560,560,3);
-INSERT INTO `item_mods` VALUES (17561,2,9);
+INSERT INTO `item_mods` VALUES (17561,2,9); -- Revenging Staff
 INSERT INTO `item_mods` VALUES (17561,5,9);
-INSERT INTO `item_mods` VALUES (17562,2,10);
+INSERT INTO `item_mods` VALUES (17561,431,1);
+INSERT INTO `item_mods` VALUES (17562,2,10); -- Revenging Staff +1
 INSERT INTO `item_mods` VALUES (17562,5,10);
+INSERT INTO `item_mods` VALUES (17562,431,1);
 INSERT INTO `item_mods` VALUES (17563,2,13);
 INSERT INTO `item_mods` VALUES (17563,5,13);
 INSERT INTO `item_mods` VALUES (17563,8,7);
@@ -21242,9 +21283,10 @@ INSERT INTO `item_mods` VALUES (17573,5,63);      -- Himmel Stock: MP +63
 INSERT INTO `item_mods` VALUES (17573,357,-3);     -- Blood Pact ability delay +3
 INSERT INTO `item_mods` VALUES (17574,12,4);
 INSERT INTO `item_mods` VALUES (17574,13,4);
-INSERT INTO `item_mods` VALUES (17575,8,6);
+INSERT INTO `item_mods` VALUES (17575,8,6); -- Somnus Signa
 INSERT INTO `item_mods` VALUES (17575,13,5);
 INSERT INTO `item_mods` VALUES (17575,14,-1);
+INSERT INTO `item_mods` VALUES (17575,431,1);
 INSERT INTO `item_mods` VALUES (17576,8,5);
 INSERT INTO `item_mods` VALUES (17576,13,6);
 INSERT INTO `item_mods` VALUES (17577,384,500);
@@ -21281,6 +21323,8 @@ INSERT INTO `item_mods` VALUES (17597,346,1);
 INSERT INTO `item_mods` VALUES (17598,5,30);
 INSERT INTO `item_mods` VALUES (17598,117,5);
 INSERT INTO `item_mods` VALUES (17598,346,3);
+INSERT INTO `item_mods` VALUES (17599,431,1); -- Diabolos's Pole
+INSERT INTO `item_mods` VALUES (17604,431,1); -- Venom Kukri +1
 INSERT INTO `item_mods` VALUES (17605,431,1);
 INSERT INTO `item_mods` VALUES (17606,431,1);
 INSERT INTO `item_mods` VALUES (17607,431,1);
@@ -21330,6 +21374,7 @@ INSERT INTO `item_mods` VALUES (17631,11,3);
 INSERT INTO `item_mods` VALUES (17631,14,3);
 INSERT INTO `item_mods` VALUES (17631,26,12);
 INSERT INTO `item_mods` VALUES (17633,110,6);
+INSERT INTO `item_mods` VALUES (17634,431,1); -- Wasp Fleuret
 INSERT INTO `item_mods` VALUES (17636,8,3);
 INSERT INTO `item_mods` VALUES (17636,10,3);
 INSERT INTO `item_mods` VALUES (17636,11,3);
@@ -21346,7 +21391,8 @@ INSERT INTO `item_mods` VALUES (17645,13,3);
 INSERT INTO `item_mods` VALUES (17645,23,7);
 INSERT INTO `item_mods` VALUES (17647,25,3);
 INSERT INTO `item_mods` VALUES (17647,110,5);
-INSERT INTO `item_mods` VALUES (17648,13,1);
+INSERT INTO `item_mods` VALUES (17648,13,1); -- Dragvandil
+INSERT INTO `item_mods` VALUES (17648,431,1);
 INSERT INTO `item_mods` VALUES (17650,59,3);
 INSERT INTO `item_mods` VALUES (17650,431,1);
 INSERT INTO `item_mods` VALUES (17652,61,14);
@@ -21394,11 +21440,13 @@ INSERT INTO `item_mods` VALUES (17677,23,12);
 INSERT INTO `item_mods` VALUES (17678,2,4);
 INSERT INTO `item_mods` VALUES (17679,2,6);
 INSERT INTO `item_mods` VALUES (17682,431,1);
+INSERT INTO `item_mods` VALUES (17683,431,1); -- Sacred Degen
 INSERT INTO `item_mods` VALUES (17690,110,5);
 INSERT INTO `item_mods` VALUES (17691,110,6);
 INSERT INTO `item_mods` VALUES (17693,27,1);
-INSERT INTO `item_mods` VALUES (17694,8,1);
+INSERT INTO `item_mods` VALUES (17694,8,1); -- Guespiere
 INSERT INTO `item_mods` VALUES (17694,13,6);
+INSERT INTO `item_mods` VALUES (17694,431,1);
 INSERT INTO `item_mods` VALUES (17695,8,3);
 INSERT INTO `item_mods` VALUES (17695,13,3);
 INSERT INTO `item_mods` VALUES (17695,431,1);
@@ -21420,6 +21468,8 @@ INSERT INTO `item_mods` VALUES (17703,2,10);
 INSERT INTO `item_mods` VALUES (17703,9,2);
 INSERT INTO `item_mods` VALUES (17703,10,2);
 INSERT INTO `item_mods` VALUES (17704,431,1);
+INSERT INTO `item_mods` VALUES (17705,431,1); -- Vulcan Degen
+INSERT INTO `item_mods` VALUES (17706,431,1); -- Vulcan Blade
 INSERT INTO `item_mods` VALUES (17707,345,1000);  -- Martial Anelace: TP Bonus +1000
 INSERT INTO `item_mods` VALUES (17708,25,2);
 INSERT INTO `item_mods` VALUES (17709,11,-4);
@@ -21487,6 +21537,7 @@ INSERT INTO `item_mods` VALUES (17736,5,20);
 INSERT INTO `item_mods` VALUES (17736,9,3);
 INSERT INTO `item_mods` VALUES (17736,10,3);
 INSERT INTO `item_mods` VALUES (17736,234,2);
+INSERT INTO `item_mods` VALUES (17737,431,1); -- Corsairs Scimitar
 INSERT INTO `item_mods` VALUES (17738,25,7);
 INSERT INTO `item_mods` VALUES (17738,111,8);
 INSERT INTO `item_mods` VALUES (17738,161,-7);
@@ -21526,6 +21577,7 @@ INSERT INTO `item_mods` VALUES (17760,68,2);
 INSERT INTO `item_mods` VALUES (17762,366,4);
 INSERT INTO `item_mods` VALUES (17763,366,6);
 INSERT INTO `item_mods` VALUES (17768,431,1);
+INSERT INTO `item_mods` VALUES (17769,431,1); -- Kororito +1
 INSERT INTO `item_mods` VALUES (17770,431,1);
 INSERT INTO `item_mods` VALUES (17771,8,-1); -- STR -1 Anju Cactuar Edit
 INSERT INTO `item_mods` VALUES (17771,9,2); -- DEX +2
@@ -21587,9 +21639,10 @@ INSERT INTO `item_mods` VALUES (17815,61,10);
 INSERT INTO `item_mods` VALUES (17821,10,2);
 INSERT INTO `item_mods` VALUES (17822,9,4);
 INSERT INTO `item_mods` VALUES (17822,73,2);     -- StoreTP+2
-INSERT INTO `item_mods` VALUES (17823,8,5);
+INSERT INTO `item_mods` VALUES (17823,8,5); -- Shinsoku
 INSERT INTO `item_mods` VALUES (17823,11,1);
 INSERT INTO `item_mods` VALUES (17823,12,-1);
+INSERT INTO `item_mods` VALUES (17823,431,1);
 INSERT INTO `item_mods` VALUES (17824,8,2);
 INSERT INTO `item_mods` VALUES (17826,14,2);
 INSERT INTO `item_mods` VALUES (17828,431,1);
@@ -21691,7 +21744,8 @@ INSERT INTO `item_mods` VALUES (17949,54,8);
 INSERT INTO `item_mods` VALUES (17953,364,10);
 INSERT INTO `item_mods` VALUES (17958,23,10);
 INSERT INTO `item_mods` VALUES (17958,248,2);
-INSERT INTO `item_mods` VALUES (17959,2,16);
+INSERT INTO `item_mods` VALUES (17959,2,16); -- Viperine Pick
+INSERT INTO `item_mods` VALUES (17959,431,1);
 INSERT INTO `item_mods` VALUES (17959,240,2);
 INSERT INTO `item_mods` VALUES (17960,8,2);
 INSERT INTO `item_mods` VALUES (17960,11,2);
@@ -21728,7 +21782,8 @@ INSERT INTO `item_mods` VALUES (17978,25,3);
 INSERT INTO `item_mods` VALUES (17979,25,3);
 INSERT INTO `item_mods` VALUES (17980,9,1);
 INSERT INTO `item_mods` VALUES (17980,11,1);
-INSERT INTO `item_mods` VALUES (17981,61,10);
+INSERT INTO `item_mods` VALUES (17981,61,10); -- Bano Del Sol
+INSERT INTO `item_mods` VALUES (17981,431,1);
 INSERT INTO `item_mods` VALUES (17982,14,5);
 INSERT INTO `item_mods` VALUES (17992,5,25);
 INSERT INTO `item_mods` VALUES (17992,12,2);
@@ -21771,10 +21826,12 @@ INSERT INTO `item_mods` VALUES (18023,2,20);
 INSERT INTO `item_mods` VALUES (18023,245,2);
 INSERT INTO `item_mods` VALUES (18024,2,22);
 INSERT INTO `item_mods` VALUES (18024,245,3);
-INSERT INTO `item_mods` VALUES (18026,68,-10);
-INSERT INTO `item_mods` VALUES (18027,24,5);
+INSERT INTO `item_mods` VALUES (18026,68,-10); -- Magnet Knife
+INSERT INTO `item_mods` VALUES (18026,431,1);
+INSERT INTO `item_mods` VALUES (18027,24,5); -- Palladium Dagger
 INSERT INTO `item_mods` VALUES (18027,110,5);
 INSERT INTO `item_mods` VALUES (18027,291,1);
+INSERT INTO `item_mods` VALUES (18027,431,1);
 INSERT INTO `item_mods` VALUES (18028,9,4);
 INSERT INTO `item_mods` VALUES (18028,413,1);
 INSERT INTO `item_mods` VALUES (18030,2,15);
@@ -21806,7 +21863,8 @@ INSERT INTO `item_mods` VALUES (18042,60,8);
 INSERT INTO `item_mods` VALUES (18043,25,5);
 INSERT INTO `item_mods` VALUES (18043,54,10);
 INSERT INTO `item_mods` VALUES (18043,225,2);
-INSERT INTO `item_mods` VALUES (18044,288,1);
+INSERT INTO `item_mods` VALUES (18044,288,1); -- Scarecrow scythe
+INSERT INTO `item_mods` VALUES (18044,431,1); -- Add Effect 
 INSERT INTO `item_mods` VALUES (18046,25,3);
 INSERT INTO `item_mods` VALUES (18047,8,2);
 INSERT INTO `item_mods` VALUES (18047,10,-2);
@@ -21851,12 +21909,14 @@ INSERT INTO `item_mods` VALUES (18083,10,4);
 INSERT INTO `item_mods` VALUES (18086,11,2);
 INSERT INTO `item_mods` VALUES (18087,8,2);
 INSERT INTO `item_mods` VALUES (18087,10,4);
-INSERT INTO `item_mods` VALUES (18088,8,4);
+INSERT INTO `item_mods` VALUES (18088,8,4); -- Dreizack
 INSERT INTO `item_mods` VALUES (18088,9,1);
+INSERT INTO `item_mods` VALUES (18088,431,1);
 INSERT INTO `item_mods` VALUES (18089,8,5);
 INSERT INTO `item_mods` VALUES (18089,110,6);
 INSERT INTO `item_mods` VALUES (18090,8,1);
 INSERT INTO `item_mods` VALUES (18091,10,2);
+INSERT INTO `item_mods` VALUES (18096,431,1); -- Heavy Lance
 INSERT INTO `item_mods` VALUES (18097,377,13);
 INSERT INTO `item_mods` VALUES (18098,345,1000);  -- Martial Lance: TP Bonus +1000
 INSERT INTO `item_mods` VALUES (18100,9,7);
@@ -22008,9 +22068,10 @@ INSERT INTO `item_mods` VALUES (18198,23,5);
 INSERT INTO `item_mods` VALUES (18198,56,10);
 INSERT INTO `item_mods` VALUES (18198,230,2);
 INSERT INTO `item_mods` VALUES (18199,73,1);
-INSERT INTO `item_mods` VALUES (18211,8,1);
+INSERT INTO `item_mods` VALUES (18211,8,1); -- Gawains Axe
 INSERT INTO `item_mods` VALUES (18211,10,5);
 INSERT INTO `item_mods` VALUES (18211,11,-2);
+INSERT INTO `item_mods` VALUES (18211,431,1);
 INSERT INTO `item_mods` VALUES (18212,11,1);
 INSERT INTO `item_mods` VALUES (18213,10,1);
 INSERT INTO `item_mods` VALUES (18213,11,1);
@@ -22324,10 +22385,12 @@ INSERT INTO `item_mods` VALUES (18385,431,1);
 INSERT INTO `item_mods` VALUES (18386,28,2);
 INSERT INTO `item_mods` VALUES (18386,30,2);
 INSERT INTO `item_mods` VALUES (18389,392,15);    -- Crude Sword: "Weapon Bash"+15
+INSERT INTO `item_mods` VALUES (18391,431,1); -- Sacred Mace
 INSERT INTO `item_mods` VALUES (18392,13,2);
 INSERT INTO `item_mods` VALUES (18392,61,3);
 INSERT INTO `item_mods` VALUES (18392,431,1);
-INSERT INTO `item_mods` VALUES (18393,111,4);
+INSERT INTO `item_mods` VALUES (18393,111,4); -- Sacred Wand
+INSERT INTO `item_mods` VALUES (18393,431,1);
 INSERT INTO `item_mods` VALUES (18394,71,2);
 INSERT INTO `item_mods` VALUES (18395,8,5);
 INSERT INTO `item_mods` VALUES (18395,23,5);
@@ -22369,6 +22432,7 @@ INSERT INTO `item_mods` VALUES (18420,289,1);
 INSERT INTO `item_mods` VALUES (18421,289,2);
 INSERT INTO `item_mods` VALUES (18423,23,3);
 INSERT INTO `item_mods` VALUES (18424,23,5);
+INSERT INTO `item_mods` VALUES (18428,431,1); -- Kogitsunemaru
 INSERT INTO `item_mods` VALUES (18429,2,-20);
 INSERT INTO `item_mods` VALUES (18429,9,3);
 INSERT INTO `item_mods` VALUES (18429,25,5);
@@ -22388,6 +22452,7 @@ INSERT INTO `item_mods` VALUES (18433,2,10);
 INSERT INTO `item_mods` VALUES (18433,9,2);
 INSERT INTO `item_mods` VALUES (18433,10,2);
 INSERT INTO `item_mods` VALUES (18433,54,8);
+INSERT INTO `item_mods` VALUES (18437,431,1); -- Namikirimaru
 INSERT INTO `item_mods` VALUES (18438,165,5);
 INSERT INTO `item_mods` VALUES (18438,306,1);
 INSERT INTO `item_mods` VALUES (18439,8,2);
@@ -23760,6 +23825,12 @@ INSERT INTO `item_mods` VALUES (19107,11,4);
 INSERT INTO `item_mods` VALUES (19107,25,4);
 INSERT INTO `item_mods` VALUES (19107,68,4);
 INSERT INTO `item_mods` VALUES (19108,68,5);
+INSERT INTO `item_mods` VALUES (19109,353,2); -- Trilling Dagger light affinity +10%
+-- INSERT INTO `item_mods` VALUES (19109,354,-2); -- dark affinity -10% dmg wiki doesn't seem to indicate we get this like light staff does
+-- INSERT INTO `item_mods` VALUES (19109,550,2); -- light affinity +acc wiki doesn't seem to indicate we get this like light staff does
+-- INSERT INTO `item_mods` VALUES (19109,551,-2); -- dark affinity -acc wiki doesn't seem to indicate we get this like light staff does
+INSERT INTO `item_mods` VALUES (19109,559,2); -- light avatar perp reduction
+INSERT INTO `item_mods` VALUES (19109,560,-2); -- dark avatar perp increase
 INSERT INTO `item_mods` VALUES (19111,14,4);
 INSERT INTO `item_mods` VALUES (19111,119,2);
 INSERT INTO `item_mods` VALUES (19112,12,4);
@@ -23808,12 +23879,14 @@ INSERT INTO `item_mods` VALUES (19145,60,20);
 INSERT INTO `item_mods` VALUES (19145,165,4);
 INSERT INTO `item_mods` VALUES (19150,5,8);
 INSERT INTO `item_mods` VALUES (19150,23,7);
-INSERT INTO `item_mods` VALUES (19151,2,10);
+INSERT INTO `item_mods` VALUES (19151,2,10); -- Bahadur
 INSERT INTO `item_mods` VALUES (19151,9,2);
 INSERT INTO `item_mods` VALUES (19151,10,2);
-INSERT INTO `item_mods` VALUES (19152,2,12);
+INSERT INTO `item_mods` VALUES (19151,431,1);
+INSERT INTO `item_mods` VALUES (19152,2,12); -- Bahadur +1
 INSERT INTO `item_mods` VALUES (19152,9,3);
 INSERT INTO `item_mods` VALUES (19152,10,3);
+INSERT INTO `item_mods` VALUES (19152,431,1);
 INSERT INTO `item_mods` VALUES (19153,23,20);
 INSERT INTO `item_mods` VALUES (19153,25,4);
 INSERT INTO `item_mods` VALUES (19153,30,3);
