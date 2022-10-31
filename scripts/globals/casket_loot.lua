@@ -1056,7 +1056,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.QUICKSAND_CAVES] =
     {
         regionalItems = {10952}, -- Tanner's Torque
-        regionalItems = { },
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2100,7 +2100,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.THE_BOYAHDA_TREE] =
     {
         regionalItems = {11038, 10948}, -- Dragonkin Earring | Carver's Torque
-        regionalItems = { },
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2162,10 +2162,10 @@ tpz.casket_loot.casketItems =
             {1700,  4447}, -- Scream Fungus
             { 650,  5866}, -- Toolbag (Moku)
             {1050,  5871}, -- Ruszor Quiver
-            {2050, 17881}, -- Deepbed Soil
+            --{2050, 17881}, -- Deepbed Soil
             {1020, 17884}, -- Sun Water
-            { 500, 17898}, -- C. Grass. Broth
-            { 400, 17899}, -- Svg. Mole Broth
+            --{ 500, 17898}, -- C. Grass. Broth
+            --{ 400, 17899}, -- Svg. Mole Broth
         }
     },
     [tpz.zone.MIDDLE_DELKFUTTS_TOWER] =
@@ -2228,8 +2228,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.UPPER_DELKFUTTS_TOWER] =
     {
-        --regionalItems = {19779}, -- Potestas Bomblet
-        regionalItems = { },
+        regionalItems = {19779}, -- Potestas Bomblet
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2275,7 +2275,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.TEMPLE_OF_UGGALEPIH] =
     {
         regionalItems = {10953}, -- Boneworker's Torque
-        regionalItems = { },
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2331,7 +2331,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.DEN_OF_RANCOR] =
     {
         regionalItems = {10950}, -- 10991}, -- Goldsm. Torque | Rancorous Mantle
-        regionalItems = { },
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2397,8 +2397,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.RANGUEMONT_PASS] =
     {
-        --regionalItems = {11575}, -- Grapevine Cape
-        regionalItems = { },
+        regionalItems = {11575}, -- Grapevine Cape
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2435,13 +2435,13 @@ tpz.casket_loot.casketItems =
             {4900,  4135}, -- Hi-Ether +3
             {2700,  4143}, -- Pro-Ether +3
             { 600,  4155}, -- Remedy
-            { 500, 17898}, -- C. Grass. Broth
+            --{ 500, 17898}, -- C. Grass. Broth
         }
     },
     [tpz.zone.BOSTAUNIEUX_OUBLIETTE] =
     {
-        -- regionalItems = {11920}, -- Melaco Mittens
-        regionalItems = { },
+        regionalItems = {11920}, -- Melaco Mittens
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2510,8 +2510,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.TORAIMARAI_CANAL] =
     {
-        --regionalItems = {11576}, -- Bond Cape
-        regionalItems = { },
+        regionalItems = {11576}, -- Bond Cape
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2581,7 +2581,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.ZERUHN_MINES] =
     {
         regionalItems = {11677}, -- Prouesse Ring
-        regionalItems = { },
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -2717,8 +2717,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.KORROLOKA_TUNNEL] =
     {
-        --regionalItems = {11039}, -- Brachyura Earring
-        regionalItems = { },
+        regionalItems = {11039}, -- Brachyura Earring
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -2830,8 +2830,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.KUFTAL_TUNNEL] =
     {
-        --regionalItems = {18816}, -- Wizzan Grip
-        regionalItems = { },
+        regionalItems = {18816}, -- Wizzan Grip
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2900,8 +2900,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.SEA_SERPENT_GROTTO] =
     {
-        --regionalItems = {19780}, -- Mana Ampulla
-        regionalItems = { },
+        regionalItems = {19780}, -- Mana Ampulla
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -3041,8 +3041,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.THE_SHRINE_OF_RUAVITAU] =
     {
-        regionalItems = {10951}, -- Terminus Earring 11040,  | Weaver's Torque
-        regionalItems = { },
+        regionalItems = {10951, 11040}, -- Terminus Earring 11040,  | Weaver's Torque
+        -- regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -3107,8 +3107,8 @@ tpz.casket_loot.casketItems =
             {1050,  5871}, -- Ruszor Quiver
             {2050, 17881}, -- Deepbed Soil
             {1020, 17884}, -- Sun Water
-            { 500, 17898}, -- C. Grass. Broth
-            { 400, 17899}, -- Svg. Mole Broth
+            --{ 500, 17898}, -- C. Grass. Broth
+            --{ 400, 17899}, -- Svg. Mole Broth
         }
     },
     [tpz.zone.LOWER_DELKFUTTS_TOWER] =
@@ -3172,7 +3172,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.KING_RANPERRES_TOMB] =
     {
         regionalItems = {10924}, -- Chocobo Torque
-        regionalItems = { },
+        -- regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3300,8 +3300,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.DANGRUF_WADI] =
     {
-        --regionalItems = {11769}, -- Field Rope
-        regionalItems = { },
+         regionalItems = {11769}, -- Field Rope
+        -- regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3409,8 +3409,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.INNER_HORUTOTO_RUINS] =
     {
-        --regionalItems = {18624}, -- Numen Staff
-        regionalItems = { },
+        regionalItems = {18624}, -- Numen Staff
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -3491,8 +3491,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.ORDELLES_CAVES] =
     {
-        --regionalItems = {11767}, -- Chocobo Rope
-        regionalItems = { },
+        regionalItems = {11767}, -- Chocobo Rope
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3617,7 +3617,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.OUTER_HORUTOTO_RUINS] =
     {
         regionalItems = {10925}, -- Fisher's Torque
-        regionalItems = { },
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3753,8 +3753,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.THE_ELDIEME_NECROPOLIS] =
     {
-        --regionalItems = {18812}, -- Ossa Grip
-        regionalItems = { },
+        regionalItems = {18812}, -- Ossa Grip
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -3815,14 +3815,14 @@ tpz.casket_loot.casketItems =
             { 210, 12693}, -- Gavial Fng. Gnt.
             { 110, 16396}, -- Koenigs Knuckles
             {  90, 17364}, -- Cythara Anglica
-            {2570, 17898}, -- C. Grass. Broth
+            --{2570, 17898}, -- C. Grass. Broth
             {3100, 18259}, -- Angon
         }
     },
     [tpz.zone.GUSGEN_MINES] =
     {
         regionalItems = {10926}, -- Field Torque
-        regionalItems = { },
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3947,8 +3947,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.CRAWLERS_NEST] =
     {
-        --regionalItems = {11823}, -- Cocoon Band
-        regionalItems = { },
+        regionalItems = {11823}, -- Cocoon Band
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4009,14 +4009,14 @@ tpz.casket_loot.casketItems =
             { 210, 12693}, -- Gavial Fng. Gnt.
             { 110, 16396}, -- Koenigs Knuckles
             {  90, 17364}, -- Cythara Anglica
-            {2570, 17898}, -- C. Grass. Broth
+            --{2570, 17898}, -- C. Grass. Broth
             {3100, 18259}, -- Angon
         }
     },
     [tpz.zone.MAZE_OF_SHAKHRAMI] =
     {
-        --regionalItems = {11768}, -- Fisher's Rope
-        regionalItems = { },
+        regionalItems = {11768}, -- Fisher's Rope
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -4141,8 +4141,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.GARLAIGE_CITADEL] =
     {
-        --regionalItems = {18784}, -- Metasoma Katars
-        regionalItems = { },
+        regionalItems = {18784}, -- Metasoma Katars
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4206,14 +4206,14 @@ tpz.casket_loot.casketItems =
             { 210, 12693}, -- Gavial Fng. Gnt.
             { 110, 16396}, -- Koenigs Knuckles
             {  90, 17364}, -- Cythara Anglica
-            {2570, 17898}, -- C. Grass. Broth
+            --{2570, 17898}, -- C. Grass. Broth
             {3100, 18259}, -- Angon
         }
     },
     [tpz.zone.FEIYIN] =
     {
-        --regionalItems = {16202}, -- Dagda's Shield
-        regionalItems = { },
+        regionalItems = {16202}, -- Dagda's Shield
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4290,7 +4290,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.IFRITS_CAULDRON] =
     {
         regionalItems = {10949}, -- Smithy's Torque
-        regionalItems = { },
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4363,7 +4363,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.GUSTAV_TUNNEL] =
     {
         regionalItems = {10955}, -- Culinarian's Torque | Liminus Earring , 11041
-        regionalItems = { },
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4427,16 +4427,16 @@ tpz.casket_loot.casketItems =
             {1700,  4447}, -- Scream Fungus
             { 650,  5866}, -- Toolbag (Moku)
             {1050,  5871}, -- Ruszor Quiver
-            {2050, 17881}, -- Deepbed Soil
+            --{2050, 17881}, -- Deepbed Soil
             {1020, 17884}, -- Sun Water
-            { 500, 17898}, -- C. Grass. Broth
-            { 400, 17899}, -- Svg. Mole Broth
+            --{ 500, 17898}, -- C. Grass. Broth
+            --{ 400, 17899}, -- Svg. Mole Broth
         }
     },
     [tpz.zone.LABYRINTH_OF_ONZOZO] =
     {
-        --regionalItems = {18817}, -- Furtive Grip
-        regionalItems = { },
+        regionalItems = {18817}, -- Furtive Grip
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
