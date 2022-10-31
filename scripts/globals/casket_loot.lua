@@ -1056,7 +1056,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.QUICKSAND_CAVES] =
     {
         regionalItems = {10952}, -- Tanner's Torque
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2100,7 +2099,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.THE_BOYAHDA_TREE] =
     {
         regionalItems = {11038, 10948}, -- Dragonkin Earring | Carver's Torque
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2229,7 +2227,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.UPPER_DELKFUTTS_TOWER] =
     {
         regionalItems = {19779}, -- Potestas Bomblet
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2275,7 +2272,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.TEMPLE_OF_UGGALEPIH] =
     {
         regionalItems = {10953}, -- Boneworker's Torque
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2331,7 +2327,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.DEN_OF_RANCOR] =
     {
         regionalItems = {10950}, -- 10991}, -- Goldsm. Torque | Rancorous Mantle
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2398,7 +2393,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.RANGUEMONT_PASS] =
     {
         regionalItems = {11575}, -- Grapevine Cape
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2441,7 +2435,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.BOSTAUNIEUX_OUBLIETTE] =
     {
         regionalItems = {11920}, -- Melaco Mittens
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2511,7 +2504,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.TORAIMARAI_CANAL] =
     {
         regionalItems = {11576}, -- Bond Cape
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2581,7 +2573,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.ZERUHN_MINES] =
     {
         regionalItems = {11677}, -- Prouesse Ring
-        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -2718,7 +2709,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.KORROLOKA_TUNNEL] =
     {
         regionalItems = {11039}, -- Brachyura Earring
-        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -2831,7 +2821,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.KUFTAL_TUNNEL] =
     {
         regionalItems = {18816}, -- Wizzan Grip
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2901,7 +2890,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.SEA_SERPENT_GROTTO] =
     {
         regionalItems = {19780}, -- Mana Ampulla
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -3042,7 +3030,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.THE_SHRINE_OF_RUAVITAU] =
     {
         regionalItems = {10951, 11040}, -- Terminus Earring 11040,  | Weaver's Torque
-        -- regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -3172,7 +3159,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.KING_RANPERRES_TOMB] =
     {
         regionalItems = {10924}, -- Chocobo Torque
-        -- regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3301,7 +3287,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.DANGRUF_WADI] =
     {
          regionalItems = {11769}, -- Field Rope
-        -- regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -4213,7 +4198,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.FEIYIN] =
     {
         regionalItems = {16202}, -- Dagda's Shield
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4290,7 +4274,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.IFRITS_CAULDRON] =
     {
         regionalItems = {10949}, -- Smithy's Torque
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4363,7 +4346,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.GUSTAV_TUNNEL] =
     {
         regionalItems = {10955}, -- Culinarian's Torque | Liminus Earring , 11041
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -4436,7 +4418,6 @@ tpz.casket_loot.casketItems =
     [tpz.zone.LABYRINTH_OF_ONZOZO] =
     {
         regionalItems = {18817}, -- Furtive Grip
-        --regionalItems = { },
         temps =
         {
         ----------------------------------
