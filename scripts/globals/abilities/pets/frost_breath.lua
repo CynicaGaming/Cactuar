@@ -70,3 +70,4 @@ function onUseAbility(pet, target, skill, action)
     if (skillchainTier > 0) then
         skill:setMsg(747)
     end
+end 

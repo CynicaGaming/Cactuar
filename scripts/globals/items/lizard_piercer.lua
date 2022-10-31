@@ -44,4 +44,3 @@ require("scripts/globals/msg")
             end
         end
     end
-end

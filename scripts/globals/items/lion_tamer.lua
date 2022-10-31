@@ -30,4 +30,5 @@ function onItemUse(target)
     potency = utils.clamp(potency, 3, 25)
 
     target:addStatusEffect(effect, potency, 0, 180)
+    end
 end

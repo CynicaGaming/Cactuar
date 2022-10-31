@@ -36,4 +36,5 @@ function onAdditionalEffect(player,target,damage)
 
         return tpz.subEffect.HP_DRAIN, tpz.msg.basic.ADD_EFFECT_HP_DRAIN, player:addHP(drain)
     end
+    end 
 end
