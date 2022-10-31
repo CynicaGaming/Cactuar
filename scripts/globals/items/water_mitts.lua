@@ -15,9 +15,9 @@ function onItemUse(target)
     local potency = 0
 
     if magicskill <= 200 then
-        potency = 3 + math.floor(6 * magicskill / 100)
+        potency = 10 + math.floor(6 * magicskill / 100)
     elseif magicskill > 200 then
-        potency = 5 + math.floor(5 * magicskill / 100)
+        potency = 12 + math.floor(5 * magicskill / 100)
     end
 
     potency = utils.clamp(potency, 3, 25)
