@@ -2322,8 +2322,8 @@ namespace charutils
         auto appearance = (CItemEquipment*)itemutils::GetItem(itemID);
         auto appearanceModel = (appearance == nullptr || !HasItem(PChar, itemID)) ? 0 : appearance->getModelId();
 
-        if (!canEquipItemOnAnyJob(PChar, appearance))
-            return;
+        //if (!canEquipItemOnAnyJob(PChar, appearance))
+            //return;
 
         switch (equipSlotID)
         {
