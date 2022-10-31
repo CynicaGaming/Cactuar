@@ -9,11 +9,11 @@ require("scripts/globals/msg")
 
 function onAdditionalEffect(player, target, damage)
     if (VanadielHour() >= 18 or VanadielHour() <= 6) then
-        local chance = 15
+        local chance = 20 -- 15
         if (math.random(0, 99) >= chance) then
             return 0, 0, 0
         else
-            local dmg = math.random(9, 11)
+            local dmg = math.random(10, 15) -- 9/11
             local params = {}
             params.bonusmab = 0
             params.includemab = false
