@@ -4842,14 +4842,14 @@ INSERT INTO `mob_groups` VALUES(5, 1603, 89, 'Gill_Pugil', 0, 128, 147, 0, 0, 62
 INSERT INTO `mob_groups` VALUES(6, 3378, 89, 'Rock_Eater', 300, 0, 1725, 0, 0, 33, 35, 0);
 INSERT INTO `mob_groups` VALUES(7, 4297, 89, 'War_Lizard', 300, 0, 221, 0, 0, 41, 43, 0);
 INSERT INTO `mob_groups` VALUES(8, 71, 89, 'Air_Elemental', 300, 4, 38, 0, 0, 75, 80, 0);
-INSERT INTO `mob_groups` VALUES(9, 4285, 89, 'Wandering_Sapling', 300, 0, 2617, 0, 0, 36, 39, 0);
+INSERT INTO `mob_groups` VALUES(9, 4285, 89, 'Wandering_Sapling', 300, 0, 2617, 0, 0, 36, 39, 0); -- Grauberg
 INSERT INTO `mob_groups` VALUES(10, 441, 89, 'Black_Wolf', 300, 1, 287, 0, 0, 49, 51, 0);
 INSERT INTO `mob_groups` VALUES(11, 4353, 89, 'Wingrats', 300, 2, 80, 0, 0, 41, 45, 0);
 INSERT INTO `mob_groups` VALUES(12, 4355, 89, 'Wivre', 300, 0, 2665, 0, 0, 68, 74, 0);
 INSERT INTO `mob_groups` VALUES(13, 2275, 89, 'Knotty_Treant', 300, 0, 1458, 0, 0, 62, 64, 0);
 INSERT INTO `mob_groups` VALUES(14, 1664, 89, 'Goblin_Freesword', 300, 0, 1063, 0, 0, 62, 64, 0);
 INSERT INTO `mob_groups` VALUES(15, 1646, 89, 'Goblin_Corpsman', 300, 0, 1024, 0, 0, 62, 64, 0);
-INSERT INTO `mob_groups` VALUES(16, 4285, 89, 'Wandering_Sapling', 300, 0, 2620, 0, 0, 36, 39, 0);
+INSERT INTO `mob_groups` VALUES(16, 4285, 89, 'Wandering_Sapling', 300, 0, 2620, 0, 0, 36, 39, 0); -- Grauberg
 INSERT INTO `mob_groups` VALUES(17, 1638, 89, 'Goblin_Blastmaster', 300, 0, 1024, 0, 0, 62, 64, 0);
 INSERT INTO `mob_groups` VALUES(18, 3912, 89, 'Thunder_Elemental', 300, 4, 2410, 0, 0, 60, 60, 0);
 INSERT INTO `mob_groups` VALUES(19, 714, 89, 'Chigoe', 300, 0, 466, 0, 0, 62, 66, 0);
@@ -5006,7 +5006,7 @@ INSERT INTO `mob_groups` VALUES(10941, 1336, 89, 'Fighting_Pugil', 240, 0, 3, 50
 INSERT INTO `mob_groups` VALUES(10942, 1603, 89, 'Gill_Pugil', 240, 0, 3, 7000, 9999, 78, 81, 0);
 INSERT INTO `mob_groups` VALUES(10943, 3378, 89, 'Rock_Eater', 240, 0, 0, 3000, 9999, 33, 37, 0);
 INSERT INTO `mob_groups` VALUES(10944, 4297, 89, 'War_Lizard', 240, 0, 0, 4000, 9999, 39, 43, 0);
-INSERT INTO `mob_groups` VALUES(10945, 4285, 89, 'Wandering_Sapling', 240, 0, 0, 2500, 9999, 36, 39, 0);
+INSERT INTO `mob_groups` VALUES(10945, 4285, 89, 'Wandering_Sapling', 240, 0, 0, 2500, 9999, 36, 39, 0); -- Grauberg
 INSERT INTO `mob_groups` VALUES(10946, 441, 89, 'Black_Wolf', 240, 0, 0, 4500, 9999, 49, 51, 0);
 INSERT INTO `mob_groups` VALUES(10947, 71, 89, 'Air_Elemental', 240, 0, 3, 3500, 9999, 75, 80, 0);
 INSERT INTO `mob_groups` VALUES(10948, 4353, 89, 'Wingrats', 240, 0, 1, 3000, 9999, 43, 45, 0);
