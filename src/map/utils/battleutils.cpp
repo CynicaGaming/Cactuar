@@ -723,6 +723,8 @@ namespace battleutils
                     PAttacker->takeDamage(Action->spikesParam / getElementalSDTDivisor(PAttacker, element), PDefender, ATTACK_MAGICAL,
                                           GetSpikesDamageType(Action->spikesEffect), false);
 
+                    break;
+
 
                 case SPIKE_DREAD:
                     if (getElementalSDTDivisor(PAttacker, element) == 2)
