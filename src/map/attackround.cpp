@@ -225,6 +225,7 @@ void CAttackRound::DeleteAttackSwing()
 ************************************************************************/
 void CAttackRound::CreateAttacks(CItemWeapon* PWeapon, PHYSICAL_ATTACK_DIRECTION direction)
 {
+    TracyZoneScoped;
     if (!PWeapon)
         return;
 
@@ -417,7 +418,7 @@ void CAttackRound::CreateKickAttacks()
         // kick attack mod (All jobs)
         uint16 kickAttack = m_attacker->getMod(Mod::KICK_ATTACK_RATE);
 
-        if (m_attacker->objtype == TYPE_PC && m_attacker->GetMJob() == JOB_MNK) // MNK (Main job))
+        if (m_attacker->objtype == TYPE_PC && m_attacker->GetMJob() == JOB_MNK || m_attacker->GetSJob() == JOB_MNK) // MNK (Main job)) //Umeboshi
         {
             kickAttack += ((CCharEntity*)m_attacker)->PMeritPoints->GetMeritValue(MERIT_KICK_ATTACK_RATE, (CCharEntity*)m_attacker);
         }

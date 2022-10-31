@@ -341,6 +341,7 @@ namespace ability
 
     void LoadAbilitiesList()
     {
+        TracyZoneScoped;
         // TODO: добавить поле message в таблицу
 
         memset(PAbilityList, 0, sizeof(PAbilityList));

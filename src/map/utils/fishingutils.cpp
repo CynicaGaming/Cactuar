@@ -899,15 +899,15 @@ namespace fishingutils
 
         // Mod bonus (Example: Fisherman's Feast)
         maxChance = maxChance * ((100.f + PChar->getMod(Mod::FISHING_SKILL_GAIN)) / 100.f);
-        //int16 modFISHING_SKILL_GAIN = PChar->getMod(Mod::FISHING_SKILL_GAIN);
-        //maxChance += (double)modFISHING_SKILL_GAIN * 0.01;
 
-        // Moon phase skillup modifiers
+        // Turning off Moon phase skill up modifers as per WingsXI update. Skillups by moon phase considered a crafting myth.
+
+        /* Moon phase skillup modifiers
         uint8 phase = CVanaTime::getInstance()->getMoonPhase();
         uint8 moonDirection = CVanaTime::getInstance()->getMoonDirection();
         switch (moonDirection)
         {
-        case 0: // None
+         case 0: // None
             if (phase == 0) {
                 skillRoll -= 20;
                 bonusChanceRoll -= 3;
@@ -936,7 +936,7 @@ namespace fishingutils
                 bonusChanceRoll += 1;
             }
             break;
-        }
+        } */
 
         // Not in City bonus
         if (zoneutils::GetZone(PChar->getZone())->GetType() > ZONETYPE_CITY) {

@@ -410,19 +410,21 @@ function doPhysicalWeaponskill(attacker, target, wsID, wsParams, tp, action, pri
 
     if not wsParams.formless then
         finaldmg = target:physicalDmgTaken(attacker, finaldmg, attack.damageType)
-        if attack.weaponType == tpz.skill.HAND_TO_HAND then
+        -- WINGSCUSTOM
+        -- using damageType so that ws dmg type follows modified weapon type (joyeuse, birdbanes, etc)
+        if attack.damageType == tpz.damageType.H2H then
             if h2hres < 1000 then
                 finaldmg = finaldmg * (1 - ((1 - h2hres / 1000) * (1 - spdefdown/100)))
             else
                 finaldmg = finaldmg * h2hres / 1000
             end
-        elseif attack.weaponType == tpz.skill.DAGGER or attack.weaponType == tpz.skill.POLEARM then
+        elseif attack.damageType == tpz.damageType.PIERCING then -- Allows WeaponSkills to inherit equipped weapon's damage type rather than weapon class damage type. Umeboshi
             if pierceres < 1000 then
                 finaldmg = finaldmg * (1 - ((1 - pierceres / 1000) * (1 - spdefdown/100)))
             else
                 finaldmg = finaldmg * pierceres / 1000
             end
-        elseif attack.weaponType == tpz.skill.CLUB or attack.weaponType == tpz.skill.STAFF then
+        elseif attack.damageType == tpz.damageType.BLUNT then
             if impactres < 1000 then
                 finaldmg = finaldmg * (1 - ((1 - impactres / 1000) * (1 - spdefdown/100)))
             else

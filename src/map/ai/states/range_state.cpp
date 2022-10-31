@@ -57,15 +57,15 @@ CRangeState::CRangeState(CBattleEntity* PEntity, uint16 targid) :
     // TODO: Allow trusts to use this
     if (auto PChar = dynamic_cast<CCharEntity*>(m_PEntity))
     {
-        if (charutils::hasTrait(PChar, TRAIT_RAPID_SHOT))
-        {
+       // if (charutils::hasTrait(PChar, TRAIT_RAPID_SHOT))
+       // {
             auto chance {PChar->getMod(Mod::RAPID_SHOT) + PChar->PMeritPoints->GetMeritValue(MERIT_RAPID_SHOT_RATE, PChar)};
             if (tpzrand::GetRandomNumber(100) < chance)
             {
                 //reduce delay by 2%-50%
                 delay = (int16)((float)delay * tpzrand::GetRandomNumber(0.50f, 0.98f));
                 m_rapidShot = true;
-            }
+         // }
         }
     }
 

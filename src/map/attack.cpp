@@ -423,7 +423,7 @@ bool CAttack::CheckCounter()
     uint8 meritCounter = 0;
     if (m_victim->objtype == TYPE_PC && charutils::hasTrait((CCharEntity*)m_victim, TRAIT_COUNTER))
     {
-        if (m_victim->GetMJob() == JOB_MNK || m_victim->GetMJob() == JOB_PUP)
+        if (m_victim->GetMJob() == JOB_MNK || m_victim->GetMJob() == JOB_PUP || m_victim->GetSJob() == JOB_MNK || m_victim->GetSJob() == JOB_PUP) //Umeboshi
         {
             meritCounter = ((CCharEntity*)m_victim)->PMeritPoints->GetMeritValue(MERIT_COUNTER_RATE, (CCharEntity*)m_victim);
         }
@@ -474,6 +474,7 @@ bool CAttack::CheckCover()
 ************************************************************************/
 void CAttack::ProcessDamage()
 {
+    TracyZoneScoped;
     // Sneak attack.
     if ((m_attacker->GetMJob() == JOB_THF || (map_config.dual_main_job && (m_attacker->GetSJob() == JOB_THF))) &&
         m_isFirstSwing &&

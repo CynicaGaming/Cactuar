@@ -504,7 +504,7 @@ void TrySkillUP(CAutomatonEntity* PAutomaton, SKILLTYPE SkillID, uint8 lvl)
         uint16 MaxSkill = getSkillCap(PChar, SkillID, std::min(PAutomaton->GetMLevel(), lvl));
 
         int16  Diff = MaxSkill - CurSkill / 10;
-        double SkillUpChance = Diff / 5.0 + map_config.skillup_chance_multiplier * (2.0 - log10(1.0 + CurSkill / 100));
+        double SkillUpChance = Diff / 5.0 + map_config.automaton_skillup_chance_multiplier * (2.0 - log10(1.0 + CurSkill / 100));
 
         double random = tpzrand::GetRandomNumber(1.);
 
@@ -543,9 +543,9 @@ void TrySkillUP(CAutomatonEntity* PAutomaton, SKILLTYPE SkillID, uint8 lvl)
             MaxSkill = MaxSkill * 10;
 
             // Do skill amount multiplier (Will only be applied if default setting is changed)
-            if (map_config.skillup_amount_multiplier > 1)
+            if (map_config.automaton_skillup_amount_multiplier > 1)
             {
-                SkillAmount += (uint8)(SkillAmount * map_config.skillup_amount_multiplier);
+                SkillAmount += (uint8)(SkillAmount * map_config.automaton_skillup_amount_multiplier);
                 if (SkillAmount > 9)
                 {
                     SkillAmount = 9;

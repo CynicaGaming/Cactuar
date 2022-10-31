@@ -2236,10 +2236,9 @@ namespace charutils
 
     bool hasValidStyle(CCharEntity* PChar, CItemEquipment* PItem, CItemEquipment* AItem)
     {
-        return (PItem != nullptr && AItem != nullptr
-            && (((CItemWeapon*)AItem)->getSkillType() == ((CItemWeapon*)PItem)->getSkillType())
-            && HasItem(PChar, AItem->getID())
-            && canEquipItemOnAnyJob(PChar, AItem));
+        return (PItem != nullptr && AItem != nullptr && (((CItemWeapon*)AItem)->getSkillType() == ((CItemWeapon*)PItem)->getSkillType()) &&
+                    HasItem(PChar, AItem->getID()));
+            //&& canEquipItemOnAnyJob(PChar, AItem));
     }
 
     void SetStyleLock(CCharEntity* PChar, bool isStyleLocked)
@@ -4813,7 +4812,8 @@ void TrySkillUP(CCharEntity* PChar, SKILLTYPE SkillID, uint8 lvl)
         uint8 afterMW4 = 0;
         uint8 afterSack = 0;
 
-        uint8 rank = PChar->profile.rank[PChar->profile.nation];
+        // return MW1 size based on player's max nation rank
+        uint8 rank = std::max({ PChar->profile.rank[0], PChar->profile.rank[1], PChar->profile.rank[2] });
 
         switch (rank)
         {

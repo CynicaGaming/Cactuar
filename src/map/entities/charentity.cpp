@@ -85,6 +85,8 @@
 #include "../packets/status_effects.h"
 #include "../mobskill.h"
 #include "../linkshell.h"
+#include "../entities/battleentity.h"
+
 
 CCharEntity::CCharEntity()
 {
@@ -551,13 +553,13 @@ void CCharEntity::setPetZoningInfo()
 {
     if (PPet->objtype == TYPE_PET)
     {
-        if (TYPE_PET != PETTYPE_JUG_PET)
-        {
+        //if (TYPE_PET != PETTYPE_JUG_PET)
+        //{
             petZoningInfo.petHP = PPet->health.hp;
             petZoningInfo.petTP = PPet->health.tp;
             petZoningInfo.petMP = PPet->health.mp;
             petZoningInfo.petType = ((CPetEntity*)PPet)->getPetType();
-        }
+        //}
     }
 }
 
@@ -1193,7 +1195,7 @@ void CCharEntity::OnCastFinished(CMagicState& state, action_t& action)
         }
     }
 
-    if (charutils::hasTrait(this, TRAIT_OCCULT_ACUMEN) &&(PSpell->getSkillType() == SKILLTYPE::SKILL_ELEMENTAL_MAGIC || PSpell->getSkillType() == SKILLTYPE::SKILL_DARK_MAGIC))
+    if (getMod(Mod::OCCULT_ACUMEN) > 0 &&(PSpell->getSkillType() == SKILLTYPE::SKILL_ELEMENTAL_MAGIC || PSpell->getSkillType() == SKILLTYPE::SKILL_DARK_MAGIC))
     {
         int16 tp = (int16)(PSpell->getMPCost() * getMod(Mod::OCCULT_ACUMEN) / 100.f * GetStoreTPMultiplier());
         addTP(tp);
@@ -1849,7 +1851,7 @@ void CCharEntity::OnRangedAttack(CRangeState& state, action_t& action)
 
         // check for recycle chance
         uint16 recycleChance = getMod(Mod::RECYCLE);
-        if (charutils::hasTrait(this, TRAIT_RECYCLE))
+         if (charutils::hasTrait(this, TRAIT_RECYCLE))
         {
             recycleChance += PMeritPoints->GetMeritValue(MERIT_RECYCLE, this);
         }
