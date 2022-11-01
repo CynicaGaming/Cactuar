@@ -953,11 +953,11 @@ tpz.casket_loot.casketItems =
             { 590, 4137}, -- Super Ether +1
             { 420, 4144}, -- Hi-Elixir
             { 655, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 460, 4155}, -- Remedy
             { 790, 4202}, -- Daedalus Wing
             { 490, 4206}, -- Catholicon
-            { 320, 4210}, -- Lethe Water
+            --{ 320, 4210}, -- Lethe Water
             { 225, 4255}, -- Mana Powder
             { 360, 4302}, -- Pamama au Lait
             { 540, 4424}, -- Melon Juice
@@ -1055,7 +1055,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.QUICKSAND_CAVES] =
     {
-        regionalItems = {10952}, -- Tanner's Torque
+        regionalItems = {645}, -- Darksteel Ore
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -1070,11 +1071,11 @@ tpz.casket_loot.casketItems =
             { 590, 4137}, -- Super Ether +1
             { 420, 4144}, -- Hi-Elixir
             { 655, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 460, 4155}, -- Remedy
             { 790, 4202}, -- Daedalus Wing
             { 490, 4206}, -- Catholicon
-            { 320, 4210}, -- Lethe Water
+            --{ 320, 4210}, -- Lethe Water
             { 225, 4255}, -- Mana Powder
             { 360, 4302}, -- Pamama au Lait
             { 540, 4424}, -- Melon Juice
@@ -1085,6 +1086,7 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   10952}, -- Tanner's Torque
             {2320,   645}, -- Darksteel Ore
             {1350,   702}, -- Ebony Log
             {1290,   737}, -- Gold Ore
@@ -1628,11 +1630,11 @@ tpz.casket_loot.casketItems =
             { 590, 4137}, -- Super Ether +1
             { 420, 4144}, -- Hi-Elixir
             { 655, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 460, 4155}, -- Remedy
             { 790, 4202}, -- Daedalus Wing
             { 490, 4206}, -- Catholicon
-            { 320, 4210}, -- Lethe Water
+            --{ 320, 4210}, -- Lethe Water
             { 225, 4255}, -- Mana Powder
             { 360, 4302}, -- Pamama au Lait
             { 540, 4424}, -- Melon Juice
@@ -1937,11 +1939,11 @@ tpz.casket_loot.casketItems =
             { 590, 4137}, -- Super Ether +1
             { 420, 4144}, -- Hi-Elixir
             { 655, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 460, 4155}, -- Remedy
             { 790, 4202}, -- Daedalus Wing
             { 490, 4206}, -- Catholicon
-            { 320, 4210}, -- Lethe Water
+            --{ 320, 4210}, -- Lethe Water
             { 225, 4255}, -- Mana Powder
             { 360, 4302}, -- Pamama au Lait
             { 540, 4424}, -- Melon Juice
@@ -1999,11 +2001,11 @@ tpz.casket_loot.casketItems =
             { 590, 4137}, -- Super Ether +1
             { 420, 4144}, -- Hi-Elixir
             { 655, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 460, 4155}, -- Remedy
             { 790, 4202}, -- Daedalus Wing
             { 490, 4206}, -- Catholicon
-            { 320, 4210}, -- Lethe Water
+            --{ 320, 4210}, -- Lethe Water
             { 225, 4255}, -- Mana Powder
             { 360, 4302}, -- Pamama au Lait
             { 540, 4424}, -- Melon Juice
@@ -2057,11 +2059,11 @@ tpz.casket_loot.casketItems =
             { 590, 4137}, -- Super Ether +1
             { 420, 4144}, -- Hi-Elixir
             { 655, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 460, 4155}, -- Remedy
             { 790, 4202}, -- Daedalus Wing
             { 490, 4206}, -- Catholicon
-            { 320, 4210}, -- Lethe Water
+            --{ 320, 4210}, -- Lethe Water
             { 225, 4255}, -- Mana Powder
             { 360, 4302}, -- Pamama au Lait
             { 540, 4424}, -- Melon Juice
@@ -2098,37 +2100,31 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.THE_BOYAHDA_TREE] =
     {
-        regionalItems = {11038, 10948}, -- Dragonkin Earring | Carver's Torque
+        regionalItems = {11038}, -- Dragonkin Earring
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {  10, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -2227,6 +2223,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.UPPER_DELKFUTTS_TOWER] =
     {
         regionalItems = {19779}, -- Potestas Bomblet
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2271,7 +2268,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.TEMPLE_OF_UGGALEPIH] =
     {
-        regionalItems = {10953}, -- Boneworker's Torque
+        regionalItems = {645}, -- Darksteel Ore
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2300,6 +2298,7 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   10953}, -- Boneworker's Torque
             {1400,   645}, -- Darksteel Ore
             {2580,   702}, -- Ebony Log
             { 700,   737}, -- Gold Ore
@@ -2326,7 +2325,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.DEN_OF_RANCOR] =
     {
-        regionalItems = {10950}, -- 10991}, -- Goldsm. Torque | Rancorous Mantle
+        regionalItems = {645}, --Darksteel Ore --Rancorous Mantle 10991
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2341,11 +2341,11 @@ tpz.casket_loot.casketItems =
             { 590, 4137}, -- Super Ether +1
             { 420, 4144}, -- Hi-Elixir
             { 655, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 460, 4155}, -- Remedy
             { 790, 4202}, -- Daedalus Wing
             { 490, 4206}, -- Catholicon
-            { 320, 4210}, -- Lethe Water
+            --{ 320, 4210}, -- Lethe Water
             { 225, 4255}, -- Mana Powder
             { 360, 4302}, -- Pamama au Lait
             { 540, 4424}, -- Melon Juice
@@ -2356,6 +2356,7 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   10950}, -- Goldsmith's Torque
             {2700,   646}, -- Adaman Ore
             { 310,   739}, -- Orichalcum Ore
             { 580,   821}, -- Rainbow Thread
@@ -2393,6 +2394,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.RANGUEMONT_PASS] =
     {
         regionalItems = {11575}, -- Grapevine Cape
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2435,37 +2437,30 @@ tpz.casket_loot.casketItems =
     [tpz.zone.BOSTAUNIEUX_OUBLIETTE] =
     {
         regionalItems = {11920}, -- Melaco Mittens
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -2504,37 +2499,30 @@ tpz.casket_loot.casketItems =
     [tpz.zone.TORAIMARAI_CANAL] =
     {
         regionalItems = {11576}, -- Bond Cape
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -2573,6 +2561,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.ZERUHN_MINES] =
     {
         regionalItems = {11677}, -- Prouesse Ring
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -2600,32 +2589,24 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         itemsLow =
         {
@@ -2709,6 +2690,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.KORROLOKA_TUNNEL] =
     {
         regionalItems = {11039}, -- Brachyura Earring
+        --regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -2821,37 +2803,30 @@ tpz.casket_loot.casketItems =
     [tpz.zone.KUFTAL_TUNNEL] =
     {
         regionalItems = {18816}, -- Wizzan Grip
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -2890,6 +2865,7 @@ tpz.casket_loot.casketItems =
     [tpz.zone.SEA_SERPENT_GROTTO] =
     {
         regionalItems = {19780}, -- Mana Ampulla
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
@@ -2963,11 +2939,11 @@ tpz.casket_loot.casketItems =
             { 420, 4137}, -- Super Ether +1
             { 540, 4144}, -- Hi-Elixir
             {1300, 4145}, -- Elixir
-            {  60, 4149}, -- Panacea
+            --{  60, 4149}, -- Panacea
             { 980, 4155}, -- Remedy
             {1670, 4202}, -- Daedalus Wing
             { 670, 4206}, -- Catholicon
-            { 760, 4210}, -- Lethe Water
+            --{ 760, 4210}, -- Lethe Water
             { 680, 4255}, -- Mana Powder
             { 450, 4302}, -- Pamama au Lait
             { 765, 4424}, -- Melon Juice
@@ -3029,38 +3005,31 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.THE_SHRINE_OF_RUAVITAU] =
     {
-        regionalItems = {10951, 11040}, -- Terminus Earring 11040,  | Weaver's Torque
+        regionalItems = {10951, 11040}, -- Terminus Earring 11040,  | Weaver's Torque -- Leaving this since everything there is Lv.75+. - Umeboshi
+        -- regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -3158,7 +3127,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.KING_RANPERRES_TOMB] =
     {
-        regionalItems = {10924}, -- Chocobo Torque
+        regionalItems = {645}, -- Darksteel Ore
+        -- regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3186,38 +3156,31 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         itemsLow =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   10924}, -- Chocobo Torque
             {3760,   505}, -- Sheepskin
             {3450,   626}, -- Black Pepper
             { 800,   898}, -- Chicken Bone
@@ -3243,6 +3206,7 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   10924}, -- Chocobo Torque
             {3760,   505}, -- Sheepskin
             {3450,   626}, -- Black Pepper
             { 480,   679}, -- Aluminum Ingot
@@ -3286,7 +3250,8 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.DANGRUF_WADI] =
     {
-         regionalItems = {11769}, -- Field Rope
+         regionalItems = {645}, -- Darksteel Ore
+        -- regionalItems = { },
         tempsLow =
         {
         ----------------------------------
@@ -3346,6 +3311,7 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   11769}, -- Field Rope
             {1450,   835}, -- Flax Flower
             { 800,   898}, -- Chicken Bone
             {2630,  1155}, -- Iron Sand
@@ -3370,6 +3336,7 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   11769}, -- Field Rope
             {2700,   646}, -- Adaman Ore
             { 920,   653}, -- Mythril Ingot
             {2100,   690}, -- Elm Log
@@ -3401,32 +3368,24 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -3476,7 +3435,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.ORDELLES_CAVES] =
     {
-        regionalItems = {11767}, -- Chocobo Rope
+        regionalItems = {645}, -- Darksteel Ore
         --regionalItems = { },
         tempsLow =
         {
@@ -3505,38 +3464,31 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         itemsLow =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,  11767}, -- Chocobo Rope
             {1450,  835}, -- Flax Flower
             { 800,  898}, -- Chicken Bone
             {2630, 1155}, -- Iron Sand
@@ -3601,7 +3553,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.OUTER_HORUTOTO_RUINS] =
     {
-        regionalItems = {10925}, -- Fisher's Torque
+        regionalItems = {645}, -- Darksteel Ore
         --regionalItems = { },
         tempsLow =
         {
@@ -3662,6 +3614,7 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,  10925}, -- Fisherman's Torque
             {3760,  505}, -- Sheepskin
             {3450,  626}, -- Black Pepper
             {4790,  656}, -- Beastcoin
@@ -3745,32 +3698,24 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -3806,7 +3751,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.GUSGEN_MINES] =
     {
-        regionalItems = {10926}, -- Field Torque
+        regionalItems = {645}, -- Darksteel Ore
         --regionalItems = { },
         tempsLow =
         {
@@ -3835,38 +3780,31 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         itemsLow =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   10926}, -- Field Torque
             {1450,   835}, -- Flax Flower
             { 800,   898}, -- Chicken Bone
             {2630,  1155}, -- Iron Sand
@@ -3939,32 +3877,24 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -4000,7 +3930,7 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.MAZE_OF_SHAKHRAMI] =
     {
-        regionalItems = {11768}, -- Fisher's Rope
+        regionalItems = {645}, -- Darksteel Ore
         --regionalItems = { },
         tempsLow =
         {
@@ -4029,38 +3959,31 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         itemsLow =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   11768}, -- Fisherman's Rope
             {1450,   835}, -- Flax Flower
             { 800,   898}, -- Chicken Bone
             {2630,  1155}, -- Iron Sand
@@ -4133,32 +4056,24 @@ tpz.casket_loot.casketItems =
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -4198,37 +4113,30 @@ tpz.casket_loot.casketItems =
     [tpz.zone.FEIYIN] =
     {
         regionalItems = {16202}, -- Dagda's Shield
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
@@ -4273,44 +4181,38 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.IFRITS_CAULDRON] =
     {
-        regionalItems = {10949}, -- Smithy's Torque
+        regionalItems = {645}, -- Darksteel Ore
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            {30,   10949}, -- Smithy's Torque
             {2700,   646}, -- Adaman Ore
             { 310,   739}, -- Orichalcum Ore
             { 580,   821}, -- Rainbow Thread
@@ -4345,44 +4247,38 @@ tpz.casket_loot.casketItems =
     },
     [tpz.zone.GUSTAV_TUNNEL] =
     {
-        regionalItems = {10955}, -- Culinarian's Torque | Liminus Earring , 11041
+        regionalItems = {11041}, --Liminus Earring
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
+            { 30,  10955}, -- Culinarian's Torque
             { 390,   657}, -- Tama-Hagane
             { 745,   876}, -- Manta Skin
             { 250,   887}, -- Coral Fragment
@@ -4407,7 +4303,7 @@ tpz.casket_loot.casketItems =
             { 900,  4174}, -- Vile Elixir
             {1200,  4291}, -- Sandfish
             {1700,  4447}, -- Scream Fungus
-            { 650,  5866}, -- Toolbag (Moku)
+            --{ 650,  5866}, -- Toolbag (Moku)
             {1050,  5871}, -- Ruszor Quiver
             --{2050, 17881}, -- Deepbed Soil
             {1020, 17884}, -- Sun Water
@@ -4418,37 +4314,30 @@ tpz.casket_loot.casketItems =
     [tpz.zone.LABYRINTH_OF_ONZOZO] =
     {
         regionalItems = {18817}, -- Furtive Grip
+        --regionalItems = { },
         temps =
         {
         ----------------------------------
         --| Weight | Item ID |   Name  |--
         ----------------------------------
-            { 900, 4202}, -- Daedalus Wing
-            { 500, 4206}, -- Catholicon
-            { 300, 4255}, -- Mana Powder
-            { 450, 5322}, -- Healing Powder
-            { 320, 5393}, -- Monarch's Drink
-            { 650, 5394}, -- Gnostic's Drink
-            { 430, 5395}, -- Cleric's Drink
-            {1000, 5433}, -- Dusty Elixir
-            { 690, 5439}, -- Vicar's Drink
-            { 250, 5440}, -- Dusty Wing
-            {2000, 5824}, -- Lucid Potion I
-            {1900, 5825}, -- Lucid Potion II
-            {1200, 5826}, -- Lucid Potion III
-            { 730, 5832}, -- Healing Mist
-            { 420, 5833}, -- Mana Mist
-            {1010, 5834}, -- Lucid Wings I
-            { 875, 5835}, -- Healing Salve I
-            { 210, 5836}, -- Healing Salve II
-            { 920, 5837}, -- Clear Salve I
-            { 190, 5838}, -- Clear Salve II
-            { 310, 5839}, -- Stalwart's Tonic
-            { 205, 5840}, -- Stalwart's Gambir
-            { 410, 5841}, -- Ascetic's Tonic
-            { 305, 5842}, -- Ascetic's Gambir
-            { 310, 5843}, -- Champion's Tonic
-            { 200, 5845}, -- Fanatic's Tonic
+        {1100, 4118}, -- Hi-Potion +2
+        {1000, 4119}, -- Hi-Potion +3
+        { 800, 4120}, -- X-Potion
+        { 600, 4121}, -- X-Potion +1
+        {1040, 4135}, -- Hi-Ether +3
+        { 790, 4136}, -- Super Ether
+        { 590, 4137}, -- Super Ether +1
+        { 420, 4144}, -- Hi-Elixir
+        { 655, 4145}, -- Elixir
+        --{  60, 4149}, -- Panacea
+        { 460, 4155}, -- Remedy
+        { 790, 4202}, -- Daedalus Wing
+        { 490, 4206}, -- Catholicon
+        --{ 320, 4210}, -- Lethe Water
+        { 225, 4255}, -- Mana Powder
+        { 360, 4302}, -- Pamama au Lait
+        { 540, 4424}, -- Melon Juice
+        { 210, 5322}, -- Healing Powder
         },
         items =
         {
