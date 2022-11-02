@@ -68,4 +68,9 @@ function onUseAbility(pet, target, skill, action)
     local dmg = AbilityFinalAdjustments(dmgmod, pet, skill, target, tpz.attackType.BREATH, tpz.damageType.EARTH, MOBPARAM_IGNORE_SHADOWS)
     if (skillchainTier > 0) then
         skill:setMsg(747)
+        target:takeDamage(dmg, pet, tpz.attackType.BREATH, tpz.damageType.EARTH)
+        return dmg
     end
+    target:takeDamage(dmg, pet, tpz.attackType.BREATH, tpz.damageType.EARTH)
+    return dmg
+end
