@@ -69,4 +69,6 @@ function onUseAbility(pet, target, skill, action)
     if (skillchainTier > 0) then
         skill:setMsg(747)
     end
+    target:takeDamage(dmg, pet, tpz.attackType.BREATH, tpz.damageType.LIGHTNING)
+    return dmg
 end
