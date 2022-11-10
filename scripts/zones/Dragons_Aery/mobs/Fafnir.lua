@@ -41,7 +41,7 @@ function onMobDespawn(mob)
     local popNow = (math.random(1, 5) == 3 or kills > 6)
 
     if LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0 then
-        GetNPCByID(ID.npc.BEHEMOTH_QM):setStatus(tpz.status.Normal)
+        GetNPCByID(ID.npc.FAFNIR_QM):setStatus(tpz.status.Normal)
     end
     
     if LandKingSystem_HQ ~= 1 and ToD <= os.time() and popNow then
