@@ -418,7 +418,12 @@ void CAttackRound::CreateKickAttacks()
         // kick attack mod (All jobs)
         uint16 kickAttack = m_attacker->getMod(Mod::KICK_ATTACK_RATE);
 
-        if (m_attacker->objtype == TYPE_PC && m_attacker->GetMJob() == JOB_MNK || m_attacker->GetSJob() == JOB_MNK) // MNK (Main job)) //Umeboshi
+        if (m_attacker->objtype == TYPE_PC && m_attacker->GetMJob() == JOB_MNK)
+        {
+            kickAttack += ((CCharEntity*)m_attacker)->PMeritPoints->GetMeritValue(MERIT_KICK_ATTACK_RATE, (CCharEntity*)m_attacker);
+        }
+
+        if (m_attacker->objtype == TYPE_PC && m_attacker->GetSJob() == JOB_MNK) // MNK (Sub job)) //Umeboshi
         {
             kickAttack += ((CCharEntity*)m_attacker)->PMeritPoints->GetMeritValue(MERIT_KICK_ATTACK_RATE, (CCharEntity*)m_attacker);
         }
