@@ -14,8 +14,8 @@ tpz.events.loginCampaign = tpz.events.loginCampaign or {}
 
 -- Change vars below to modify settings for current login campaign
 -- NOTE: the year and month values are used in the Moogle's Event!
-local loginCampaignYear = 2022
-local loginCampaignMonth = 10
+local loginCampaignYear = 2023
+local loginCampaignMonth = 01
 local loginCampaignDay = 10
 local loginCampaignDuration = 23  -- Duration is set in Earth days (Average is 23 days)
 
@@ -66,9 +66,9 @@ tpz.events.loginCampaign.onGameIn = function(player)
     local loginCount   = player:getCharVar("LoginCampaignLoginNumber")
 
     if playercMonth ~= loginCampaignMonth or playercYear ~= loginCampaignYear then
-        if loginPoints > 1500 then
-            player:setCurrency("login_points", 1500)
-            player:messageSpecial(ID.text.CARRIED_OVER_POINTS, 0, 1500)
+        if loginPoints > 2000 then
+            player:setCurrency("login_points", 2000)
+            player:messageSpecial(ID.text.CARRIED_OVER_POINTS, 0, 2000)
         elseif loginPoints ~= 0 then
             player:messageSpecial(ID.text.CARRIED_OVER_POINTS, 0, loginPoints)
         end
